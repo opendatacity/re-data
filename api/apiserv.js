@@ -76,7 +76,7 @@ app.get('/events/:id', function(req, res){
 
 
 app.get('*', function(req, res){
-  res.json({"rp-api", config.version});
+  res.json({"rp-api": config.version});
 });
 
 /* listen on either tcp or socket according to config */
