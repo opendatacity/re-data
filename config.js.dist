@@ -21,6 +21,9 @@ module.exports = {
 				password: ''
 			}
 		}
-	}
+	},
+	
+	/* version */
+	version: 0.1
 	
 };

@@ -13,7 +13,7 @@ var express = require("express");
 var log = require(path.resolve(__dirname, "lib/log.js"));
 
 /* import config */
-var config = require(path.resolve(__dirname, "config.js"));
+var config = require(path.resolve(__dirname, "../config.js"));
 
 /* setup couchdb connection */
 var db = null;
@@ -76,7 +76,7 @@ app.get('/events/:id', function(req, res){
 
 
 app.get('*', function(req, res){
-  res.send('rp-api default');
+  res.json({"rp-api", config.version});
 });
 
 /* listen on either tcp or socket according to config */

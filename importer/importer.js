@@ -11,14 +11,14 @@ var cradle = require("cradle");
 var log = require(path.resolve(__dirname, "../api/lib/log.js"));
 
 /* import config */
-var config = require(path.resolve(__dirname, "../api/config.js"));
+var config = require(path.resolve(__dirname, "../config.js"));
 
 /* data object */
 var data = {};
 
 /* load data */
 ["events"].forEach(function(d){
-	data[d] = JSON.parse(fs.readFileSync(path.resolve(__dirname, "data/"+d+".json")));
+	data[d] = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/"+d+".json")));
 });
 
 /* purge current couchdb and create a new one. */
