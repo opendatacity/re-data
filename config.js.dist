@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+/* configuration */
+module.exports = {
+	
+	/* listen on tcp or socket */
+	app: {
+		host: 'localhost',
+		port: 9999
+	},
+	
+	/* couchdb configuration */
+	db: {
+		database: 'rp-data',
+		host: 'localhost',
+		port: 5984,
+		options: {
+			secure: false,
+			auth: {
+				username: '',
+				password: ''
+			}
+		}
+	}
+	
+};

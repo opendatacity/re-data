@@ -1,0 +1,107 @@
+[{
+	"type": "event",
+	"id": "rp14",
+	"label": "re:publica 14",
+	"title": "into the wild",
+	"date": ["2014-05-06","2014-05-08"],
+	"locations": [{
+		"label": "Station Berlin",
+		"coords": [52.49814,13.374538]
+	}],
+	"url": "http://14.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp13",
+	"label": "re:publica 13",
+	"title": "IN/SIDE/OUT",
+	"date": ["2013-05-06","2013-05-08"],
+	"locations": [{
+		"label": "Station Berlin",
+		"coords": [52.49814,13.374538]
+	}],
+	"url": "http://13.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp12",
+	"label": "re:publica 12",
+	"title": "Act!on",
+	"date": ["2012-05-02","2012-05-04"],
+	"locations": [{
+		"label": "Station Berlin",
+		"coords": [52.49814,13.374538]
+	}],
+	"url": "http://12.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp11",
+	"label": "re:publica 11",
+	"title": "XI",
+	"date": ["2011-04-13","2011-04-15"],
+	"locations": [{
+		"label": "Friedrichstadt-Palast",
+		"coords": [52.523922,13.387853]
+	},{
+		"label": "Kalkscheune",
+		"coords": [52.524372,13.389652]
+	},{
+		"label": "Quatsch Comedy Club",
+		"coords": [52.523685,13.388311]
+	}],
+	"url": "http://11.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp10",
+	"label": "re:publica 10",
+	"title": "Now here",
+	"date": ["2010-04-14","2010-04-16"],
+	"locations": [{
+		"label": "Friedrichstadt-Palast",
+		"coords": [52.523922,13.387853]
+	},{
+		"label": "Kalkscheune",
+		"coords": [52.524372,13.389652]
+	},{
+		"label": "Quatsch Comedy Club",
+		"coords": [52.523685,13.388311]
+	}],
+	"url": "http://10.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp09",
+	"label": "re:publica 09",
+	"title": "Shift happened",
+	"date": ["2009-04-01","2009-04-03"],
+	"locations": [{
+		"label": "Friedrichstadt-Palast",
+		"coords": [52.523922,13.387853]
+	},{
+		"label": "Kalkscheune",
+		"coords": [52.524372,13.389652]
+	},{
+		"label": "Media Center",
+		"coords": [52.524943,13.388944]
+	}],
+	"url": "http://09.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp08",
+	"label": "re:publica 08",
+	"title": "Die kritische Masse",
+	"date": ["2008-04-02","2008-04-04"],
+	"locations": [{
+		"label": "Kalkscheune",
+		"coords": [52.524372,13.389652]
+	}],
+	"url": "http://08.re-publica.de/"
+},{
+	"type": "event",
+	"id": "rp07",
+	"label": "re:publica 07",
+	"title": "Leben im Netz",
+	"date": ["2007-04-11","2007-04-13"],
+	"locations": [{
+		"label": "Kalkscheune",
+		"coords": [52.524372,13.389652]
+	}],
+	"url": "http://08.re-publica.de/2007/"
+}]
