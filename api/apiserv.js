@@ -85,7 +85,10 @@ if ("port" in config.app) {
 		log.info("Server ready, Listening on TCP/IP", config.app.host+':'+config.app.port);
 	});
 } else if("socket" in config.app) {
+	var mask = process.umask(0);
+	if (fs.existsSync(config.app.socket)) fs.unlinkSync(config.app.socket);
 	app.listen(config.app.socket, function(){
+		if (mask) { process.umask(mask); mask = null; }
 		log.info("Server ready, Listening on Socket", config.app.socket);
 	});
 }
