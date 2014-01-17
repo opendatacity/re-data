@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>re:data API</title>
+
+    <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/sunburst.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/docs.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/print.css" media="print">
+    
+
+    <script type="text/javascript" src="assets/js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+    <script type="text/javascript" src="assets/js/lunr.min.js"></script>
+
+    
+
+    <script type="text/javascript">var BASE_URL = "";</script>
+    <script type="text/javascript" src="assets/js/viewer.js"></script>
+
+    
+</head>
+<body>
+    <div id="page">
+        <a name="top" />
+        <header id="header">
+            <h1><a href="">re:data API</a></h1>
+        </header>
+        
+
+<div id="sidebar">
+    <form action="search.html"><input id="search" type="text" placeholder="Search" name="q" /></form>
+    <nav id="toc">
+        
+    <ol>
+    
+        <li>
+            <a href="api.html#api">API</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="api.html#authentication">Authentication</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#events">Events</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#sessions">Sessions</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#speakers">Speakers</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#tracks">Tracks</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#areas">Areas</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#days">Days</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#formats">Formats</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#levels">Levels</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#languages">Languages</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#attendees">Attendees</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+</ol>
+
+    </nav>
+    
+    <nav id="links">
+        <ul>
+            
+        </ul>
+    </nav>
+    
+</div>
+
+        <div id="content">
+            <h1 id="api">API</h1>
+<h2 id="authentication">Authentication</h2>
+<p><em>not specified yet</em></p>
+<h2 id="events">Events</h2>
+<p>An event is one chronologically delimited total of sessions. Like a yearly conference.</p>
+<h3 id="get-events-">GET <code>/events</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;rp14&quot;,
+    &quot;label&quot;: &quot;re:publica 14&quot;,
+    &quot;title&quot;: &quot;into the wild&quot;,
+    &quot;date&quot;: [&quot;2014-05-06&quot;,&quot;2014-05-08&quot;],
+    &quot;locations&quot;: [{
+        &quot;label&quot;: &quot;Station Berlin&quot;,
+        &quot;coords&quot;: [52.49814,13.374538] // lat, lon
+    }],
+    &quot;url&quot;: &quot;http://14.re-publica.de/&quot;
+},{
+    &quot;id&quot;: &quot;rp13&quot;,
+    &quot;label&quot;: &quot;re:publica 13&quot;,
+    &quot;title&quot;: &quot;IN/SIDE/OUT&quot;,
+    &quot;date&quot;: [&quot;2013-05-06&quot;,&quot;2013-05-08&quot;],
+    &quot;locations&quot;: [{
+        &quot;label&quot;: &quot;Station Berlin&quot;,
+        &quot;coords&quot;: [52.49814,13.374538] // lat, lon
+    }],
+    &quot;url&quot;: &quot;http://13.re-publica.de/&quot;
+}]
+</code></pre>
+<h3 id="get-events-event-id-">GET <code>/events/&lt;event-id&gt;</code></h3>
+<pre><code class="lang-javascript">{
+    &quot;id&quot;: &quot;rp14&quot;,
+    &quot;label&quot;: &quot;re:publica 14&quot;,
+    &quot;title&quot;: &quot;into the wild&quot;,
+    &quot;date&quot;: [&quot;2014-05-06&quot;,&quot;2014-05-08&quot;],
+    &quot;locations&quot;: [{
+        &quot;label&quot;: &quot;Station Berlin&quot;,
+        &quot;coords&quot;: [52.49814,13.374538] // lat, lon
+    }],
+    &quot;url&quot;: &quot;http://14.re-publica.de/&quot;
+}
+</code></pre>
+<h2 id="sessions">Sessions</h2>
+<h3 id="get-event-id-sessions-">GET <code>/&lt;event-id&gt;/sessions</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;status&quot;: &quot;upcoming&quot;, // upcoming | current | over
+    &quot;title&quot;: &quot;Eröffnung&quot;,
+    &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/bla.jpeg&quot;,
+    &quot;abstract&quot;: &quot;...&quot;,
+    &quot;description&quot;: &quot;...&quot;,
+    &quot;url&quot;: &quot;http://14.re-publica.de/session/1&quot;
+    &quot;begin&quot;: &quot;2014-05-06T10:00:00.0Z&quot;,
+    &quot;end&quot;: &quot;2014-05-06T11:00:00.0Z&quot;,
+    &quot;duration&quot;: 45,
+    &quot;day&quot;: {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;label&quot;: &quot;6. Mai&quot;
+    },
+    &quot;area&quot;: {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;label&quot;: &quot;Stage 1&quot;
+    },
+    &quot;track&quot;: {
+        &quot;id&quot;: 1,
+        &quot;label&quot;: &quot;re:publica&quot;
+    },
+    &quot;format&quot;: {
+        &quot;id&quot;: &quot;talk&quot;,
+        &quot;label&quot;: &quot;Vortrag&quot;
+    },
+    &quot;level&quot;: {
+        &quot;id&quot;: &quot;beginner&quot;,
+        &quot;label&quot;: &quot;Anfängerinnen&quot;
+    },
+    &quot;lang&quot;: {
+        &quot;id&quot;: &quot;de&quot;,
+        &quot;label&quot;: &quot;Deutsch&quot;
+    },
+    &quot;speakers&quot;: [{
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;Andreas Gebhard&quot;,
+        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/fasel.jpeg&quot;
+    },{
+        &quot;id&quot;: &quot;2&quot;,
+        &quot;name&quot;: &quot;Markus Beckedahl&quot;,
+        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/blub.jpeg&quot;
+    }],
+    &quot;devices&quot;: 232,
+    &quot;users&quot;: 23,
+    &quot;favorited&quot;: 100,
+    &quot;revision&quot;: 12, // incremental revision counter
+    &quot;last-modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;    
+}]
+</code></pre>
+<h3 id="get-event-id-sessions-session_id-">GET <code>/&lt;event-id&gt;/sessions/$session_id</code></h3>
+<pre><code class="lang-javascript">{
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;title&quot;: &quot;Eröffnung&quot;,
+    &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/bla.jpeg&quot;,
+    &quot;abstract&quot;: &quot;...&quot;,
+    &quot;description&quot;: &quot;...&quot;,
+    &quot;url&quot;: &quot;http://14.re-publica.de/session/1&quot;
+    &quot;begin&quot;: &quot;2014-05-06T10:00:00.0Z&quot;,
+    &quot;end&quot;: &quot;2014-05-06T11:00:00.0Z&quot;,
+    &quot;duration&quot;: 45,
+    &quot;day&quot;: {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;label&quot;: &quot;6. Mai&quot;
+    },
+    &quot;area&quot;: {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;label&quot;: &quot;Stage 1&quot;
+    },
+    &quot;track&quot;: {
+        &quot;id&quot;: 1,
+        &quot;label&quot;: &quot;re:publica&quot;
+    },
+    &quot;format&quot;: {
+        &quot;id&quot;: &quot;talk&quot;,
+        &quot;label&quot;: &quot;Vortrag&quot;
+    },
+    &quot;level&quot;: {
+        &quot;id&quot;: &quot;beginner&quot;,
+        &quot;label&quot;: &quot;Anfängerinnen&quot;
+    },
+    &quot;lang&quot;: {
+        &quot;id&quot;: &quot;de&quot;,
+        &quot;label&quot;: &quot;Deutsch&quot;
+    },
+    &quot;speakers&quot;: [{
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;Andreas Gebhard&quot;,
+        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/fasel.jpeg&quot;
+    },{
+        &quot;id&quot;: &quot;2&quot;,
+        &quot;name&quot;: &quot;Markus Beckedahl&quot;,
+        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/blub.jpeg&quot;
+    }],
+    &quot;favorited&quot;: 100,
+    &quot;devices&quot;: 232,
+    &quot;users&quot;: 23,
+    &quot;faved-by&quot;: [{
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;name&quot;: &quot;yetzt&quot;,
+        &quot;friend&quot;: true,
+        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/fnord.png&quot;
+    }],
+    &quot;revision&quot;: 12, // incremental revision counter
+    &quot;last-modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;    
+}
+</code></pre>
+<h2 id="speakers">Speakers</h2>
+<p>Speakers are people performing sessions.</p>
+<h3 id="get-event-id-speakers-">GET <code>/&lt;event-id&gt;/speakers</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;144&quot;,
+    &quot;attendee&quot;: $attendee_id,
+    &quot;name&quot;: &quot;Sebastian Vollnals&quot;,
+    &quot;nickname&quot;: &quot;yetzt&quot;,
+    &quot;photo&quot;: &quot;http://assets.re-publica.de/pictures/picture-144.jpg&quot;,
+    &quot;organization&quot;: &quot;OpenDataCity&quot;,
+    &quot;tagline&quot;: &quot;whatever&quot;,
+    &quot;description&quot;: &quot;poly &amp; queer hacker, feminist sidekick. wandering about in berlin and wearing pink hair.&quot;,
+    &quot;links&quot;: [{
+        &quot;service&quot;: &quot;twitter&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;https://twitter.com/yetzt&quot;
+    },{
+        &quot;service&quot;: &quot;blog&quot;,
+        &quot;label&quot;: &quot;blog&quot;,
+        &quot;url&quot;: &quot;http://yetzt.wordpress.com/&quot;
+    },{
+        &quot;service&quot;: &quot;github&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;http://github.com/yetzt&quot;
+    },{
+        &quot;service&quot;: &quot;adn&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;https://app.net/yetzt&quot;
+    }],
+    &quot;sessions&quot;: [$session_id, $session_id, $session_id]
+}]
+</code></pre>
+<h3 id="get-event-id-speakers-id-">GET <code>/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
+<p><em>single object, as above</em></p>
+<h2 id="tracks">Tracks</h2>
+<p>Tracks are topic-based collections of sessions</p>
+<h3 id="get-event-id-tracks-">GET <code>/&lt;event-id&gt;/tracks</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;business-innovation&quot;,
+    &quot;label&quot;: &quot;Business &amp; innovation&quot;,
+    &quot;sessions&quot;: [$session_id,$session_id,$session_id]
+},{
+    &quot;id&quot;: &quot;science-technology&quot;,
+    &quot;label&quot;: &quot;Science &amp; Technology&quot;,
+    &quot;sessions&quot;: [$session_id,$session_id,$session_id]    
+}]
+</code></pre>
+<h3 id="get-tracks-track-id-">GET <code>/tracks/&lt;track-id&gt;</code></h3>
+<p><em>single object, as above</em></p>
+<h2 id="areas">Areas</h2>
+<p>Areas are specified spaces on the compound and may be stages. Areas are used for wifi-cell-based location services.</p>
+<p><strong>The <code>friends</code> value requires an authenticated api call</strong> </p>
+<h3 id="get-event-id-areas-">GET <code>/&lt;event-id&gt;/areas</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;stage1&quot;, // area_id
+    &quot;label&quot;: &quot;Stage 1&quot;,
+    &quot;stage&quot;: true, // is this a stage
+    &quot;current&quot;: $session_id, // id of current session or null
+    &quot;upcoming&quot;: [$session_id, $session_id,$session_id],
+    &quot;level&quot;: 0, // floor in the building, 0 is ground
+    &quot;shape&quot;: &quot;$geojson&quot;,
+    &quot;devices&quot;: 100, // number of connected devices in this area
+    &quot;users&quot;: 80, // number of users in this area
+    &quot;friends&quot;: [$user_id, $user_id, $user_id] // friends in this area
+},{
+    &quot;id&quot;: &quot;affenfelsen&quot;,
+    &quot;label&quot;: &quot;Affenfelsen&quot;,
+    &quot;stage&quot;: false,
+    &quot;level&quot;: 0, // floor in the building, 0 is ground
+    &quot;shape&quot;: &quot;$geojson&quot;,
+    &quot;devices&quot;: 500, // number of connected devices in this area
+    &quot;users&quot;: 40, // number of users in this area
+    &quot;friends&quot;: [$user_id, $user_id,$user_id] // friends in this area
+}]
+</code></pre>
+<h3 id="get-event-id-area-area-id-">GET <code>/&lt;event-id&gt;/area/&lt;area-id&gt;</code></h3>
+<p><em>single object as above</em></p>
+<h2 id="days">Days</h2>
+<p>Days enframe several session by a slice of time, usually one day.</p>
+<h3 id="get-event-id-days-">GET <code>/&lt;event-id&gt;/days</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;label&quot;: &quot;6. Mai&quot;,
+    &quot;date&quot;: &quot;2014-05-06&quot;
+},{
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;label&quot;: &quot;7. Mai&quot;,
+    &quot;date&quot;: &quot;2014-05-07&quot;
+},{
+    &quot;id&quot;: &quot;3&quot;,
+    &quot;label&quot;: &quot;8. Mai&quot;,
+    &quot;date&quot;: &quot;2014-05-08&quot;
+}]
+</code></pre>
+<h3 id="get-days-1-">GET <code>/days/1</code></h3>
+<p><em>single object as above</em></p>
+<h2 id="formats">Formats</h2>
+<p>Formats indicate the practical execution of a session, like talk, discussion, workshop etc.</p>
+<h3 id="get-event-id-formats-">GET <code>/&lt;event-id&gt;/formats</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;talk&quot;,
+    &quot;label&quot;: &quot;Vortrag&quot;
+},{
+    &quot;id&quot;: &quot;discussion&quot;,
+    &quot;label&quot;: &quot;Diskussion&quot;,
+},{
+    &quot;id&quot;: &quot;workshop&quot;,
+    &quot;label&quot;: &quot;Workshop&quot;,
+},{
+    &quot;id&quot;: &quot;action&quot;,
+    &quot;label&quot;: &quot;Aktion&quot;,
+}]
+</code></pre>
+<h3 id="get-event-id-formats-id-">GET <code>/&lt;event-id&gt;/formats/&lt;id&gt;</code></h3>
+<p><em>single object as above</em></p>
+<h2 id="levels">Levels</h2>
+<p>Levels indivate the amount of preexisting knowledge expected from the respective audience</p>
+<h3 id="get-event-id-levels-">GET <code>/&lt;event-id&gt;/levels</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;beginner&quot;,
+    &quot;label&quot;: &quot;Beginnerinnen&quot;
+},{
+    &quot;id&quot;: &quot;intermediate&quot;,
+    &quot;label&quot;: &quot;Fortgeschrittene&quot;    
+},{
+    &quot;id&quot;: &quot;advanced&quot;,
+    &quot;label&quot;: &quot;Expertinnen&quot;    
+}]
+</code></pre>
+<h3 id="get-event-id-levels-id-">GET <code>/&lt;event-id&gt;/levels/&lt;id&gt;</code></h3>
+<p><em>single object as above</em></p>
+<h2 id="languages">Languages</h2>
+<h3 id="get-event-id-languages-">GET <code>/&lt;event-id&gt;/languages</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;de&quot;,
+    &quot;label&quot;: &quot;Deutsch&quot;
+},{
+    &quot;lid&quot;: &quot;en&quot;,
+    &quot;label&quot;: &quot;English&quot;    
+}]
+</code></pre>
+<h3 id="get-event-id-languages-language-id-">GET <code>/&lt;event-id&gt;/languages/&lt;language-id&gt;</code></h3>
+<p><em>single object as above</em></p>
+<h2 id="attendees">Attendees</h2>
+<p>Attendees are humans participating in an event.</p>
+<h3 id="get-event-id-attendees-">GET <code>/&lt;event-id&gt;/attendees</code></h3>
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: 1,
+    &quot;speaker&quot;: &quot;&lt;speaker-id&gt;&quot; // or false
+    &quot;name&quot;: &quot;Sebastian Vollnals&quot;,
+    &quot;nickname&quot;: &quot;yetzt&quot;,
+    &quot;photo&quot;: &quot;http://assets.re-publica.de/pictures/picture-144.jpg&quot;,
+    &quot;organization&quot;: &quot;OpenDataCity&quot;,
+    &quot;description&quot;: &quot;poly &amp; queer hacker, feminist sidekick. wandering about in berlin and wearing pink hair.&quot;,
+    &quot;links&quot;: [{
+        &quot;service&quot;: &quot;twitter&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;https://twitter.com/yetzt&quot;
+    },{
+        &quot;service&quot;: &quot;blog&quot;,
+        &quot;label&quot;: &quot;blog&quot;,
+        &quot;url&quot;: &quot;http://yetzt.wordpress.com/&quot;
+    },{
+        &quot;service&quot;: &quot;github&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;http://github.com/yetzt&quot;
+    },{
+        &quot;service&quot;: &quot;adn&quot;,
+        &quot;label&quot;: &quot;yetzt&quot;,
+        &quot;url&quot;: &quot;https://app.net/yetzt&quot;
+    }],
+    &quot;sessions&quot;: [$session_id,$session_id,$session_id],
+    &quot;area&quot;: {
+        &quot;id&quot;: &quot;&lt;area-id&gt;&quot;,
+        &quot;label&quot;: &quot;Affenfelsen&quot;
+    }
+}]
+</code></pre>
+
+
+
+
+
+        </div>
+        <footer id="footer">
+            Powered by <a href="http://github.com/maximebf/beautiful-docs">beautiful-docs</a> -
+            <a href="#top">Back to top</a> - <a href="all.html">Everything on a single page</a>
+            - <a href="?print=1">Print current page</a> - <a href="all.html?print=1">Print all pages</a>
+            
+                <a href="https://github.com/opendatacity/rp-data" id="fork-me-on-github">Fork me on Github</a>
+            
+        </footer>
+    </div>
+</body>
+</html>

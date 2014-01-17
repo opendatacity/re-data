@@ -1,16 +1,16 @@
 # API
 
-## Authentication *[2]*
+## Authentication
 
-...
+*not specified yet*
 
-## Events *[1]*
+## Events
 
 An event is one chronologically delimited total of sessions. Like a yearly conference.
 
 ### GET `/events`
 
-````
+```` javascript
 [{
 	"id": "rp14",
 	"label": "re:publica 14",
@@ -36,7 +36,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 
 ### GET `/events/<event-id>`
 
-````
+```` javascript
 {
 	"id": "rp14",
 	"label": "re:publica 14",
@@ -50,11 +50,11 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }
 ````
 
-## Sessions *[1]*
+## Sessions
 
 ### GET `/<event-id>/sessions`
 
-````
+```` javascript
 [{
 	"id": "1",
 	"status": "upcoming", // upcoming | current | over
@@ -107,9 +107,9 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }]
 ````
 
-### GET `/<event-id>/sessions/<session-id>`
+### GET `/<event-id>/sessions/$session_id`
 
-````
+```` javascript
 {
 	"id": "1",
 	"title": "Eröffnung",
@@ -167,21 +167,21 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }
 ````
 
-## Speakers *[1]*
+## Speakers
 
 Speakers are people performing sessions.
 
 ### GET `/<event-id>/speakers`
 
-````
+```` javascript
 [{
 	"id": "144",
-	"attendee": "<attendee-id>"
+	"attendee": $attendee_id,
 	"name": "Sebastian Vollnals",
 	"nickname": "yetzt",
 	"photo": "http://assets.re-publica.de/pictures/picture-144.jpg",
 	"organization": "OpenDataCity",
-	"tagline": "<3",
+	"tagline": "whatever",
 	"description": "poly & queer hacker, feminist sidekick. wandering about in berlin and wearing pink hair.",
 	"links": [{
 		"service": "twitter",
@@ -200,27 +200,29 @@ Speakers are people performing sessions.
 		"label": "yetzt",
 		"url": "https://app.net/yetzt"
 	}],
-	"sessions": [<session-id>,<session-id>,<session-id>]
+	"sessions": [$session_id, $session_id, $session_id]
 }]
 ````
+
 ### GET `/<event-id>/speakers/<id>`
 
 *single object, as above*
 
-## Tracks *[1]*
+## Tracks
 
 Tracks are topic-based collections of sessions
 
 ### GET `/<event-id>/tracks`
-````
+
+```` javascript
 [{
 	"id": "business-innovation",
 	"label": "Business & innovation",
-	"sessions": [<session-id>,<session-id>,<session-id>]
+	"sessions": [$session_id,$session_id,$session_id]
 },{
 	"id": "science-technology",
 	"label": "Science & Technology",
-	"sessions": [<session-id>,<session-id>,<session-id>]	
+	"sessions": [$session_id,$session_id,$session_id]	
 }]
 ````
 
@@ -228,34 +230,35 @@ Tracks are topic-based collections of sessions
 
 *single object, as above*
 
-## Areas **(new)** *[1]*
+## Areas
 
 Areas are specified spaces on the compound and may be stages. Areas are used for wifi-cell-based location services.
 
 **The `friends` value requires an authenticated api call** 
 
 ### GET `/<event-id>/areas`
-````
+
+```` javascript
 [{
-	"id": "stage1",
+	"id": "stage1", // area_id
 	"label": "Stage 1",
 	"stage": true, // is this a stage
-	"current": <session-id>, // id of current session or null
-	"upcoming": [<session-id>,<session-id>,<session-id>],
+	"current": $session_id, // id of current session or null
+	"upcoming": [$session_id, $session_id,$session_id],
 	"level": 0, // floor in the building, 0 is ground
-	"shape": "<geojson>",
+	"shape": "$geojson",
 	"devices": 100, // number of connected devices in this area
 	"users": 80, // number of users in this area
-	"friends": [<user-id>, <user-id>, <user-id>] // friends in this area
+	"friends": [$user_id, $user_id, $user_id] // friends in this area
 },{
 	"id": "affenfelsen",
 	"label": "Affenfelsen",
 	"stage": false,
 	"level": 0, // floor in the building, 0 is ground
-	"shape": "<geojson>",
+	"shape": "$geojson",
 	"devices": 500, // number of connected devices in this area
 	"users": 40, // number of users in this area
-	"friends": [<user-id>,<user-id>,<user-id>] // friends in this area
+	"friends": [$user_id, $user_id,$user_id] // friends in this area
 }]
 ````
 
@@ -263,13 +266,13 @@ Areas are specified spaces on the compound and may be stages. Areas are used for
 
 *single object as above*
 
-## Days *[1]*
+## Days
 
 Days enframe several session by a slice of time, usually one day.
 
 ### GET `/<event-id>/days`
 
-````
+```` javascript
 [{
 	"id": "1",
 	"label": "6. Mai",
@@ -285,16 +288,17 @@ Days enframe several session by a slice of time, usually one day.
 }]
 ````
 
-## GET `/days/1`
+### GET `/days/1`
 
 *single object as above*
 
-## Formats *[1]*
+## Formats
 
 Formats indicate the practical execution of a session, like talk, discussion, workshop etc.
 
 ### GET `/<event-id>/formats`
-````
+
+```` javascript
 [{
 	"id": "talk",
 	"label": "Vortrag"
@@ -314,12 +318,13 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 
 *single object as above*
 
-## Levels *[1]*
+## Levels
 
 Levels indivate the amount of preexisting knowledge expected from the respective audience
 
 ### GET `/<event-id>/levels`
-````
+
+```` javascript
 [{
 	"id": "beginner",
 	"label": "Beginnerinnen"
@@ -336,10 +341,11 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 
 *single object as above*
 
-## Languages *[1]*
+## Languages
 
 ### GET `/<event-id>/languages`
-````
+
+```` javascript
 [{
 	"id": "de",
 	"label": "Deutsch"
@@ -353,13 +359,13 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 
 *single object as above*
 
-## Attendees **(new)** *[2]*
+## Attendees
 
 Attendees are humans participating in an event.
 
 ### GET `/<event-id>/attendees`
 
-````
+```` javascript
 [{
 	"id": 1,
 	"speaker": "<speaker-id>" // or false
@@ -385,16 +391,10 @@ Attendees are humans participating in an event.
 		"label": "yetzt",
 		"url": "https://app.net/yetzt"
 	}],
-	"sessions": [<session-id>,<session-id>,<session-id>],
+	"sessions": [$session_id,$session_id,$session_id],
 	"area": {
 		"id": "<area-id>",
 		"label": "Affenfelsen"
 	}
 }]
 ````
-
-# Implementation Levels
-
-* [1] Level 1 – Must have
-* [2] Level 2 – Should have
-* [3] Level 3 – Nice to have
