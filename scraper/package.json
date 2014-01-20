@@ -1,0 +1,14 @@
+{
+	"private": true,
+	"name": "rp13-scraper",
+	"version": "0.0.1",
+	"description": "retrieve and convert xml dump of rp13 to importable json",
+	"dependencies": {
+		"scrapyard": ">= 0.0.3",
+		"moment": ">= 2.2.1",
+		"ent": ">= 0.1.0"
+	},
+	"engines": {
+		"node": "0.10.21"
+	}
+}
