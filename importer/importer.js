@@ -17,7 +17,7 @@ var config = require(path.resolve(__dirname, "../config.js"));
 var data = {};
 
 /* load data */
-["events"].forEach(function(d){
+["events","rp13-data"].forEach(function(d){
 	data[d] = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/"+d+".json")));
 });
 
@@ -64,9 +64,32 @@ couch(function(db){
 		/* insert events */
 		db.save(data["events"], function(err, res){
 			if (err) log.critical("Could not save 'events' data", err);
-			log.info("Saved 'events' data");
+			log.info("Saved events");
+			
+			db.save("_design/data", {
+				views: {
+					sessions: { map: function(doc) { if (doc.type === 'session') emit([doc.event, doc.id]); }},
+					speakers: { map: function(doc) { if (doc.type === 'speaker') emit([doc.event, doc.id]); }},
+					areas: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.id]); }} /*,
+					sessions_day: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.day, doc.id]); }},
+					sessions_lang: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.lang.slug, doc.id]); }},
+					sessions_level: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.level.slug, doc.id]); }},
+					sessions_area: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.lang.slug, doc.id]); }},
+					sessions_lang: { map: function(doc) { if (doc.type === 'area') emit([doc.event, doc.lang.slug, doc.id]); }}, */
+				}
+			}, function(err, res){
+			
+				if (err) log.critical("Could not save 'rp13' design", err);
+				log.info("Saved 'rp13' design doc");
+				
+				/* rp13 data */
+				db.save(data["rp13-data"], function(err, res){
+					if (err) log.critical("Could not save 'rp13' data", err);
+					log.info("Saved rp13 data");
+					log.done();
+				});
+			});
 		});
 	});
-	
 });
 
