@@ -22,5 +22,8 @@ module.exports = {
 		args.unshift("[CRIT]".inverse.bold.cyan);
 		console.error.apply(this, args);
 		process.exit();
+	},
+	done: function() {
+		console.error("<3".magenta.bold, "made with datalove".magenta);
 	}
 };
