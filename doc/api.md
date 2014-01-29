@@ -112,6 +112,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 ```` javascript
 {
 	"id": "1",
+	"status": "upcoming", // upcoming | current | over | cancelled
 	"title": "Eröffnung",
 	"photo": "http://assets.re-publica.de/bla/bla.jpeg",
 	"abstract": "...",
