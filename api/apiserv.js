@@ -60,7 +60,7 @@ app.get('/events', function(req, res){
 
 app.get('/events/:id', function(req, res){
 	db.view('events/id', {include_docs: true, descending: true, key: req.params.id}, function(err, data){
-		if (err || data.length !== 1) return res.json({});
+		if (err || data.length !== 1) return res.json({}); // FIXME: err
 		var data = data.pop().doc;
 		res.json({
 			"id": data.id,
@@ -73,7 +73,80 @@ app.get('/events/:id', function(req, res){
 	});
 });
 
+/* api: sessions */
 
+app.get('/:event/sessions', function(req, res){
+	console.log(req.params.event);
+	db.view('data/sessions', {include_docs: true, descending: true, startkey: [req.params.event], startkey: [req.params.event, {}]}, function(err, data){
+		if (err || data.length === 0) return res.json({}); // FIXME: err
+		var result = [];
+		data.forEach(function(d){
+			result.push({
+				"id": d.id,
+				"status": d.status,
+				"title": d.title,
+				"photo": d.photo,
+				"abstract": d.abstract,
+				"description": d.description,
+				"url": d.url,
+				"begin": d.begin,
+				"end": d.end,
+				"duration": d.duration,
+				"day": d.day,
+				"area": d.area,
+				"track": d.track,
+				"format": d.format,
+				"level": d.level,
+				"lang": d.lang,
+				"speakers": d.speakers,
+				"revision": d.revision,
+				"last-modified": d["last-modified"],
+				"devices": null,
+				"users": null,
+				"favorited": null,
+				"friends": null
+			});
+		});
+		res.json(result);
+	});
+});
+
+app.get('/:event/sessions/:id', function(req, res){
+	console.log(req.params.event);
+	db.view('data/sessions', {include_docs: true, descending: true, key: [req.params.event, req.params.id]}, function(err, data){
+		if (err || data.length !== 1) return res.json({}); // FIXME: err
+		var data = data.pop().doc;
+		res.json({
+			"id": data.id,
+			"status": data.status,
+			"title": data.title,
+			"photo": data.photo,
+			"abstract": data.abstract,
+			"description": data.description,
+			"url": data.url,
+			"begin": data.begin,
+			"end": data.end,
+			"duration": data.duration,
+			"day": data.day,
+			"area": data.area,
+			"track": data.track,
+			"format": data.format,
+			"level": data.level,
+			"lang": data.lang,
+			"speakers": data.speakers,
+			"revision": data.revision,
+			"last-modified": data["last-modified"],
+			"devices": null,
+			"users": null,
+			"favorited": null,
+			"friends": null
+		});
+	});
+});
+
+/* api: speakers */
+
+/* api: default */
 
 app.get('*', function(req, res){
   res.json({"rp-api": config.version});
