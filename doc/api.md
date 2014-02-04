@@ -123,7 +123,8 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"duration": 45,
 	"day": {
 		"id": "1",
-		"label": "6. Mai"
+		"label": "6. Mai",
+		"date": "2014-05-06"
 	},
 	"area": {
 		"id": "1",
@@ -289,7 +290,7 @@ Days enframe several session by a slice of time, usually one day.
 }]
 ````
 
-### GET `/days/1`
+### GET `/<event-id>/days/1`
 
 *single object as above*
 
