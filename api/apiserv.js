@@ -76,8 +76,7 @@ app.get('/events/:id', function(req, res){
 /* api: sessions */
 
 app.get('/:event/sessions', function(req, res){
-	console.log(req.params.event);
-	db.view('data/sessions', {include_docs: true, descending: true, startkey: [req.params.event], startkey: [req.params.event, {}]}, function(err, data){
+	db.view('data/sessions', {include_docs: true, startkey: [req.params.event], endkey: [req.params.event, {}]}, function(err, data){
 		if (err || data.length === 0) return res.json({}); // FIXME: err
 		var result = [];
 		data.forEach(function(d){
