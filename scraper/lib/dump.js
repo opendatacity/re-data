@@ -1,4 +1,6 @@
 var fs = require('fs');
+var path = require('path');
+var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 
 var dumpFolder = '../data/';
 
@@ -75,7 +77,10 @@ exports.dump = function (data) {
 }
 
 function exportJSON(event_key, suffix, data) {
-	fs.writeFileSync(dumpFolder+event_key+'/'+suffix+'.json', JSON.stringify(data, null, '\t'), 'utf8');
+	var filename = dumpFolder+event_key+'/'+suffix+'.json';
+	log.info('Dumping JSON "'+filename+'"');
+
+	fs.writeFileSync(filename, JSON.stringify(data, null, '\t'), 'utf8');
 }
 
 function exportTSV(event_key, suffix, data) {
@@ -89,7 +94,11 @@ function exportTSV(event_key, suffix, data) {
 	})
 
 	tsv = tsv.join('\n');
-	fs.writeFileSync(dumpFolder+event_key+'/'+suffix+'.tsv', tsv, 'utf8');
+
+	var filename = dumpFolder+event_key+'/'+suffix+'.tsv';
+	log.info('Dumping TSV "'+filename+'"');
+
+	fs.writeFileSync(filename, tsv, 'utf8');
 }
 
 
