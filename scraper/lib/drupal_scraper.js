@@ -251,8 +251,6 @@ exports.scrape = function (options, callback) {
 		});
 
 		if (callback) callback(data);
-		
-		log.done();
 
 	});
 

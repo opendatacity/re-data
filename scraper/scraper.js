@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 
+var path = require('path');
 var async = require('async');
 
 var db = require('./lib/db');
 var dump = require('./lib/dump');
+
+var log = require(path.resolve(__dirname, '../api/lib/log.js'));
 
 async.eachSeries(
 	[
@@ -17,5 +20,6 @@ async.eachSeries(
 		});
 	},
 	function () {
+		log.done();		
 	}
 )
