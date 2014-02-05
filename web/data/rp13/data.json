@@ -32,6 +32,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1380",
 				"rp13-speaker-95",
@@ -40,7 +41,7 @@
 				"rp13-speaker-1347"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-8029",
@@ -74,11 +75,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2025"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5044",
@@ -112,11 +114,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/1AYsmc4Kstw/mqdefault.jpg",
+					"title": "re:publica 2013 - Erik Hersman: Innovating Africa",
+					"url": "http://youtube.com/watch?v=1AYsmc4Kstw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1433"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5369",
@@ -150,11 +160,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/j4Pa3RCBC2s/mqdefault.jpg",
+					"title": "re:publica 2013 - Christoph Meinel: brand eins",
+					"url": "http://youtube.com/watch?v=j4Pa3RCBC2s",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-724"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5035",
@@ -188,11 +206,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/uPU1y9V3jL4/mqdefault.jpg",
+					"title": "re:publica 2013 - Gunter Dueck: Aufruf zum metakulturellen Diskurs",
+					"url": "http://youtube.com/watch?v=uPU1y9V3jL4",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1103"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5048",
@@ -226,11 +252,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1491"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6424",
@@ -264,11 +291,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/wdnHbeWlgV4/mqdefault.jpg",
+					"title": "re:publica 2013 - Birgitta Jónsdóttir: Iceland could have been innovative: Participatory democracy.",
+					"url": "http://youtube.com/watch?v=wdnHbeWlgV4",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2118"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5370",
@@ -302,11 +337,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1438"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4946",
@@ -315,9 +351,7 @@
 			"status": "over",
 			"title": "Ecstasy and Despair: How Powerful Emotions Trigger Digital Activism",
 			"photo": null,
-			"slides": [
-				"http://13.re-publica.de/sites/13.re-publica.de/files/slides/DeannaZandt_rp13_EcstasyDespair.pdf"
-			],
+			"slides": [],
 			"abstract": "What does my friend Nicole's bum have to do with breast cancer, murdered young black men, and the future of the Internet?",
 			"description": "In the last year, we've seen unprecendented social uprising happening online – it seems like every day, there's a new movement for justice. But what makes a movement catch fire, and how are social technologies shifting our understanding of how power makes the world go 'round? In this talk, Deanna Zandt will connect the dots between amorphous global movements – #aufschrei, Planned Parenthood Saved Me, Trayvon Martin, Bell Bajao/Ring the Bell, and more – and reveal the intoxicating combination of power and emotional resonance that make revolutions happen.",
 			"url": null,
@@ -342,11 +376,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/beArpOK5Ov0/mqdefault.jpg",
+					"title": "re:publica 2013 - Deanna Zandt: Ecstasy and Despair: How Powerful Emotions Trigger Digital Activism",
+					"url": "http://youtube.com/watch?v=beArpOK5Ov0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1631"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5597",
@@ -380,11 +422,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ELw3PQOSgd0/mqdefault.jpg",
+					"title": "re:publica 2013 - Laurie Penny: Cybersexism",
+					"url": "http://youtube.com/watch?v=ELw3PQOSgd0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1854"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5371",
@@ -418,11 +468,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1633"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5037",
@@ -456,11 +507,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/l8yCIwi_Owg/mqdefault.jpg",
+					"title": "re:publica 2013 - Mitchell Baker: Building a web we can trust",
+					"url": "http://youtube.com/watch?v=l8yCIwi_Owg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-921"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5869",
@@ -494,12 +553,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/1gSTwaYVERo/mqdefault.jpg",
+					"title": "re:publica 2013 - Richard Allan, Ulf Buermeyer: Speech at scale",
+					"url": "http://youtube.com/watch?v=1gSTwaYVERo",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2007",
 				"rp13-speaker-1685"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5372",
@@ -533,11 +600,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1103"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5046",
@@ -571,12 +639,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/qB4tQW02AGQ/mqdefault.jpg",
+					"title": "re:publica 2013 - Tero Kaukomaa, Timo Vuorensola: Iron Sky",
+					"url": "http://youtube.com/watch?v=qB4tQW02AGQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-958",
 				"rp13-speaker-957"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6039",
@@ -610,12 +686,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/3Fxj-yU1TbQ/mqdefault.jpg",
+					"title": "re:publica 2013 - Kaleb Lechowski, Ingke Weimert: Making-of R´ha",
+					"url": "http://youtube.com/watch?v=3Fxj-yU1TbQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2004",
 				"rp13-speaker-2039"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5117",
@@ -649,12 +733,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/zzI4ZWbs-lk/mqdefault.jpg",
+					"title": "re:publica 2013 - Graham Linehan, Johnny Haeusler: Comic Misunderstanding",
+					"url": "http://youtube.com/watch?v=zzI4ZWbs-lk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1540",
 				"rp13-speaker-48"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1152",
@@ -688,11 +780,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Raas1BhSIbs/mqdefault.jpg",
+					"title": "re:publica 2013 - Sascha Lobo: Überraschungsvortrag II",
+					"url": "http://youtube.com/watch?v=Raas1BhSIbs",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-81"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-879",
@@ -726,12 +826,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/mSXy-H13DJM/mqdefault.jpg",
+					"title": "re:publica 2013 - fukami, Lorenz Matzat: Die maschinenlesbare Regierung - Eine kritische Analyse zu",
+					"url": "http://youtube.com/watch?v=mSXy-H13DJM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-251",
 				"rp13-speaker-1936"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1547",
@@ -765,12 +873,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/QBSNr6UXIJg/mqdefault.jpg",
+					"title": "re:publica 2013 - Julia Kloiber, Stefan Wehrmeyer: Open Data -- und was hat das mit mir zu tun?",
+					"url": "http://youtube.com/watch?v=QBSNr6UXIJg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-434",
 				"rp13-speaker-547"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1538",
@@ -804,11 +920,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/dJ9C7UPGJ-o/mqdefault.jpg",
+					"title": "re:publica 2013 - Michael Kreil: openPlanB - Stufe 2",
+					"url": "http://youtube.com/watch?v=dJ9C7UPGJ-o",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-545"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5594",
@@ -842,6 +966,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/18xQRtdrJhQ/mqdefault.jpg",
+					"title": "re:publica 2013: Opening Public Transport in Berlin",
+					"url": "http://youtube.com/watch?v=18xQRtdrJhQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1847",
 				"rp13-speaker-434",
@@ -849,7 +981,7 @@
 				"rp13-speaker-2443"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1940",
@@ -883,12 +1015,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/NpHnuFVL2ug/mqdefault.jpg",
+					"title": "re:publica 2013 - Joris Pekel, Daniel Dietrich: Open Data & Culture - Creating the Cultural Commons",
+					"url": "http://youtube.com/watch?v=NpHnuFVL2ug",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-783",
 				"rp13-speaker-875"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2304",
@@ -922,11 +1062,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/REP4eqvwkR0/mqdefault.jpg",
+					"title": "re:publica 2013 - Joe McNamee: Freedom of speech, nipples and the rule of law",
+					"url": "http://youtube.com/watch?v=REP4eqvwkR0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-768"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4711",
@@ -960,12 +1108,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/0Gi-MT8M0lE/mqdefault.jpg",
+					"title": "re:publica 2013 - Katarzyna  Szymielewicz, Jérémie Zimmermann: Personal Data: Nothing to hide?",
+					"url": "http://youtube.com/watch?v=0Gi-MT8M0lE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1531",
 				"rp13-speaker-922"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6128",
@@ -999,13 +1155,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/CsdGJc74YiY/mqdefault.jpg",
+					"title": "re:publica 2013: Stimmt das? Check mit dem ZDF die Fakten im Wahlkampf",
+					"url": "http://youtube.com/watch?v=CsdGJc74YiY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1911",
 				"rp13-speaker-1909",
 				"rp13-speaker-2499"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1577",
@@ -1039,13 +1203,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/oOcOTE2IP34/mqdefault.jpg",
+					"title": "re:publica 2013: Das Buch muss überwunden werden - Digitales Utopia oder eher El Dorado?",
+					"url": "http://youtube.com/watch?v=oOcOTE2IP34",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-576",
 				"rp13-speaker-695",
 				"rp13-speaker-1425"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1823",
@@ -1079,13 +1251,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/5iSAl_krauA/mqdefault.jpg",
+					"title": "re:publica 2013: Wikipedia: wo User geblockt, Artikel gelöscht und Reputationen zerstört werden",
+					"url": "http://youtube.com/watch?v=5iSAl_krauA",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-724",
 				"rp13-speaker-453",
 				"rp13-speaker-485"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2012",
@@ -1119,6 +1299,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/5dn3mwS6ZzY/mqdefault.jpg",
+					"title": "re:publica 2013: Das heilige Abendmahl",
+					"url": "http://youtube.com/watch?v=5dn3mwS6ZzY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-813",
 				"rp13-speaker-1443",
@@ -1127,7 +1315,7 @@
 				"rp13-speaker-2506"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7131",
@@ -1161,11 +1349,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2514"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7529",
@@ -1199,12 +1388,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2429",
 				"rp13-speaker-2430"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7132",
@@ -1238,11 +1428,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1073"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7133",
@@ -1276,11 +1467,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-688"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7256",
@@ -1314,11 +1506,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5514",
@@ -1352,11 +1545,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/nQLdaFBIDwc/mqdefault.jpg",
+					"title": "re:publica 2013 - Betsy Hoover: Community Organizing - lessons from Obama for America 2012",
+					"url": "http://youtube.com/watch?v=nQLdaFBIDwc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1821"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6019",
@@ -1390,11 +1591,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/OJt_quKiMgw/mqdefault.jpg",
+					"title": "re:publica 2013 - Ben Scott: Political Advocacy and the Internet",
+					"url": "http://youtube.com/watch?v=OJt_quKiMgw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1450"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1930",
@@ -1428,6 +1637,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/IXL95HSe0Yw/mqdefault.jpg",
+					"title": "re:publica 2013: 403 Forbidden: A Hands on Experience of the Iranian Internet",
+					"url": "http://youtube.com/watch?v=IXL95HSe0Yw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-776",
 				"rp13-speaker-1063",
@@ -1435,7 +1652,7 @@
 				"rp13-speaker-1526"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1697",
@@ -1469,12 +1686,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Nnezb00EsaQ/mqdefault.jpg",
+					"title": "re:publica 2013 - Stefan Panhuijsen, Jillian York: Silly jokes or game changers? A live internationa",
+					"url": "http://youtube.com/watch?v=Nnezb00EsaQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-494",
 				"rp13-speaker-561"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1206",
@@ -1508,11 +1733,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/lJrL-rrGg1g/mqdefault.jpg",
+					"title": "re:publica 2013 - Heba Amin: The Revolution of Jokes",
+					"url": "http://youtube.com/watch?v=lJrL-rrGg1g",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-329"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1552",
@@ -1546,12 +1779,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/8P0GVMA7dfs/mqdefault.jpg",
+					"title": "re:publica 2013 - Kai Schächtele, Monis Bukhari: The story of Baladna FM: How a Syrian online radio",
+					"url": "http://youtube.com/watch?v=8P0GVMA7dfs",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-408",
 				"rp13-speaker-570"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1573",
@@ -1585,11 +1826,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/uPEklgZSE00/mqdefault.jpg",
+					"title": "re:publica 2013 - Mark Rendeiro: Personal Revolutions Along the Nile",
+					"url": "http://youtube.com/watch?v=uPEklgZSE00",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-567"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1916",
@@ -1623,11 +1872,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/oMDWMPtu7E8/mqdefault.jpg",
+					"title": "re:publica 2013 - Sascha Funk: Boom vs. Culture Clash | Understanding online in South East Asia",
+					"url": "http://youtube.com/watch?v=oMDWMPtu7E8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-111"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1726",
@@ -1661,11 +1918,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/YMGjfr3sAuo/mqdefault.jpg",
+					"title": "re:publica 2013 - Stine Eckert: Muslimische BloggerInnen schaffen Gegenöffentlichkeit",
+					"url": "http://youtube.com/watch?v=YMGjfr3sAuo",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-675"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-170",
@@ -1699,11 +1964,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/WTmpwt4sV4c/mqdefault.jpg",
+					"title": "re:publica 2013 - Zahi Alawi: Facebook: vom Revolutionsmacher zum Revolutionsgegner?",
+					"url": "http://youtube.com/watch?v=WTmpwt4sV4c",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-89"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6402",
@@ -1737,13 +2010,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/LDvzgyhzWkY/mqdefault.jpg",
+					"title": "re:publica 2013: TEN CITIES Project: Clubculture IN/SIDE/OUT",
+					"url": "http://youtube.com/watch?v=LDvzgyhzWkY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2187",
 				"rp13-speaker-2374",
 				"rp13-speaker-2170"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6243",
@@ -1777,11 +2058,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/dFau0avDBWU/mqdefault.jpg",
+					"title": "re:publica 2013 - Tomas Caspers: Innovationsbeschleuniger gesucht! - Wie wär's mit Barrierefreiheit?",
+					"url": "http://youtube.com/watch?v=dFau0avDBWU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2108"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6242",
@@ -1815,6 +2104,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/DUuxnnvWnWQ/mqdefault.jpg",
+					"title": "re:publica 2013: Mehrwert oder Barriere - Wie lassen sich mobile Endgeräte für alle zugänglich mache",
+					"url": "http://youtube.com/watch?v=DUuxnnvWnWQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2099",
 				"rp13-speaker-1344",
@@ -1822,7 +2119,7 @@
 				"rp13-speaker-2115"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1716",
@@ -1856,6 +2153,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/5N5dgagk0Dk/mqdefault.jpg",
+					"title": "re:publica 2013: Code Literacy - Verstehen, was uns online lenkt",
+					"url": "http://youtube.com/watch?v=5N5dgagk0Dk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-463",
 				"rp13-speaker-1341",
@@ -1864,7 +2169,7 @@
 				"rp13-speaker-1490"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1781",
@@ -1898,13 +2203,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/G3qhsyvA9go/mqdefault.jpg",
+					"title": "re:publica 2013: Algorithmen-Ethik",
+					"url": "http://youtube.com/watch?v=G3qhsyvA9go",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-241",
 				"rp13-speaker-2333",
 				"rp13-speaker-2316"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5946",
@@ -1938,6 +2251,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/cH__w7L7FJI/mqdefault.jpg",
+					"title": "re:publica 2013: Finanzblogs: Intellektuelle Elite oder verständliches Massenmedium?",
+					"url": "http://youtube.com/watch?v=cH__w7L7FJI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1068",
 				"rp13-speaker-2051",
@@ -1946,7 +2267,7 @@
 				"rp13-speaker-1950"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1208",
@@ -1980,11 +2301,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/z3uu3sxRyHA/mqdefault.jpg",
+					"title": "re:publica 2013 - Elisabeth Rank: Bis dass der Tod uns scheidet - Soziale Medien und der Umgang mit",
+					"url": "http://youtube.com/watch?v=z3uu3sxRyHA",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-359"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2283",
@@ -2018,12 +2347,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/10s_DUG4q8U/mqdefault.jpg",
+					"title": "re:publica 2013 - Kirsten Fiedler, Alexander Sander: Praktische Anleitung für den fürsorglichen Über",
+					"url": "http://youtube.com/watch?v=10s_DUG4q8U",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-543",
 				"rp13-speaker-338"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2546",
@@ -2057,11 +2394,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/lHckB_RQG7o/mqdefault.jpg",
+					"title": "re:publica 2013 - Raegan MacDonald: Surveillance by Design",
+					"url": "http://youtube.com/watch?v=lHckB_RQG7o",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-905"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1454",
@@ -2095,6 +2440,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-195",
 				"rp13-speaker-2022",
@@ -2103,7 +2449,7 @@
 				"rp13-speaker-2216"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6423",
@@ -2137,13 +2483,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-65",
 				"rp13-speaker-2226",
 				"rp13-speaker-1863"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4747",
@@ -2177,6 +2524,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-289",
 				"rp13-speaker-542",
@@ -2186,7 +2534,7 @@
 				"rp13-speaker-1949"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6624",
@@ -2220,11 +2568,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1422"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5316",
@@ -2258,11 +2607,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1439"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5908",
@@ -2296,12 +2646,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1643",
 				"rp13-speaker-1647"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1715",
@@ -2335,6 +2686,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-117",
 				"rp13-speaker-397",
@@ -2342,7 +2694,7 @@
 				"rp13-speaker-440"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-3110",
@@ -2376,12 +2728,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2299",
 				"rp13-speaker-977"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1812",
@@ -2415,12 +2768,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-274",
 				"rp13-speaker-513"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6426",
@@ -2454,11 +2808,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2521"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5577",
@@ -2492,11 +2847,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1843"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5576",
@@ -2530,13 +2886,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1840",
 				"rp13-speaker-1841",
 				"rp13-speaker-1842"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5702",
@@ -2570,6 +2927,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1878",
 				"rp13-speaker-1879",
@@ -2577,7 +2935,7 @@
 				"rp13-speaker-1881"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1864",
@@ -2611,12 +2969,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-595",
 				"rp13-speaker-1995"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5515",
@@ -2650,11 +3009,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1822"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5520",
@@ -2688,11 +3048,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1825"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5517",
@@ -2726,11 +3087,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1823"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6211",
@@ -2764,9 +3126,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2391",
@@ -2800,12 +3163,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-886",
 				"rp13-speaker-893"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5578",
@@ -2839,12 +3203,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1844",
 				"rp13-speaker-1845"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5519",
@@ -2878,11 +3243,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1824"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6127",
@@ -2916,11 +3282,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1883"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5970",
@@ -2954,6 +3321,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1659",
 				"rp13-speaker-1812",
@@ -2965,7 +3333,7 @@
 				"rp13-speaker-2048"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5949",
@@ -2999,11 +3367,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1646"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5415",
@@ -3037,11 +3406,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1420"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7257",
@@ -3075,11 +3445,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1763"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6184",
@@ -3113,11 +3484,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2301"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6401",
@@ -3151,11 +3523,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2372"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5668",
@@ -3189,11 +3562,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1519"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5947",
@@ -3227,11 +3601,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1835"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5966",
@@ -3265,11 +3640,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1923"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5189",
@@ -3303,11 +3679,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1451"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6206",
@@ -3341,12 +3718,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1449",
 				"rp13-speaker-1632"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6425",
@@ -3380,11 +3758,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/VH96W-Iav60/mqdefault.jpg",
+					"title": "re:publica 2013 - Yoani Sánchez: Blogging Cuba",
+					"url": "http://youtube.com/watch?v=VH96W-Iav60",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2117"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6146",
@@ -3418,12 +3804,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/YAh4Jr5dJcQ/mqdefault.jpg",
+					"title": "re:publica 2013 - Horst Zuse, Katharina Meyer: Die Geschichte des Computers",
+					"url": "http://youtube.com/watch?v=YAh4Jr5dJcQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2105",
 				"rp13-speaker-47"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1957",
@@ -3457,11 +3851,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/doPGYWNT-3s/mqdefault.jpg",
+					"title": "re:publica 2013 - Kathrin Passig: Mass Customization: Da geht noch mehr",
+					"url": "http://youtube.com/watch?v=doPGYWNT-3s",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-791"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1393",
@@ -3495,12 +3897,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/J7KSmReUUlE/mqdefault.jpg",
+					"title": "re:publica 2013 - Bertram Gugel, Markus Hündgen: YouTube -- zwischen Wildwest und Goldgrube.",
+					"url": "http://youtube.com/watch?v=J7KSmReUUlE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-462",
 				"rp13-speaker-1472"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5866",
@@ -3534,6 +3944,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/n54c2LcIp9Q/mqdefault.jpg",
+					"title": "re:publica 2013: YouTube macht die Stars von heute",
+					"url": "http://youtube.com/watch?v=n54c2LcIp9Q",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1999",
 				"rp13-speaker-2059",
@@ -3543,7 +3961,7 @@
 				"rp13-speaker-2200"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4273",
@@ -3577,11 +3995,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/25AbnDLrDO4/mqdefault.jpg",
+					"title": "re:publica 2013 - Wolf Lotter: Zivilkapitalismus. Wir sind die Wirtschaft.",
+					"url": "http://youtube.com/watch?v=25AbnDLrDO4",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1438"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5039",
@@ -3615,12 +4041,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Jl4IbEbzte8/mqdefault.jpg",
+					"title": "re:publica 2013 - Mercedes Bunz, Diedrich Diederichsen: Immer dieses Internet!",
+					"url": "http://youtube.com/watch?v=Jl4IbEbzte8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1008",
 				"rp13-speaker-1497"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1810",
@@ -3654,13 +4088,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/rf9C4Prjkmc/mqdefault.jpg",
+					"title": "re:publica 2013: Data Cuisine - How to get juicy data from spreadsheets",
+					"url": "http://youtube.com/watch?v=rf9C4Prjkmc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-274",
 				"rp13-speaker-1405",
 				"rp13-speaker-1410"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6145",
@@ -3694,11 +4136,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1069"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5516",
@@ -3732,12 +4175,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1829",
 				"rp13-speaker-1827"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6126",
@@ -3771,11 +4215,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2031"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5518",
@@ -3809,11 +4254,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1830"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1698",
@@ -3847,6 +4293,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-526",
 				"rp13-speaker-1424",
@@ -3854,7 +4301,7 @@
 				"rp13-speaker-1416"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6125",
@@ -3888,11 +4335,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1873"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7964",
@@ -3926,9 +4374,10 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7965",
@@ -3962,11 +4411,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2374"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1759",
@@ -4000,6 +4450,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/KzKhyoCk9dI/mqdefault.jpg",
+					"title": "re:publica 2013: Modeblogger vereinigt euch! Sind Blog-Netzwerke der Schlüssel zur Professionalisier",
+					"url": "http://youtube.com/watch?v=KzKhyoCk9dI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-700",
 				"rp13-speaker-1407",
@@ -4007,7 +4465,7 @@
 				"rp13-speaker-1509"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1532",
@@ -4041,11 +4499,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/xPL0vKClCxM/mqdefault.jpg",
+					"title": "re:publica 2013 - Johannes Kleske: Das Ende der Arbeit -- Wenn Maschinen uns ersetzen",
+					"url": "http://youtube.com/watch?v=xPL0vKClCxM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-253"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2923",
@@ -4079,12 +4545,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/DQBtc_szJh0/mqdefault.jpg",
+					"title": "re:publica 2013 - Stephanie Hankey, Marek Tuszynski: Investigation 2.0",
+					"url": "http://youtube.com/watch?v=DQBtc_szJh0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1929",
 				"rp13-speaker-956"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1981",
@@ -4118,12 +4592,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/YMVkmLNCbIk/mqdefault.jpg",
+					"title": "re:publica 2013 - Annabel Church, Friedrich Lindenberg: News you can't print - journalism beyond the",
+					"url": "http://youtube.com/watch?v=YMVkmLNCbIk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-574",
 				"rp13-speaker-578"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-184",
@@ -4157,12 +4639,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Y4_UADsQofU/mqdefault.jpg",
+					"title": "re:publica 2013 - Matthias Spielkamp: Why Hackers Should Be Fed",
+					"url": "http://youtube.com/watch?v=Y4_UADsQofU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-141",
 				"rp13-speaker-461"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6431",
@@ -4196,13 +4686,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/NPJRK8UUFBg/mqdefault.jpg",
+					"title": "re:publica 2013: THE NEW//AFRICA",
+					"url": "http://youtube.com/watch?v=NPJRK8UUFBg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2119",
 				"rp13-speaker-2196",
 				"rp13-speaker-2197"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1674",
@@ -4236,13 +4734,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/rAcxxj7ADsk/mqdefault.jpg",
+					"title": "re:publica 2013: Debunking conspiracy theories",
+					"url": "http://youtube.com/watch?v=rAcxxj7ADsk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-484",
 				"rp13-speaker-1650",
 				"rp13-speaker-1638"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6171",
@@ -4276,11 +4782,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/IIIz7HZWAHY/mqdefault.jpg",
+					"title": "re:publica 2013 - Joachim Vranken: Interactive Cologne",
+					"url": "http://youtube.com/watch?v=IIIz7HZWAHY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2047"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-183",
@@ -4314,11 +4828,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/dQusZ1FsJUk/mqdefault.jpg",
+					"title": "re:publica 2013 - Daniel Decker: Mixing Pop & Politics",
+					"url": "http://youtube.com/watch?v=dQusZ1FsJUk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-135"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1476",
@@ -4352,11 +4874,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/IlAAX_sfBzg/mqdefault.jpg",
+					"title": "re:publica 2013 - Caspar Clemens Mierau: Weder süß, noch salzig: Wie mir die Piratenpartei meine Fre",
+					"url": "http://youtube.com/watch?v=IlAAX_sfBzg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-76"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1814",
@@ -4390,12 +4920,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ZHeTHnTD6eU/mqdefault.jpg",
+					"title": "re:publica 2013 - Nilz Bokelberg, Markus Herrmann: Herm und Nilz präsentieren: Das Internet - Der Pr",
+					"url": "http://youtube.com/watch?v=ZHeTHnTD6eU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-235",
 				"rp13-speaker-2325"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1825",
@@ -4429,11 +4967,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/MpiatFsLE9w/mqdefault.jpg",
+					"title": "re:publica 2013 - Teresa Bücker: Der Montag liebt dich",
+					"url": "http://youtube.com/watch?v=MpiatFsLE9w",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-698"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5118",
@@ -4467,11 +5013,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/yNLR2ykS0Tc/mqdefault.jpg",
+					"title": "re:publica 2013 - Jutta Allmendinger: Zeit - Geld - Familie",
+					"url": "http://youtube.com/watch?v=yNLR2ykS0Tc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1030"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5051",
@@ -4505,11 +5059,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/DQmfFWQBIHw/mqdefault.jpg",
+					"title": "re:publica 2013 - Carolina Ödman-Govender: Crowdsourced Astronomy",
+					"url": "http://youtube.com/watch?v=DQmfFWQBIHw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1409"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5704",
@@ -4543,11 +5105,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/-_oXpxrjLrc/mqdefault.jpg",
+					"title": "re:publica 2013 - Andrew Rasiej: You Can Turn Off the Public Internet But You Can't Turn Off the Int",
+					"url": "http://youtube.com/watch?v=-_oXpxrjLrc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2033"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4735",
@@ -4581,12 +5151,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/PuTY2qZtVvM/mqdefault.jpg",
+					"title": "re:publica 2013 - Dieter Zetsche, Martin Randelhoff: Das vernetzte Auto -- wie verändert sich unsere",
+					"url": "http://youtube.com/watch?v=PuTY2qZtVvM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1477",
 				"rp13-speaker-2310"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5705",
@@ -4620,12 +5198,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/6hUg48vf0QI/mqdefault.jpg",
+					"title": "re:publica 2013 - Neil Harbisson, Moon Ribas: Life with extra Senses - How to become a Cyborg.",
+					"url": "http://youtube.com/watch?v=6hUg48vf0QI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1682",
 				"rp13-speaker-1681"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5040",
@@ -4659,11 +5245,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/gozSLhUwi48/mqdefault.jpg",
+					"title": "re:publica 2013 - Kate Darling: Robot Ethics",
+					"url": "http://youtube.com/watch?v=gozSLhUwi48",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1014"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6382",
@@ -4697,11 +5291,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/EcsaUnQgvhM/mqdefault.jpg",
+					"title": "re:publica 2013 - Yoani Sánchez: The Bobs' Six Winners",
+					"url": "http://youtube.com/watch?v=EcsaUnQgvhM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2117"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5049",
@@ -4735,11 +5337,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/wG_EbEUboxo/mqdefault.jpg",
+					"title": "re:publica 2013 - Kate Miltner: Cat Memes",
+					"url": "http://youtube.com/watch?v=wG_EbEUboxo",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-962"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1449",
@@ -4773,6 +5383,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/dH2ftI-t7WM/mqdefault.jpg",
+					"title": "re:publica 2013: Ohne Jauch geht's auch. Thema: Von Human Resources zu Human Relations - wie sieht d",
+					"url": "http://youtube.com/watch?v=dH2ftI-t7WM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-496",
 				"rp13-speaker-2474",
@@ -4783,7 +5401,7 @@
 				"rp13-speaker-2484"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1959",
@@ -4817,13 +5435,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/HmufQU5GDGU/mqdefault.jpg",
+					"title": "re:publica 2013: Das kleine Digitale und das große Ganze. Internetaktivismus, Netzbewegung und Polit",
+					"url": "http://youtube.com/watch?v=HmufQU5GDGU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-450",
 				"rp13-speaker-806",
 				"rp13-speaker-1390"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1628",
@@ -4857,6 +5483,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/9Oi4uhdIGFE/mqdefault.jpg",
+					"title": "re:publica 2013: Let's Talk about Content! - Wie sich die Infrastruktur des Internets verändert",
+					"url": "http://youtube.com/watch?v=9Oi4uhdIGFE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-281",
 				"rp13-speaker-1938",
@@ -4865,7 +5499,7 @@
 				"rp13-speaker-2030"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6432",
@@ -4899,6 +5533,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/A_AE838UFlg/mqdefault.jpg",
+					"title": "re:publica 2013: Global Internet Infrastructure - Shaping the world through neutral exchanges",
+					"url": "http://youtube.com/watch?v=A_AE838UFlg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1886",
 				"rp13-speaker-561",
@@ -4907,7 +5549,7 @@
 				"rp13-speaker-1350"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6428",
@@ -4941,11 +5583,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/tA-E_38oWLI/mqdefault.jpg",
+					"title": "re:publica 2013 - Marco Maas: LobbyPlag",
+					"url": "http://youtube.com/watch?v=tA-E_38oWLI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-95"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1278",
@@ -4979,11 +5629,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/fhNKKU5k9TE/mqdefault.jpg",
+					"title": "re:publica 2013 - Moritz Simon Geist: Marvin und der Blues",
+					"url": "http://youtube.com/watch?v=fhNKKU5k9TE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-198"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4785",
@@ -5017,6 +5675,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/7GTh_ppeudU/mqdefault.jpg",
+					"title": "re:publica 2013: ... and the rest will follow! (Digitale) Musikwirtschaft und Regionalentwicklung. E",
+					"url": "http://youtube.com/watch?v=7GTh_ppeudU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1655",
 				"rp13-speaker-1671",
@@ -5025,7 +5691,7 @@
 				"rp13-speaker-1888"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2732",
@@ -5059,11 +5725,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Fr_9_6AyCP4/mqdefault.jpg",
+					"title": "re:publica 2013 - Peter Kirn: How music can predict the human/machine future",
+					"url": "http://youtube.com/watch?v=Fr_9_6AyCP4",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-933"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1887",
@@ -5097,12 +5771,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/LBleM-R4yoQ/mqdefault.jpg",
+					"title": "re:publica 2013 - Christian Tjaben, Oke Göttlich: Music Recommendation - From Peel To Peer: Curatori",
+					"url": "http://youtube.com/watch?v=LBleM-R4yoQ",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-725",
 				"rp13-speaker-2055"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1859",
@@ -5136,6 +5818,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/aCg4Vycf8D4/mqdefault.jpg",
+					"title": "re:publica 2013: Music Recommendation - Future Casting",
+					"url": "http://youtube.com/watch?v=aCg4Vycf8D4",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-743",
 				"rp13-speaker-1470",
@@ -5143,7 +5833,7 @@
 				"rp13-speaker-1476"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2282",
@@ -5177,6 +5867,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/DTiK3slZTiE/mqdefault.jpg",
+					"title": "re:publica 2013: dorkbot.bln \"re:publica 13 Special\"",
+					"url": "http://youtube.com/watch?v=DTiK3slZTiE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2359",
 				"rp13-speaker-1975",
@@ -5186,7 +5884,7 @@
 				"rp13-speaker-2416"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2161",
@@ -5220,11 +5918,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/CIBN-e-aja8/mqdefault.jpg",
+					"title": "re:publica 2013 - Tim Pritlove: Radio Universal",
+					"url": "http://youtube.com/watch?v=CIBN-e-aja8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-870"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6427",
@@ -5258,11 +5964,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Rb7c9sxMk2Q/mqdefault.jpg",
+					"title": "re:publica 2013 - Markus Beckedahl: Unser Blog soll schöner werden",
+					"url": "http://youtube.com/watch?v=Rb7c9sxMk2Q",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-46"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5052",
@@ -5296,11 +6010,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/52CqKIR0rVM/mqdefault.jpg",
+					"title": "re:publica 2013 - R. Trebor Scholz: Digital Labor: New Opportunities, Old Inequalities",
+					"url": "http://youtube.com/watch?v=52CqKIR0rVM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-896"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5053",
@@ -5334,13 +6056,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/MQAK38KCjfY/mqdefault.jpg",
+					"title": "re:publica 2013: Net Neutrality - Ben Scott, Hannah Seiffert, Markus Beckedahl",
+					"url": "http://youtube.com/watch?v=MQAK38KCjfY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1450",
 				"rp13-speaker-2357",
 				"rp13-speaker-46"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-3983",
@@ -5374,12 +6104,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/PDYEl62g1b8/mqdefault.jpg",
+					"title": "re:publica 2013 - Tanja Haeusler, Johnny Haeusler: Netzgemüse: The Kids Are Alright",
+					"url": "http://youtube.com/watch?v=PDYEl62g1b8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2003",
 				"rp13-speaker-48"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2042",
@@ -5413,11 +6151,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/bQGURr6Vjzg/mqdefault.jpg",
+					"title": "re:publica 2013 - Manuela Schauerhammer: Heute aufwachsen in Digitalistan: Die neuen mündigen Mensch",
+					"url": "http://youtube.com/watch?v=bQGURr6Vjzg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-828"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6403",
@@ -5451,11 +6197,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/dUzqvMQ_9aY/mqdefault.jpg",
+					"title": "re:publica 2013 - lidi brouwer: Interactive Landscapes",
+					"url": "http://youtube.com/watch?v=dUzqvMQ_9aY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2110"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6059",
@@ -5489,6 +6243,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Uq-bwzIQ4Wg/mqdefault.jpg",
+					"title": "re:publica 2013: Netzpolitischer Nachmittag: IN/SIDE/OUT #digiges",
+					"url": "http://youtube.com/watch?v=Uq-bwzIQ4Wg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2010",
 				"rp13-speaker-2040",
@@ -5496,7 +6258,7 @@
 				"rp13-speaker-1688"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6434",
@@ -5530,12 +6292,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/gAQQtamyO1A/mqdefault.jpg",
+					"title": "re:publica 2013 - Moon Ribas, Neil Harbisson: Color Concert & Waiting for Earthquakes",
+					"url": "http://youtube.com/watch?v=gAQQtamyO1A",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1681",
 				"rp13-speaker-1682"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1137",
@@ -5569,13 +6339,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/8D8g8Xol6bg/mqdefault.jpg",
+					"title": "re:publica 2013: Das digitale Quartett - live on stage",
+					"url": "http://youtube.com/watch?v=8D8g8Xol6bg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-168",
 				"rp13-speaker-1068",
 				"rp13-speaker-2452"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4257",
@@ -5609,11 +6387,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Z0EfKzKi0So/mqdefault.jpg",
+					"title": "re:publica 2013 - Manouchehr Shamsrizi: Wissen.Macht.Moral - über das Digitale im Marionettentheater",
+					"url": "http://youtube.com/watch?v=Z0EfKzKi0So",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1089"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4694",
@@ -5647,11 +6433,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/azD5EUy8HkI/mqdefault.jpg",
+					"title": "re:publica 2013 - Friedrich von Borries: Werde Shareholder der Revolution",
+					"url": "http://youtube.com/watch?v=azD5EUy8HkI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1518"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2442",
@@ -5685,11 +6479,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/wJYtHBD0XbI/mqdefault.jpg",
+					"title": "re:publica 2013 - Francesco Lapenta: Mediated Life after Virtualization. A Critical Look at the Scen",
+					"url": "http://youtube.com/watch?v=wJYtHBD0XbI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-894"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1642",
@@ -5723,6 +6525,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/JZI3peYWGUU/mqdefault.jpg",
+					"title": "re:publica 2013: IN, SIDE, OUT of SCIENCE",
+					"url": "http://youtube.com/watch?v=JZI3peYWGUU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-407",
 				"rp13-speaker-514",
@@ -5730,7 +6540,7 @@
 				"rp13-speaker-604"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5337",
@@ -5764,6 +6574,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/-9d0KM1I0aw/mqdefault.jpg",
+					"title": "re:publica 2013: How radical are Open Access and the Digital Humanities?",
+					"url": "http://youtube.com/watch?v=-9d0KM1I0aw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1008",
 				"rp13-speaker-1359",
@@ -5771,7 +6589,7 @@
 				"rp13-speaker-1817"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1626",
@@ -5805,6 +6623,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ceARb5FRy8A/mqdefault.jpg",
+					"title": "re:publica 2013: Faszination Grundlagenforschung --  Das Higgs, Big Data und die Teilchenphysik",
+					"url": "http://youtube.com/watch?v=ceARb5FRy8A",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2017",
 				"rp13-speaker-1814",
@@ -5812,7 +6638,7 @@
 				"rp13-speaker-606"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1405",
@@ -5846,12 +6672,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-341",
 				"rp13-speaker-406"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1868",
@@ -5885,12 +6712,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/i-LkQdVpiSI/mqdefault.jpg",
+					"title": "re:publica 2013 - Christine Heller, Jochen Mai: Personal Branding Kampagne: Wie der neue Job dich fi",
+					"url": "http://youtube.com/watch?v=i-LkQdVpiSI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-625",
 				"rp13-speaker-1067"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6169",
@@ -5899,9 +6734,7 @@
 			"status": "over",
 			"title": "Hell Yeah, it's Rocket Science! - pushing private space exploration with 30 Million US Dollars",
 			"photo": null,
-			"slides": [
-				"http://13.re-publica.de/sites/13.re-publica.de/files/slides/PTScientists_RP13.pdf"
-			],
+			"slides": [],
 			"abstract": "Founded by scientists and engineers in their spare time, the Part-Time Scientists compete in a new space race towards landing the first private spacecraft on the moon. Will this be the end for missions like Curiosity? Or is this the dawn of a new Space 2.0? Get to know the Part-Time Scientists, their team of rocket scientists, and embark with them and the German Aerospace Center (DLR) on a heartful discussion on the future of private space exploration!",
 			"description": "The Part-Time Scientists are among the top 5 teams in the Google Lunar XPRIZE competition, a new space race towards the moon. The international team of scientists and engineers is based right here in Berlin, Germany, and spent the past three years building the technology to get back to the moon for good. The goal of the competition is to land a rover safely on the surface of the moon and travel a distance of at least 500 meters, over 43 years after man last walked the moon. In the light of previous incentive prizes like the Orteig prize , which motivated Charles Lindberg to step aboard the Spirit of St. Louis , cross the Atlantic and kickstart the aviation industry, Google intends to provide an incentive for a space sector which is currently mostly influenced by governmental and political decissions.&nbsp;Learn about the challenges the team is facing on its way to the moon and the reasons for teaming up with the German Aerospace Center (DLR) . After a brief presentation of the team and the competition, we will have an open discussion about why Red Bull Stratos , Virgin Galactic and William Shatner naming a moon of pluto are important for the future of space exploration! The Google Lunar XPRIZE Google awards up to 30 Million US Dollars to the first private team which lands a rover safely on the surface of the moon, lets it drive at least 500 meters and transmit HD video back to earth. Currently 23 teams, most of them from the United States are competing for the prize purse. &nbsp; This session is organised in cooperation with DLR German Aerospace Center .",
 			"url": null,
@@ -5926,12 +6759,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/tlcYQOVwYKg/mqdefault.jpg",
+					"title": "re:publica 2013 - Karsten Becker, Robert Böhme: Hell Yeah, it's Rocket Science! - pushing private sp",
+					"url": "http://youtube.com/watch?v=tlcYQOVwYKg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1998",
 				"rp13-speaker-1928"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1397",
@@ -5965,12 +6806,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/BEIOcw33IH8/mqdefault.jpg",
+					"title": "re:publica 2013 - Thorsten Feldmann, Henning  Krieg: Saisonrückblick Social Media Recht",
+					"url": "http://youtube.com/watch?v=BEIOcw33IH8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-465",
 				"rp13-speaker-104"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5115",
@@ -6004,6 +6853,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/iWlC59PSYhM/mqdefault.jpg",
+					"title": "re:publica 2013: Eröffnung",
+					"url": "http://youtube.com/watch?v=iWlC59PSYhM",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-65",
 				"rp13-speaker-46",
@@ -6011,7 +6868,7 @@
 				"rp13-speaker-48"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:33+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5308",
@@ -6045,6 +6902,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-168",
 				"rp13-speaker-1508",
@@ -6052,7 +6910,7 @@
 				"rp13-speaker-1684"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4655",
@@ -6086,11 +6944,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-358"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-168",
@@ -6124,11 +6983,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-94"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1984",
@@ -6162,11 +7022,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-154"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6282",
@@ -6200,11 +7061,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1983"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1123",
@@ -6238,13 +7100,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-96",
 				"rp13-speaker-1187",
 				"rp13-speaker-1294"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1805",
@@ -6278,13 +7141,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-694",
 				"rp13-speaker-346",
 				"rp13-speaker-1077"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6182",
@@ -6293,9 +7157,7 @@
 			"status": "over",
 			"title": "Wie Fernsehen und Online zusammenwachsen: die SWR-Projekte “Zeit der Helden” und “Tatort+ 2013”",
 			"photo": null,
-			"slides": [
-				"http://13.re-publica.de/sites/13.re-publica.de/files/slides/TatortPlus_republica.pdf"
-			],
+			"slides": [],
 			"abstract": "Das lineare Fernsehprogramm ist ein Auslaufmodell? Keineswegs, denn Trends wie “Social TV” und Second-Screen-Anwendungen beweisen gerade das Gegenteil. Doch Twittern beim “Tatort” - ist das wirklich schon alles? Der SWR sagt Nein! Das Web bietet noch viel mehr Möglichkeiten für fiktionale Formate. Interaktion mit dem Nutzer und Integration ins lineare TV sind die Meilensteine für innovative Projekte, die Signale für alle Teile der Gesellschaft, auch für jüngere Zielgruppen, setzen.",
 			"description": "Zwei große Projekte, bei denen der SWR die Grenzen zwischen linearem Fernsehen und Online auflöst, stehen im Fokus dieser Session.&nbsp; &nbsp; In der neunteiligen Echtzeit-Serie “Zeit der Helden” stimmen Erzählzeit und erzählte Zeit im Fernsehen und im Web überein. Die Timeline auf zeitderhelden.de bildet den Takt ab, in dem die fünf Helden der fiktionalen TV-Serie fünf Tage lang durch die Midlife Crisis schliddern. Das Web hat die »Echtzeit-Fiktion« während der TV-Ausstrahlung unterstützt (vom 25. bis 29. März 2013 auf ARTE und im SWR Fernsehen). Und es bietet eine zusätzliche Erzähl- und Spielebene, die es so nur im Netz gibt: In einer Spurensuche konnten die Spieler die Vergangenheit der krisengeplagten Hauptfiguren aufdecken - und folgten dabei einer parallelen Dramaturgie nach dem Second-Screen-Prinzip.&nbsp; Ein Transmedia-Projekt, das nicht mit SciFi, Mystery oder einem Mordfall aufwartet, sondern sich um große Fragen des Lebens dreht: Hab ich alles richtig gemacht? Bin ich zufrieden? War’s das mit Mitte 40? Wie geht es weiter? &nbsp; Für Krimi-Fans gibt es im Mai 2013 die Anknüpfung an ein Format, das der SWR im vergangenen Jahr mit großem Erfolg gestartet hat: Der “Tatort+” geht in die zweite Runde. Nach dem Ludwigshafener “Tatort”-Spiel von 2012 geht es nun in Stuttgart mit “Spiel auf Zeit” beim “Tatort+ 2013” weiter. Schon eine Woche vor dem “Tatort” werden die Spieler mit einem Verbrechen konfrontiert, das es aufzulösen gilt. Nika Banovic, den “Tatort”-Zuschauern als Mitarbeiterin der Stuttgarter Spurensicherung bekannt, wird die Spieler durch den Fall führen. Dessen Lösung ist eng mit den Geschehnissen im Tatort “Spiel auf Zeit” verknüpft.&nbsp; Nach der Ausstrahlung des Tatort im linearen Programm geht das Spiel für die Online-Ermittler weiter.&nbsp; &nbsp; Im Rahmen der Session, die vom SWR präsentiert wird, sollen die Projekte, deren Entstehungsphasen und Weiterentwicklungen, mit denen die fiktionale Formate jonglieren, vorgestellt werden.",
 			"url": null,
@@ -6320,6 +7182,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1637",
 				"rp13-speaker-2038",
@@ -6327,7 +7190,7 @@
 				"rp13-speaker-2468"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4802",
@@ -6361,6 +7224,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1564",
 				"rp13-speaker-1562",
@@ -6370,7 +7234,7 @@
 				"rp13-speaker-2413"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6205",
@@ -6404,9 +7268,10 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6207",
@@ -6440,9 +7305,10 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6212",
@@ -6476,9 +7342,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6232",
@@ -6512,9 +7379,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6236",
@@ -6548,9 +7416,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6437",
@@ -6584,9 +7453,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5669",
@@ -6620,11 +7490,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-608"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5722",
@@ -6658,11 +7529,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1773"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5368",
@@ -6696,6 +7568,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1324",
 				"rp13-speaker-1073",
@@ -6704,7 +7577,7 @@
 				"rp13-speaker-671"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6433",
@@ -6738,12 +7611,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1762",
 				"rp13-speaker-1775"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6422",
@@ -6777,6 +7651,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2097",
 				"rp13-speaker-2167",
@@ -6788,7 +7663,7 @@
 				"rp13-speaker-1745"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6435",
@@ -6822,6 +7697,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ag3my5UWuT8/mqdefault.jpg",
+					"title": "re:publica 2013: Verabschiedung (ohne Musik)",
+					"url": "http://youtube.com/watch?v=ag3my5UWuT8",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-523",
 				"rp13-speaker-1366",
@@ -6829,7 +7712,7 @@
 				"rp13-speaker-2465"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6436",
@@ -6863,11 +7746,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1359"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1955",
@@ -6901,11 +7785,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-690"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1631",
@@ -6939,11 +7824,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-605"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1374",
@@ -6977,12 +7863,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/-s5WvYQEr0Y/mqdefault.jpg",
+					"title": "re:publica 2013 - Digitaldarwinismus - Warum gibt es keine digitalen Bananen?",
+					"url": "http://youtube.com/watch?v=-s5WvYQEr0Y",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-443",
 				"rp13-speaker-444"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1933",
@@ -7016,12 +7910,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-144",
 				"rp13-speaker-1382"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7464",
@@ -7055,11 +7950,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2389"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6183",
@@ -7093,11 +7989,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2384"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6400",
@@ -7131,11 +8028,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2048"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7097",
@@ -7169,6 +8067,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1632",
 				"rp13-speaker-2283",
@@ -7176,7 +8075,7 @@
 				"rp13-speaker-1449"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5968",
@@ -7210,11 +8109,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1923"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5969",
@@ -7248,12 +8148,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1923",
 				"rp13-speaker-2577"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6018",
@@ -7287,11 +8188,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1553"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5706",
@@ -7325,6 +8227,7 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1839",
 				"rp13-speaker-1875",
@@ -7334,7 +8237,7 @@
 				"rp13-speaker-1872"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7099",
@@ -7368,11 +8271,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1923"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6208",
@@ -7406,9 +8310,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6214",
@@ -7442,9 +8347,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6233",
@@ -7478,9 +8384,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6237",
@@ -7514,9 +8421,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2010",
@@ -7550,11 +8458,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-534"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-841",
@@ -7588,11 +8497,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/6Pu5agqAy_Q/mqdefault.jpg",
+					"title": "re:publica 2013 -- Constantin Alexander -- Politiker, die in Bratwürste beißen",
+					"url": "http://youtube.com/watch?v=6Pu5agqAy_Q",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-199"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6209",
@@ -7626,9 +8543,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6230",
@@ -7662,9 +8580,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6234",
@@ -7698,9 +8617,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6238",
@@ -7734,9 +8654,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2870",
@@ -7770,11 +8691,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-946"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1389",
@@ -7808,11 +8730,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-246"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6210",
@@ -7846,9 +8769,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6231",
@@ -7882,9 +8806,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6235",
@@ -7918,9 +8843,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6239",
@@ -7954,9 +8880,10 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5398",
@@ -7990,11 +8917,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-670"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7137",
@@ -8028,11 +8956,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1643"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7138",
@@ -8066,11 +8995,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7416",
@@ -8104,11 +9034,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7258",
@@ -8142,11 +9073,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1435",
@@ -8180,12 +9112,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-421",
 				"rp13-speaker-669"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7966",
@@ -8219,12 +9152,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2324",
 				"rp13-speaker-743"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-179",
@@ -8258,11 +9192,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-129"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5617",
@@ -8296,12 +9231,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1757",
 				"rp13-speaker-1761"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6040",
@@ -8335,12 +9271,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2008",
 				"rp13-speaker-1924"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1888",
@@ -8374,13 +9311,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-596",
 				"rp13-speaker-597",
 				"rp13-speaker-603"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1969",
@@ -8414,11 +9352,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-667"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1561",
@@ -8452,11 +9391,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-325"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1978",
@@ -8490,11 +9430,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-802"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-980",
@@ -8528,12 +9469,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ZG4FawUtYPA/mqdefault.jpg",
+					"title": "Die Trolldrossel [re:Fefe: Erkenntnisse der empirischen Trollforschung] #rp13",
+					"url": "http://youtube.com/watch?v=ZG4FawUtYPA",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-288",
 				"rp13-speaker-545"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-172",
@@ -8567,11 +9516,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-88"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-774",
@@ -8605,11 +9555,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-213"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5615",
@@ -8643,11 +9594,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-977"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6527",
@@ -8681,12 +9633,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-826",
 				"rp13-speaker-1885"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5614",
@@ -8720,12 +9673,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1378",
 				"rp13-speaker-2000"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1672",
@@ -8759,11 +9713,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-637"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6240",
@@ -8797,6 +9752,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-182",
 				"rp13-speaker-591",
@@ -8805,7 +9761,7 @@
 				"rp13-speaker-1479"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1932",
@@ -8839,12 +9795,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-409",
 				"rp13-speaker-1082"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1597",
@@ -8878,13 +9835,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-156",
 				"rp13-speaker-150",
 				"rp13-speaker-1398"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1572",
@@ -8918,11 +9876,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/naGvgXzxlvc/mqdefault.jpg",
+					"title": "re:publica 2013 - Volker Grassmuck: Von Television zu WikiVision: Mediale Grundversorgung von allen",
+					"url": "http://youtube.com/watch?v=naGvgXzxlvc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-569"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2045",
@@ -8956,11 +9922,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/OpzCViwvH1k/mqdefault.jpg",
+					"title": "re:publica 2013 - Lorenz Lorenz-Meyer: Jagen, Sammeln, Pflegen - alte und neue Aufgaben für die Öffe",
+					"url": "http://youtube.com/watch?v=OpzCViwvH1k",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-829"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-188",
@@ -8994,13 +9968,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/vWerZQFj4Xc/mqdefault.jpg",
+					"title": "re:publica 2013: Datenbefreiung selbst gemacht.",
+					"url": "http://youtube.com/watch?v=vWerZQFj4Xc",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-144",
 				"rp13-speaker-145",
 				"rp13-speaker-545"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1892",
@@ -9034,6 +10016,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/bddyZSOlkAo/mqdefault.jpg",
+					"title": "re:publica 2013: Export Controls for Dual-Use Software",
+					"url": "http://youtube.com/watch?v=bddyZSOlkAo",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1832",
 				"rp13-speaker-2111",
@@ -9042,7 +10032,7 @@
 				"rp13-speaker-1099"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6626",
@@ -9076,13 +10066,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Vlas5oZ88MU/mqdefault.jpg",
+					"title": "re:publica 2013: The Outernet -- A revolution, in reality",
+					"url": "http://youtube.com/watch?v=Vlas5oZ88MU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1923",
 				"rp13-speaker-1920",
 				"rp13-speaker-1886"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-182",
@@ -9116,11 +10114,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/g7jKhi5dp3s/mqdefault.jpg",
+					"title": "re:publica 2013 - Daniel Bröckerhoff: \"Hast Du das schon getwittert?\" - Über Nutzen und Risiken von",
+					"url": "http://youtube.com/watch?v=g7jKhi5dp3s",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-125"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1348",
@@ -9129,9 +10135,7 @@
 			"status": "over",
 			"title": "\"Das meld ich dem Rundfunkrat!\" - Neues aus der öffentlich-rechtlichen Kommentarambulanz",
 			"photo": null,
-			"slides": [
-				"http://13.re-publica.de/sites/13.re-publica.de/files/slides/Deefs_Kommentartipps_komplett.pdf"
-			],
+			"slides": [],
 			"abstract": "\"Sorge dich nicht, zensiere!\"",
 			"description": "Deef Pirmasens von \"quer\" (BR) und&nbsp;Simone Stoffers von \"extra 3\" (NDR)&nbsp;berichten als Community Manager Neues von der Satirefront. Wie man unzufriedene Zuschauer puschelt und aggressive Kommentartrolle vertreibt. Sie zeigen die&nbsp;Handhabung und Pflege unterschiedlicher Feedbacktypen vom \"Bringt doch endlich mein Thema\"-Fanboy bis zur \"Das petz ich dem Intendanten\"-Trollantin. Inklusive&nbsp;relevanzoptimierte Feedbackkompetenz im sozialmedialen Resonanzraum und einem&nbsp;Wiedersehen mit dem Panda der Gerechtigkeit.",
 			"url": null,
@@ -9156,12 +10160,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-431",
 				"rp13-speaker-553"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1867",
@@ -9195,6 +10200,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/9Nvy9sHunZU/mqdefault.jpg",
+					"title": "re:publica 2013: Blogs und Bier? Das lob' ich mir! #ironblogger",
+					"url": "http://youtube.com/watch?v=9Nvy9sHunZU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-347",
 				"rp13-speaker-1065",
@@ -9203,7 +10216,7 @@
 				"rp13-speaker-1413"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1714",
@@ -9237,12 +10250,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-666",
 				"rp13-speaker-241"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7096",
@@ -9276,11 +10290,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1640"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5166",
@@ -9314,11 +10329,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1641"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2016",
@@ -9352,11 +10368,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-766"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1890",
@@ -9390,13 +10407,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-547",
 				"rp13-speaker-760",
 				"rp13-speaker-707"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1767",
@@ -9430,12 +10448,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-372",
 				"rp13-speaker-241"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2063",
@@ -9469,11 +10488,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-183"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1879",
@@ -9507,12 +10527,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-733",
 				"rp13-speaker-740"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1404",
@@ -9546,11 +10567,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-338"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6453",
@@ -9584,11 +10606,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1096"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1618",
@@ -9622,11 +10645,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-605"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1764",
@@ -9660,11 +10684,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-105"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1786",
@@ -9698,12 +10723,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-382",
 				"rp13-speaker-2229"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4176",
@@ -9737,6 +10763,14 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/M3MjlT7zmeI/mqdefault.jpg",
+					"title": "re:publica 2013: Responding effectively to digital emergencies & human rights violations online",
+					"url": "http://youtube.com/watch?v=M3MjlT7zmeI",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1350",
 				"rp13-speaker-1590",
@@ -9745,7 +10779,7 @@
 				"rp13-speaker-1546"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1560",
@@ -9779,12 +10813,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/5f_JiFfI9Ts/mqdefault.jpg",
+					"title": "re:publica 2013 - Jeanette Hofmann, Christian  Katzenbach: Im Schatten des Rechts - Wie informelle N",
+					"url": "http://youtube.com/watch?v=5f_JiFfI9Ts",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-559",
 				"rp13-speaker-1072"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1806",
@@ -9818,13 +10860,21 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/kNSXrqRxJjw/mqdefault.jpg",
+					"title": "re:publica 2013: Netzkultur vs Urheberrecht",
+					"url": "http://youtube.com/watch?v=kNSXrqRxJjw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-184",
 				"rp13-speaker-720",
 				"rp13-speaker-1815"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1318",
@@ -9858,11 +10908,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ndHqyprTNDk/mqdefault.jpg",
+					"title": "re:publica 2013 - Joerg Heidrich: The first thing we do, let's kill all the lawyers -- Die Anwälte,",
+					"url": "http://youtube.com/watch?v=ndHqyprTNDk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-415"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1765",
@@ -9896,11 +10954,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/yVnDp6zKGpk/mqdefault.jpg",
+					"title": "re:publica 2013 - Mathias Schindler: Der Urheberrechts-Yeti",
+					"url": "http://youtube.com/watch?v=yVnDp6zKGpk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-695"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-3059",
@@ -9934,12 +11000,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/LRXgm3L6EIk/mqdefault.jpg",
+					"title": "re:publica 2013 - Ellery Roberts Biddle, Hisham Almiraat: Myths of the Open Internet: Bust Them and",
+					"url": "http://youtube.com/watch?v=LRXgm3L6EIk",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-960",
 				"rp13-speaker-966"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1986",
@@ -9973,12 +11047,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/41ZwNdqBcaU/mqdefault.jpg",
+					"title": "re:publica 2013 - Christian Heller, Snibeti Snab: Internet-Meme: Geschichte, Forschungsstand, Kontro",
+					"url": "http://youtube.com/watch?v=41ZwNdqBcaU",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-572",
 				"rp13-speaker-1088"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1234",
@@ -10012,11 +11094,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Qr2pbVucL6o/mqdefault.jpg",
+					"title": "re:publica 2013 - Marcus Brown: I palindrome I -- your life is mine",
+					"url": "http://youtube.com/watch?v=Qr2pbVucL6o",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-263"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-162",
@@ -10050,11 +11140,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/v3s76ho_boo/mqdefault.jpg",
+					"title": "re:publica 2013 - Thomas Andrezak: E-Zigarette, der Genuß der aus dem Internet kam",
+					"url": "http://youtube.com/watch?v=v3s76ho_boo",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-73"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1865",
@@ -10088,11 +11186,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/uQX18jZP8u0/mqdefault.jpg",
+					"title": "re:publica 2013 - Matthias Bauer: Richtig essen, richtig schlafen, und lasst die Mate weg: Besser Le",
+					"url": "http://youtube.com/watch?v=uQX18jZP8u0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-598"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4780",
@@ -10126,13 +11232,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/_e8Ztolx_Vw/mqdefault.jpg",
+					"title": "re:publica 2013: 3D Printing: (How) can we make it a third industrial revolution?",
+					"url": "http://youtube.com/watch?v=_e8Ztolx_Vw",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-151",
 				"rp13-speaker-1864",
 				"rp13-speaker-1371"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6381",
@@ -10166,13 +11280,21 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/4NsDr54-lKA/mqdefault.jpg",
+					"title": "re:publica 2013: China, India, Bangladesh, we're looking at you: Blogging and tweeting in Asia",
+					"url": "http://youtube.com/watch?v=4NsDr54-lKA",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2032",
 				"rp13-speaker-2035",
 				"rp13-speaker-2036"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1707",
@@ -10206,11 +11328,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/ZTejUqHLQXE/mqdefault.jpg",
+					"title": "re:publica 2013 - Felix Schwenzel: 10 Vorschläge um die Welt zu verbessern",
+					"url": "http://youtube.com/watch?v=ZTejUqHLQXE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-659"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-190",
@@ -10244,12 +11374,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://b.vimeocdn.com/ts/437/108/437108865_640.jpg",
+					"title": "Die Digital Natives ziehen in den Krieg",
+					"url": "http://vimeo.com/65905002",
+					"service": "vimeo"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-75",
 				"rp13-speaker-152"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1446",
@@ -10283,12 +11421,20 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/54IYXPW_IJY/mqdefault.jpg",
+					"title": "re:publica 2013 - Sebastian Wernicke, Jörn Loviscach: Online universities - food for thought or an i",
+					"url": "http://youtube.com/watch?v=54IYXPW_IJY",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-495",
 				"rp13-speaker-420"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5965",
@@ -10322,11 +11468,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/KD_N0mJ7qx0/mqdefault.jpg",
+					"title": "re:publica 2013 - Jan Philipp Schmidt: Ceci n'est pas un MOOC. How to build awesome, open, dirt-chea",
+					"url": "http://youtube.com/watch?v=KD_N0mJ7qx0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-942"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4381",
@@ -10360,6 +11514,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/5zcy_NB1mxs/mqdefault.jpg",
+					"title": "re:publica 2013: Digital by default - „Digital Natives der Herzen\" im Journalismus",
+					"url": "http://youtube.com/watch?v=5zcy_NB1mxs",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1059",
 				"rp13-speaker-1538",
@@ -10367,7 +11529,7 @@
 				"rp13-speaker-1828"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5134",
@@ -10401,6 +11563,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/3ON3cSuW4Bs/mqdefault.jpg",
+					"title": "re:publica 2013: 1 Million Petitionen -- Protestieren wir richtig im Netz?",
+					"url": "http://youtube.com/watch?v=3ON3cSuW4Bs",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1674",
 				"rp13-speaker-1794",
@@ -10410,7 +11580,7 @@
 				"rp13-speaker-2052"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6439",
@@ -10444,11 +11614,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/1u1x3d8fVPE/mqdefault.jpg",
+					"title": "re:publica 2013 - Esteve Almirall: The Open Innovation Ecosystem",
+					"url": "http://youtube.com/watch?v=1u1x3d8fVPE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2190"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4945",
@@ -10482,11 +11660,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/aI6ir37Iaq0/mqdefault.jpg",
+					"title": "re:publica 2013 - Carles Ferreiro: New Open Cities Challenge: Managing large tourism flows",
+					"url": "http://youtube.com/watch?v=aI6ir37Iaq0",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1620"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1438",
@@ -10520,11 +11706,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/CwhKl0qvcfA/mqdefault.jpg",
+					"title": "re:publica 2013 - Frank Karlitschek: crushing data silos with ownCloud",
+					"url": "http://youtube.com/watch?v=CwhKl0qvcfA",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-490"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6448",
@@ -10558,11 +11752,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/KU4PZK48-dg/mqdefault.jpg",
+					"title": "re:publica 2013 - Nick Jennings: Autonomous web apps with Sockethub",
+					"url": "http://youtube.com/watch?v=KU4PZK48-dg",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-947"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1749",
@@ -10596,12 +11798,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Kc2kwO-jf7c/mqdefault.jpg",
+					"title": "re:publica 2013 - Frederic Valin, Jan-Uwe Fitz: Wie das Internet literarisches Schreiben verändert",
+					"url": "http://youtube.com/watch?v=Kc2kwO-jf7c",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-371",
 				"rp13-speaker-583"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-2007",
@@ -10635,12 +11845,20 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/fi5Vbvj7HzE/mqdefault.jpg",
+					"title": "re:publica 2013 - Jeannette Gusko, Bianca Praetorius: Die vierte Wand als Twitterwall. Eine Schauspi",
+					"url": "http://youtube.com/watch?v=fi5Vbvj7HzE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-798",
 				"rp13-speaker-1106"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5595",
@@ -10674,6 +11892,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/Ibb5KE6Cl_w/mqdefault.jpg",
+					"title": "re:publica 2013: 21st Century Skills - Keynote: Andreas Schleicher",
+					"url": "http://youtube.com/watch?v=Ibb5KE6Cl_w",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1826",
 				"rp13-speaker-1885",
@@ -10682,7 +11908,7 @@
 				"rp13-speaker-2003"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5929",
@@ -10716,11 +11942,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/gNIzKFTQLog/mqdefault.jpg",
+					"title": "re:publica 2013 - Keren Elazari: Take a ride on the Cyberpunk Express train",
+					"url": "http://youtube.com/watch?v=gNIzKFTQLog",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1799"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5047",
@@ -10754,11 +11988,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/j-4DpaQdsFs/mqdefault.jpg",
+					"title": "re:publica 2013 - Lisa Ma: Speculative Design",
+					"url": "http://youtube.com/watch?v=j-4DpaQdsFs",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1074"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5849",
@@ -10792,11 +12034,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/VyiD0iPhMec/mqdefault.jpg",
+					"title": "re:publica 2013 - Lothar Müller: Das Blatt und das Netz.",
+					"url": "http://youtube.com/watch?v=VyiD0iPhMec",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1727"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4380",
@@ -10830,6 +12080,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/_bK_94oeN4o/mqdefault.jpg",
+					"title": "re:publica 2013: Die EU-Datenschutzreform als Balanceakt",
+					"url": "http://youtube.com/watch?v=_bK_94oeN4o",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-1856",
 				"rp13-speaker-2114",
@@ -10839,7 +12097,7 @@
 				"rp13-speaker-2553"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5119",
@@ -10873,11 +12131,19 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/uWqx_1tDyqE/mqdefault.jpg",
+					"title": "re:publica 2013 - Cory Doctorow: It's not a fax machine connect to a waffle iron",
+					"url": "http://youtube.com/watch?v=uWqx_1tDyqE",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-971"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6398",
@@ -10911,11 +12177,19 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/B3c4UMnX7ig/mqdefault.jpg",
+					"title": "re:publica 2013 - Anne Wizorek: Ihr wollt also wissen, was #aufschrei gebracht hat?",
+					"url": "http://youtube.com/watch?v=B3c4UMnX7ig",
+					"service": "youtube"
+				}
+			],
 			"speakers": [
 				"rp13-speaker-2101"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-8363",
@@ -10949,9 +12223,17 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [
+				{
+					"thumbnail": "http://i.ytimg.com/vi/29tk6vQXV64/mqdefault.jpg",
+					"title": "re:publica 2013: Interview with Ai Weiwei",
+					"url": "http://youtube.com/watch?v=29tk6vQXV64",
+					"service": "youtube"
+				}
+			],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6481",
@@ -10985,6 +12267,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-48",
 				"rp13-speaker-2003",
@@ -10992,7 +12275,7 @@
 				"rp13-speaker-65"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7098",
@@ -11026,9 +12309,10 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6124",
@@ -11062,11 +12346,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1422"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5967",
@@ -11100,11 +12385,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1918"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5948",
@@ -11138,11 +12424,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1703"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6200",
@@ -11176,12 +12463,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1433",
 				"rp13-speaker-2174"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7100",
@@ -11215,11 +12503,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1923"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1363",
@@ -11253,11 +12542,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-438"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4058",
@@ -11291,11 +12581,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1386"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4656",
@@ -11329,12 +12620,13 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1517",
 				"rp13-speaker-1516"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1382",
@@ -11368,11 +12660,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-451"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-6452",
@@ -11406,12 +12699,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1390",
 				"rp13-speaker-1929"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4690",
@@ -11445,6 +12739,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-562",
 				"rp13-speaker-2367",
@@ -11453,7 +12748,7 @@
 				"rp13-speaker-2431"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-5133",
@@ -11487,6 +12782,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-166",
 				"rp13-speaker-295",
@@ -11494,7 +12790,7 @@
 				"rp13-speaker-2478"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-4779",
@@ -11528,6 +12824,7 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-1344",
 				"rp13-speaker-1070",
@@ -11536,7 +12833,7 @@
 				"rp13-speaker-1939"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1862",
@@ -11570,11 +12867,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-687"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1258",
@@ -11608,13 +12906,14 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-375",
 				"rp13-speaker-1478",
 				"rp13-speaker-1768"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-1535",
@@ -11648,12 +12947,13 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-541",
 				"rp13-speaker-1094"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7134",
@@ -11687,11 +12987,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-434"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7135",
@@ -11725,11 +13026,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-8176",
@@ -11763,11 +13065,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7139",
@@ -11801,11 +13104,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-7238",
@@ -11839,11 +13143,12 @@
 				"slug": "de",
 				"label": "Deutsch"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-2369"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		},
 		{
 			"id": "rp13-session-8028",
@@ -11877,11 +13182,12 @@
 				"slug": "en",
 				"label": "English"
 			},
+			"videos": [],
 			"speakers": [
 				"rp13-speaker-198"
 			],
 			"revision": 1,
-			"last_modified": "2014-02-05T20:44:34+01:00"
+			"last_modified": "2014-02-05T21:43:26+01:00"
 		}
 	],
 	"speakers": [

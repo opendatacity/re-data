@@ -215,6 +215,8 @@ exports.scrape = function (options, callback) {
 							"slug": lang_slug,
 							"label": lang_label
 						},
+						"videos": [],
+						"slides": [],
 						"speakers": speakers,
 						"revision": 1,
 						"last_modified": moment().format("YYYY-MM-DD[T]HH:mm:ssZ")
