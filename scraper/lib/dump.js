@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 
-var dumpFolder = '../data/';
+var dumpFolder = '../web/data/';
 
 var typeMatching = {
 	'day': 'days',
