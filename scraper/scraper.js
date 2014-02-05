@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var db = require('db');
-var dump = require('dump').dump;
+var db = require('./lib/db');
+var dump = require('./lib/dump');
 
 function finalize(data) {
 	db.update(data);
-	dump(data);
+	dump.dump(data);
 }
 
 
