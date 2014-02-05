@@ -6,7 +6,8 @@
 	"dependencies": {
 		"scrapyard": ">= 0.0.3",
 		"moment": ">= 2.2.1",
-		"ent": ">= 0.1.0"
+		"ent": ">= 0.1.0",
+		"async": ">= 0.2.10"
 	},
 	"engines": {
 		"node": "0.10.21"
