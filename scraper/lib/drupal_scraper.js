@@ -125,7 +125,8 @@ exports.scrape = function (options, callback) {
 						"id": location_id,
 						"event": options.event_id,
 						"type": "location",
-						"label": room.$.name,
+						"label_de": room.$.name,
+						"label_en": room.$.name,
 						"stage": true,
 						"level": null, // we don't know
 						"shape": null // we don't know either
