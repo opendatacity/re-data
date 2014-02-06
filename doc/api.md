@@ -9,8 +9,8 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 ```` javascript
 [{
 	"id": "rp14",
-	"label": "re:publica 14",
-	"title": "into the wild",
+	"title": "re:publica 14",
+	"slogan": "into the wild",
 	"begin": "2014-05-06",
 	"end": "2014-05-08",
 	"locations": [{
@@ -20,8 +20,8 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"url": "http://14.re-publica.de/"
 },{
 	"id": "rp13",
-	"label": "re:publica 13",
-	"title": "IN/SIDE/OUT",
+	"title": "re:publica 13",
+	"slogan": "IN/SIDE/OUT",
 	"begin": "2013-05-06",
 	"end": "2013-05-08",
 	"locations": [{
@@ -43,9 +43,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 ```` javascript
 [{
 	"id": "1",
-	"status": "upcoming", // upcoming | current | over | cancelled
 	"title": "Eröffnung",
-	"photo": "http://assets.re-publica.de/bla/bla.jpeg",
 	"abstract": "...",
 	"description": "...",
 	"url": "http://14.re-publica.de/session/1"
@@ -54,9 +52,10 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"duration": 45,
 	"day": {
 		"id": "1",
-		"label": "6. Mai"
+		"label_de": "6. Mai"
+		"label_en": "6. May"
 	},
-	"area": {
+	"location": {
 		"id": "1",
 		"label": "Stage 1"
 	},
@@ -66,15 +65,18 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	},
 	"format": {
 		"id": "talk",
-		"label": "Vortrag"
+		"label_de": "Vortrag",
+		"label_en": "Talk"
 	},
 	"level": {
 		"id": "beginner",
-		"label": "Anfängerinnen"
+		"label_de": "Anfängerinnen",
+		"label_en": "Beginner"
 	},
 	"lang": {
 		"id": "de",
-		"label": "Deutsch"
+		"label_de": "Deutsch",
+		"label_en": "German"
 	},
 	"speakers": [{
 		"id": "1",
@@ -85,8 +87,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"name": "Markus Beckedahl",
 		"photo": "http://assets.re-publica.de/bla/blub.jpeg"
 	}],
-	"revision": 12, // incremental revision counter
-	"last-modified": "2013-12-04T15:50:00.0Z"	
+	"last_modified": "2013-12-04T15:50:00.0Z"
 }]
 ````
 
@@ -107,7 +108,6 @@ Speakers are people performing sessions.
     	"event": "rp13",
     	"type": "speaker",
     	"name": "Johnny Haeusler",
-    	"nickname": "johnny-haeusler",
     	"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
     	"organization": "Spreeblick",
     	"position": "",
@@ -160,12 +160,12 @@ Locations are specified spaces on the compound and may be stages.
 [{
 	"id": "stage1", // location_id
 	"label": "Stage 1",
-	"stage": true, // is this a stage
+	"is_stage": true, // is this a stage
 	"floor": 0 // floor in the building, 0 is ground
 },{
 	"id": "affenfelsen",
 	"label": "Affenfelsen",
-	"stage": false,
+	"is_stage": false,
 	"floor": 0 // floor in the building, 0 is ground
 }]
 ````
@@ -183,15 +183,18 @@ Days enframe several session by a slice of time, usually one day.
 ```` javascript
 [{
 	"id": "1",
-	"label": "6. Mai",
+	"label_de": "6. Mai",
+	"label_en": "6. May",
 	"date": "2014-05-06"
 },{
 	"id": "2",
-	"label": "7. Mai",
+	"label_de": "7. Mai",
+	"label_en": "7. May",
 	"date": "2014-05-07"
 },{
 	"id": "3",
-	"label": "8. Mai",
+	"label_de": "8. Mai",
+	"label_en": "8. May",
 	"date": "2014-05-08"
 }]
 ````
@@ -209,7 +212,8 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 ```` javascript
 [{
 	"id": "talk",
-	"label": "Vortrag"
+	"label_de": "Vortrag"
+	"label_en": "Talk"
 },{
 	"id": "discussion",
 	"label": "Diskussion",
@@ -235,13 +239,16 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ```` javascript
 [{
 	"id": "beginner",
-	"label": "Beginnerinnen"
+	"label_de": "Anfängerinnen",
+	"label_en": "Beginner"
 },{
 	"id": "intermediate",
-	"label": "Fortgeschrittene"	
+	"label_de": "Fortgeschrittene",
+	"label_en": "Intermediate"
 },{
 	"id": "advanced",
-	"label": "Expertinnen"	
+	"label_de": "Expertinnen",
+	"label_en": "Experts"
 }]
 ````
 
@@ -256,10 +263,12 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ```` javascript
 [{
 	"id": "de",
-	"label": "Deutsch"
+	"label_de": "Deutsch",
+	"label_en": "German"
 },{
 	"lid": "en",
-	"label": "English"	
+	"label_de": "Englisch",
+	"label_en": "English"
 }]
 ````
 
