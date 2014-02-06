@@ -178,6 +178,21 @@ exports.scrape = function (options, callback) {
 					/* timing */
 					var _time = moment([day.$.date, event.start[0]].join(" "), "YYYY-MM-DD HH:mm");
 					var _duration = parseInt(event.duration[0].replace(/[^0-9]/g,''),10);
+
+					var enclosures = [];
+					var links = [];
+
+					event.slide.forEach(
+						function (url) {
+							if (url !== '') {
+								enclosures.push({
+									url:url,
+									mime:'application/pdf',
+									type:'slides'
+								})
+							}
+						}
+					)
 					
 					data.push({
 						"id": session_id,
@@ -186,7 +201,6 @@ exports.scrape = function (options, callback) {
 						"status": "over", // all rp13 events are over :(
 						"title": event.title[0],
 						"photo": null, // there is no such thing :(
-						"slides": event.slide.filter(function(s){ return (s !== ""); }),
 						"abstract": _dehtml(event.abstract[0]),
 						"description": _dehtml(event.description[0]),
 						"url": null, // FIXME, the slug is empty, wtf.
@@ -200,6 +214,8 @@ exports.scrape = function (options, callback) {
 						"level": level,
 						"lang": language,
 						"speakers": speakers,
+						"enclosures": enclosures,
+						"links": links,
 						"revision": 1,
 						"last_modified": moment().format("YYYY-MM-DD[T]HH:mm:ssZ")
 					});
