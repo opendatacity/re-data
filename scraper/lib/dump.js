@@ -40,20 +40,18 @@ exports.dump = function (data) {
 			return {
 				id:            entry.id,
 				event:         entry.event,
-				type:          entry.type,
-				status:        entry.status,
 				title:         entry.title,
-				photo:         entry.photo,
+				url:           entry.url,
 				begin:         entry.begin,
 				end:           entry.end,
 				duration:      entry.duration,
-				day:           entry.day,
-				area:          entry.area,
-				track:         entry.track.slug,
-				format:        entry.format.slug,
-				level:         entry.level.slug,
-				lang:          entry.lang.slug,
-				speakers:      entry.speakers.join(', '),
+				day:           entry.day.date,
+				location:      entry.location.label_en,
+				track:         entry.track.id,
+				format:        entry.format.id,
+				level:         entry.level.id,
+				lang:          entry.lang.id,
+				speakers:      entry.speakers.map(function (speaker) { return speaker.name }).join(', '),
 				last_modified: entry.last_modified
 			}
 		}));
@@ -62,14 +60,11 @@ exports.dump = function (data) {
 			return {
 				id:           entry.id,
 				event:        entry.event,
-				type:         entry.type,
 				name:         entry.name,
-				nickname:     entry.nickname,
 				photo:        entry.photo,
 				organization: entry.organization,
 				position:     entry.position,
-				biography:    entry.biography,
-				sessions:     entry.sessions.join(', ')
+				sessions:     entry.sessions.map(function (session) { return session.title }).join(', ')
 			}
 		}));
 	});
