@@ -14,30 +14,36 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 
 
 /* track slug conversion */
-var track_slugs = {
-	"business-innovation": "Business & Innovation",
-	"science-technology": "Science & Technology",
-	"politics-society": "Politics & Society",
-	"research-education": "Research & Education",
-	"culture": "Culture",
-	"media": "Media",
-	"republica": "Re:publica",
-	"recampaign": "Re:campaign"
+var trackTypes = {
+	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation", label_en:"Business & Innovation"},
+	"science-technology":  {id:"science-technology",  label_de:"Science & Technology",  label_en:"Science & Technology" },
+	"politics-society":    {id:"politics-society",    label_de:"Politics & Society",    label_en:"Politics & Society"   },
+	"research-education":  {id:"research-education",  label_de:"Research & Education",  label_en:"Research & Education" },
+	"culture":             {id:"culture",             label_de:"Culture",               label_en:"Culture"              },
+	"media":               {id:"media",               label_de:"Media",                 label_en:"Media"                },
+	"republica":           {id:"republica",           label_de:"Re:publica",            label_en:"Re:publica"           },
+	"recampaign":          {id:"recampaign",          label_de:"Re:campaign",           label_en:"Re:campaign"          }
 };
 
 /* format slug conversion */
-var format_slugs = {
-	"Diskussion": "discussion",
-	"Vortrag": "talk",
-	"Workshop": "workshop",
-	"Aktion": "action"
+var formatTypes = {
+	"Diskussion": {id:"discussion", label_de:"Diskussion", label_en:"Discussion"},
+	"Vortrag":    {id:"talk",       label_de:"Vortrag",    label_en:"Talk"      },
+	"Workshop":   {id:"workshop",   label_de:"Workshop",   label_en:"Workshop"  },
+	"Aktion":     {id:"action",     label_de:"Aktion",     label_en:"Action"    }
 };
 
 /* level slug conversion */
-var level_slugs = {
-	"Beginner": "beginner",
-	"Fortgeschrittene": "intermediate",
-	"Experten": "advanced"
+var levelTypes = {
+	"Beginner":         {id:"beginner",     label_de:"Beginner",         label_en:"Beginner"     },
+	"Fortgeschrittene": {id:"intermediate", label_de:"Fortgeschrittene", label_en:"Intermediate" },
+	"Experten":         {id:"advanced",     label_de:"Experten",         label_en:"Advanced"     }
+};
+
+/* level slug conversion */
+var languageTypes = {
+	"English": {id:"en", label_de:"Englisch", label_en:"English" },
+	"German":  {id:"de", label_de:"Deutsch",  label_en:"German"  }
 };
 
 var sort_types = {
@@ -138,36 +144,26 @@ exports.scrape = function (options, callback) {
 					
 					/* make id for session */
 					var session_id = [options.event_id, "session", event.$.id].join("-");
-					
+
 					/* language */
-					switch (event.language[0]) {
-						case "English": 
-							var lang_slug = "en";
-							var lang_label = "English";
-						break;
-						case "German": 
-							var lang_slug = "de";
-							var lang_label = "Deutsch";
-						break;
-						default: 
-							log.critical("Unknown Language:", event.language[0]);
-						break;
-					}
+					var language = event.language[0];
+					if (!languageTypes[language]) log.critical("Unknown Language:", language);
+					language = languageTypes[language];
 
 					/* track */
-					var track_slug = event.track[0].toLowerCase().replace(/ & /g,'-').replace(/[^a-z\-]/g,'');
-					if (!(track_slug in track_slugs)) log.critical("Unknown Track Slug:", track_slug);
-					var track_label = track_slugs[track_slug];
+					var track = event.track[0].toLowerCase().replace(/ & /g,'-').replace(/[^a-z\-]/g,'');
+					if (!trackTypes[track]) log.critical("Unknown Track:", track);
+					track = trackTypes[track];
 					
 					/* format */
-					if (!(event.type[0] in format_slugs)) log.critical("Unknown Format Slug:", event.type[0]);
-					var format_label = event.type[0];
-					var format_slug = format_slugs[format_label];
+					var format = event.type[0];
+					if (!formatTypes[format]) log.critical("Unknown Format:", format);
+					format = formatTypes[format];
 					
 					/* level */
-					if (!(event.experience_level[0] in level_slugs)) log.critical("Unknown Level Slug:", event.experience_level[0]);
-					var level_label = event.experience_level[0];
-					var level_slug = level_slugs[level_label];
+					var level = event.experience_level[0];
+					if (!levelTypes[level]) log.critical("Unknown Level:", level);
+					level = levelTypes[level];
 					
 					/* speakers */
 					var speakers = [];
@@ -199,23 +195,10 @@ exports.scrape = function (options, callback) {
 						"duration": _duration,
 						"day": day_id,
 						"area": area_id,
-						"track": {
-							"slug": track_slug,
-							"label": track_label
-						},
-						"format": {
-							"slug": format_slug,
-							"label": format_label
-						},
-						"level": {
-							"slug": level_slug,
-							"label": level_label
-						},
-						"lang": {
-							"slug": lang_slug,
-							"label": lang_label
-						},
-						"videos": [],
+						"track": track,
+						"format": format,
+						"level": level,
+						"lang": language,
 						"speakers": speakers,
 						"revision": 1,
 						"last_modified": moment().format("YYYY-MM-DD[T]HH:mm:ssZ")
