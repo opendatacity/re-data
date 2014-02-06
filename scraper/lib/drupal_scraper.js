@@ -77,7 +77,7 @@ var sort_types = {
 
 
 /* helper functions */
-var _nickname = function(str) {
+var _id_ifier = function(str) {
 	return str
 	.toString()
 	.toLowerCase()
@@ -131,7 +131,7 @@ exports.scrape = function (options, callback) {
 			day.room.forEach(function(room){
 
 				/* location id */
-				var location_id = [options.event_id, "location", _nickname(room.$.name)].join("-");
+				var location_id = [options.event_id, "location", _id_ifier(room.$.name)].join("-");
 				
 				/* check if room is already in data */
 				if (existing_locations.indexOf(location_id) < 0) {
@@ -251,7 +251,6 @@ exports.scrape = function (options, callback) {
 				"event": options.event_id,
 				"type": "speaker",
 				"name": speaker.fullname[0],
-				"nickname": _nickname(speaker.fullname[0]), // mockup
 				"photo": speaker.picture[0],
 				"organization": speaker.organization[0],
 				"position": speaker.position[0],
