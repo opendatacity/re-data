@@ -240,10 +240,16 @@ exports.scrape = function (options, callback) {
 
 		});
 		
+		var known_speakers = {};
+
 		/* iterate speakers */
 		xml.schedule.speakers[0].speaker.forEach(function(speaker){
 			
 			var speaker_id = [options.event_id, "speaker", speaker.$.persons].join("-");
+			if (known_speakers[speaker_id]) return;
+
+			known_speakers[speaker_id] = true;
+
 			data.push({
 				"id": speaker_id,
 				"event": options.event_id,
