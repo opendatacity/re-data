@@ -69,7 +69,6 @@ exports.dump = function (data) {
 				organization: entry.organization,
 				position:     entry.position,
 				biography:    entry.biography,
-				links:        entry.links.join(', '),
 				sessions:     entry.sessions.join(', ')
 			}
 		}));

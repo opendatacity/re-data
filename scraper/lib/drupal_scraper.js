@@ -241,14 +241,12 @@ exports.scrape = function (options, callback) {
 				"id": speaker_id,
 				"event": options.event_id,
 				"type": "speaker",
-				"attendee": null,
 				"name": speaker.fullname[0],
 				"nickname": _nickname(speaker.fullname[0]), // mockup
 				"photo": speaker.picture[0],
 				"organization": speaker.organization[0],
 				"position": speaker.position[0],
 				"biography": speaker.biography[0],
-				"links": [],
 				"sessions": speaker_talks[speaker_id] // fill me later
 			});
 		});
