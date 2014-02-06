@@ -214,7 +214,6 @@ exports.scrape = function (options, callback) {
 						"speakers": speakers,
 						"enclosures": enclosures,
 						"links": links,
-						"revision": 1,
 						"last_modified": moment().format("YYYY-MM-DD[T]HH:mm:ssZ")
 					});
 
