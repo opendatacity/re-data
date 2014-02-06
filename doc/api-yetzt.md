@@ -1,5 +1,9 @@
 # API
 
+## Authentication
+
+*not specified yet*
+
 ## Events
 
 An event is one chronologically delimited total of sessions. Like a yearly conference.
@@ -11,8 +15,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"id": "rp14",
 	"label": "re:publica 14",
 	"title": "into the wild",
-	"begin": "2014-05-06",
-	"end": "2014-05-08",
+	"date": ["2014-05-06","2014-05-08"],
 	"locations": [{
 		"label": "Station Berlin",
 		"coords": [52.49814,13.374538] // lat, lon
@@ -22,8 +25,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"id": "rp13",
 	"label": "re:publica 13",
 	"title": "IN/SIDE/OUT",
-	"begin": "2013-05-06",
-	"end": "2013-05-08",
+	"date": ["2013-05-06","2013-05-08"],
 	"locations": [{
 		"label": "Station Berlin",
 		"coords": [52.49814,13.374538] // lat, lon
@@ -34,7 +36,19 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 
 ### GET `/events/<event-id>`
 
-*single object, as above*
+```` javascript
+{
+	"id": "rp14",
+	"label": "re:publica 14",
+	"title": "into the wild",
+	"date": ["2014-05-06","2014-05-08"],
+	"locations": [{
+		"label": "Station Berlin",
+		"coords": [52.49814,13.374538] // lat, lon
+	}],
+	"url": "http://14.re-publica.de/"
+}
+````
 
 ## Sessions
 
@@ -85,6 +99,9 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"name": "Markus Beckedahl",
 		"photo": "http://assets.re-publica.de/bla/blub.jpeg"
 	}],
+	"devices": 232,
+	"users": 23,
+	"favorited": 100,
 	"revision": 12, // incremental revision counter
 	"last-modified": "2013-12-04T15:50:00.0Z"	
 }]
@@ -109,7 +126,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"label": "6. Mai",
 		"date": "2014-05-06"
 	},
-	"location": {
+	"area": {
 		"id": "1",
 		"label": "Stage 1"
 	},
@@ -137,7 +154,16 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"id": "2",
 		"name": "Markus Beckedahl",
 		"photo": "http://assets.re-publica.de/bla/blub.jpeg"
-	}]
+	}],
+	"favorited": 100,
+	"devices": 232,
+	"users": 23,
+	"faved-by": [{
+		"id": "1",
+		"name": "yetzt",
+		"friend": true,
+		"photo": "http://assets.re-publica.de/bla/fnord.png"
+	}],
 	"revision": 12, // incremental revision counter
 	"last-modified": "2013-12-04T15:50:00.0Z"	
 }
@@ -150,27 +176,34 @@ Speakers are people performing sessions.
 ### GET `/<event-id>/speakers`
 
 ```` javascript
-[
-	{
-    	"id": "1",
-    	"event": "rp13",
-    	"type": "speaker",
-    	"name": "Johnny Haeusler",
-    	"nickname": "johnny-haeusler",
-    	"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
-    	"organization": "Spreeblick",
-    	"position": "",
-    	"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
-    	"sessions": [
-    		"rp13-session-5115",
-    		"rp13-session-5117",
-    		"rp13-session-5866",
-    		"rp13-session-3983",
-    		"rp13-session-6481"
-    	]
-    },
- 	...
-]
+[{
+	"id": "144",
+	"attendee": $attendee_id,
+	"name": "Sebastian Vollnals",
+	"nickname": "yetzt",
+	"photo": "http://assets.re-publica.de/pictures/picture-144.jpg",
+	"organization": "OpenDataCity",
+	"tagline": "whatever",
+	"description": "poly & queer hacker, feminist sidekick. wandering about in berlin and wearing pink hair.",
+	"links": [{
+		"service": "twitter",
+		"label": "yetzt",
+		"url": "https://twitter.com/yetzt"
+	},{
+		"service": "blog",
+		"label": "blog",
+		"url": "http://yetzt.wordpress.com/"
+	},{
+		"service": "github",
+		"label": "yetzt",
+		"url": "http://github.com/yetzt"
+	},{
+		"service": "adn",
+		"label": "yetzt",
+		"url": "https://app.net/yetzt"
+	}],
+	"sessions": [$session_id, $session_id, $session_id]
+}]
 ````
 
 ### GET `/<event-id>/speakers/<id>`
@@ -199,27 +232,39 @@ Tracks are topic-based collections of sessions
 
 *single object, as above*
 
-## Locations
+## Areas
 
-Locations are specified spaces on the compound and may be stages.
+Areas are specified spaces on the compound and may be stages. Areas are used for wifi-cell-based location services.
 
-### GET `/<event-id>/locations`
+**The `friends` value requires an authenticated api call** 
+
+### GET `/<event-id>/areas`
 
 ```` javascript
 [{
-	"id": "stage1", // location_id
+	"id": "stage1", // area_id
 	"label": "Stage 1",
 	"stage": true, // is this a stage
-	"floor": 0 // floor in the building, 0 is ground
+	"current": $session_id, // id of current session or null
+	"upcoming": [$session_id, $session_id,$session_id],
+	"level": 0, // floor in the building, 0 is ground
+	"shape": "$geojson",
+	"devices": 100, // number of connected devices in this area
+	"users": 80, // number of users in this area
+	"friends": [$user_id, $user_id, $user_id] // friends in this area
 },{
 	"id": "affenfelsen",
 	"label": "Affenfelsen",
 	"stage": false,
-	"floor": 0 // floor in the building, 0 is ground
+	"level": 0, // floor in the building, 0 is ground
+	"shape": "$geojson",
+	"devices": 500, // number of connected devices in this area
+	"users": 40, // number of users in this area
+	"friends": [$user_id, $user_id,$user_id] // friends in this area
 }]
 ````
 
-### GET `/<event-id>/locations/<location-id>`
+### GET `/<event-id>/area/<area-id>`
 
 *single object as above*
 
@@ -316,3 +361,42 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 
 *single object as above*
 
+## Attendees
+
+Attendees are humans participating in an event.
+
+### GET `/<event-id>/attendees`
+
+```` javascript
+[{
+	"id": 1,
+	"speaker": "<speaker-id>" // or false
+	"name": "Sebastian Vollnals",
+	"nickname": "yetzt",
+	"photo": "http://assets.re-publica.de/pictures/picture-144.jpg",
+	"organization": "OpenDataCity",
+	"description": "poly & queer hacker, feminist sidekick. wandering about in berlin and wearing pink hair.",
+	"links": [{
+		"service": "twitter",
+		"label": "yetzt",
+		"url": "https://twitter.com/yetzt"
+	},{
+		"service": "blog",
+		"label": "blog",
+		"url": "http://yetzt.wordpress.com/"
+	},{
+		"service": "github",
+		"label": "yetzt",
+		"url": "http://github.com/yetzt"
+	},{
+		"service": "adn",
+		"label": "yetzt",
+		"url": "https://app.net/yetzt"
+	}],
+	"sessions": [$session_id,$session_id,$session_id],
+	"area": {
+		"id": "<area-id>",
+		"label": "Affenfelsen"
+	}
+}]
+````
