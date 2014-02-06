@@ -8,7 +8,7 @@ var typeMatching = {
 	'day': 'days',
 	'session': 'sessions',
 	'speaker': 'speakers',
-	'area': 'areas'
+	'location': 'locations'
 };
 
 exports.dump = function (data) {

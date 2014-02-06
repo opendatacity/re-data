@@ -50,7 +50,7 @@ var sort_types = {
 	"session": 1,
 	"speaker": 2,
 	"day": 3,
-	"area": 4,
+	"location": 4,
 	"track": 5,
 	"format": 6,
 	"level": 7,
@@ -95,7 +95,7 @@ exports.scrape = function (options, callback) {
 		var speaker_talks = {};
 
 		/* double check arrays */
-		var existing_areas = [];
+		var existing_locations = [];
 		var existing_languages = [];
 		var existing_tracks = [];
 		var existing_formats = [];
@@ -118,21 +118,21 @@ exports.scrape = function (options, callback) {
 				'date': day.$.date
 			});
 
-			/* iterate areas, but only once */
+			/* iterate locations, but only once */
 			day.room.forEach(function(room){
 
-				/* area id */
-				var area_id = [options.event_id, "area", _nickname(room.$.name)].join("-");
+				/* location id */
+				var location_id = [options.event_id, "location", _nickname(room.$.name)].join("-");
 				
 				/* check if room is already in data */
-				if (existing_areas.indexOf(area_id) < 0) {
-					existing_areas.push(area_id);
+				if (existing_locations.indexOf(location_id) < 0) {
+					existing_locations.push(location_id);
 				
 					/* push room */
 					data.push({
-						"id": area_id,
+						"id": location_id,
 						"event": options.event_id,
-						"type": "area",
+						"type": "location",
 						"label": room.$.name,
 						"stage": true,
 						"level": null, // we don't know
@@ -209,13 +209,13 @@ exports.scrape = function (options, callback) {
 						"begin": _time.format("YYYY-MM-DD[T]HH:mm:ssZ"),
 						"end": _time.add('m', _duration).format("YYYY-MM-DD[T]HH:mm:ssZ"),
 						"duration": _duration,
-						"area": area_id,
 						'day': {
 							'id': day_id,
 							'label_de': day_label_de,
 							'label_en': day_label_en,
 							'date': day.$.date
 						},
+						"location": location_id,
 						"track": track,
 						"format": format,
 						"level": level,
