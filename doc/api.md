@@ -42,7 +42,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 
 ```` javascript
 [{
-	"id": "1",
+	"id": "rp14-session-1",
 	"title": "Eröffnung",
 	"abstract": "...",
 	"description": "...",
@@ -51,17 +51,20 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"end": "2014-05-06T11:00:00.0Z",
 	"duration": 45,
 	"day": {
-		"id": "1",
+		"id": "rp14-day-1",
 		"label_de": "6. Mai"
 		"label_en": "6. May"
+		"date": "2014-05-06"
 	},
 	"location": {
-		"id": "1",
-		"label": "Stage 1"
+		"id": "rp14-location-stage-7",
+		"label_de": "Stage 7",
+		"label_en": "Stage 7"
 	},
 	"track": {
-		"id": 1,
-		"label": "re:publica"
+		"id": "media",
+		"label_de": "Media",
+		"label_en": "Media"
 	},
 	"format": {
 		"id": "talk",
@@ -78,15 +81,12 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"label_de": "Deutsch",
 		"label_en": "German"
 	},
-	"speakers": [{
-		"id": "1",
-		"name": "Andreas Gebhard",
-		"photo": "http://assets.re-publica.de/bla/fasel.jpeg"
-	},{
-		"id": "2",
-		"name": "Markus Beckedahl",
-		"photo": "http://assets.re-publica.de/bla/blub.jpeg"
-	}],
+	"speakers": [
+		{
+        	"id": "rp13-speaker-81",
+        	"name": "Sascha Lobo"
+        } //...
+	],
 	"last_modified": "2013-12-04T15:50:00.0Z"
 }]
 ````
@@ -104,7 +104,7 @@ Speakers are people performing sessions.
 ```` javascript
 [
 	{
-    	"id": "1",
+    	"id": "rp13-session-1",
     	"event": "rp13",
     	"type": "speaker",
     	"name": "Johnny Haeusler",
@@ -113,14 +113,16 @@ Speakers are people performing sessions.
     	"position": "",
     	"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
     	"sessions": [
-    		"rp13-session-5115",
-    		"rp13-session-5117",
-    		"rp13-session-5866",
-    		"rp13-session-3983",
-    		"rp13-session-6481"
+    		{
+            	"id": "rp13-session-5117",
+            	"title": "Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)"
+            },
+            {
+            	"id": "rp13-session-5866",
+            	"title": "YouTube macht die Stars von heute"
+            } //...
     	]
-    },
- 	...
+    } //...
 ]
 ````
 
@@ -135,15 +137,29 @@ Tracks are topic-based collections of sessions
 ### GET `/<event-id>/tracks`
 
 ```` javascript
-[{
-	"id": "business-innovation",
-	"label": "Business & innovation",
-	"sessions": [$session_id,$session_id,$session_id]
-},{
-	"id": "science-technology",
-	"label": "Science & Technology",
-	"sessions": [$session_id,$session_id,$session_id]	
-}]
+[
+	{
+		"id": "research-education",
+		"label_de": "Research & Education",
+		"label_en": "Research & Education",
+    	"sessions: [
+    		{
+        		"id": "rp13-session-1714",
+        		"title": "Street fighting data science"
+        	} //...
+         ]
+	},{
+    	"id": "politics-society",
+    	"label_de": "Politics & Society",
+    	"label_en": "Politics & Society",
+    	"sessions: [
+			{
+				"id": "rp13-session-1781",
+				"title": "Algorithmen-Ethik"
+			} //...
+    	]
+    } //...
+]
 ````
 
 ### GET `/<event-id>/tracks/<track-id>`
@@ -157,17 +173,19 @@ Locations are specified spaces on the compound and may be stages.
 ### GET `/<event-id>/locations`
 
 ```` javascript
-[{
-	"id": "stage1", // location_id
-	"label": "Stage 1",
-	"is_stage": true, // is this a stage
-	"floor": 0 // floor in the building, 0 is ground
-},{
-	"id": "affenfelsen",
-	"label": "Affenfelsen",
-	"is_stage": false,
-	"floor": 0 // floor in the building, 0 is ground
-}]
+[
+	{
+		"id": "stage1", // location_id
+		"label": "Stage 1",
+		"is_stage": true, // is this a stage
+		"floor": 0 // floor in the building, 0 is ground
+	},{
+		"id": "affenfelsen",
+		"label": "Affenfelsen",
+		"is_stage": false,
+		"floor": 0 // floor in the building, 0 is ground
+	} //...
+]
 ````
 
 ### GET `/<event-id>/locations/<location-id>`
@@ -181,22 +199,23 @@ Days enframe several session by a slice of time, usually one day.
 ### GET `/<event-id>/days`
 
 ```` javascript
-[{
-	"id": "1",
-	"label_de": "6. Mai",
-	"label_en": "6. May",
-	"date": "2014-05-06"
-},{
-	"id": "2",
-	"label_de": "7. Mai",
-	"label_en": "7. May",
-	"date": "2014-05-07"
-},{
-	"id": "3",
-	"label_de": "8. Mai",
-	"label_en": "8. May",
-	"date": "2014-05-08"
-}]
+[
+	{
+		"id": "1",
+		"event": "rp13",
+		"type": "day",
+		"label_de": "6. Mai",
+		"label_en": "6. May",
+		"date": "2014-05-06"
+	},{
+		"id": "2",
+		"event": "rp13",
+		"type": "day",
+		"label_de": "7. Mai",
+		"label_en": "7. May",
+		"date": "2014-05-07"
+	} //...
+]
 ````
 
 ### GET `/<event-id>/days/<day-id>`
@@ -210,20 +229,21 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 ### GET `/<event-id>/formats`
 
 ```` javascript
-[{
-	"id": "talk",
-	"label_de": "Vortrag"
-	"label_en": "Talk"
-},{
-	"id": "discussion",
-	"label": "Diskussion",
-},{
-	"id": "workshop",
-	"label": "Workshop",
-},{
-	"id": "action",
-	"label": "Aktion",
-}]
+[
+	{
+		"id": "talk",
+		"label_de": "Vortrag",
+		"label_en": "Talk"
+	},{
+		"id": "discussion",
+		"label_de": "Diskussion",
+		"label_en": "Discussion"
+	},{
+		"id": "workshop",
+		"label_de": "Workshop",
+		label_en": "Workshop"
+	} //...
+]
 ````
 
 ### GET `/<event-id>/formats/<format-id>`
@@ -237,19 +257,21 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ### GET `/<event-id>/levels`
 
 ```` javascript
-[{
-	"id": "beginner",
-	"label_de": "Anfängerinnen",
-	"label_en": "Beginner"
-},{
-	"id": "intermediate",
-	"label_de": "Fortgeschrittene",
-	"label_en": "Intermediate"
-},{
-	"id": "advanced",
-	"label_de": "Expertinnen",
-	"label_en": "Experts"
-}]
+[
+	{
+		"id": "beginner",
+		"label_de": "Anfängerinnen",
+		"label_en": "Beginner"
+	},{
+		"id": "intermediate",
+		"label_de": "Fortgeschrittene",
+		"label_en": "Intermediate"
+	},{
+		"id": "advanced",
+		"label_de": "Expertinnen",
+		"label_en": "Experts"
+	} //...
+]
 ````
 
 ### GET `/<event-id>/levels/<level-id>`
@@ -261,15 +283,17 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ### GET `/<event-id>/languages`
 
 ```` javascript
-[{
-	"id": "de",
-	"label_de": "Deutsch",
-	"label_en": "German"
-},{
-	"lid": "en",
-	"label_de": "Englisch",
-	"label_en": "English"
-}]
+[
+	{
+		"id": "de",
+		"label_de": "Deutsch",
+		"label_en": "German"
+	},{
+		"lid": "en",
+		"label_de": "Englisch",
+		"label_en": "English"
+	}
+]
 ````
 
 ### GET `/<event-id>/languages/<language-id>`

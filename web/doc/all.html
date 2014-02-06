@@ -110,8 +110,8 @@
 <h3 id="get-events-">GET <code>/events</code></h3>
 <pre><code class="lang-javascript">[{
     &quot;id&quot;: &quot;rp14&quot;,
-    &quot;label&quot;: &quot;re:publica 14&quot;,
-    &quot;title&quot;: &quot;into the wild&quot;,
+    &quot;title&quot;: &quot;re:publica 14&quot;,
+    &quot;slogan&quot;: &quot;into the wild&quot;,
     &quot;begin&quot;: &quot;2014-05-06&quot;,
     &quot;end&quot;: &quot;2014-05-08&quot;,
     &quot;locations&quot;: [{
@@ -121,8 +121,8 @@
     &quot;url&quot;: &quot;http://14.re-publica.de/&quot;
 },{
     &quot;id&quot;: &quot;rp13&quot;,
-    &quot;label&quot;: &quot;re:publica 13&quot;,
-    &quot;title&quot;: &quot;IN/SIDE/OUT&quot;,
+    &quot;title&quot;: &quot;re:publica 13&quot;,
+    &quot;slogan&quot;: &quot;IN/SIDE/OUT&quot;,
     &quot;begin&quot;: &quot;2013-05-06&quot;,
     &quot;end&quot;: &quot;2013-05-08&quot;,
     &quot;locations&quot;: [{
@@ -137,10 +137,8 @@
 <h2 id="sessions">Sessions</h2>
 <h3 id="get-event-id-sessions-">GET <code>/&lt;event-id&gt;/sessions</code></h3>
 <pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;1&quot;,
-    &quot;status&quot;: &quot;upcoming&quot;, // upcoming | current | over | cancelled
+    &quot;id&quot;: &quot;rp14-session-1&quot;,
     &quot;title&quot;: &quot;Eröffnung&quot;,
-    &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/bla.jpeg&quot;,
     &quot;abstract&quot;: &quot;...&quot;,
     &quot;description&quot;: &quot;...&quot;,
     &quot;url&quot;: &quot;http://14.re-publica.de/session/1&quot;
@@ -148,40 +146,43 @@
     &quot;end&quot;: &quot;2014-05-06T11:00:00.0Z&quot;,
     &quot;duration&quot;: 45,
     &quot;day&quot;: {
-        &quot;id&quot;: &quot;1&quot;,
-        &quot;label&quot;: &quot;6. Mai&quot;
+        &quot;id&quot;: &quot;rp14-day-1&quot;,
+        &quot;label_de&quot;: &quot;6. Mai&quot;
+        &quot;label_en&quot;: &quot;6. May&quot;
+        &quot;date&quot;: &quot;2014-05-06&quot;
     },
-    &quot;area&quot;: {
-        &quot;id&quot;: &quot;1&quot;,
-        &quot;label&quot;: &quot;Stage 1&quot;
+    &quot;location&quot;: {
+        &quot;id&quot;: &quot;rp14-location-stage-7&quot;,
+        &quot;label_de&quot;: &quot;Stage 7&quot;,
+        &quot;label_en&quot;: &quot;Stage 7&quot;
     },
     &quot;track&quot;: {
-        &quot;id&quot;: 1,
-        &quot;label&quot;: &quot;re:publica&quot;
+        &quot;id&quot;: &quot;media&quot;,
+        &quot;label_de&quot;: &quot;Media&quot;,
+        &quot;label_en&quot;: &quot;Media&quot;
     },
     &quot;format&quot;: {
         &quot;id&quot;: &quot;talk&quot;,
-        &quot;label&quot;: &quot;Vortrag&quot;
+        &quot;label_de&quot;: &quot;Vortrag&quot;,
+        &quot;label_en&quot;: &quot;Talk&quot;
     },
     &quot;level&quot;: {
         &quot;id&quot;: &quot;beginner&quot;,
-        &quot;label&quot;: &quot;Anfängerinnen&quot;
+        &quot;label_de&quot;: &quot;Anfängerinnen&quot;,
+        &quot;label_en&quot;: &quot;Beginner&quot;
     },
     &quot;lang&quot;: {
         &quot;id&quot;: &quot;de&quot;,
-        &quot;label&quot;: &quot;Deutsch&quot;
+        &quot;label_de&quot;: &quot;Deutsch&quot;,
+        &quot;label_en&quot;: &quot;German&quot;
     },
-    &quot;speakers&quot;: [{
-        &quot;id&quot;: &quot;1&quot;,
-        &quot;name&quot;: &quot;Andreas Gebhard&quot;,
-        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/fasel.jpeg&quot;
-    },{
-        &quot;id&quot;: &quot;2&quot;,
-        &quot;name&quot;: &quot;Markus Beckedahl&quot;,
-        &quot;photo&quot;: &quot;http://assets.re-publica.de/bla/blub.jpeg&quot;
-    }],
-    &quot;revision&quot;: 12, // incremental revision counter
-    &quot;last-modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;    
+    &quot;speakers&quot;: [
+        {
+            &quot;id&quot;: &quot;rp13-speaker-81&quot;,
+            &quot;name&quot;: &quot;Sascha Lobo&quot;
+        } //...
+    ],
+    &quot;last_modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;
 }]
 </code></pre>
 <h3 id="get-event-id-sessions-session-id-">GET <code>/&lt;event-id&gt;/sessions/&lt;session-id&gt;</code></h3>
@@ -191,24 +192,25 @@
 <h3 id="get-event-id-speakers-">GET <code>/&lt;event-id&gt;/speakers</code></h3>
 <pre><code class="lang-javascript">[
     {
-        &quot;id&quot;: &quot;1&quot;,
+        &quot;id&quot;: &quot;rp13-session-1&quot;,
         &quot;event&quot;: &quot;rp13&quot;,
         &quot;type&quot;: &quot;speaker&quot;,
         &quot;name&quot;: &quot;Johnny Haeusler&quot;,
-        &quot;nickname&quot;: &quot;johnny-haeusler&quot;,
         &quot;photo&quot;: &quot;http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png&quot;,
         &quot;organization&quot;: &quot;Spreeblick&quot;,
         &quot;position&quot;: &quot;&quot;,
         &quot;biography&quot;: &quot;Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....&quot;,
         &quot;sessions&quot;: [
-            &quot;rp13-session-5115&quot;,
-            &quot;rp13-session-5117&quot;,
-            &quot;rp13-session-5866&quot;,
-            &quot;rp13-session-3983&quot;,
-            &quot;rp13-session-6481&quot;
+            {
+                &quot;id&quot;: &quot;rp13-session-5117&quot;,
+                &quot;title&quot;: &quot;Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)&quot;
+            },
+            {
+                &quot;id&quot;: &quot;rp13-session-5866&quot;,
+                &quot;title&quot;: &quot;YouTube macht die Stars von heute&quot;
+            } //...
         ]
-    },
-     ...
+    } //...
 ]
 </code></pre>
 <h3 id="get-event-id-speakers-id-">GET <code>/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
@@ -216,98 +218,129 @@
 <h2 id="tracks">Tracks</h2>
 <p>Tracks are topic-based collections of sessions</p>
 <h3 id="get-event-id-tracks-">GET <code>/&lt;event-id&gt;/tracks</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;business-innovation&quot;,
-    &quot;label&quot;: &quot;Business &amp; innovation&quot;,
-    &quot;sessions&quot;: [$session_id,$session_id,$session_id]
-},{
-    &quot;id&quot;: &quot;science-technology&quot;,
-    &quot;label&quot;: &quot;Science &amp; Technology&quot;,
-    &quot;sessions&quot;: [$session_id,$session_id,$session_id]    
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;research-education&quot;,
+        &quot;label_de&quot;: &quot;Research &amp; Education&quot;,
+        &quot;label_en&quot;: &quot;Research &amp; Education&quot;,
+        &quot;sessions: [
+            {
+                &quot;id&quot;: &quot;rp13-session-1714&quot;,
+                &quot;title&quot;: &quot;Street fighting data science&quot;
+            } //...
+         ]
+    },{
+        &quot;id&quot;: &quot;politics-society&quot;,
+        &quot;label_de&quot;: &quot;Politics &amp; Society&quot;,
+        &quot;label_en&quot;: &quot;Politics &amp; Society&quot;,
+        &quot;sessions: [
+            {
+                &quot;id&quot;: &quot;rp13-session-1781&quot;,
+                &quot;title&quot;: &quot;Algorithmen-Ethik&quot;
+            } //...
+        ]
+    } //...
+]
 </code></pre>
 <h3 id="get-event-id-tracks-track-id-">GET <code>/&lt;event-id&gt;/tracks/&lt;track-id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <h2 id="locations">Locations</h2>
 <p>Locations are specified spaces on the compound and may be stages.</p>
 <h3 id="get-event-id-locations-">GET <code>/&lt;event-id&gt;/locations</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;stage1&quot;, // location_id
-    &quot;label&quot;: &quot;Stage 1&quot;,
-    &quot;stage&quot;: true, // is this a stage
-    &quot;floor&quot;: 0 // floor in the building, 0 is ground
-},{
-    &quot;id&quot;: &quot;affenfelsen&quot;,
-    &quot;label&quot;: &quot;Affenfelsen&quot;,
-    &quot;stage&quot;: false,
-    &quot;floor&quot;: 0 // floor in the building, 0 is ground
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;stage1&quot;, // location_id
+        &quot;label&quot;: &quot;Stage 1&quot;,
+        &quot;is_stage&quot;: true, // is this a stage
+        &quot;floor&quot;: 0 // floor in the building, 0 is ground
+    },{
+        &quot;id&quot;: &quot;affenfelsen&quot;,
+        &quot;label&quot;: &quot;Affenfelsen&quot;,
+        &quot;is_stage&quot;: false,
+        &quot;floor&quot;: 0 // floor in the building, 0 is ground
+    } //...
+]
 </code></pre>
 <h3 id="get-event-id-locations-location-id-">GET <code>/&lt;event-id&gt;/locations/&lt;location-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="days">Days</h2>
 <p>Days enframe several session by a slice of time, usually one day.</p>
 <h3 id="get-event-id-days-">GET <code>/&lt;event-id&gt;/days</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;1&quot;,
-    &quot;label&quot;: &quot;6. Mai&quot;,
-    &quot;date&quot;: &quot;2014-05-06&quot;
-},{
-    &quot;id&quot;: &quot;2&quot;,
-    &quot;label&quot;: &quot;7. Mai&quot;,
-    &quot;date&quot;: &quot;2014-05-07&quot;
-},{
-    &quot;id&quot;: &quot;3&quot;,
-    &quot;label&quot;: &quot;8. Mai&quot;,
-    &quot;date&quot;: &quot;2014-05-08&quot;
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;event&quot;: &quot;rp13&quot;,
+        &quot;type&quot;: &quot;day&quot;,
+        &quot;label_de&quot;: &quot;6. Mai&quot;,
+        &quot;label_en&quot;: &quot;6. May&quot;,
+        &quot;date&quot;: &quot;2014-05-06&quot;
+    },{
+        &quot;id&quot;: &quot;2&quot;,
+        &quot;event&quot;: &quot;rp13&quot;,
+        &quot;type&quot;: &quot;day&quot;,
+        &quot;label_de&quot;: &quot;7. Mai&quot;,
+        &quot;label_en&quot;: &quot;7. May&quot;,
+        &quot;date&quot;: &quot;2014-05-07&quot;
+    } //...
+]
 </code></pre>
 <h3 id="get-event-id-days-day-id-">GET <code>/&lt;event-id&gt;/days/&lt;day-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="formats">Formats</h2>
 <p>Formats indicate the practical execution of a session, like talk, discussion, workshop etc.</p>
 <h3 id="get-event-id-formats-">GET <code>/&lt;event-id&gt;/formats</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;talk&quot;,
-    &quot;label&quot;: &quot;Vortrag&quot;
-},{
-    &quot;id&quot;: &quot;discussion&quot;,
-    &quot;label&quot;: &quot;Diskussion&quot;,
-},{
-    &quot;id&quot;: &quot;workshop&quot;,
-    &quot;label&quot;: &quot;Workshop&quot;,
-},{
-    &quot;id&quot;: &quot;action&quot;,
-    &quot;label&quot;: &quot;Aktion&quot;,
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;talk&quot;,
+        &quot;label_de&quot;: &quot;Vortrag&quot;,
+        &quot;label_en&quot;: &quot;Talk&quot;
+    },{
+        &quot;id&quot;: &quot;discussion&quot;,
+        &quot;label_de&quot;: &quot;Diskussion&quot;,
+        &quot;label_en&quot;: &quot;Discussion&quot;
+    },{
+        &quot;id&quot;: &quot;workshop&quot;,
+        &quot;label_de&quot;: &quot;Workshop&quot;,
+        label_en&quot;: &quot;Workshop&quot;
+    } //...
+]
 </code></pre>
 <h3 id="get-event-id-formats-format-id-">GET <code>/&lt;event-id&gt;/formats/&lt;format-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="levels">Levels</h2>
 <p>Levels indivate the amount of preexisting knowledge expected from the respective audience</p>
 <h3 id="get-event-id-levels-">GET <code>/&lt;event-id&gt;/levels</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;beginner&quot;,
-    &quot;label&quot;: &quot;Beginnerinnen&quot;
-},{
-    &quot;id&quot;: &quot;intermediate&quot;,
-    &quot;label&quot;: &quot;Fortgeschrittene&quot;    
-},{
-    &quot;id&quot;: &quot;advanced&quot;,
-    &quot;label&quot;: &quot;Expertinnen&quot;    
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;beginner&quot;,
+        &quot;label_de&quot;: &quot;Anfängerinnen&quot;,
+        &quot;label_en&quot;: &quot;Beginner&quot;
+    },{
+        &quot;id&quot;: &quot;intermediate&quot;,
+        &quot;label_de&quot;: &quot;Fortgeschrittene&quot;,
+        &quot;label_en&quot;: &quot;Intermediate&quot;
+    },{
+        &quot;id&quot;: &quot;advanced&quot;,
+        &quot;label_de&quot;: &quot;Expertinnen&quot;,
+        &quot;label_en&quot;: &quot;Experts&quot;
+    } //...
+]
 </code></pre>
 <h3 id="get-event-id-levels-level-id-">GET <code>/&lt;event-id&gt;/levels/&lt;level-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="languages">Languages</h2>
 <h3 id="get-event-id-languages-">GET <code>/&lt;event-id&gt;/languages</code></h3>
-<pre><code class="lang-javascript">[{
-    &quot;id&quot;: &quot;de&quot;,
-    &quot;label&quot;: &quot;Deutsch&quot;
-},{
-    &quot;lid&quot;: &quot;en&quot;,
-    &quot;label&quot;: &quot;English&quot;    
-}]
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;de&quot;,
+        &quot;label_de&quot;: &quot;Deutsch&quot;,
+        &quot;label_en&quot;: &quot;German&quot;
+    },{
+        &quot;lid&quot;: &quot;en&quot;,
+        &quot;label_de&quot;: &quot;Englisch&quot;,
+        &quot;label_en&quot;: &quot;English&quot;
+    }
+]
 </code></pre>
 <h3 id="get-event-id-languages-language-id-">GET <code>/&lt;event-id&gt;/languages/&lt;language-id&gt;</code></h3>
 <p><em>single object as above</em></p>
