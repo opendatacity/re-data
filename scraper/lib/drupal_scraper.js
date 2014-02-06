@@ -11,7 +11,24 @@ var ent = require('ent');
 /* get local modules */
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 
+var location_list = {
+	'rp13-location-stage-1': { label_de:'Stage 1', label_en:'Stage 1', floor:0, is_stage:true },
+	'rp13-location-stage-2': { label_de:'Stage 2', label_en:'Stage 2', floor:0, is_stage:true },
+	'rp13-location-stage-3': { label_de:'Stage 3', label_en:'Stage 3', floor:0, is_stage:true },
+	'rp13-location-stage-4': { label_de:'Stage 4', label_en:'Stage 4', floor:0, is_stage:true },
+	'rp13-location-stage-5': { label_de:'Stage 5', label_en:'Stage 5', floor:0, is_stage:true },
+	'rp13-location-stage-6': { label_de:'Stage 6', label_en:'Stage 6', floor:0, is_stage:true },
+	'rp13-location-stage-7': { label_de:'Stage 7', label_en:'Stage 7', floor:1, is_stage:true },
 
+	'rp13-location-workshop-a': { label_de:'Workshop A', label_en:'Workshop A', floor:1, is_stage:true },
+	'rp13-location-workshop-b': { label_de:'Workshop B', label_en:'Workshop B', floor:1, is_stage:true },
+	'rp13-location-workshop-c': { label_de:'Workshop C', label_en:'Workshop C', floor:1, is_stage:true },
+	'rp13-location-workshop-d': { label_de:'Workshop D', label_en:'Workshop D', floor:1, is_stage:true },
+
+	'rp13-location-newthinking': { label_de:'Newthinking', label_en:'Newthinking', floor:0, is_stage:false },
+	'rp13-location-re-publica':  { label_de:'re:publica',  label_en:'re:publica',  floor:0, is_stage:false },
+	'rp13-location-global-innovation-lounge': { label_de:'Global Innovation Lounge', label_en:'Global Innovation Lounge', floor:0, is_stage:false },
+}
 
 /* track slug conversion */
 var trackTypes = {
@@ -35,7 +52,7 @@ var formatTypes = {
 
 /* level slug conversion */
 var levelTypes = {
-	"Beginner":         {id:"beginner",     label_de:"Beginner",         label_en:"Beginner"     },
+	"Beginner":         {id:"beginner",     label_de:"Anfänger",         label_en:"Beginner"     },
 	"Fortgeschrittene": {id:"intermediate", label_de:"Fortgeschrittene", label_en:"Intermediate" },
 	"Experten":         {id:"advanced",     label_de:"Experten",         label_en:"Advanced"     }
 };
@@ -119,17 +136,19 @@ exports.scrape = function (options, callback) {
 				/* check if room is already in data */
 				if (existing_locations.indexOf(location_id) < 0) {
 					existing_locations.push(location_id);
+
+					var location = location_list[location_id];
+					if (!location) log.critical('Unknown Location:', location_id)
 				
 					/* push room */
 					data.push({
 						"id": location_id,
 						"event": options.event_id,
 						"type": "location",
-						"label_de": room.$.name,
-						"label_en": room.$.name,
-						"stage": true,
-						"level": null, // we don't know
-						"shape": null // we don't know either
+						"label_de": location.label_de,
+						"label_en": location.label_en,
+						"is_stage": location.is_stage,
+						"floor": location.floor, // we don't know
 					});
 				
 				}
