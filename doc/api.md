@@ -90,58 +90,9 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }]
 ````
 
-### GET `/<event-id>/sessions/$session_id`
+### GET `/<event-id>/sessions/<session-id>`
 
-```` javascript
-{
-	"id": "1",
-	"status": "upcoming", // upcoming | current | over | cancelled
-	"title": "Eröffnung",
-	"photo": "http://assets.re-publica.de/bla/bla.jpeg",
-	"abstract": "...",
-	"description": "...",
-	"url": "http://14.re-publica.de/session/1"
-	"begin": "2014-05-06T10:00:00.0Z",
-	"end": "2014-05-06T11:00:00.0Z",
-	"duration": 45,
-	"day": {
-		"id": "1",
-		"label": "6. Mai",
-		"date": "2014-05-06"
-	},
-	"location": {
-		"id": "1",
-		"label": "Stage 1"
-	},
-	"track": {
-		"id": 1,
-		"label": "re:publica"
-	},
-	"format": {
-		"id": "talk",
-		"label": "Vortrag"
-	},
-	"level": {
-		"id": "beginner",
-		"label": "Anfängerinnen"
-	},
-	"lang": {
-		"id": "de",
-		"label": "Deutsch"
-	},
-	"speakers": [{
-		"id": "1",
-		"name": "Andreas Gebhard",
-		"photo": "http://assets.re-publica.de/bla/fasel.jpeg"
-	},{
-		"id": "2",
-		"name": "Markus Beckedahl",
-		"photo": "http://assets.re-publica.de/bla/blub.jpeg"
-	}]
-	"revision": 12, // incremental revision counter
-	"last-modified": "2013-12-04T15:50:00.0Z"	
-}
-````
+*single object, as above*
 
 ## Speakers
 
@@ -195,7 +146,7 @@ Tracks are topic-based collections of sessions
 }]
 ````
 
-### GET `/tracks/<track-id>`
+### GET `/<event-id>/tracks/<track-id>`
 
 *single object, as above*
 
@@ -245,7 +196,7 @@ Days enframe several session by a slice of time, usually one day.
 }]
 ````
 
-### GET `/<event-id>/days/1`
+### GET `/<event-id>/days/<day-id>`
 
 *single object as above*
 
@@ -271,7 +222,7 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 }]
 ````
 
-### GET `/<event-id>/formats/<id>`
+### GET `/<event-id>/formats/<format-id>`
 
 *single object as above*
 
@@ -294,7 +245,7 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 }]
 ````
 
-### GET `/<event-id>/levels/<id>`
+### GET `/<event-id>/levels/<level-id>`
 
 *single object as above*
 
