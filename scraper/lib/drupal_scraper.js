@@ -105,15 +105,17 @@ exports.scrape = function (options, callback) {
 		xml.schedule.day.forEach(function(day){
 
 			/* push day */
-			var day_id = [options.event_id, "day", day.$.index].join("-");
-			var day_label = moment(day.$.date, "YYYY-MM-DD").format("D. MMMM");
+			var day_id = [options.event_id, 'day', day.$.index].join('-');
+			var day_label_de = moment(day.$.date, 'YYYY-MM-DD').lang('de').format('D. MMMM');
+			var day_label_en = moment(day.$.date, 'YYYY-MM-DD').lang('en').format('D. MMMM');
 			
 			data.push({
-				"id": day_id,
-				"event": options.event_id,
-				"type": "day",
-				"label": day_label,
-				"date": day.$.date
+				'id': day_id,
+				'event': options.event_id,
+				'type': 'day',
+				'label_de': day_label_de,
+				'label_en': day_label_en,
+				'date': day.$.date
 			});
 
 			/* iterate areas, but only once */
@@ -207,8 +209,13 @@ exports.scrape = function (options, callback) {
 						"begin": _time.format("YYYY-MM-DD[T]HH:mm:ssZ"),
 						"end": _time.add('m', _duration).format("YYYY-MM-DD[T]HH:mm:ssZ"),
 						"duration": _duration,
-						"day": day_id,
 						"area": area_id,
+						'day': {
+							'id': day_id,
+							'label_de': day_label_de,
+							'label_en': day_label_en,
+							'date': day.$.date
+						},
 						"track": track,
 						"format": format,
 						"level": level,
