@@ -210,9 +210,7 @@ exports.scrape = function (options, callback) {
 						"id": session_id,
 						"event": options.event_id,
 						"type": "session",
-						"status": "over", // all rp13 events are over :(
 						"title": event.title[0],
-						"photo": null, // there is no such thing :(
 						"abstract": _dehtml(event.abstract[0]),
 						"description": _dehtml(event.description[0]),
 						"url": null, // FIXME, the slug is empty, wtf.
