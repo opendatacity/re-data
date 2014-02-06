@@ -27,11 +27,12 @@ exports.scrape = function (callback) {
 				if (video.video_url.indexOf('youtube.com') >= 0) service = 'youtube';
 				if (video.video_url.indexOf('vimeo.com'  ) >= 0) service = 'vimeo';
 				
-				entry.videos.push({
+				entry.links.push({
 					thumbnail:video.thumbnail,
 					title:video.video_title,
 					url:video.video_url,
-					service:service
+					service:service,
+					type:'recording'
 				})
 
 			})
