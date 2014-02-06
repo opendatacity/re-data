@@ -91,15 +91,7 @@ exports.scrape = function (options, callback) {
 
 		var data = [];
 
-		/* talk to speaker map */
-		var speaker_talks = {};
-
-		/* double check arrays */
 		var existing_locations = [];
-		var existing_languages = [];
-		var existing_tracks = [];
-		var existing_formats = [];
-		var existing_levels = [];
 			
 		/* iterate days */
 		xml.schedule.day.forEach(function(day){
@@ -173,8 +165,6 @@ exports.scrape = function (options, callback) {
 						if (typeof person.$.id === "undefined" || person.$.id === "") return; // defective person
 						var speaker_id = [options.event_id, "speaker", person.$.id].join("-")
 						speakers.push(speaker_id);
-						if (!(speaker_id in speaker_talks)) speaker_talks[speaker_id] = [];
-						speaker_talks[speaker_id].push(session_id);
 					});
 					
 					/* timing */
@@ -247,7 +237,7 @@ exports.scrape = function (options, callback) {
 				"organization": speaker.organization[0],
 				"position": speaker.position[0],
 				"biography": speaker.biography[0],
-				"sessions": speaker_talks[speaker_id] // fill me later
+				"sessions": [] // fill me later
 			});
 		});
 		
