@@ -246,6 +246,57 @@ exports.scrape = function (options, callback) {
 			return (sort_types[a.type] - sort_types[b.type]);
 		});
 
+		var lookup = {};
+
+		data.forEach(function (entry) {
+			lookup[entry.id] = entry;
+		});
+
+		// Filling Sessions of Speakers
+		data.forEach(function (entry) {
+			if (entry.type == 'session') {
+				entry.speakers.forEach(function (speaker_id) {
+					lookup[speaker_id].sessions.push(entry.id);
+				})
+			}
+		});
+
+		// Filling id arrays with more meta data
+		data.forEach(function (entry) {
+			switch (entry.type) {
+				case 'session':
+
+					var location = lookup[entry.location];
+					entry.location = {
+						'id':       location.id,
+						'label_de': location.label_de,
+						'label_en': location.label_en
+					};
+
+					entry.speakers = entry.speakers.map(function (id) {
+						speaker = lookup[id];
+						return {
+							'id':   id,
+							'name': speaker.name
+						}
+					})
+				break;
+
+				case 'speaker':
+
+					entry.sessions = entry.sessions.map(function (id) {
+						session = lookup[id];
+						return {
+							'id':   id,
+							'title': session.title
+						}
+					})
+				break;
+			}
+		})
+
+
+
 		if (callback) callback(data);
 
 	});
