@@ -1,6 +1,5 @@
 
-@header_color_top: #fff;
-@header_color_bottom: #fff;
+@header_color: #fff;
 @header_border_color: #aaa;
 @header_text_color: #333;
 @sidebar_border_color: #ccc;
@@ -13,10 +12,26 @@ body {
     min-width: 1100px;
 }
 
+.menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-transform: none;
+    font-size: 16px;
+    font-family: Verdana, arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    line-height: 20px;
+}
+
+    a {
+        color: #f03838;
+        text-decoration: none;
+    }
+
 #header {
-    background: @header_color_top;
-    background: -moz-linear-gradient(top, @header_color_top 0%, @header_color_bottom 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@header_color_top), color-stop(100%,@header_color_bottom));
+    background: @header_color;
     border-bottom: 3px solid @header_border_color;
     display: block;
     position: relative;
@@ -25,7 +40,6 @@ body {
     h1 {
         font-size: 37px;
         line-height: 46px;
-        text-shadow: #aaa 1px 1px 2px;
         a {
             color: @header_text_color;
             text-decoration: none;
