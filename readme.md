@@ -1,3 +1,3 @@
-# rp-data
+# re-data
 
 providing an API for re:publica
