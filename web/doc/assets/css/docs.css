@@ -4,11 +4,25 @@ body {
   line-height: 1.4em;
   min-width: 1100px;
 }
+.menu {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-transform: none;
+  font-size: 16px;
+  font-family: Verdana, arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  line-height: 20px;
+}
+a {
+  color: #f03838;
+  text-decoration: none;
+}
 #header {
-  background: #f1c40f;
-  background: -moz-linear-gradient(top, #f1c40f 0%, #eaa800 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1c40f), color-stop(100%, #eaa800));
-  border-bottom: 3px solid #eabb12;
+  background: #ffffff;
+  border-bottom: 3px solid #aaaaaa;
   display: block;
   position: relative;
   padding: 10px 20px;
@@ -16,7 +30,6 @@ body {
 #header h1 {
   font-size: 37px;
   line-height: 46px;
-  text-shadow: #aaa 1px 1px 2px;
 }
 #header h1 a {
   color: #333333;
