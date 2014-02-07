@@ -1,0 +1,1 @@
+bfdocs --theme=theme manifest.json ../web/doc/
