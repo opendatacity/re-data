@@ -73,7 +73,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	},
 	"level": {
 		"id": "beginner",
-		"label_de": "Anfängerinnen",
+		"label_de": "Beginner",
 		"label_en": "Beginner"
 	},
 	"lang": {
@@ -142,7 +142,7 @@ Tracks are topic-based collections of sessions
 		"id": "research-education",
 		"label_de": "Research & Education",
 		"label_en": "Research & Education",
-    	"sessions: [
+    	"sessions": [
     		{
         		"id": "rp13-session-1714",
         		"title": "Street fighting data science"
@@ -152,7 +152,7 @@ Tracks are topic-based collections of sessions
     	"id": "politics-society",
     	"label_de": "Politics & Society",
     	"label_en": "Politics & Society",
-    	"sessions: [
+    	"sessions": [
 			{
 				"id": "rp13-session-1781",
 				"title": "Algorithmen-Ethik"
@@ -241,7 +241,7 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 	},{
 		"id": "workshop",
 		"label_de": "Workshop",
-		label_en": "Workshop"
+		"label_en": "Workshop"
 	} //...
 ]
 ````
@@ -289,10 +289,10 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 		"label_de": "Deutsch",
 		"label_en": "German"
 	},{
-		"lid": "en",
+		"id": "en",
 		"label_de": "Englisch",
 		"label_en": "English"
-	}
+	} //...
 ]
 ````
 
