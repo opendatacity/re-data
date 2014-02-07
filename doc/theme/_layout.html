@@ -45,7 +45,7 @@
 <body>
     <div id="page">
         <a name="top" />
-        <header id="header">AAAA
+        <header id="header">
             <h1><a href="<%= @baseUrl %>"><%= @manifest.title or @title %></a></h1>
         </header>
         <%- @include "_sidebar.html" %>
@@ -57,7 +57,7 @@
             <a href="#top">Back to top</a> - <a href="<%= @baseUrl %>all.html">Everything on a single page</a>
             - <a href="?print=1">Print current page</a> - <a href="<%= @baseUrl %>all.html?print=1">Print all pages</a>
             <% if @manifest.options.github: %>
-                <a href="https://github.com/<%= @manifest.options.github %>" id="fork-me-on-github">Fork me on Github</a>
+                - <a href="https://github.com/<%= @manifest.options.github %>">Code is on Github</a>
             <% end %>
         </footer>
     </div>
