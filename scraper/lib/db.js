@@ -122,14 +122,14 @@ function updateCouchDB(db, data, callback) {
 
 						// ... or if it should be updated in the database.
 						log.info('Updating "'+item.id+'"');
-						db.save(doc._id, item, function () { callback() });
+						db.save(doc._id, item, function (err, res) { if (err) log.critical(err); callback() });
 
 					}
 				} else {
 
 					// If it does not exists in the database, just add the damn thing!
 					log.info('Adding "'+item.id+'"');
-					db.save(item, function () { callback() });
+					db.save(item, function (err, res) { if (err) log.critical(err); callback() });
 
 				}
 			});
