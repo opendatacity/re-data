@@ -32,14 +32,14 @@ var locationTypes = {
 
 /* track slug conversion */
 var trackTypes = {
-	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation", label_en:"Business & Innovation", sessions:[]},
-	"science-technology":  {id:"science-technology",  label_de:"Science & Technology",  label_en:"Science & Technology",  sessions:[]},
-	"politics-society":    {id:"politics-society",    label_de:"Politics & Society",    label_en:"Politics & Society",    sessions:[]},
-	"research-education":  {id:"research-education",  label_de:"Research & Education",  label_en:"Research & Education",  sessions:[]},
-	"culture":             {id:"culture",             label_de:"Culture",               label_en:"Culture",               sessions:[]},
-	"media":               {id:"media",               label_de:"Media",                 label_en:"Media",                 sessions:[]},
-	"republica":           {id:"republica",           label_de:"Re:publica",            label_en:"Re:publica",            sessions:[]},
-	"recampaign":          {id:"recampaign",          label_de:"Re:campaign",           label_en:"Re:campaign",           sessions:[]}
+	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation",  label_en:"Business & Innovation", sessions:[]},
+	"science-technology":  {id:"science-technology",  label_de:"Wissenschaft & Technik", label_en:"Science & Technology",  sessions:[]},
+	"politics-society":    {id:"politics-society",    label_de:"Politik & Gesellschaft", label_en:"Politics & Society",    sessions:[]},
+	"research-education":  {id:"research-education",  label_de:"Forschung & Bildung",    label_en:"Research & Education",  sessions:[]},
+	"culture":             {id:"culture",             label_de:"Kultur",                 label_en:"Culture",               sessions:[]},
+	"media":               {id:"media",               label_de:"Medien",                 label_en:"Media",                 sessions:[]},
+	"republica":           {id:"republica",           label_de:"re:publica",             label_en:"re:publica",            sessions:[]},
+	"recampaign":          {id:"recampaign",          label_de:"re:campaign",            label_en:"re:campaign",           sessions:[]}
 };
 
 /* format slug conversion */
