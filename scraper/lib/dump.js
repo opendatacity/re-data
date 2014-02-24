@@ -33,6 +33,15 @@ exports.dump = function (data) {
 	Object.keys(events).forEach(function (event_key) {
 		var event = events[event_key];
 
+		// Sort every sub_key
+		Object.keys(event).forEach(function (key) {
+			event[key].sort(function (a,b) {
+				if(a.id < b.id) return -1;
+				if(a.id > b.id) return 1;
+				return 0;
+			})
+		})
+
 		if (!fs.existsSync(dumpFolder+event_key)) fs.mkdirSync(dumpFolder+event_key);
 
 		exportJSON(event_key, 'data',     event         );
