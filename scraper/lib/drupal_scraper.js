@@ -11,7 +11,7 @@ var ent = require('ent');
 /* get local modules */
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 
-var location_list = {
+var locationTypes = {
 	'rp13-location-stage-1': { label_de:'Stage 1', label_en:'Stage 1', floor:0, is_stage:true },
 	'rp13-location-stage-2': { label_de:'Stage 2', label_en:'Stage 2', floor:0, is_stage:true },
 	'rp13-location-stage-3': { label_de:'Stage 3', label_en:'Stage 3', floor:0, is_stage:true },
@@ -32,14 +32,14 @@ var location_list = {
 
 /* track slug conversion */
 var trackTypes = {
-	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation", label_en:"Business & Innovation"},
-	"science-technology":  {id:"science-technology",  label_de:"Science & Technology",  label_en:"Science & Technology" },
-	"politics-society":    {id:"politics-society",    label_de:"Politics & Society",    label_en:"Politics & Society"   },
-	"research-education":  {id:"research-education",  label_de:"Research & Education",  label_en:"Research & Education" },
-	"culture":             {id:"culture",             label_de:"Culture",               label_en:"Culture"              },
-	"media":               {id:"media",               label_de:"Media",                 label_en:"Media"                },
-	"republica":           {id:"republica",           label_de:"Re:publica",            label_en:"Re:publica"           },
-	"recampaign":          {id:"recampaign",          label_de:"Re:campaign",           label_en:"Re:campaign"          }
+	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation", label_en:"Business & Innovation", sessions:[]},
+	"science-technology":  {id:"science-technology",  label_de:"Science & Technology",  label_en:"Science & Technology",  sessions:[]},
+	"politics-society":    {id:"politics-society",    label_de:"Politics & Society",    label_en:"Politics & Society",    sessions:[]},
+	"research-education":  {id:"research-education",  label_de:"Research & Education",  label_en:"Research & Education",  sessions:[]},
+	"culture":             {id:"culture",             label_de:"Culture",               label_en:"Culture",               sessions:[]},
+	"media":               {id:"media",               label_de:"Media",                 label_en:"Media",                 sessions:[]},
+	"republica":           {id:"republica",           label_de:"Re:publica",            label_en:"Re:publica",            sessions:[]},
+	"recampaign":          {id:"recampaign",          label_de:"Re:campaign",           label_en:"Re:campaign",           sessions:[]}
 };
 
 /* format slug conversion */
@@ -137,7 +137,7 @@ exports.scrape = function (options, callback) {
 				if (existing_locations.indexOf(location_id) < 0) {
 					existing_locations.push(location_id);
 
-					var location = location_list[location_id];
+					var location = locationTypes[location_id];
 					if (!location) log.critical('Unknown Location:', location_id)
 				
 					/* push room */
@@ -168,6 +168,7 @@ exports.scrape = function (options, callback) {
 					var track = event.track[0].toLowerCase().replace(/ & /g,'-').replace(/[^a-z\-]/g,'');
 					if (!trackTypes[track]) log.critical("Unknown Track:", track);
 					track = trackTypes[track];
+					track.sessions.push({id:session_id, title:event.title[0]});
 					
 					/* format */
 					var format = event.type[0];
@@ -224,7 +225,7 @@ exports.scrape = function (options, callback) {
 							'date': day.$.date
 						},
 						"location": location_id,
-						"track": track,
+						"track": { id:track.id, label_en:track.label_en, label_de:track.label_de },
 						"format": format,
 						"level": level,
 						"lang": language,
@@ -261,6 +262,69 @@ exports.scrape = function (options, callback) {
 				"biography": speaker.biography[0],
 				"sessions": [] // fill me later
 			});
+		});
+
+		Object.keys(trackTypes).forEach(function (key) {
+			var track = trackTypes[key];
+			track.sessions.sort(function (a,b) {
+				if(a.id < b.id) return -1;
+				if(a.id > b.id) return 1;
+				return 0;
+			})
+			data.push({
+				'id': track.id,
+				'event': options.event_id,
+				'type': 'track',
+				'label_de': track.label_de,
+				'label_en': track.label_en,
+				'sessions': track.sessions
+			})
+		});
+
+		Object.keys(locationTypes).forEach(function (key) {
+			var location = locationTypes[key];
+			data.push({
+				'id': key,
+				'event': options.event_id,
+				'type': 'location',
+				'label_de': location.label_de,
+				'label_en': location.label_en,
+				'floor': location.floor,
+				'is_stage': location.is_stage
+			})
+		});
+
+		Object.keys(formatTypes).forEach(function (key) {
+			var format = formatTypes[key];
+			data.push({
+				'id': format.id,
+				'event': options.event_id,
+				'type': 'format',
+				'label_de': format.label_de,
+				'label_en': format.label_en
+			})
+		});
+
+		Object.keys(levelTypes).forEach(function (key) {
+			var level = levelTypes[key];
+			data.push({
+				'id': level.id,
+				'event': options.event_id,
+				'type': 'level',
+				'label_de': level.label_de,
+				'label_en': level.label_en
+			})
+		});
+
+		Object.keys(languageTypes).forEach(function (key) {
+			var language = languageTypes[key];
+			data.push({
+				'id': language.id,
+				'event': options.event_id,
+				'type': 'language',
+				'label_de': language.label_de,
+				'label_en': language.label_en
+			})
 		});
 		
 		data.sort(function(a,b){
