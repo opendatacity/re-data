@@ -176,15 +176,11 @@ Locations are specified spaces on the compound and may be stages.
 [
 	{
 		"id": "stage1", // location_id
-		"label": "Stage 1",
+		"label_de": "Stage 1",
+		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
 		"floor": 0 // floor in the building, 0 is ground
-	},{
-		"id": "affenfelsen",
-		"label": "Affenfelsen",
-		"is_stage": false,
-		"floor": 0 // floor in the building, 0 is ground
-	} //...
+	}, //...
 ]
 ````
 
