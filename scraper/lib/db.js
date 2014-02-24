@@ -115,7 +115,7 @@ function updateCouchDB(db, data, callback) {
 					if (areEqual(doc, item)) {
 
 						// ... it is still the same so set the last_modified date to the last known changes ...
-						item.last_modified = doc.last_modified;
+						if (item.type == 'session') item.last_modified = doc.last_modified;
 						callback();
 
 					} else {
