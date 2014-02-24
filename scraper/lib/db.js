@@ -245,15 +245,15 @@ function areEqual(obj1, obj2) {
 
 		db.save("_design/data", {
 				views: {
-					sessions:  { map: function(doc) { if (doc.type === 'session') emit([doc.event, doc.id]); }},
-					speakers:  { map: function(doc) { if (doc.type === 'speaker') emit([doc.event, doc.id]); }},
-					tracks:    { map: function(doc) { if (doc.type === 'track') emit([doc.event, doc.id]); }},
+					sessions:  { map: function(doc) { if (doc.type === 'session')  emit([doc.event, doc.id]); }},
+					speakers:  { map: function(doc) { if (doc.type === 'speaker')  emit([doc.event, doc.id]); }},
+					tracks:    { map: function(doc) { if (doc.type === 'track')    emit([doc.event, doc.id]); }},
 					locations: { map: function(doc) { if (doc.type === 'location') emit([doc.event, doc.id]); }},
 
-					days:      { map: function(doc) { if (doc.type === 'day') emit([doc.event, doc.day, doc.id]); }},
-					formats:   { map: function(doc) { if (doc.type === 'format') emit([doc.event, doc.lang.slug, doc.id]); }},
-					levels:    { map: function(doc) { if (doc.type === 'level') emit([doc.event, doc.level.slug, doc.id]); }},
-					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.lang.slug, doc.id]); }}
+					days:      { map: function(doc) { if (doc.type === 'day')      emit([doc.event, doc.id]); }},
+					formats:   { map: function(doc) { if (doc.type === 'format')   emit([doc.event, doc.id]); }},
+					levels:    { map: function(doc) { if (doc.type === 'level')    emit([doc.event, doc.id]); }},
+					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.id]); }}
 				}
 			}
 		);
