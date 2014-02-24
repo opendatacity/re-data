@@ -35,123 +35,133 @@ var db = null;
 	});
 })();
 
-/* setup express */
+
+// setup express
+
 var app = express();
 
-/* api: events */
 
-app.get('/events', function(req, res){
-	db.view('events/id', {include_docs: true, descending: true}, function(err, data){
-		/* FIXME: handle some errors */
-		var result = [];
-		data.forEach(function(d){
-			result.push({
-				"id": d.id,
-				"label": d.label,
-				"title": d.title,
-				"date": d.date,
-				"locations": d.locations,
-				"url": d.url
-			});
-		});
-		res.json(result);
+// api: events
+
+app.get('/events', function(req, res) {
+	db.view('events/id', {include_docs: true, descending: true}, function(err, data) {
+		publishList(err, data, req.query, res);
 	});
 });
 
-app.get('/events/:id', function(req, res){
-	db.view('events/id', {include_docs: true, descending: true, key: req.params.id}, function(err, data){
-		if (err || data.length !== 1) return res.json({}); // FIXME: err
-		var data = data.pop().doc;
-		res.json({
-			"id": data.id,
-			"label": data.label,
-			"title": data.title,
-			"date": data.date,
-			"locations": data.locations,
-			"url": data.url
-		});
+app.get('/events/:id', function(req, res) {
+	db.view('events/id', {include_docs: true, descending: true, key: req.params.id}, function(err, data) {
+		publishItem(err, data, req.query, res);
 	});
 });
 
-/* api: sessions */
 
-app.get('/:event/sessions', function(req, res){
-	db.view('data/sessions', {include_docs: true, startkey: [req.params.event], endkey: [req.params.event, {}]}, function(err, data){
-		if (err || data.length === 0) return res.json({}); // FIXME: err
-		var result = [];
-		data.forEach(function(d){
-			result.push({
-				"id": d.id,
-				"status": d.status,
-				"title": d.title,
-				"photo": d.photo,
-				"abstract": d.abstract,
-				"description": d.description,
-				"url": d.url,
-				"begin": d.begin,
-				"end": d.end,
-				"duration": d.duration,
-				"day": d.day,
-				"area": d.area,
-				"track": d.track,
-				"format": d.format,
-				"level": d.level,
-				"lang": d.lang,
-				"speakers": d.speakers,
-				"revision": d.revision,
-				"last-modified": d["last-modified"],
-				"devices": null,
-				"users": null,
-				"favorited": null,
-				"friends": null
-			});
-		});
-		res.json(result);
-	});
-});
+// api: everything else
 
-app.get('/:event/sessions/:id', function(req, res){
-	console.log(req.params.event);
-	db.view('data/sessions', {include_docs: true, descending: true, key: [req.params.event, req.params.id]}, function(err, data){
-		if (err || data.length !== 1) return res.json({}); // FIXME: err
-		var data = data.pop().doc;
-		res.json({
-			"id": data.id,
-			"status": data.status,
-			"title": data.title,
-			"photo": data.photo,
-			"abstract": data.abstract,
-			"description": data.description,
-			"url": data.url,
-			"begin": data.begin,
-			"end": data.end,
-			"duration": data.duration,
-			"day": data.day,
-			"area": data.area,
-			"track": data.track,
-			"format": data.format,
-			"level": data.level,
-			"lang": data.lang,
-			"speakers": data.speakers,
-			"revision": data.revision,
-			"last-modified": data["last-modified"],
-			"devices": null,
-			"users": null,
-			"favorited": null,
-			"friends": null
+var types = [
+	'days',
+	'sessions',
+	'speakers',
+	'locations',
+	'tracks',
+	'formats',
+	'levels',
+	'languages'
+];
+
+types.forEach(function (type) {
+
+	app.get('/:event/'+type, function(req, res) {
+		db.view('data/'+type, {include_docs: true, startkey: [req.params.event], endkey: [req.params.event, {}]}, function(err, data) {
+			publishList(err, data, req.query, res);
 		});
 	});
-});
 
-/* api: speakers */
+	app.get('/:event/'+type+'/:id', function(req, res) {
+		db.view('data/'+type, {include_docs: true, descending: true, key: [req.params.event, req.params.id]}, function(err, data) {
+			publishItem(err, data, req.query, res);
+		});
+	});
 
-/* api: default */
+})
+
+
+// function for publishing a list
+
+function publishList(err, data, query, res) {
+	if (err) {
+		log.critical(err);
+		res.json({ok:false});
+	}
+
+	data = data.map(function (item) {
+		delete item._id;
+		delete item._rev;
+		return item;
+	})
+
+	data.sort(function (a,b) {
+		if (a.id < b.id) return -1;
+		if (a.id > b.id) return 1;
+		return 0;
+	})
+
+	var count = data.length;
+	
+	if (query.start || query.count) {
+		var startIndex = 0;
+		var endIndex   = 1e10;
+
+		if (query.start) startIndex = parseInt(query.start, 10);
+		if (query.count) endIndex = parseInt(query.count, 10) + startIndex;
+
+		data = data.filter(function (item, index) {
+			return (index >= startIndex) && (index < endIndex);
+		})
+	}
+
+	res.json({
+		ok: true,
+		count: count,
+		data: data
+	});
+}
+
+
+// function for publishing a single item
+
+function publishItem(err, data, query, res) {
+	if (err) {
+		log.critical(err);
+		res.json({ok:false});
+	}
+
+	if (data.length != 1) {
+		res.json({ok:false});
+	}
+
+	var item = data[0].doc;
+	delete item._id;
+	delete item._rev;
+
+	res.json({
+		ok: true,
+		count: 1,
+		data: item
+	});
+}
+
+
+
+// api: default
 
 app.get('*', function(req, res){
   res.json({"rp-api": config.version});
 });
 
-/* listen on either tcp or socket according to config */
+
+// listen on either tcp or socket according to config
+
 if ("port" in config.app) {
 	app.listen(config.app.port, config.app.host, function(){
 		log.info("Server ready, Listening on TCP/IP", config.app.host+':'+config.app.port);
