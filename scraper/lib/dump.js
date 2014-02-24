@@ -8,7 +8,11 @@ var typeMatching = {
 	'day': 'days',
 	'session': 'sessions',
 	'speaker': 'speakers',
-	'location': 'locations'
+	'location': 'locations',
+	'track': 'tracks',
+	'format': 'formats',
+	'level': 'levels',
+	'language': 'languages'
 };
 
 exports.dump = function (data) {
