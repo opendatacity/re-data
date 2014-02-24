@@ -63,7 +63,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	},
 	"track": {
 		"id": "media",
-		"label_de": "Media",
+		"label_de": "Medien",
 		"label_en": "Media"
 	},
 	"format": {
@@ -140,7 +140,7 @@ Tracks are topic-based collections of sessions
 [
 	{
 		"id": "research-education",
-		"label_de": "Research & Education",
+		"label_de": "Forschung & Bildung",
 		"label_en": "Research & Education",
     	"sessions": [
     		{
@@ -150,7 +150,7 @@ Tracks are topic-based collections of sessions
          ]
 	},{
     	"id": "politics-society",
-    	"label_de": "Politics & Society",
+    	"label_de": "Politik & Gesellschaft",
     	"label_en": "Politics & Society",
     	"sessions": [
 			{
