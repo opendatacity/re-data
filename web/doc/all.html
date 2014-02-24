@@ -5,13 +5,13 @@
     <title>re:data</title>
 
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/sunburst.min.css">
+    <link type="text/css" rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/sunburst.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/docs.css">
     <link type="text/css" rel="stylesheet" href="assets/css/print.css" media="print">
     
 
     <script type="text/javascript" src="assets/js/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+    <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
     <script type="text/javascript" src="assets/js/lunr.min.js"></script>
 
     
@@ -38,7 +38,28 @@
     <ol>
     
         <li>
-            <a href="api.html#api">API</a>
+            <a href="api.html#basics">Basics</a>
+            
+                
+    <ol>
+    
+        <li>
+            <a href="api.html#requests-and-responses">Requests and Responses</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#single-objects-and-lists">Single Objects and Lists</a>
+            
+        </li>
+    
+</ol>
+
+            
+        </li>
+    
+        <li>
+            <a href="api.html#reference">Reference</a>
             
                 
     <ol>
@@ -106,7 +127,56 @@
 </div>
 
         <div id="content">
-            <h1 id="api">API</h1>
+            <h1 id="basics">Basics</h1>
+<h2 id="requests-and-responses">Requests and Responses</h2>
+<p>The API is RESTful, so all you have to do is to call a specified URL and you will get a JSON result.</p>
+<p>For example: If you call <a href="http://data.re-publica.de/api/events">http://data.re-publica.de/api/events</a> you should receive something like this:</p>
+<pre><code class="lang-javascript">{
+    &quot;ok&quot;: true,
+    &quot;count&quot;: 1,
+    &quot;data&quot;: [{
+        &quot;type&quot;: &quot;event&quot;,
+        &quot;id&quot;: &quot;rp13&quot;,
+        &quot;label&quot;: &quot;re:publica 13&quot;,
+        &quot;title&quot;: &quot;IN/SIDE/OUT&quot;,
+        &quot;date&quot;: [ &quot;2013-05-06&quot;, &quot;2013-05-08&quot; ],
+        &quot;locations&quot;: [{
+            &quot;label&quot;: &quot;Station Berlin&quot;,
+            &quot;coords&quot;: [ 52.49814, 13.374538 ]
+        }],
+        &quot;url&quot;: &quot;http://13.re-publica.de/&quot;
+    }]
+}
+</code></pre>
+<p>The response is always an object with the properties:</p>
+<ul>
+<li><code>ok</code> is true or false and shows, whether the request was successful. If it was successful also the following properties will be set:</li>
+<li><code>count</code> shows the number of total results</li>
+<li><code>data</code> is an array with the results</li>
+</ul>
+<h2 id="single-objects-and-lists">Single Objects and Lists</h2>
+<p>If you are requesting for a single, existing object (e.g. by an object id) <code>count</code> will always be 1 and <code>data</code> will always be an array with a single object.</p>
+<p>If you are requesting for a list of objects (e.g. all sessions) <code>count</code> will always be the total number of known objects (e.g. sessions) and <code>data</code> will always be an array with the results. But when using lists you also can use the special GET parameters <code>start</code> and <code>count</code> for pagination.</p>
+<p>E.g. <a href="http://data.re-publica.de/api/rp13/sessions">http://data.re-publica.de/api/rp13/sessions</a> will list all sessions:</p>
+<pre><code class="lang-javascript">{
+    &quot;ok&quot;: true,
+    &quot;count&quot;: 347,
+    &quot;data&quot;: [
+        // ... list of 347 session objects
+    ]
+}
+</code></pre>
+<p>The same request with pagination <a href="http://data.re-publica.de/api/rp13/sessions?start=100&amp;count=20">...sessions?start=100&amp;count=20</a> will list only the requested 20 sessions - starting with the 100th:</p>
+<pre><code class="lang-javascript">{
+    &quot;ok&quot;: true,
+    &quot;count&quot;: 347, // count will still show the number of all sessions
+    &quot;data&quot;: [
+        // ... list of the requested 20 session objects
+    ]
+}
+</code></pre>
+<h1 id="reference">Reference</h1>
+<p>In the following reference examples only the content of the <code>data</code> property will be shown.</p>
 <h2 id="events">Events</h2>
 <p>An event is one chronologically delimited total of sessions. Like a yearly conference.</p>
 <h3 id="get-events-">GET <code>/events</code></h3>

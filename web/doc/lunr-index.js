@@ -8,11 +8,32 @@ var documentTitles = {};
 
 
 
-documentTitles["api.html#api"] = "API";
+documentTitles["api.html#basics"] = "Basics";
 index.add({
-    url: "api.html#api",
-    title: "API",
-    body: "# API  "
+    url: "api.html#basics",
+    title: "Basics",
+    body: "# Basics  "
+});
+
+documentTitles["api.html#requests-and-responses"] = "Requests and Responses";
+index.add({
+    url: "api.html#requests-and-responses",
+    title: "Requests and Responses",
+    body: "## Requests and Responses  The API is RESTful, so all you have to do is to call a specified URL and you will get a JSON result.  For example: If you call &lt;http://data.re-publica.de/api/events&gt; you should receive something like this:  ``` javascript { 	\&quot;ok\&quot;: true, 	\&quot;count\&quot;: 1, 	\&quot;data\&quot;: [{ 		\&quot;type\&quot;: \&quot;event\&quot;, 		\&quot;id\&quot;: \&quot;rp13\&quot;, 		\&quot;label\&quot;: \&quot;re:publica 13\&quot;, 		\&quot;title\&quot;: \&quot;IN/SIDE/OUT\&quot;, 		\&quot;date\&quot;: [ \&quot;2013-05-06\&quot;, \&quot;2013-05-08\&quot; ], 		\&quot;locations\&quot;: [{ 			\&quot;label\&quot;: \&quot;Station Berlin\&quot;, 			\&quot;coords\&quot;: [ 52.49814, 13.374538 ] 		}], 		\&quot;url\&quot;: \&quot;http://13.re-publica.de/\&quot; 	}] } ```  The response is always an object with the properties:  * ```ok``` is true or false and shows, whether the request was successful. If it was successful also the following properties will be set: * ```count``` shows the number of total results * ```data``` is an array with the results  "
+});
+
+documentTitles["api.html#single-objects-and-lists"] = "Single Objects and Lists";
+index.add({
+    url: "api.html#single-objects-and-lists",
+    title: "Single Objects and Lists",
+    body: "## Single Objects and Lists  If you are requesting for a single, existing object (e.g. by an object id) ```count``` will always be 1 and ```data``` will always be an array with a single object.  If you are requesting for a list of objects (e.g. all sessions) ```count``` will always be the total number of known objects (e.g. sessions) and ```data``` will always be an array with the results. But when using lists you also can use the special GET parameters ```start``` and ```count``` for pagination.  E.g. &lt;http://data.re-publica.de/api/rp13/sessions&gt; will list all sessions: ``` javascript { 	\&quot;ok\&quot;: true, 	\&quot;count\&quot;: 347, 	\&quot;data\&quot;: [ 		// ... list of 347 session objects 	] } ``` The same request with pagination [...sessions?start=100&amp;count=20](http://data.re-publica.de/api/rp13/sessions?start=100&amp;count=20) will list only the requested 20 sessions - starting with the 100th: ``` javascript { 	\&quot;ok\&quot;: true, 	\&quot;count\&quot;: 347, // count will still show the number of all sessions 	\&quot;data\&quot;: [ 		// ... list of the requested 20 session objects 	] } ```  "
+});
+
+documentTitles["api.html#reference"] = "Reference";
+index.add({
+    url: "api.html#reference",
+    title: "Reference",
+    body: "# Reference  In the following reference examples only the content of the ```data``` property will be shown.  "
 });
 
 documentTitles["api.html#events"] = "Events";

@@ -1,4 +1,66 @@
-# API
+# Basics
+
+## Requests and Responses
+
+The API is RESTful, so all you have to do is to call a specified URL and you will get a JSON result.
+
+For example: If you call <http://data.re-publica.de/api/events> you should receive something like this:
+
+``` javascript
+{
+	"ok": true,
+	"count": 1,
+	"data": [{
+		"type": "event",
+		"id": "rp13",
+		"label": "re:publica 13",
+		"title": "IN/SIDE/OUT",
+		"date": [ "2013-05-06", "2013-05-08" ],
+		"locations": [{
+			"label": "Station Berlin",
+			"coords": [ 52.49814, 13.374538 ]
+		}],
+		"url": "http://13.re-publica.de/"
+	}]
+}
+```
+
+The response is always an object with the properties:
+
+* ```ok``` is true or false and shows, whether the request was successful. If it was successful also the following properties will be set:
+* ```count``` shows the number of total results
+* ```data``` is an array with the results
+
+## Single Objects and Lists
+
+If you are requesting for a single, existing object (e.g. by an object id) ```count``` will always be 1 and ```data``` will always be an array with a single object.
+
+If you are requesting for a list of objects (e.g. all sessions) ```count``` will always be the total number of known objects (e.g. sessions) and ```data``` will always be an array with the results. But when using lists you also can use the special GET parameters ```start``` and ```count``` for pagination.
+
+E.g. <http://data.re-publica.de/api/rp13/sessions> will list all sessions:
+``` javascript
+{
+	"ok": true,
+	"count": 347,
+	"data": [
+		// ... list of 347 session objects
+	]
+}
+```
+The same request with pagination [...sessions?start=100&count=20](http://data.re-publica.de/api/rp13/sessions?start=100&count=20) will list only the requested 20 sessions - starting with the 100th:
+``` javascript
+{
+	"ok": true,
+	"count": 347, // count will still show the number of all sessions
+	"data": [
+		// ... list of the requested 20 session objects
+	]
+}
+```
+
+# Reference
+
+In the following reference examples only the content of the ```data``` property will be shown.
 
 ## Events
 

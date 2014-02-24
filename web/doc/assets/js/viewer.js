@@ -2,6 +2,7 @@
 (function() {
   $(function() {
     if (typeof hljs !== "undefined" && hljs !== null) {
+      hljs.configure({languages:['javascript']});
       $('#content pre code').each(function(i, el) {
         return hljs.highlightBlock(el);
       });
