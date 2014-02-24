@@ -147,7 +147,7 @@ function publishItem(err, data, query, res) {
 	res.json({
 		ok: true,
 		count: 1,
-		data: item
+		data: [item]
 	});
 }
 
