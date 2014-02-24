@@ -36,7 +36,7 @@ exports.dump = function (data) {
 		exportJSON(event_key, 'sessions', event.sessions);
 		exportJSON(event_key, 'speakers', event.speakers);
 
-		exportTSV(event_key, 'sessions', event.sessions.map(function (entry) {
+		exportTSV(event_key, 'sessions', (event.sessions || []).map(function (entry) {
 			return {
 				id:            entry.id,
 				event:         entry.event,
@@ -56,7 +56,7 @@ exports.dump = function (data) {
 			}
 		}));
 
-		exportTSV(event_key, 'speakers', event.speakers.map(function (entry) {
+		exportTSV(event_key, 'speakers', (event.speakers || []).map(function (entry) {
 			return {
 				id:           entry.id,
 				event:        entry.event,
@@ -79,7 +79,7 @@ function exportJSON(event_key, suffix, data) {
 
 function exportTSV(event_key, suffix, data) {
 	
-	var header = Object.keys(data[0]);
+	var header = Object.keys(data[0] || {});
 	var tsv = [header.join('\t')];
 
 	data.forEach(function (entry) {
