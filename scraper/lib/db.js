@@ -25,36 +25,61 @@ exports.update = function (data, callback) {
 
 function updateCouch(db, data, callback) {
 
+	var dbCache = new (function () {
+		var me = this;
+
+		var couchViews = {
+			'session':'data/sessions',
+			'speaker':'data/speakers',
+			'track':'data/tracks',
+			'location':'data/locations',
+			'day':'data/days',
+			'format':'data/formats',
+			'level':'data/levels',
+			'language':'data/languages'
+		}
+
+		var caches = {};
+
+		me.findInDB = function (item, callback) {
+			var cacheKey = [item.event, item.type].join('-');
+			if (caches[cacheKey]) {
+				callback(caches[cacheKey][item.id]);
+			} else {
+				var couchView = couchViews[item.type];
+				if (!couchView) {
+					log.critical('Unknown Item Type "'+item.type+'"');
+					callback();
+				}
+				log.info('Fetching "'+couchView+'" for "'+item.event+'"');
+				db.view(couchView, {include_docs: true, startkey: [item.event], endkey: [item.event, {}]}, function(err, docs) {
+					var cache = {};
+					docs.forEach(function (doc) {
+						cache[doc.id] = doc;
+					});
+					caches[cacheKey] = cache;
+					callback(caches[cacheKey][item.id]);
+				})
+			}
+		}
+		return me;
+	})();
+
 	async.eachSeries(
 		data,
 		function (item, callback) {
-
-			var couchView = couchViews[item.type];
-			if (!couchView) {
-				log.critical('Unknown Item Type "'+item.type+'"');
-				callback();
-			}
-
-			db.view(couchView, {include_docs: true, key: [item.event, item.id]}, function(err, docs) {
-				switch (docs.length) {
-					case 0://fehlt
-						log.info('Adding "'+item.id+'"');
-						db.save(item, function () { callback() });
-					break;
-					case 1:
-						var doc = docs[0].doc;
-						if (areEqual(doc, item)) {
-							item.last_modified = doc.last_modified;
-							callback();
-						} else {
-							log.info('Updating "'+item.id+'"');
-							db.save(doc._id, item, function () { callback() });
-						}
-					break;
-					default:
-						log.critical('Found "'+docs.length+'" Items');
+			dbCache.findInDB(item, function (doc) {
+				if (doc) {
+					if (areEqual(doc, item)) {
+						item.last_modified = doc.last_modified;
 						callback();
-						//Irgendwas im Arsch
+					} else {
+						log.info('Updating "'+item.id+'"');
+						db.save(doc._id, item, function () { callback() });
+					}
+				} else {
+					log.info('Adding "'+item.id+'"');
+					db.save(item, function () { callback() });
 				}
 			});
 		},
@@ -64,17 +89,6 @@ function updateCouch(db, data, callback) {
 	);
 }
 
-
-var couchViews = {
-	'session':'data/sessions',
-	'speaker':'data/speakers',
-	'track':'data/tracks',
-	'location':'data/locations',
-	'day':'data/days',
-	'format':'data/formats',
-	'level':'data/levels',
-	'language':'data/languages'
-}
 
 function connectCouch(callback) {
 	/* connect to couchdb */
