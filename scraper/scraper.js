@@ -14,9 +14,10 @@ async.eachSeries(
 	],
 	function (scraper, callback) {
 		scraper.scrape(function (data) {
-			db.update(data);
-			dump.dump(data);
-			callback();
+			db.update(data, function (data) {
+				dump.dump(data);
+				callback();
+			});
 		});
 	},
 	function () {
