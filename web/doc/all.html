@@ -253,10 +253,17 @@
     &quot;last_modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;
 }]
 </code></pre>
-<h4 id="enclosures">Enclosures</h4>
-<h4 id="links">Links</h4>
 <h3 id="get-event-id-sessions-session-id-">GET <code>/&lt;event-id&gt;/sessions/&lt;session-id&gt;</code></h3>
 <p><em>single object, as above</em></p>
+<p>Sessions also have two special fields: enclosures and links:</p>
+<h3 id="enclosures">Enclosures</h3>
+<p>Enclosures list files including mime type. The idea is to make it easy to generate e.g. podcast feeds. Currently this feature is not implemented yet.</p>
+<h3 id="links">Links</h3>
+<p>Links is a list of related webpages. Currently we provide only links to youtube/vimeo recordings. Later we also want to provide links to Etherpads, Slideshare, etc.</p>
+<ul>
+<li>Values of <code>&quot;type&quot;</code>: <code>&quot;recording&quot;</code></li>
+<li>Values of <code>&quot;service&quot;</code>: <code>&quot;youtube&quot;</code>, <code>&quot;vimeo&quot;</code></li>
+</ul>
 <h2 id="speakers">Speakers</h2>
 <p>Speakers are people performing sessions.</p>
 <h3 id="get-event-id-speakers-">GET <code>/&lt;event-id&gt;/speakers</code></h3>

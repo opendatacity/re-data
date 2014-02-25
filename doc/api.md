@@ -148,15 +148,23 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"last_modified": "2013-12-04T15:50:00.0Z"
 }]
 ````
-#### Enclosures
-
-#### Links
-
-
 
 ### GET `/<event-id>/sessions/<session-id>`
 
 *single object, as above*
+
+Sessions also have two special fields: enclosures and links:
+
+### Enclosures
+
+Enclosures list files including mime type. The idea is to make it easy to generate e.g. podcast feeds. Currently this feature is not implemented yet.
+
+### Links
+
+Links is a list of related webpages. Currently we provide only links to youtube/vimeo recordings. Later we also want to provide links to Etherpads, Slideshare, etc.
+
+* Values of ```"type"```: ```"recording"```
+* Values of ```"service"```: ```"youtube"```, ```"vimeo"```
 
 ## Speakers
 
