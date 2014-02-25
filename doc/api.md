@@ -109,49 +109,50 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"abstract": "...",
 	"description": "...",
 	"url": "http://14.re-publica.de/session/1"
-	"begin": "2014-05-06T10:00:00.0Z",
+	"begin": "2014-05-06T10:00:00.0Z", // local time (CEST)
 	"end": "2014-05-06T11:00:00.0Z",
-	"duration": 45,
+	"duration": 45, // in minutes
 	"day": {
-		"id": "rp14-day-1",
-		"label_de": "6. Mai"
-		"label_en": "6. May"
+		"id": "rp14-day-1", "label_de": "6. Mai", "label_en": "6. May",
 		"date": "2014-05-06"
 	},
 	"location": {
-		"id": "rp14-location-stage-7",
-		"label_de": "Stage 7",
-		"label_en": "Stage 7"
+		"id": "rp14-location-stage-7", "label_de": "Stage 7", "label_en": "Stage 7"
 	},
 	"track": {
-		"id": "media",
-		"label_de": "Medien",
-		"label_en": "Media"
+		"id": "media", "label_de": "Medien", "label_en": "Media"
 	},
 	"format": {
-		"id": "talk",
-		"label_de": "Vortrag",
-		"label_en": "Talk"
+		"id": "talk", "label_de": "Vortrag", "label_en": "Talk"
 	},
 	"level": {
-		"id": "beginner",
-		"label_de": "Beginner",
-		"label_en": "Beginner"
+		"id": "beginner", "label_de": "Beginner", "label_en": "Beginner"
 	},
 	"lang": {
-		"id": "de",
-		"label_de": "Deutsch",
-		"label_en": "German"
+		"id": "de", "label_de": "Deutsch", "label_en": "German"
 	},
 	"speakers": [
+		{ "id": "rp13-speaker-81", "name": "Sascha Lobo" }
+		//...
+	],
+	"enclosures": [],
+	"links": [
 		{
-			"id": "rp13-speaker-81",
-			"name": "Sascha Lobo"
-		} //...
+			"thumbnail": "http://i.ytimg.com/vi/18xQRtdrJhQ/mqdefault.jpg",
+			"title": "re:publica 2014: ...",
+			"url": "http://youtube.com/watch?v=18xQRtdrJhQ",
+			"service": "youtube",
+			"type": "recording"
+		}
 	],
 	"last_modified": "2013-12-04T15:50:00.0Z"
 }]
 ````
+#### Enclosures
+
+#### Links
+
+
 
 ### GET `/<event-id>/sessions/<session-id>`
 
