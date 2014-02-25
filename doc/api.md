@@ -145,9 +145,9 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	},
 	"speakers": [
 		{
-        	"id": "rp13-speaker-81",
-        	"name": "Sascha Lobo"
-        } //...
+			"id": "rp13-speaker-81",
+			"name": "Sascha Lobo"
+		} //...
 	],
 	"last_modified": "2013-12-04T15:50:00.0Z"
 }]
@@ -166,25 +166,25 @@ Speakers are people performing sessions.
 ```` javascript
 [
 	{
-    	"id": "rp13-session-1",
-    	"event": "rp13",
-    	"type": "speaker",
-    	"name": "Johnny Haeusler",
-    	"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
-    	"organization": "Spreeblick",
-    	"position": "",
-    	"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
-    	"sessions": [
-    		{
-            	"id": "rp13-session-5117",
-            	"title": "Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)"
-            },
-            {
-            	"id": "rp13-session-5866",
-            	"title": "YouTube macht die Stars von heute"
-            } //...
-    	]
-    } //...
+		"id": "rp13-session-1",
+		"event": "rp13",
+		"type": "speaker",
+		"name": "Johnny Haeusler",
+		"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
+		"organization": "Spreeblick",
+		"position": "",
+		"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
+		"sessions": [
+			{
+				"id": "rp13-session-5117",
+				"title": "Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)"
+			},
+			{
+				"id": "rp13-session-5866",
+				"title": "YouTube macht die Stars von heute"
+			} //...
+		]
+	} //...
 ]
 ````
 
@@ -203,24 +203,12 @@ Tracks are topic-based collections of sessions
 	{
 		"id": "research-education",
 		"label_de": "Forschung & Bildung",
-		"label_en": "Research & Education",
-    	"sessions": [
-    		{
-        		"id": "rp13-session-1714",
-        		"title": "Street fighting data science"
-        	} //...
-         ]
+		"label_en": "Research & Education"
 	},{
-    	"id": "politics-society",
-    	"label_de": "Politik & Gesellschaft",
-    	"label_en": "Politics & Society",
-    	"sessions": [
-			{
-				"id": "rp13-session-1781",
-				"title": "Algorithmen-Ethik"
-			} //...
-    	]
-    } //...
+		"id": "politics-society",
+		"label_de": "Politik & Gesellschaft",
+		"label_en": "Politics & Society"
+	} //...
 ]
 ````
 

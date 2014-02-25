@@ -168,7 +168,6 @@ exports.scrape = function (options, callback) {
 					var track = event.track[0].toLowerCase().replace(/ & /g,'-').replace(/[^a-z\-]/g,'');
 					if (!trackTypes[track]) log.critical("Unknown Track:", track);
 					track = trackTypes[track];
-					track.sessions.push({id:session_id, title:event.title[0]});
 					
 					/* format */
 					var format = event.type[0];
@@ -266,18 +265,12 @@ exports.scrape = function (options, callback) {
 
 		Object.keys(trackTypes).forEach(function (key) {
 			var track = trackTypes[key];
-			track.sessions.sort(function (a,b) {
-				if(a.id < b.id) return -1;
-				if(a.id > b.id) return 1;
-				return 0;
-			})
 			data.push({
 				'id': track.id,
 				'event': options.event_id,
 				'type': 'track',
 				'label_de': track.label_de,
-				'label_en': track.label_en,
-				'sessions': track.sessions
+				'label_en': track.label_en
 			})
 		});
 
