@@ -45,13 +45,13 @@ var app = express();
 
 app.get('/events', function(req, res) {
 	db.view('events/id', {include_docs: true, descending: true}, function(err, data) {
-		publishList(err, data, req.query, res);
+		replyList(err, data, req.query, res);
 	});
 });
 
 app.get('/events/:id', function(req, res) {
 	db.view('events/id', {include_docs: true, descending: true, key: req.params.id}, function(err, data) {
-		publishItem(err, data, req.query, res);
+		replyItem(err, data, req.query, res);
 	});
 });
 
@@ -73,33 +73,35 @@ types.forEach(function (type) {
 
 	app.get('/:event/'+type, function(req, res) {
 		db.view('data/'+type, {include_docs: true, startkey: [req.params.event], endkey: [req.params.event, {}]}, function(err, data) {
-			publishList(err, data, req.query, res);
+			replyList(err, data, req.query, res);
 		});
 	});
 
 	app.get('/:event/'+type+'/:id', function(req, res) {
 		db.view('data/'+type, {include_docs: true, descending: true, key: [req.params.event, req.params.id]}, function(err, data) {
-			publishItem(err, data, req.query, res);
+			replyItem(err, data, req.query, res);
 		});
 	});
 
 })
 
 
-// function for publishing a list
+// function for replying a list
 
-function publishList(err, data, query, res) {
+function replyList(err, data, query, res) {
 	if (err) {
 		log.critical(err);
 		res.json({ok:false});
 	}
 
+	// delete unnecessary fields _id and _rev
 	data = data.map(function (item) {
 		delete item._id;
 		delete item._rev;
 		return item;
 	})
 
+	// sort by id
 	data.sort(function (a,b) {
 		if (a.id < b.id) return -1;
 		if (a.id > b.id) return 1;
@@ -108,18 +110,20 @@ function publishList(err, data, query, res) {
 
 	var count = data.length;
 	
+	// pagination
 	if (query.start || query.count) {
 		var startIndex = 0;
 		var endIndex   = 1e10;
 
 		if (query.start) startIndex = parseInt(query.start, 10);
-		if (query.count) endIndex = parseInt(query.count, 10) + startIndex;
+		if (query.count) endIndex   = parseInt(query.count, 10) + startIndex;
 
 		data = data.filter(function (item, index) {
 			return (index >= startIndex) && (index < endIndex);
 		})
 	}
 
+	// return result
 	res.json({
 		ok: true,
 		count: count,
@@ -128,9 +132,9 @@ function publishList(err, data, query, res) {
 }
 
 
-// function for publishing a single item
+// function for replying a single item
 
-function publishItem(err, data, query, res) {
+function replyItem(err, data, query, res) {
 	if (err) {
 		log.critical(err);
 		res.json({ok:false});
@@ -140,10 +144,12 @@ function publishItem(err, data, query, res) {
 		res.json({ok:false});
 	}
 
+	// delete unnecessary fields _id and _rev
 	var item = data[0].doc;
 	delete item._id;
 	delete item._rev;
 
+	// return result
 	res.json({
 		ok: true,
 		count: 1,
