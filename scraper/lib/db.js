@@ -16,7 +16,7 @@ exports.update = function (data, callback) {
 
 	// Try to connect to CouchDB ...
 
-	connectCouch(function (db) {
+	connectCouch(function (db, connection) {
 		if (!db) {
 			log.critical('Can not Update the Database');
 			callback(data);
@@ -158,21 +158,22 @@ function updateCouchDB(db, data, callback) {
 
 function connectCouch(callback) {
 	/* connect to couchdb */
-	var db = new cradle.Connection(config.db.host, config.db.port, config.db.options).database(config.db.database);
+	var connection = new cradle.Connection(config.db.host, config.db.port, config.db.options);
+	var db = connection.database(config.db.database);
 	/* create database if not existing*/
 	db.exists(function(err, exists) {
 		if (err) {
 			log.critical('Database Connection Failed', err);
-			callback();
+			callback(false, connection);
 			return
 		}
 		if (exists) {
-			callback(db);
+			callback(db, connection);
 		} else {
 			db.create(function(err){
 				if (err) log.critical('Could not create Database', err);
 				log.info('Database Created');
-				callback(db);
+				callback(db, connection);
 			});
 		}
 	});
