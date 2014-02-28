@@ -247,7 +247,8 @@ function recreateCouchDB(db, connection) {
 				'label': 'Station Berlin',
 				'coords': [52.49814,13.374538]
 			}],
-			'url': 'http://13.re-publica.de/'
+			'url': 'http://13.re-publica.de/',
+			'last_modified': (new Date()).getTime()/1000
 		}
 	];
 
