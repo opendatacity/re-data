@@ -106,7 +106,7 @@ function updateCouchDB(db, data, callback) {
 
 	// Now we have a super smooth db lookup with caching ...
 
-	var last_modified = new Date();
+	var last_modified = (new Date()).getTime()/1000;
 
 	// ... so we could start to check every scraped item ...
 	async.eachSeries(
