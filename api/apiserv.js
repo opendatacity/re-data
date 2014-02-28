@@ -108,6 +108,14 @@ function replyList(err, data, query, res) {
 		return 0;
 	})
 
+	// filter by last_modified
+	if (query.last_modified) {
+		var last_modified = parseFloat(query.last_modified);
+		data = data.filter(function (item) {
+			return (item.last_modified > last_modified);
+		})
+	}
+
 	var count = data.length;
 	
 	// pagination
