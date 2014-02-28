@@ -22,6 +22,11 @@ exports.update = function (data, callback) {
 			callback(data);
 			return;
 		}
+		
+		// (optionally destroy database and recreate it)
+		if (false) {
+			return recreateCouchDB(db, connection);
+		}
 
 		// ... and update the database
 
@@ -216,63 +221,72 @@ function areEqual(obj1, obj2) {
 }
 
 
-
-
-/*
+function recreateCouchDB(db, connection) {
 	
-	// Old Code for database, view and "events" generation
 
 	var events = [
 		// {
-		// 	"type": "event",
-		// 	"id": "rp14",
-		// 	"label": "re:publica 14",
-		// 	"title": "into the wild",
-		// 	"date": ["2014-05-06","2014-05-08"],
-		// 	"locations": [{
-		// 		"label": "Station Berlin",
-		// 		"coords": [52.49814,13.374538]
+		// 	'type': 'event',
+		// 	'id': 'rp14',
+		// 	'label': 're:publica 14',
+		// 	'title': 'into the wild',
+		// 	'date': ['2014-05-06','2014-05-08'],
+		// 	'locations': [{
+		// 		'label': 'Station Berlin',
+		// 		'coords': [52.49814,13.374538]
 		// 	}],
-		// 	"url": "http://14.re-publica.de/"
+		// 	'url': 'http://14.re-publica.de/'
 		// },
 		{
-			"type": "event",
-			"id": "rp13",
-			"label": "re:publica 13",
-			"title": "IN/SIDE/OUT",
-			"date": ["2013-05-06","2013-05-08"],
-			"locations": [{
-				"label": "Station Berlin",
-				"coords": [52.49814,13.374538]
+			'type': 'event',
+			'id': 'rp13',
+			'label': 're:publica 13',
+			'title': 'IN/SIDE/OUT',
+			'date': ['2013-05-06','2013-05-08'],
+			'locations': [{
+				'label': 'Station Berlin',
+				'coords': [52.49814,13.374538]
 			}],
-			"url": "http://13.re-publica.de/"
+			'url': 'http://13.re-publica.de/'
 		}
 	];
 
-
-		
-		db.save("_design/events", {
-			views: {
-				id: {
-					map: function(doc) { if (doc.type === 'event') emit(doc.id); }
+	async.series([
+		function (cb) {
+			if (!db) return cb();
+			db.destroy(cb);
+		},
+		function (cb) {
+			db = connection.database(config.db.database);
+			db.create(cb);
+		},
+		function (cb) {
+			db.save('_design/events', {
+				views: {
+					id: {
+						map: function(doc) { if (doc.type === 'event') emit(doc.id); }
+					}
 				}
-			}
-		});
-
-		db.save("_design/data", {
+			}, cb);
+		},
+		function (cb) {
+			db.save('_design/data', {
 				views: {
 					sessions:  { map: function(doc) { if (doc.type === 'session')  emit([doc.event, doc.id]); }},
 					speakers:  { map: function(doc) { if (doc.type === 'speaker')  emit([doc.event, doc.id]); }},
 					tracks:    { map: function(doc) { if (doc.type === 'track')    emit([doc.event, doc.id]); }},
 					locations: { map: function(doc) { if (doc.type === 'location') emit([doc.event, doc.id]); }},
-
 					days:      { map: function(doc) { if (doc.type === 'day')      emit([doc.event, doc.id]); }},
 					formats:   { map: function(doc) { if (doc.type === 'format')   emit([doc.event, doc.id]); }},
 					levels:    { map: function(doc) { if (doc.type === 'level')    emit([doc.event, doc.id]); }},
 					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.id]); }}
 				}
-			}
-		);
-
-		db.save(events, function(err, res){callback()})
-*/
+			}, cb);
+		},
+		function (cb) {
+			db.save(events, cb)
+		}
+	], function (err, result) {
+		console.log(err, result);
+	});
+}
