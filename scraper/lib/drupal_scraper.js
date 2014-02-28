@@ -230,8 +230,7 @@ exports.scrape = function (options, callback) {
 						"lang": language,
 						"speakers": speakers,
 						"enclosures": enclosures,
-						"links": links,
-						"last_modified": moment().format("YYYY-MM-DD[T]HH:mm:ssZ")
+						"links": links
 					});
 
 				});

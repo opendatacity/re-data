@@ -101,10 +101,15 @@ function updateCouchDB(db, data, callback) {
 
 	// Now we have a super smooth db lookup with caching ...
 
+	var last_modified = new Date();
+
 	// ... so we could start to check every scraped item ...
 	async.eachSeries(
 		data,
 		function (item, callback) {
+
+
+			item.last_modified = last_modified;
 			
 			// ... if it already exsists in the database.
 			dbCache.findInDB(item, function (doc) {
@@ -115,7 +120,7 @@ function updateCouchDB(db, data, callback) {
 					if (areEqual(doc, item)) {
 
 						// ... it is still the same so set the last_modified date to the last known changes ...
-						if (item.type == 'session') item.last_modified = doc.last_modified;
+						item.last_modified = doc.last_modified;
 						callback();
 
 					} else {
