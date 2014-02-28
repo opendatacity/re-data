@@ -53,6 +53,16 @@
             
         </li>
     
+        <li>
+            <a href="api.html#modification-time">Modification Time</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#pagination">Pagination</a>
+            
+        </li>
+    
 </ol>
 
             
@@ -156,7 +166,12 @@
 </ul>
 <h2 id="single-objects-and-lists">Single Objects and Lists</h2>
 <p>If you are requesting for a single, existing object (e.g. by an object id) <code>count</code> will always be 1 and <code>data</code> will always be an array with a single object.</p>
-<p>If you are requesting for a list of objects (e.g. all sessions) <code>count</code> will always be the total number of known objects (e.g. sessions) and <code>data</code> will always be an array with the results. But when using lists you also can use the special GET parameters <code>start</code> and <code>count</code> for pagination.</p>
+<p>If you are requesting for a list of objects (e.g. all sessions) <code>count</code> will always be the total number of known objects (e.g. sessions) and <code>data</code> will always be an array with the results.</p>
+<h2 id="modification-time">Modification Time</h2>
+<p>Every element has the field <code>last_modified</code> containing the Unix time (in seconds) of the last change.</p>
+<p>You can use that to filter lists. E.g. <code>http://data.re-publica.de/api/rp13/speakers?last_modified=1393611456</code> returns only speaker entries, that have changed since Unix time <code>1393611456</code>.</p>
+<h2 id="pagination">Pagination</h2>
+<p>When requesting for a list you can use the special GET parameters <code>start</code> and <code>count</code> for pagination.</p>
 <p>E.g. <a href="http://data.re-publica.de/api/rp13/sessions">http://data.re-publica.de/api/rp13/sessions</a> will list all sessions:</p>
 <pre><code class="lang-javascript">{
     &quot;ok&quot;: true,
@@ -190,7 +205,8 @@
         &quot;label&quot;: &quot;Station Berlin&quot;,
         &quot;coords&quot;: [52.49814,13.374538] // lat, lon
     }],
-    &quot;url&quot;: &quot;http://14.re-publica.de/&quot;
+    &quot;url&quot;: &quot;http://14.re-publica.de/&quot;,
+    &quot;last_modified&quot;: 1393611456.99
 },{
     &quot;id&quot;: &quot;rp13&quot;,
     &quot;title&quot;: &quot;re:publica 13&quot;,
@@ -201,7 +217,8 @@
         &quot;label&quot;: &quot;Station Berlin&quot;,
         &quot;coords&quot;: [52.49814,13.374538] // lat, lon
     }],
-    &quot;url&quot;: &quot;http://13.re-publica.de/&quot;
+    &quot;url&quot;: &quot;http://13.re-publica.de/&quot;,
+    &quot;last_modified&quot;: 1393611456.99
 }]
 </code></pre>
 <h3 id="get-events-event-id-">GET <code>/events/&lt;event-id&gt;</code></h3>
@@ -250,7 +267,7 @@
             &quot;type&quot;: &quot;recording&quot;
         }
     ],
-    &quot;last_modified&quot;: &quot;2013-12-04T15:50:00.0Z&quot;
+    &quot;last_modified&quot;: 1393611456.99
 }]
 </code></pre>
 <h3 id="get-event-id-sessions-session-id-">GET <code>/&lt;event-id&gt;/sessions/&lt;session-id&gt;</code></h3>
@@ -267,27 +284,27 @@
 <h2 id="speakers">Speakers</h2>
 <p>Speakers are people performing sessions.</p>
 <h3 id="get-event-id-speakers-">GET <code>/&lt;event-id&gt;/speakers</code></h3>
-<pre><code class="lang-javascript">[
-    {
-        &quot;id&quot;: &quot;rp13-session-1&quot;,
-        &quot;event&quot;: &quot;rp13&quot;,
-        &quot;type&quot;: &quot;speaker&quot;,
-        &quot;name&quot;: &quot;Johnny Haeusler&quot;,
-        &quot;photo&quot;: &quot;http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png&quot;,
-        &quot;organization&quot;: &quot;Spreeblick&quot;,
-        &quot;position&quot;: &quot;&quot;,
-        &quot;biography&quot;: &quot;Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....&quot;,
-        &quot;sessions&quot;: [
-            {
-                &quot;id&quot;: &quot;rp13-session-5117&quot;,
-                &quot;title&quot;: &quot;Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)&quot;
-            },
-            {
-                &quot;id&quot;: &quot;rp13-session-5866&quot;,
-                &quot;title&quot;: &quot;YouTube macht die Stars von heute&quot;
-            } //...
-        ]
-    } //...
+<pre><code class="lang-javascript">[{
+    &quot;id&quot;: &quot;rp13-session-1&quot;,
+    &quot;event&quot;: &quot;rp13&quot;,
+    &quot;type&quot;: &quot;speaker&quot;,
+    &quot;name&quot;: &quot;Johnny Haeusler&quot;,
+    &quot;photo&quot;: &quot;http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png&quot;,
+    &quot;organization&quot;: &quot;Spreeblick&quot;,
+    &quot;position&quot;: &quot;&quot;,
+    &quot;biography&quot;: &quot;Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....&quot;,
+    &quot;sessions&quot;: [
+        {
+            &quot;id&quot;: &quot;rp13-session-5117&quot;,
+            &quot;title&quot;: &quot;Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)&quot;
+        },
+        {
+            &quot;id&quot;: &quot;rp13-session-5866&quot;,
+            &quot;title&quot;: &quot;YouTube macht die Stars von heute&quot;
+        } //...
+    ],
+    &quot;last_modified&quot;: 1393611456.99
+} //...
 ]
 </code></pre>
 <h3 id="get-event-id-speakers-id-">GET <code>/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
@@ -299,11 +316,13 @@
     {
         &quot;id&quot;: &quot;research-education&quot;,
         &quot;label_de&quot;: &quot;Forschung &amp; Bildung&quot;,
-        &quot;label_en&quot;: &quot;Research &amp; Education&quot;
+        &quot;label_en&quot;: &quot;Research &amp; Education&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;politics-society&quot;,
         &quot;label_de&quot;: &quot;Politik &amp; Gesellschaft&quot;,
-        &quot;label_en&quot;: &quot;Politics &amp; Society&quot;
+        &quot;label_en&quot;: &quot;Politics &amp; Society&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     } //...
 ]
 </code></pre>
@@ -318,7 +337,8 @@
         &quot;label_de&quot;: &quot;Stage 1&quot;,
         &quot;label_en&quot;: &quot;Stage 1&quot;,
         &quot;is_stage&quot;: true, // is this a stage
-        &quot;floor&quot;: 0 // floor in the building, 0 is ground
+        &quot;floor&quot;: 0, // floor in the building, 0 is ground
+        &quot;last_modified&quot;: 1393611456.99
     }, //...
 ]
 </code></pre>
@@ -334,14 +354,16 @@
         &quot;type&quot;: &quot;day&quot;,
         &quot;label_de&quot;: &quot;6. Mai&quot;,
         &quot;label_en&quot;: &quot;6. May&quot;,
-        &quot;date&quot;: &quot;2014-05-06&quot;
+        &quot;date&quot;: &quot;2014-05-06&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;2&quot;,
         &quot;event&quot;: &quot;rp13&quot;,
         &quot;type&quot;: &quot;day&quot;,
         &quot;label_de&quot;: &quot;7. Mai&quot;,
         &quot;label_en&quot;: &quot;7. May&quot;,
-        &quot;date&quot;: &quot;2014-05-07&quot;
+        &quot;date&quot;: &quot;2014-05-07&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     } //...
 ]
 </code></pre>
@@ -354,15 +376,18 @@
     {
         &quot;id&quot;: &quot;talk&quot;,
         &quot;label_de&quot;: &quot;Vortrag&quot;,
-        &quot;label_en&quot;: &quot;Talk&quot;
+        &quot;label_en&quot;: &quot;Talk&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;discussion&quot;,
         &quot;label_de&quot;: &quot;Diskussion&quot;,
-        &quot;label_en&quot;: &quot;Discussion&quot;
+        &quot;label_en&quot;: &quot;Discussion&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;workshop&quot;,
         &quot;label_de&quot;: &quot;Workshop&quot;,
-        &quot;label_en&quot;: &quot;Workshop&quot;
+        &quot;label_en&quot;: &quot;Workshop&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     } //...
 ]
 </code></pre>
@@ -375,15 +400,18 @@
     {
         &quot;id&quot;: &quot;beginner&quot;,
         &quot;label_de&quot;: &quot;Anfängerinnen&quot;,
-        &quot;label_en&quot;: &quot;Beginner&quot;
+        &quot;label_en&quot;: &quot;Beginner&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;intermediate&quot;,
         &quot;label_de&quot;: &quot;Fortgeschrittene&quot;,
-        &quot;label_en&quot;: &quot;Intermediate&quot;
+        &quot;label_en&quot;: &quot;Intermediate&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;advanced&quot;,
         &quot;label_de&quot;: &quot;Expertinnen&quot;,
-        &quot;label_en&quot;: &quot;Experts&quot;
+        &quot;label_en&quot;: &quot;Experts&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     } //...
 ]
 </code></pre>
@@ -395,11 +423,13 @@
     {
         &quot;id&quot;: &quot;de&quot;,
         &quot;label_de&quot;: &quot;Deutsch&quot;,
-        &quot;label_en&quot;: &quot;German&quot;
+        &quot;label_en&quot;: &quot;German&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     },{
         &quot;id&quot;: &quot;en&quot;,
         &quot;label_de&quot;: &quot;Englisch&quot;,
-        &quot;label_en&quot;: &quot;English&quot;
+        &quot;label_en&quot;: &quot;English&quot;,
+        &quot;last_modified&quot;: 1393611456.99
     } //...
 ]
 </code></pre>

@@ -35,7 +35,17 @@ The response is always an object with the properties:
 
 If you are requesting for a single, existing object (e.g. by an object id) ```count``` will always be 1 and ```data``` will always be an array with a single object.
 
-If you are requesting for a list of objects (e.g. all sessions) ```count``` will always be the total number of known objects (e.g. sessions) and ```data``` will always be an array with the results. But when using lists you also can use the special GET parameters ```start``` and ```count``` for pagination.
+If you are requesting for a list of objects (e.g. all sessions) ```count``` will always be the total number of known objects (e.g. sessions) and ```data``` will always be an array with the results.
+
+## Modification Time
+
+Every element has the field ```last_modified``` containing the Unix time (in seconds) of the last change.
+
+You can use that to filter lists. E.g. ```http://data.re-publica.de/api/rp13/speakers?last_modified=1393611456``` returns only speaker entries, that have changed since Unix time ```1393611456```.
+
+## Pagination
+
+When requesting for a list you can use the special GET parameters ```start``` and ```count``` for pagination.
 
 E.g. <http://data.re-publica.de/api/rp13/sessions> will list all sessions:
 ``` javascript
@@ -79,7 +89,8 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"label": "Station Berlin",
 		"coords": [52.49814,13.374538] // lat, lon
 	}],
-	"url": "http://14.re-publica.de/"
+	"url": "http://14.re-publica.de/",
+	"last_modified": 1393611456.99
 },{
 	"id": "rp13",
 	"title": "re:publica 13",
@@ -90,7 +101,8 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"label": "Station Berlin",
 		"coords": [52.49814,13.374538] // lat, lon
 	}],
-	"url": "http://13.re-publica.de/"
+	"url": "http://13.re-publica.de/",
+	"last_modified": 1393611456.99
 }]
 ````
 
@@ -145,7 +157,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 			"type": "recording"
 		}
 	],
-	"last_modified": "2013-12-04T15:50:00.0Z"
+	"last_modified": 1393611456.99
 }]
 ````
 
@@ -173,27 +185,27 @@ Speakers are people performing sessions.
 ### GET `/<event-id>/speakers`
 
 ```` javascript
-[
-	{
-		"id": "rp13-session-1",
-		"event": "rp13",
-		"type": "speaker",
-		"name": "Johnny Haeusler",
-		"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
-		"organization": "Spreeblick",
-		"position": "",
-		"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
-		"sessions": [
-			{
-				"id": "rp13-session-5117",
-				"title": "Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)"
-			},
-			{
-				"id": "rp13-session-5866",
-				"title": "YouTube macht die Stars von heute"
-			} //...
-		]
-	} //...
+[{
+	"id": "rp13-session-1",
+	"event": "rp13",
+	"type": "speaker",
+	"name": "Johnny Haeusler",
+	"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
+	"organization": "Spreeblick",
+	"position": "",
+	"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
+	"sessions": [
+		{
+			"id": "rp13-session-5117",
+			"title": "Comic Misunderstanding – A conversation with Graham Linehan (IT Crowd)"
+		},
+		{
+			"id": "rp13-session-5866",
+			"title": "YouTube macht die Stars von heute"
+		} //...
+	],
+	"last_modified": 1393611456.99
+} //...
 ]
 ````
 
@@ -212,11 +224,13 @@ Tracks are topic-based collections of sessions
 	{
 		"id": "research-education",
 		"label_de": "Forschung & Bildung",
-		"label_en": "Research & Education"
+		"label_en": "Research & Education",
+		"last_modified": 1393611456.99
 	},{
 		"id": "politics-society",
 		"label_de": "Politik & Gesellschaft",
-		"label_en": "Politics & Society"
+		"label_en": "Politics & Society",
+		"last_modified": 1393611456.99
 	} //...
 ]
 ````
@@ -238,7 +252,8 @@ Locations are specified spaces on the compound and may be stages.
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
-		"floor": 0 // floor in the building, 0 is ground
+		"floor": 0, // floor in the building, 0 is ground
+		"last_modified": 1393611456.99
 	}, //...
 ]
 ````
@@ -261,14 +276,16 @@ Days enframe several session by a slice of time, usually one day.
 		"type": "day",
 		"label_de": "6. Mai",
 		"label_en": "6. May",
-		"date": "2014-05-06"
+		"date": "2014-05-06",
+		"last_modified": 1393611456.99
 	},{
 		"id": "2",
 		"event": "rp13",
 		"type": "day",
 		"label_de": "7. Mai",
 		"label_en": "7. May",
-		"date": "2014-05-07"
+		"date": "2014-05-07",
+		"last_modified": 1393611456.99
 	} //...
 ]
 ````
@@ -288,15 +305,18 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 	{
 		"id": "talk",
 		"label_de": "Vortrag",
-		"label_en": "Talk"
+		"label_en": "Talk",
+		"last_modified": 1393611456.99
 	},{
 		"id": "discussion",
 		"label_de": "Diskussion",
-		"label_en": "Discussion"
+		"label_en": "Discussion",
+		"last_modified": 1393611456.99
 	},{
 		"id": "workshop",
 		"label_de": "Workshop",
-		"label_en": "Workshop"
+		"label_en": "Workshop",
+		"last_modified": 1393611456.99
 	} //...
 ]
 ````
@@ -316,15 +336,18 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 	{
 		"id": "beginner",
 		"label_de": "Anfängerinnen",
-		"label_en": "Beginner"
+		"label_en": "Beginner",
+		"last_modified": 1393611456.99
 	},{
 		"id": "intermediate",
 		"label_de": "Fortgeschrittene",
-		"label_en": "Intermediate"
+		"label_en": "Intermediate",
+		"last_modified": 1393611456.99
 	},{
 		"id": "advanced",
 		"label_de": "Expertinnen",
-		"label_en": "Experts"
+		"label_en": "Experts",
+		"last_modified": 1393611456.99
 	} //...
 ]
 ````
@@ -342,11 +365,13 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 	{
 		"id": "de",
 		"label_de": "Deutsch",
-		"label_en": "German"
+		"label_en": "German",
+		"last_modified": 1393611456.99
 	},{
 		"id": "en",
 		"label_de": "Englisch",
-		"label_en": "English"
+		"label_en": "English",
+		"last_modified": 1393611456.99
 	} //...
 ]
 ````
