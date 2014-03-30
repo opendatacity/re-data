@@ -10,14 +10,20 @@ var log = require(path.resolve(__dirname, '../api/lib/log.js'));
 
 async.eachSeries(
 	[
-		require('./rp13/scraper.js')
+		{ module:require('./rp13/scraper.js'), db:true },
+		{ module:require('./rp14/scraper.js'), db:false }
 	],
-	function (scraper, callback) {
-		scraper.scrape(function (data) {
-			db.update(data, function (data) {
+	function (item, callback) {
+		item.module.scrape(function (data) {
+			if (item.db) {
+				db.update(data, function (data) {
+					dump.dump(data);
+					callback();
+				});
+			} else {
 				dump.dump(data);
 				callback();
-			});
+			}
 		});
 	},
 	function () {
