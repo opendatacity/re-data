@@ -1,0 +1,4262 @@
+[
+	{
+		"id": "rp14-session-1077",
+		"title": "OER textbooks in Polish schools: a year later",
+		"abstract": "A year ago Polish teachers, parents, open education activists, and textbook publishers were in the heat of a discussion over a bold pilot programme out to create a set of open educational resources - libre-licensed textbooks spanning a part of curriculum. Today bold got bolder, with a plan to introduce libre-licensed government-commissioned textbooks to every school. Publishers are concerned about their business, teachers and parents about quality and political entanglement of content.",
+		"description": "???",
+		"url": "http://re-publica.de/node/1077",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1096"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-1171",
+		"title": "Gamefication of protest in authoritarian context: looking for new identities and new forms of participation (Russian cases)",
+		"abstract": "In the \"post-Sonwden\" era our digital identities and personal data become fragile. What alternatives can we elaborate in order to keep on communicating and constructing a better world? In Russian context this issue becomes particularly urgent, the off-line activism being oppressed. However Russian independent civic hackers and activists have been developing some new mobile/web apps gamifying and decentralizing civic participation (With some 500 000 users). My presentation will be based on a fieldwork that I've been doing for two years in Russia. The second half of the presentation will be organized as a brainstorm where I propose us to think together over some prototypes of web and/or mobile apps that can be helpful for todays activists. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/1171",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1104"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-1290",
+		"title": "Future scenarios of culture's circuits",
+		"abstract": "We will present scenarios of possible changes in creating, using and sharing of cultural works in 30 years perspective.  In collaboration with experts we choose the European cultural policy and intermediary business as a main factors that will shape the future of culture's circuits (especially digital ones). Then we built upon it  four possible scenarios and did assessment of their impact on the society, culture, education,  reative industries and the copyright system.",
+		"description": "???",
+		"url": "http://re-publica.de/node/1290",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1110",
+			"rp14-speaker-1120"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-1575",
+		"title": "makeKGL: Making an innovative city",
+		"abstract": "Social particle acceleration as development: Innovations in science, culture and business can be accelerated by increasing the rate of collisions between makers, artists and entrepreneurs.",
+		"description": "???",
+		"url": "http://re-publica.de/node/1575",
+		"begin": false,
+		"end": false,
+		"duration": 15,
+		"day": false,
+		"location": false,
+		"track": false,
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1138"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-1727",
+		"title": "Shadow libraries - pirate archivists",
+		"abstract": "Shadow libraries host millions of (scientific) books and tens of millions of journal articles. How do they operate? What do they offer? Who uses them? For what reasons? Come and see how pirate libraries that cost less than 2000 USD/year may shape the future of libraries. \r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/1727",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-255"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-1762",
+		"title": "My Heart-Shape Will Go On: It's Time for Emoji Karaoke!",
+		"abstract": "In Emoji Karaoke, participants from the audience will compete against each other to quickly translate a famous song lyric into emoji. The only requirements are a sense of humor, some creativity, and lightning-quick thumbs. Whether you come to watch or play, Emoji Karaoke is guaranteed to keep you entertained!",
+		"description": "???",
+		"url": "http://re-publica.de/node/1762",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "action",
+			"label_de": "Aktion",
+			"label_en": "Action"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1109"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-187",
+		"title": "Dragonfathers. How role playing games shaped virtual reality.",
+		"abstract": "Before computers and before the internet people already immersed themselves in shared virtual realities. These were called role playing games (RPGs). When we think about the origins of the web, ARPANet, TCP/IP or the C64 spring to mind. But the genesis of virtual worlds can also be traced to offline games people played as early as 1850. This session will show you where today's RPGs like WoW or Ultima came from and how much computer culture owes to pen & paper RPGs like Dungeons & Dragons.",
+		"description": "???",
+		"url": "http://re-publica.de/node/187",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-207",
+			"rp14-speaker-1774"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-198",
+		"title": "Rede zur Lage der Nation",
+		"abstract": "Die digitale Welt im Jahr 1 nach Snowden. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/198",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-235"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-201",
+		"title": " Möglichkeiten der Online-Kommunikation im therapeutischen und beratenden Kontext bei Autismus-Spektrum-Störungen",
+		"abstract": "In therapeutischen Kontexten ist die Arbeit mit autistischen Personen schwierig. Es zeigt sich aber, dass ein stark klientenorientiertes Vorgehen des Therapeuten Fortschritte bringt. Dazu gehören Analysen der einzelnen Wahrnehmungssituationen und eine auf Email verlagerte Kommunikation, welche die Sitzungen ergänzt. So ist eine Annäherung möglich, bei der soziale Irritationen vermieden. Auf dem Blog seinsdualitaet.de zeigen wir exemplarisch die einzelnen Annäherungsschritte in einer Beratung.",
+		"description": "???",
+		"url": "http://re-publica.de/node/201",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-242"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-2109",
+		"title": "Vom Gemeinschaftsblog zum Gemeinschaftsfilm",
+		"abstract": "Notes of Berlin ist eine Hommage an all die Notizen, die Berlin tagtäglich im Stadtbild hinterlässt. Im Fokus stehen dabei Aushänge aus Papier, die sich im öffentlichen urbanen Lebensraum der Hauptstadt entdecken lassen und ausschließlich persönliche Anliegen kommunizieren.  Jeder kann mitmachen, seine Fundstücke einreichen und sich zu den veröffentlichten Beiträgen äußern. \r\nDieses bereits vorhandene Potential kann genutzt werden, um etwas bisher nicht Dagewesenes zu schaffen: Die erste filmische Blogadaption. Ein cross-medialer Episoden-Kinospielfilm. Zusammen mit der Crowd  produziert, für die Crowd. Vom Gemeinschaftsblog zum Gemeinschaftsfilm! \r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/2109",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-159"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-219",
+		"title": "Wildes Fußballmemory (unnützes Wissen für die WM 2014)",
+		"abstract": "Die Fußball-WM in Brasilien lässt im Jahr 2014 die Herzen der Sportfans schon jetzt höher schlagen. Damit die Verbindung von Sport und digitalen Inhalten auf der rp14 nicht zu kurz kommt, spielen wir mit allen Fußballnerds ein noch nie dagewesenes Memory mit den Social Media-Profilen von Spielern, Trainern, Spielerfrauen, Managern und Maskottchen.\r\n ",
+		"description": "???",
+		"url": "http://re-publica.de/node/219",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "action",
+			"label_de": "Aktion",
+			"label_en": "Action"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-197",
+			"rp14-speaker-286"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-223",
+		"title": "Sind bloggende Väter eine Nischenerscheinung?",
+		"abstract": "Mütter- & Mamiblogs gibt es wie Sand am Meer. Trauen sich die Väter nicht hinter dem Ofen hervor oder hindert sie die Karriere daran, sich mit einem eigenen Blog Gehör zu verschaffen? \"Into the Wild\" ist dafür das richtige Thema. Kinder und Familie können wild sein. Lasst es uns zusammen bändigen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/223",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-290",
+			"rp14-speaker-1499",
+			"rp14-speaker-1631",
+			"rp14-speaker-1939"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-233",
+		"title": "Wild Wild Web: Netzkultur ohne niedliche Katzen",
+		"abstract": "Eine Reise in die dunklen, seltsamen und verstörenden Ecken des Webs, jenseits von Hype und Kommerz.",
+		"description": "???",
+		"url": "http://re-publica.de/node/233",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-303",
+			"rp14-speaker-1918"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-2477",
+		"title": "Lehrst Du noch oder lernst Du schon? - Moderne Schule ist (k)eine Frage der Technik",
+		"abstract": "Schüler der Oskar-von-Miller-Schule in Kassel erzählen, wie sie im Unterricht eigene Lernwege gehen und Verantwortung für ihren Lernprozess übernehmen. Recherche im Netz, das Erstellen von Websites, Podcasts und Videos oder auch die Kenntnis von Creative Commons Lizenzen sind dabei Alltag.",
+		"description": "???",
+		"url": "http://re-publica.de/node/2477",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1755",
+			"rp14-speaker-1861"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-2482",
+		"title": "Roboterjournalismus: Wenn Algorithmen Nachrichten machen",
+		"abstract": "Automatisierung wird Journalismus verändern: Welche Folgen hat das für den Beruf, die Medienwirtschaft und die Konsumenten?",
+		"description": "???",
+		"url": "http://re-publica.de/node/2482",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1863"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-2494",
+		"title": "Zahnbürste oder Longboard!",
+		"abstract": "Lust auf eine Zeitreise mit einem zwölfjährigen Reiseführer durch crossmediale Landschaften mit dem anschließenden Ping Pong Thinking über die Zukunft? Dann folgen Sie ihm auffällig!     ",
+		"description": "???",
+		"url": "http://re-publica.de/node/2494",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1865"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-250",
+		"title": "Raspberry for Fun and Business",
+		"abstract": "Home-Automation inkl. twittergesteuerter Weihnachtsbeleuchtung und ein Kunden-Informations-System, das eine unsichtbare Dienstleistung aus der Wolke anfassbar macht. Zwei sehr unterschiedliche Raspberry-Projekte, die das unglaubliche Spektrum möglicher Anwendungen des Systems deutlich machen sollen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/250",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-256"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-2500",
+		"title": "Supergeiler First Kiss - Viralität nur gegen Kohle?",
+		"abstract": "Warum verbreitet sich ein Video im Netz? Lässt sich Viralität kaufen? Ist der Siegeszug eines Videos programmierbar? Was bewegt jemanden, einen Link zu liken oder zu sharen? Erfolgreiche virale Verbreitung hängt nicht nur von guten Inhalten, sondern auch davon ab, dass sie zu den richtigen Multiplikatoren durchdringen. Ein Patentrezept gibt es nicht, aber Schlecky Silberstein, Blogrebell Martin Giesler und Melanie Gömmel vom WWF werden versuchen, sachdienliche Hinweise zu geben.",
+		"description": "???",
+		"url": "http://re-publica.de/node/2500",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1879"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-270",
+		"title": "Die Drei-Welten-Theorie. Von der Informationsüberlastung zur Informationssouveränität. ",
+		"abstract": "Die pessimistisch-apokalyptische Debatte über das Problem der Informationsüberflutung basiert auf einer pauschal-vereinfachten Gegenüberstellung: der Einzelne, der dem Datenwirrwarr mehr oder minder ohnmächtig gegenüber steht. Aber dieses Denkschema greift zu kurz, denn wir leben heute alle parallel in drei Informationswelten, für die wir auf dem Weg zu echter Informationssouveränität unterschiedliche Strategien benötigen. Der Vortrag entfaltet diese Drei-Welten-Theorie und nennt die wichtigsten Strategien, die in den einzelnen Informationswelten greifen können.",
+		"description": "???",
+		"url": "http://re-publica.de/node/270",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-368"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-272",
+		"title": " Internet into the wild - Myanmar goes online",
+		"abstract": "As South-East Asia braces itself for a more unified and open market some of the former ‘closed’ states have to open up and allow international organizations and companies to set up work and businesses. While Singapore and Malaysia are quite westernized and Thailand tries to establish itself as central hub for South-East Asia, Myanmar is in the middle of a transition period. Just turned onto a path back to democracy after having been a military dictatorship for decades the country prepares itself for the arrival of high-end technology, social media and mobile internet. Along with that comes the fear of threats from the west, IT overkill and the fear of exploitation as a host of cheap outsourcing companies.",
+		"description": "???",
+		"url": "http://re-publica.de/node/272",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-240"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-284",
+		"title": "Six degrees of Wikipedia",
+		"abstract": "In der Wikipedia von einem Ende zum anderen zu gelangen ist möglich und unterhaltsam.",
+		"description": "???",
+		"url": "http://re-publica.de/node/284",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "action",
+			"label_de": "Aktion",
+			"label_en": "Action"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-168",
+			"rp14-speaker-680"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-307",
+		"title": "Wenn der Kühlschrank twittert: Das Zusammenspiel von Haushaltsgeräten in unserer vernetzten Welt",
+		"abstract": "2015 wird es weltweit rund 15 Milliarden intelligente, miteinander vernetzte Geräte geben. Kühlschrank, Kaffeemaschine, Smartwatch, Audioanlage, Waschmaschine und Zahnbürsten alle werden online sein, dort miteinander kommunizieren und dabei bestehende Online-Dienste und Plattformen wie z.B. Twitter nutzen. Das bringt viele Veränderungen mit sich. Zum einen sind plötzlich nicht nur Menschen, sondern auch Geräte auf den Plattformen aktiv, zum anderen werden im Kontext des „Internet der Dinge“ neue Services und Dienstleistungen entstehen – insbesondere im Smart Home Umfeld.",
+		"description": "???",
+		"url": "http://re-publica.de/node/307",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-466"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-314",
+		"title": "Der Online-Elternclan: Zur gesellschaftlichen Bedeutung von Elternblogs",
+		"abstract": "Elternblogs und Eltern-Twitteraccounts sind wichtig: Sowohl individuell als auch gesellschaftlich. Greifen Socialmediakanäle in die Möglichkeiten des Veröffentlichens ein, wie beispielsweise Facebook bei Stillbildern, stellt dies nicht nur einen Eingriff in die Persönlichkeitsrechte dar, sondern kann langfristig entscheidenden kulturellen Einfluss haben.\r\nZiel des Vortrags ist es, einen Überblick über die gesellschaftliche Bedeutung von Elternblogs zu geben, hergeleitet aus der Bedeutung des Clanlebens in der Menschheitsgeschichte, die relevanten Thematiken von Elternblogs hierin einzubetten und die Folgen möglicher Eingriffe in diese bedeutende gesellschaftliche Gruppe heraus zu filtern, die dann gemeinsam diskutiert werden können.",
+		"description": "???",
+		"url": "http://re-publica.de/node/314",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-481"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-321",
+		"title": "Diamonds are a quantum computer’s best friend",
+		"abstract": "The next revolution in data processing is Quantum computing.\r\nThis talk is an entertaining “tour de force” including a brief introduction to the fascinating yet strange theories of quantum physics, the concepts of using these in quantum computing and the latest results on qubits in devices made out of real diamonds. If you want to learn about the machines that decrypt your passwords in the coming years and how you can actually grow diamonds in your microwave oven (and who wouldn’t?) this talk is for you!",
+		"description": "???",
+		"url": "http://re-publica.de/node/321",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-196"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-334",
+		"title": "Zeit für Sabotage!",
+		"abstract": "Wie NGOs durch Subversion, zivilen Ungehorsam und Humor ihre Legitimität behalten und dabei noch Geld sparen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/334",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-504"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-337",
+		"title": "Health 2020 - How Science Fiction turns into Reality",
+		"abstract": "Joe is a man like you and me. He prefers watching action movies on Friday nights, rather than finishing a hard work week with hitting the gym. A healthy lifestyle isn't quite his thing. He likes Gin Tonic and good red wine, chocolate with whole hazelnuts and burgers. Especially burgers.\r\n\r\nBut luckily Joe has one advantage that all of us don't have yet. He lives in the future. Not the far future, but in the year 2020. Six years later from now, healthcare will have improved extraordinarily. Let's take a look at Joe's daily life and find out what we can expect.\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/337",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-509"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-340",
+		"title": "Jetlag Overload - One day we’ll be tired, baby!",
+		"abstract": "Filme, Reportagen und Geschichten über das Aussteigen boomen - warum sehnen wir uns so sehr nach einem “echten” Leben und wie definieren wir das eigentlich, dieses “Echte”? Ist das Leben im Netz wirklich so schädlich wie viele glauben? Und kann digitale Abstinenz eine Lösung für die seelische Gesundheit sein? Wie wollen wir leben? Und warum tun wir es nicht einfach, anstatt nur Videos zu teilen, in denen es um Träume geht?",
+		"description": "???",
+		"url": "http://re-publica.de/node/340",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-356",
+			"rp14-speaker-306",
+			"rp14-speaker-438"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-348",
+		"title": "Über das Entlieben in Zeiten des Internets",
+		"abstract": "Es genügt nicht mehr, die gemeinsamen Lieblingsorte zu verlassen, Waschmaschine und Kühlschrank und Freundeskreis untereinander aufzuteilen. Wer behält Facebook, wer tobt sich weiterhin auf Instagram aus? Wie schaffe ich es, zu ignorieren, dass der instagramaccount des Expartners plötzlich so aussieht wie eine Ausstellung der Gemälde von Caspar David Friedrich? Wie reagiere ich auf die feucht fröhlichen tweets der Exfreundin, während ich gerade weinend zuhause sitze?",
+		"description": "???",
+		"url": "http://re-publica.de/node/348",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": false,
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-518"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-365",
+		"title": "Barrierefreches Webdesign für Dummies",
+		"abstract": "Premiere der Plattform \"barrierefrechheit.de\". \r\n\r\nDie Plattform \"barrierefrechheit.de\" stellt Tipps und Hinweise zur Verfügung, um eigene Anwendungen, Websites und Blogs zugänglicher zu machen. Schnell. Einfach. Konkret. Auf Deutsch.",
+		"description": "???",
+		"url": "http://re-publica.de/node/365",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-531"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-370",
+		"title": "„Überwachung macht impotent!“ – Neue Narrative gegen Überwachung",
+		"abstract": "Was könnte die große wirkmächtige Geschichte sein, die wir gegen Überwachung erzählen müssen, damit die Menschen sich endlich wehren?",
+		"description": "???",
+		"url": "http://re-publica.de/node/370",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-283"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-377",
+		"title": "The Telescreen in your pocket",
+		"abstract": "Crowdsourcing mobile network security assessments.",
+		"description": "???",
+		"url": "http://re-publica.de/node/377",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-568",
+			"rp14-speaker-1716"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-378",
+		"title": "Can’t pay? Don’t play: New ethical models for digital business",
+		"abstract": "Reactions are emerging to online economic disparity. Cooperatively-run startups and new forms of the mutual society may be an answer to exploitative digital business models. Social surges like the freelancers’ rights movement are building real world political pressure. Companies that don’t pay will be told they can’t be in business.",
+		"description": "???",
+		"url": "http://re-publica.de/node/378",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-392"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-379",
+		"title": "Burnout & Broken Comment Culture",
+		"abstract": "Das Dilemma das Onlineaktivismus ist, dass Beteiligte unter Druck, Tempo und Gewalterfahrungen im Netz immer schneller ausbrennen, sich zurückziehen und ihren Communities verloren gehen. Technische Möglichkeiten stützen Bewegungen, Diskussionskultur schwächt sie. Der Vortrag geht diesen Fragen nach und präsentiert Ideen dazu, Debatten im Netz neu zu organisieren und inklusiver zu gestalten, um Onlineaktivismus langfristig zu stärken.",
+		"description": "???",
+		"url": "http://re-publica.de/node/379",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-574"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-383",
+		"title": "Die Stein-Strategie – Von der Kunst, nicht zu handeln",
+		"abstract": "Warum Trends nicht so heiß gegessen werden, wie sie gekocht werden. Warum man Zukunftsexperten grundsätzlich misstrauen sollte (besonders denen, die häufig in den Medien auftauchen).  Warum der \"action bias\" das Grundübel unserer Zeit ist. Und wie man im Schnick-Schnack-Schnuck gewinnt.",
+		"description": "???",
+		"url": "http://re-publica.de/node/383",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-586"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-394",
+		"title": "Sketchnotes für Einsteiger",
+		"abstract": "Manchmal möchte man zeichnen können. Bei der Konferenz, um sich ein Zitat des Redners besser zu merken. Im Workshop, um die Ergebnisse grafisch festzuhalten. Und immer, wenn ein Bild alles viel einfacher machen würde.\r\nWie man mit nur wenigen Strichen Worte, Vorträge und Gedanken in kurzer Zeit visuell strukturieren und dokumentieren kann, lernt man im Sketchnote Workshop.",
+		"description": "???",
+		"url": "http://re-publica.de/node/394",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-197",
+			"rp14-speaker-595",
+			"rp14-speaker-597"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-402",
+		"title": "#idpet – Wenn Partizipation und Grundrechte kollidieren.",
+		"abstract": "Eine Aufgabe für die Netzpolitik: Wie bekommt man direkte Demokratie und Minderheitenschutz unter einen Hut? –\r\n\r\nPetitionen, insbesondere Online-Petitionen, haben das Image, ein gutes Instrument für den Kampf um Gerechtigkeit zu sein. Was aber, wenn das Instrument der Online-Petition dazu genutzt wird, Stimmung gegen Minderheiten zu machen?  Am Beispiel der Petition \"Zukunft – Verantwortung – Lernen: Kein Bildungsplan 2015 unter der Ideologie des Regenbogens” #idpet auf dem Portal von openPetition zeigen wir, was passiert, wenn Hatespeech mit freier Meinungsäußerung verwechselt wird.",
+		"description": "???",
+		"url": "http://re-publica.de/node/402",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-348",
+			"rp14-speaker-432"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-408",
+		"title": "Geschäftsmodell der Zukunft: Bullshit",
+		"abstract": "Während alle über die Zukunft des Journalismus diskutieren, hat sich Bullshit als florierendes Geschäftsmodell etabliert. Wo soll das hinführen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/408",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-570"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-410",
+		"title": "Get real, Netzgemeinde",
+		"abstract": "Ah, Netzgemeinde, unbekannter, treuer Freund. Oft beschworen, niemals getroffen. Doch wer zählt eigentlich dazu? Was ist diese Netzgemeine(tm) und warum scheint sie die einzige zu sein, die sich um NSA, VDS oder Lanz schert? Und stimmt das überhaupt - oder dreht sich die Netzgemeinde mittlerweile nur noch um sich selbst? \r\nDies und etwas mehr wird unter Einbeziehung von digitaler Spaltung, digitaler Milieus und gesellschaftlicher Herausforderungen beleuchtet. Für die Netzgemeinde, und alle, die niemals dazu gehören woll(t)en.",
+		"description": "???",
+		"url": "http://re-publica.de/node/410",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-620"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-412",
+		"title": "Irgendwo muss man halt anfangen - Programmieren für Nullcheckerbunnys",
+		"abstract": "Circa 100 Millionen Menschen im deutschsprachigen Raum können nicht ausreichend programmieren. Sie haben Schwierigkeiten mit den täglichen Programmieraufgaben und sind auf fremde Hilfe angewiesen. Wir helfen beim Weg in die Selbstständigkeit. Keine Vorkenntnisse erforderlich.",
+		"description": "???",
+		"url": "http://re-publica.de/node/412",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-166",
+			"rp14-speaker-387"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-428",
+		"title": "Do you want to know who has been asking about you? ",
+		"abstract": "If you want to know what state knows about you and why so much, then we have something in common. In the post-Snowden world we became well aware that data we store on servers belonging to private companies tends to have a second life. It is where secret services and law enforcement meet the Internet. How to prevent bulk transfers from private to public data bases? How to make sure that due process is in place? What do we know about disclosures of our data and how can we learn more? \r\n\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/428",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-638"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-430",
+		"title": "Smart Grid - Smarte Überwachung vs. Energiewende von unten",
+		"abstract": "Das Smart Grid der Energiekonzerne zur Optimierung der Stromnetze sammelt Daten aus unserem privatesten Lebensmittelpunkt: Unserer Wohnung. Was sind das für Daten? Wer könnte sie wofür nutzen? Wie können wir verhindern, dass selbst unser Offline-Alltag für Firmen und Behörden völlig transparent wird? Und wie können WIR diese Technik gegen die Energiekonzerne einsetzen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/430",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-640"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-439",
+		"title": "Warum ACTA Jugendliche bewegt hat und PRISM kaum - eine Spurensuche",
+		"abstract": "Wo wir eben noch freudig ob des kommenden Nachwuchses und derem neu entfachtem netzpolitischem Interesse waren, tritt Ernüchterung an dessen Stelle. Die Bevölkerung und insbesondere der viel beschriebene \"digitale Nachwuchs\" scheint desinteressiert. Warum hat ACTA bewegt? Und warum bewegt PRISM die junge Generation kaum?\r\nDer Vortragende zeichnet die Perspektive zahlreicher Jugendlicher nach, setzt diese in Kontext aktueller Forschung, zeigt jugendliche Haltungen in Video-Interviews und präsentiert auch Gegen-Ansätze, z.B. Medien-Produktionen Jugendlicher gegen Überwachung, die Hoffnung machen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/439",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-656"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-441",
+		"title": "Stimmen der Revolution – Zeitreise durch 200 Jahre Widerstand",
+		"abstract": "Historische Überwachung braucht historische Antworten! Wir nehmen Euch mit auf eine Audio-Zeitreise durch 200 Jahre Widerstand gegen staatliche Überwachung. Zitate, Artikel, Reden, Lieder, Gedichte: In einer Mischung aus Vortrag und Hörspiel lassen wir Menschen zu Wort kommen, die sich ohne Netz und doppelten Boden trauten, für Bürger- und Freiheitsrechte einzustehen. Wir möchten Euch Mut machen, indem wir mutige Zeitzeug_innen aus der Geschichte vorstellen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/441",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-510",
+			"rp14-speaker-548"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-446",
+		"title": "Beyond Porn oder Die digitale sexuelle Revolution",
+		"abstract": "Sexualität im Internet ist mehr als kurze - bis zur Abmahnung - kostenlose Clips auf RedTube. Anders als vielfach in den Medien verbreitet, sind Seiten mit sexuellem Inhalt nicht das Ende der Zivilisation, sondern bieten vielmehr die Möglichkeit einer sexuellen Revolution 2.0.",
+		"description": "???",
+		"url": "http://re-publica.de/node/446",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-601"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-447",
+		"title": "History Repeating? Wenn Nerds Geschichte schreiben",
+		"abstract": "Die Kultur der Nerds kommt in die Jahre, und es wird begonnen, ihre Geschichte zu dokumentieren und aufzuschreiben. In zum Teil innovativen Formaten - aber auch mit althergebrachten Mustern: Wie schon in der Wissenschaftsgeschichte drohen einige, in Vergessenheit zu geraten.",
+		"description": "???",
+		"url": "http://re-publica.de/node/447",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-678"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-455",
+		"title": "Von Tod und Geburt der Gegenwartsliteratur im Internet",
+		"abstract": "In Abgrenzung zur Untergang-des-Abendlands-Rhetorik, die die Debatte um die Gegenwartsliteratur im digitalen Zeitalter begleitet, möchte mein Vortrag das Internet als Geburtsstätte von Gegenwartsliteratur im eigentlichen Sinn profilieren: Online entsteht zeitgenössische Literatur, die das Jetzt nicht nur in Text bannt, sondern selbst dynamischer Teil der Gegenwart ist. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/455",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-562"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-460",
+		"title": "A nerd, an autistic boy and a mother develop an app.",
+		"abstract": "\"All autists can speak, they are just too shy.\"\r\n(\"Alle Autisten können sprechen, sie sind nur zu schüchtern.\") \r\nby Max, 12 year old autistic boy",
+		"description": "???",
+		"url": "http://re-publica.de/node/460",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-613",
+			"rp14-speaker-546",
+			"rp14-speaker-625",
+			"rp14-speaker-1598"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-462",
+		"title": "Into the Kiez: Gefahrengebiet Lokaljournalismus",
+		"abstract": "Ist das nur alter Wochenblatt-Content in neuen Eingabemasken – oder findet im Hyperlokalen endlich die Medienrevolution statt, von der wir seit Blogbeginn träumen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/462",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-303",
+			"rp14-speaker-1920",
+			"rp14-speaker-1922",
+			"rp14-speaker-1940",
+			"rp14-speaker-1941"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-480",
+		"title": "Untenable stories and strong drinks",
+		"abstract": "There are a good number of amazing bars serving awesome drinks by wonderful people in beautiful surroundings. Also, there are a lot of “home bartenders” who invest a lot of time and money in reproducing or improving the bar experience for their house guests. Lastly, there is a huge online community concerning bars, bartending, cocktails, spirits, etc. This session will give you an insight into the scene, a bunch of anecdotes, and maybe some drinks.",
+		"description": "???",
+		"url": "http://re-publica.de/node/480",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-697",
+			"rp14-speaker-1506"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-486",
+		"title": "Into the body - workshop",
+		"abstract": "Into the wild – going back to nature - meeting your insides. \r\nIt does not matter if you are sitting or standing while creating your content for the web, most likely you are not moving much while writing, reading, researching. Sometimes you even forget the necessities of your body: while blogging about the injustice of natural reservations being destroid, your bladder screams in despair. Though your stomach is roaring of hunger you only want to finish the piece about the pizza place around the corner?! Why do we constantly ignore the needs of our bodies? \r\nThe internet doesn’t forget, is a saying of our times, well your body neither. Especially movement patterns stick to you, well inside of you, and are reproduced on a daily basis. How are these patterns programmed into your body? Which are the most precarious structures? How can you prevent a total meltdown? \r\nThis talk will provide an overview of body structures, organs and movement patterns. How to take good care of them and little life-hacks to integrate into daily life. Raising awareness for what matters most is one aspect of being an active part of the digital society. Writting is about expressing yourself, shouldn’t you be working in cooperation with your body then, who is expressing who you are all day long? \r\nLet’s go back to nature – realize what the body needs, discover how to find that out and behave accordingly.",
+		"description": "???",
+		"url": "http://re-publica.de/node/486",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-239"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-487",
+		"title": "I will go down with this Ship - von Fandoms und Fan sein",
+		"abstract": "In diesem Talk soll es um Fandoms als Internetsubkultur gehen. Dabei werden einige Begriffe erklärt, verschiedene Fandoms vorgestellt, Anekdoten und Memes geteilt. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/487",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-620"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-501",
+		"title": "Network Liberation: How Freifunk Communities are Spreading around the World",
+		"abstract": "While the public is often aware of local freifunk community network projects to offer Internet and and local network services, it is mostly unknown, that community networks today exist in nearly every country in the world. From schools in Afghanistan, remote villages in Zambia, uncensored local networks in Iran, huge community run networks proving Internet in Spain, city networks in Italy and networks even free international phone calls in Mexico, more and more people take the Internet in their own hands.",
+		"description": "???",
+		"url": "http://re-publica.de/node/501",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-772"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-502",
+		"title": "Heroes",
+		"abstract": "Heroes - A Brief History of Whistleblowing. The truth seems to need heroes to be a driver of change. Regarding media coverage, we seem to know everything about whistleblowing. But in fact we don't. This lecture will tell you about people and events from centuries of whistleblowing while trying to entertain you at the same time.",
+		"description": "???",
+		"url": "http://re-publica.de/node/502",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-771"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-504",
+		"title": "Todessternsünden",
+		"abstract": "Die Liste der sieben Todsünden ist laut Wikipedia gut 1600 Jahre alt, Wikipedia ist ein Teenager und das gesamte Internet ist auch nur unwesentlich älter.\r\nIch will in diesem Talk die digitalen Nachfahren der klassischen Todsünden vorstellen und darauf eingehen, weshalb es auch heute Sinn machen kann, über \"Sünden\" und deren Vermeidung nachzudenken.",
+		"description": "???",
+		"url": "http://re-publica.de/node/504",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-717"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-512",
+		"title": "Crowdsourcing Design: The Good, the Bad and the Ugly",
+		"abstract": "Florian A. Schmidt looks at the ethics and aesthetics of the crowdsourcing industry, its dark side and silver linings, with a focus on the crowdsourcing of design. What distinguishes the crowd design from micro tasking? And is crowdsourcing inherently exploitative or can it be done in a way that is sustainable for all stakeholders? ",
+		"description": "???",
+		"url": "http://re-publica.de/node/512",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-634"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-521",
+		"title": "Data gone wild - wie frei darf Datenvisualisierung sein?",
+		"abstract": "Lasst die Daten raus - weg von starren Darstellungsformen hin zu einer neuen Ästhetik im Bereich der Informationswirtschaft. Eine Diskussionsrunde mit ExpertInnen aus der Kreativwirtschaft und den Medien.\r\n\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/521",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-197",
+			"rp14-speaker-330"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-527",
+		"title": "Wildnis in der Wildnis: Digitaler Aufbruch an unseren Schulen",
+		"abstract": "Vermittlung von Internet- und Technik-Inhalten sind nicht gerade Stärken des aktuellen Schulsystems. Anhand von zwei Lösungs-Ansätzen wollen wir diskutieren, wie es gelingen kann, Schüler*innen zu Technik-Freaks und Netzreinschreiber*innen zu machen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/527",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-256",
+			"rp14-speaker-602",
+			"rp14-speaker-799"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-528",
+		"title": "Hacking “Chiba City”: Untaming the Data Deluge of Digital Urban Landscapes",
+		"abstract": "Like the megalopolis of William Gibson’s Neuromancer, cities have become interfaces for recording our geographic lives. We choose restaurants on Yelp, find our way on Google Maps, and let our friends know our whereabouts through geo-tagged tweets. These platforms end up leaving some areas completely digitally blank. Reviewing findings from the study of digital gentrification in two London neighborhoods, we pose a challenge to the participants: how can we redesign our digital geographies as progressive places? Can we overcome digital exclusion and rediscover these blank spaces?  \r\n\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/528",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-795",
+			"rp14-speaker-794"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-533",
+		"title": "Geh mir weg mit BarCamp!",
+		"abstract": "2006 schickte sich ein neues offenes Unkonferenz-Format an, die deutsche Webszene aufzumischen. Acht Jahre und geschätzte 500 BarCamps später reagiert so mancher alter BarCamp-Hase genervt auf das Thema, während andererseits immer mehr ThemenCamps und interne BarCamps aus dem Boden schießen. Wie ist der Status Quo in Sachen BarCamps? Wohin geht die Reise – und gibt es eine Kommerzialisierung des Formats? Und welches Potential hat dieses Format überhaupt noch?",
+		"description": "???",
+		"url": "http://re-publica.de/node/533",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-763",
+			"rp14-speaker-375",
+			"rp14-speaker-847",
+			"rp14-speaker-1814"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-545",
+		"title": "[do:index] - Offenheit ranken? Der digitale Offenheitsindex",
+		"abstract": "Der Digitale Offenheitsindex [do:index] ist ein mehrdimensionales Instrument zur Messung des Beitrags öffentlicher Körperschaften zu digitalen Gemeingütern (Daten, Information, Wissen und Infrastruktur) auf kommunaler, regionaler und nationaler Ebene. Der Digitale Offenheitsindex verfolgt drei Ziele: Erstens soll die Bandbreite der möglichen Maßnahmen zur Verbesserung digitaler Offenheit aufgezeigt werden; zweitens soll digitale Offenheit gemessen und beispielhafte Praktiken identifiziert werden; drittens handelt es sich hierbei um die erste Ausgabe des Digitalen Offenheitsindex, der zukünftig jährlich veröffentlicht werden und so Entwicklungen im Zeitverlauf sowie Benchmarking über Ländergrenzen hinweg ermöglichen soll. Auf diese Weise soll sich unser Verständnis des gesellschaftlichen Werts von digitaler Offenheit ständig weiterentwickeln.  \r\n\r\nWir präsentieren exklusiv und zum ersten Mal die Ergebnisse der Studie und Datenerhebung 2013/2014 in 48 Gebietskörperschaften (die fünf größten Städte in der Schweiz und Österreich, sowie die 16 Bundesländer und deren jeweiligen Haupstädte in Deutschland, sowie 6 Städte mit mehr als 500.000 Einwohner_innen. Inklusiver schicker Datenvisualierung von opendatacity. Dabei stellen wir die Vorreiterstädte und Kommunen in den Teilbereichen des [do:index] Open Data, Open Infrastructure, Open Software, Open Policies und Open Educational Resources vor und gehen auf die gesammelten Erfahrungen ein. Wir werden weiters die neue erweiterte Erhebungsphase für 2014/2015 darlegen und das dafür erstellte neue Selbsterhebungstool präsentieren.",
+		"description": "???",
+		"url": "http://re-publica.de/node/545",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-220",
+			"rp14-speaker-801"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-550",
+		"title": "Das Digitale Quartett analog und live on stage",
+		"abstract": "Das Internet kann mehr als langweilige Talkrunden für ein Massenpublikum. Oder wie Zeit Online schreibt: \"Seit einiger Zeit wächst im Internet eine Form der Graswurzel-Talkkultur heran, die weder illustre Gäste benötigt, noch fernsehtaugliche Themen bedienen muss.\" Seit September 2012 beweist das Digitale Quartett mit relevanten Gästen und spannenden Themen für ein interessiertes Nischenpublikum, dass diese These stimmt. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/550",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-819"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-553",
+		"title": "Automated profiling in law enforcement? What can we know about the actual practice Germany?",
+		"abstract": "Profiling technologies have impact on societal norms and practices. A research team at Technische Universität Berlin conducted a case study on the role of profiling technologies in the field of law enforcement and monitoring of political activism. In this talk, first outcomes will be presented.",
+		"description": "???",
+		"url": "http://re-publica.de/node/553",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-828"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-577",
+		"title": "Mit der Crowd um die Welt",
+		"abstract": "Wir haben das Experiment Crowd-Journalismus gewagt und drei Monate lang nur getan, was die Crowd wollte. In Brasilien, ein Jahr vor der Fußball-WM. Es funktionierte. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/577",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-842",
+			"rp14-speaker-938"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-586",
+		"title": "Social Media & Recht: Saisonrückblick 2014",
+		"abstract": "Seit 2009 veranstalten die beiden Rechtsanwälte Henning Krieg und Thorsten Feldmann auf der re:publica einen gemeinsamen Workshop zu den rechtlichen Aspekten des Schreibens im Netz und der aktiven Nutzung von Social-Media-Diensten. Auch in diesem Jahr werden die beiden Praktiker die Highlights des Online-Rechts präsentieren.",
+		"description": "???",
+		"url": "http://re-publica.de/node/586",
+		"begin": false,
+		"end": false,
+		"duration": 90,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-440",
+			"rp14-speaker-760"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-604",
+		"title": "Where's that Revolution",
+		"abstract": "3D printing has been promised to us as a new industrial revolution. The Maker Movement has been promised to us as a new industrial revolution. But for big industry it appears to be business as usual, year on year. So where's that revolution? Have we been mislead, dreaming, blinded by wishful thinking? Are we setting course head-on into Gartner's thorugh of disillusionment? Or is there still hope? -- An update on an ongoing development. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/604",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-529"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-606",
+		"title": "#Zensurheberrecht",
+		"abstract": "Im Januar 2014 hat das Bundesinnenministerium von der Open Knowledge Foundation verlangt, einen geleakten Vermerk von der Website FragDenStaat.de zu löschen - und sich dabei auf das Urheberrecht berufen. Der Fall ist nicht der einzige, in dem das Urheberrecht zur Unterdrückung einer Veröffentlichung zweckentfremdet wird. Dass sein solcher Missbrauch überhaupt möglich ist, beweist anschaulich seine dringende Reformbedürftigkeit.",
+		"description": "???",
+		"url": "http://re-publica.de/node/606",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "discussion",
+			"label_de": "Diskussion",
+			"label_en": "Discussion"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-428",
+			"rp14-speaker-840",
+			"rp14-speaker-889"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-607",
+		"title": "Wie geht's dir, Kinderzimmerprogrammierer/in?",
+		"abstract": "Die Ausbildung, die junge Hacker/innen erfahren, ist - um es mit den Worten von Edward Snowden zu sagen - \"zutiefst informell\". Mit welcher Unterstützung (oder Demoralisierung) ihrer Fähigkeiten wachsen junge Programmiertalente in Deutschland auf? Wie sieht die Lebensrealität von computerbegeisterten jungen Menschen heute im Vergleich zu damals aus? Welchen Beitrag zur Förderung und Vernetzung können Programme wie \"Jugend hackt\" leisten? Das Wort \"Schule\" kommt in diesem Talk als Randnotiz vor.",
+		"description": "???",
+		"url": "http://re-publica.de/node/607",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-853"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-616",
+		"title": "Escaping Dystopia",
+		"abstract": "The world needs a vision - a vision on how to get away from a dystopian reality. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/616",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-884"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-617",
+		"title": "“Into the Wild? Nicht mit mir!” – Warum Menschen das Netz (oder Teile davon) nicht nutzen ",
+		"abstract": "Auch wenn “das Internet” heute weit verbreitet ist und viele Zugangsbarrieren wegfallen gibt es nach wie vor Menschen, die einzelne Dienste oder das Netz insgesamt nicht nutzen. Dabei spielen nicht nur Faktoren wie Alter oder Bildung eine Rolle: Es geht auch um die ganz bewusste Entscheidung zur Nichtnutzung – über deren Ursachen und Folgen sollten wir mehr forschen und vor allem reden. \r\n\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/617",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-662",
+			"rp14-speaker-342",
+			"rp14-speaker-619",
+			"rp14-speaker-623",
+			"rp14-speaker-880"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-653",
+		"title": "Ein blindes Huhn ist kein Ponyhof: Mit Schabernack auf Wortschatzsuche ",
+		"abstract": "Der Wortschatz ist das Persönlichste, das wir miteinander teilen können. Sprichwörter und Redewendungen erzeugen Nähe - oder Abgrenzung. Wörter, Sätze und Texte sind neben Bildern die Grundlage der digitalen Kommunikation. Es wird soviel gelesen und geschrieben wie wohl niemals zuvor. Dennoch ist immer wieder von Sprachverfall die Rede. OMG!!! Zu Recht? Ist das Abendland in Gefahr? Werden wir alle durch Social Media zu Sprachstümpern und ruchlosen Verbrechern an unserer Muttersprache? Wibke Ladwig hebt den Wortschatz und lädt zu einem Spaziergang durch die digitalen Refugien der Sprachliebhaber und Wortspielkinder ein.",
+		"description": "???",
+		"url": "http://re-publica.de/node/653",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-860"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-667",
+		"title": "Big, small, open - my data",
+		"abstract": "There is a lot of talk about “big data” at the moment. For some “big data” is the next big thing, the next wet dream of new business models in the tech industry. For some “big data” is the synonym for the new face of a surveillance society where governments and other organisations aim to get hold of literally “any data” about people, they can get hold of. While both developments deserve attention and reflection, we might miss out important perspectives on concepts like “small data”, “open data” and “my data” - as the question of ones’ control over its own data.",
+		"description": "???",
+		"url": "http://re-publica.de/node/667",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-220",
+			"rp14-speaker-653"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-675",
+		"title": "Aristoteles mit der Brechstange - Games im Deutschunterricht",
+		"abstract": "Dramendidaktik mit Half-Life, Geschichtenverstehen mit Warcraft III, Märchenvermittlung mittels Ceville. Geht das? Darf man das? Sollte man das? Die Antwort ist dreimal „Ja!“. \r\nViele Inhalte, die der Deutschunterricht vermitteln soll, lassen sich nicht nur mit Büchern und alter Literatur vermitteln, sondern können ebenso gut mit Computerspielen gelernt werden. Welche Potenziale populäre Spiele für den Erwerb literarischer Kompetenz haben, wird im Vortrag gezeigt.\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/675",
+		"begin": false,
+		"end": false,
+		"duration": 15,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-941"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-676",
+		"title": "A Path Towards Autonomy",
+		"abstract": "This talk develops a holistic understanding of the factors that shape our ability to make autonomous, empowered decisions about our data and our use of technologies. Drawing on ten years of Tactical Tech experience working on digital security with communities on the ground to enable better decision making, I will introduce our new research on the barriers and paths to behavior change around privacy and security-enabling practices. But I won't end on a depressing note. I'll point a path towards greater user data autonomy that fits within the Tactical Tech philosophy of empowering communities. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/676",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-784"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-681",
+		"title": "Keep It Tidy: digital security for your organisation",
+		"abstract": "How should organisation's approach the protection of their data and communications? In this session we will dive into how Tactical Tech treats organisational security, and our plans to make it even better.",
+		"description": "???",
+		"url": "http://re-publica.de/node/681",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-953",
+			"rp14-speaker-644"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-685",
+		"title": "Making Privacy Tangible",
+		"abstract": "Few will argue that the right to privacy is important. But feeling the importance of privacy is a different matter. We'll demonstrate and guide a group through a series of exercises that make the abstract tangible, in this interactive workshop with Tactical Tech. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/685",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-784"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-701",
+		"title": "Denzentrale Social Networks. Warum sie scheitern und wie es gehen könnte",
+		"abstract": "Der Traum von erfolgreichen, dezentralen Social Networks wurde bisher regelmäßig enttäuscht. Ein Blick auf die ökonomische Eigendynamik von Vernetzungsprozessen und die sie beherbergenden Plattformen, zeigt auf warum das so ist. Die Antworten bergen aber ebenfalls einen möglichen Ausweg.",
+		"description": "???",
+		"url": "http://re-publica.de/node/701",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-948"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-727",
+		"title": "Zurück in die Zukunft",
+		"abstract": "Science Fiction geht der Stoff aus. Cyborgs, NSA, Google Roboter, Holodecks: was sich Designer, Autorinnen, Architekten oder Regisseurinnen mal ausdachten gibt es heute oder zumindest bald real. Was sind die neuen Geschichten? Wie werden sie in Zukunft geschrieben und entwickelt? Ein interaktiver Vortrag mit Zeitreise.",
+		"description": "???",
+		"url": "http://re-publica.de/node/727",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-971"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-738",
+		"title": "Facebook-Werbung: ein heiterer Bilderbogen",
+		"abstract": "Werbetreibende können auf Facebook genau ihre Zielgruppe anvisieren. Aber was machen sie daraus? Screenshots von Facebook-Anzeigen werfen ein Schlaglicht auf das Grauen des Targetings. Der Eiertanz zwischen einer Plattform mit puritanischen Sauberkeitsidealen und dem unerschütterlichen Bedürfnis der Werbetreibenden, kein Sexismus-Fettnäpfchen auszulassen, zieht oft absurde Verrenkungen nach sich.",
+		"description": "???",
+		"url": "http://re-publica.de/node/738",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-797"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-739",
+		"title": "Maps of Myths: Memory Space and Digital Remembrance in the Egyptian Revolution",
+		"abstract": "What happens when the events of a revolution unfold online, when governments and ideologies change and people are potentially held accountable for past online activity? How can we begin to deal with the trauma of the past when it continues to haunt us in the future?  This presentation investigates spaces of remembrance in the age of digital communication and examines how public memory is intertwined with urban topologies and new media. It uses Egypt as a case study by addressing the impact of social media and digital fatigue in the midst of revolution and investigates how digital archives have altered collective memory.",
+		"description": "???",
+		"url": "http://re-publica.de/node/739",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-811"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-746",
+		"title": "Wie ich lernte, die Überwachung zu lieben",
+		"abstract": "Die fiktionale Figur Andrew (Ender) Wiggins sagt in Orson Scott Cards Buch (und Film) Das große Spiel: „In dem Moment in dem ich meinen Feind verstehe, ihn gut genug verstehe um ihn zu schlagen, in genau diesem Moment liebe ich ihn auch.“\r\n\r\nHilft uns diese pop-philosophische Erkenntnis möglicherweise den Überwachungsstaat zu schlagen und zu überwinden und wieder mehr Grundrechte garantiert zu bekommen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/746",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-935"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-748",
+		"title": "Digital Citizenship - Orientierung und Verantwortung in sozialen Netzen",
+		"abstract": "\"Digital Citizenship\" ist eine notwendige Voraussetzung, um kompetent, selbstbestimmt und verantwortlich an sozialen Netzwerken teilzunehmen und muss in Bildungsinstitutionen gefördert werden.",
+		"description": "???",
+		"url": "http://re-publica.de/node/748",
+		"begin": false,
+		"end": false,
+		"duration": 15,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-999",
+			"rp14-speaker-978"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-758",
+		"title": "Hacking History",
+		"abstract": "Digitisation has massively widened access to historical sources, yet history seems to still be written in much the same way and by the same narrow set of people as before. Why is this? And will it stay that way? What is needed besides technology to put this potential into practice, and what consequences would that have for both the character of historical research in particular, and the construction of plausible narratives of our past and present in general? ",
+		"description": "???",
+		"url": "http://re-publica.de/node/758",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-987"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-760",
+		"title": "Kreativitäts-Fracking: Der Vierte Affe",
+		"abstract": "Kreativitäts-Fracking nach dem Prinzip des vierten Affen. Die Technik beruht auf der Erschaffung und Pflege eines Characters, der einem imaginären Partner ähnlich dem/der Kreativen als Sidekick zur Seite steht und sich im Laufe der Anwendung weiterentwickelt. An der Grenze zum Borderlining nutzen wir die positiven Aspekte der Psychose, um neue Sichtweisen und Lösungsansätze zu finden. Vortrag & Workshop mit der Musikgruppe Supershirt (Audiolith).\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/760",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1006"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-762",
+		"title": "Bildmedien der Zukunft und wie sie unser Bild der Welt verändern",
+		"abstract": "Die Bildmedien der Zukunft sind Wunder voller Magie. Sie zeigen, machen sichtbar, lassen uns sehen wie die menschlichen Augen niemals zuvor gesehen haben. Ihre Bilder werden unsere Vorstellungen, was Bilder sind, völlig umstürzen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/762",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-730"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-767",
+		"title": "The Mechanics of Crowdsourcing: Mobilizing the Many and the Extraordinary",
+		"abstract": "Crowdsourcing is an integral part of the digital society. Crowdsourcing still seems to carry significant novelty for scholars and practitioners alike, but, arguably, it has become a buzzword. As a result, the meaning of crowdsourcing is blurred and distorted. In our talk we reassess and clarify the concept “crowdsourcing”. Furthermore, we distinguish between four types of crowdsourcing and examine the consequences of each type for (a digital) society. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/767",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-824",
+			"rp14-speaker-1827"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-770",
+		"title": "Data Dealer: Überwachung & Datenhandel als Spiel",
+		"abstract": "„Data Dealer“ ist ein vielfach ausgezeichnetes Online-Spiel, das sich mit viel Ironie mit dem brisanten Thema der persönlichen Daten im digitalen Zeitalter beschäftigt. Das von einem Nonprofit-Team aus Wien entwickelte kritisch-didaktische „Serious Game mit Tarnkappe\" gilt inzwischen international als Best-Practice-Projekt im Feld von Datenschutz und digitaler Kompetenz. Mitinitiator Wolfie Christl gibt einen Rückblick auf 3 Jahre Entwicklung und fragt sich: Was könnten andere Projekte im Bereich kritischer digitaler Kultur von den dabei gemachten Erfahrungen lernen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/770",
+		"begin": false,
+		"end": false,
+		"duration": 15,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-996"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-778",
+		"title": "Lights on the Wild! - Was können uns Geschichten der Netzpolitik über die Strukturierung eines Politikfeldes erzählen? ",
+		"abstract": "Auch wenn die Netzpolitik komplex, grenzenlos oder schwer voraussehbar zu sein scheint: Es lassen sich Muster ihrer Struktur und Entwicklung erkennen, deren Kenntnis für die weitere Gestaltung einer digitalen Gesellschaft nützlich ist. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/778",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-820",
+			"rp14-speaker-896"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-780",
+		"title": "guns, sex and rock'n'roll as 3d prints",
+		"abstract": "Kill, love and create. \r\n3d printers are more than an industrial revolution. They are also a new media for artists and digital natives to manipulate the real world with virtual objects. We presentate and talk about 3d printing as art.",
+		"description": "???",
+		"url": "http://re-publica.de/node/780",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "action",
+			"label_de": "Aktion",
+			"label_en": "Action"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-789",
+			"rp14-speaker-1023",
+			"rp14-speaker-1619",
+			"rp14-speaker-1622",
+			"rp14-speaker-1625"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-782",
+		"title": "Anleitung zum offen machen. Wie Designerinnen und Designer ihre Arbeiten offen und frei zur Verfügung stellen können (und trotzdem Geld dabei verdienen).",
+		"abstract": "Was bringt das Teilen von Wissen rund um Design? Wie teilt man am besten? Was muss man dabei beachten? Und was heißt es, wenn die eigenen Arbeiten geteilt werden? Kann man damit Geld verdienen? Und wenn ja, wie?\r\nEin Workshop für DesignerInnen, jene, die es werden wollen, und besonders interessierte KonsumentInnen. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/782",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-808"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-790",
+		"title": "re:data",
+		"abstract": "Open Data trifft re:publica.",
+		"description": "???",
+		"url": "http://re-publica.de/node/790",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "business-innovation",
+			"label_de": "Business & Innovation",
+			"label_en": "Business & Innovation"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-455",
+			"rp14-speaker-168",
+			"rp14-speaker-1864"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-792",
+		"title": "15 journalistic start-ups you need to know. In a presentation that will blow your mind.",
+		"abstract": "Von der viralen Wackel-Katze bis zur 12-Sekunden-Instagram-Nachrichtenshow.\r\nMartin Giesler und Jannis Kucharz spielen \"Wer kennt das coolere Journalismus Start-Up\" und informieren über aktuelle Trends und neue Unternehmen im Journalismus. Wer hat den größten Trumpf in der Hand? Ezra Klein sticht!",
+		"description": "???",
+		"url": "http://re-publica.de/node/792",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "media",
+			"label_de": "Medien",
+			"label_en": "Media"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-708",
+			"rp14-speaker-1919"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-804",
+		"title": "Geschichten aus dem Country Club - die weltweit erste App.net-Lesung",
+		"abstract": "Das soziale Netzwerk App.net in einer nie dagewesenen Show: Wir lesen unsere Lieblingsposts, stellen die schrägsten Clubs und liebreizendsten Appnetizens vor - und all das in einer stilvollen Atmosphäre. Wenn ihr dachtet, dort trieben sich nur irrelevante Nerds rum, dann kommet und lasset euch eines besseren belehren. Wir laden euch ein in eine Welt voller wundersamer Geschichten, die mittlerweile unser Kleinod, unser Zuhause, unser Hafen im Alltag geworden ist, an dem wir Anker legen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/804",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "culture",
+			"label_de": "Kultur",
+			"label_en": "Culture"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-857",
+			"rp14-speaker-973",
+			"rp14-speaker-854",
+			"rp14-speaker-1013",
+			"rp14-speaker-1061"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-807",
+		"title": "Willkommen in meinen Wohnzimmer: Lifestyle-Blogger Oder: Wo verläuft die Grenze zwischen Persönlichem und Privatem.",
+		"abstract": "Auf Lifestyleblogs wird jedem der Blick ins Wohnzimmer gestattet, die eigene Küche geöffnet. Auch ins Schlafzimmer. Auch wenn dort nur die Bettwäsche und die Schlafzimmereinrichtung gezeigt wird.\r\nAber wo findet die Abgrenzung zwischen Persönlichem und Privaten statt? Wieviel Preis geben ist in Ordnung und was verrät das gepostete Morgenmüsli über einen?\r\nLifestyle-Blogger diskutieren über Lifestyle Porn und ob das „Romantisieren des Alltags und des Alltäglichen“ eine gute Sache ist oder zu noch mehr Perfektionsdruck führt.\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/807",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": false,
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1022"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-819",
+		"title": "Brechen wir auf IN DIE (Minecraft) WILDNIS - in der Schule",
+		"abstract": "Lernspiele haben ihre Berechtigung. Aber teilweise machen ungezähmte, kommerzielle Spiele den besseren Lern-Job. Ich zeige an Beispielen wie man kommerzielle Spiele wie Minecraft in Lernsituationen einsetzen kann. An Minecraft besonders spannend sind dabei nicht nur die Möglichkeiten des Spieles an sich, sondern auch auf die vielfältigen gruppendynamischen Prozesse, die gemeinsame Bauprojekte mit sich bringen. \r\nWie können wir Spiele, die die Schüler gerne spielen, für das Lernen nutzbar machen?",
+		"description": "???",
+		"url": "http://re-publica.de/node/819",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-879"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-824",
+		"title": "How we will settle on Mars – and why",
+		"abstract": "Hunger, war, global warming. Here on earth, we have chocolate – and a lot of problems to solve.\r\nNevertheless we dream of flying to Mars. \r\n\r\n– An overly optimistic overview about the potential colonization of the Red Planet.\r\nBecause sometimes, fantasizing about what seems almost impossible is just what we need. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/824",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1032"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-826",
+		"title": "Game Thinking - Innovation und besseres Leben durch Spiele und Design?",
+		"abstract": "Game Thinking ist der Versuch die Disziplinen Game Design und Design Thinking zu verknüpfen.",
+		"description": "???",
+		"url": "http://re-publica.de/node/826",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1028"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-834",
+		"title": "Mit Sicherheit scheitern: the End of One-Internet",
+		"abstract": "Eighteen years ago, John Perry Barlow derided the \"weary giants of flesh and steel\" — today, they control the Internet.  The idea of a communicational one-world has been superseded by the giants' power-grabbing approach. This talk discusses different types of possible Internet security institutions, their viability, and their ability to achieve traditional Internet values embedded in open source ideas. The choice between technological cosmopolitanism, a fire brigades-design, an Internet government, informational hegemony, and noospheric empire fundamentally influences which values the Internet can yield.",
+		"description": "???",
+		"url": "http://re-publica.de/node/834",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-700"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-837",
+		"title": "The Web Women Want - A new generation of thinkers ",
+		"abstract": "My talk will describe 5 amazing women revolutioning the Internet, where are they from, what are they thinking, why their views of the future are amazing and why we should celebrate the genius and creations. It will be a tribute for their achievements but also an inspiration for young people to think about a more inclusive future, with all the voices included. One woman per continent.",
+		"description": "???",
+		"url": "http://re-publica.de/node/837",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1038"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-852",
+		"title": "DesiSec :. Cybersecurity & Civil Society in India",
+		"abstract": "DesiSec is the first documentary film to explore cybersecurity from the civil society perspective. It explores the relationship between the average Internet user in India and the state. What is privacy, surveillance, and censorship in the world's largest democracy? How does the law impact user experience and free expression? The questions asked - and the discussions raised - have particular relevance to the Indian people, and emerging networks across the Internet. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/852",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-876"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-855",
+		"title": "Talk: A spoonful of craft helps the activism go down ",
+		"abstract": "We live in an ever-changing world where many forms of activism are not as effective as they once were. The terms ‘clicktivist’ and ‘slacktivist’ are used to describe minimal personal effort and engagement. Politicians have referred to such campaigners as ‘zombie campaigners’. Many people are becoming cynical and feeling like ‘robots’ just asked to do transactional activities rather than being helped in their own personal transformation to be the change they wish to see in the world. ",
+		"description": "???",
+		"url": "http://re-publica.de/node/855",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1057"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-857",
+		"title": "Stone age minds in a digital world – Evolutionspsychologische Perspektive auf die digitale Welt",
+		"abstract": "Unser (digitales) Handeln ist nicht immer rational: lässt uns unser Smartphone hängen, sind wir wütend; wir verlieben uns in Fake-Profile; wir klicken unbedacht durchs Netz. Obwohl wir es doch eigentlich besser wissen...\r\nAll das ist nicht logisch, aber vielleicht psycho-logisch? Wir vermuten: ja! Erklärungen finden wir, wenn wir weit zurück in die Menschheitsgeschichte blicken: Der Mensch ist ein Produkt der Evolution und damit auf digitale Medien einfach nicht optimal vorbereitet. Unser “stone age mind” reagiert so wie es sich bewährt hat – damals, in einer nicht-digitalen Welt.",
+		"description": "???",
+		"url": "http://re-publica.de/node/857",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1064",
+			"rp14-speaker-1657"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-865",
+		"title": "Networked Consent: Dreaming and Desire in the 21st Century",
+		"abstract": "Changes in communications technology allow us to think in new ways about consent, desire and the nature of power. There are important parallels between the backlash against rape culture and innovations in digital politics. What does that mean for the consent of the governed?",
+		"description": "???",
+		"url": "http://re-publica.de/node/865",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1069"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-867",
+		"title": "Trade School Berlin: an experimental learning project ",
+		"abstract": "Trade School Berlin is a non-monetary and self-organized alternative school for exchange and mutual aid. \r\nTeachers propose classes and ask for barter items from students. For example, if you teach a class about making butter, you might ask students to bring heavy cream, jars, bread, music tips, clothes, vegetables, or help with something like finding an apartment. We believe that given a safe space, both virtual and material, we all have something valuable to offer.\r\n\r\n",
+		"description": "???",
+		"url": "http://re-publica.de/node/867",
+		"begin": false,
+		"end": false,
+		"duration": 15,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "research-education",
+			"label_de": "Forschung & Bildung",
+			"label_en": "Research & Education"
+		},
+		"format": {
+			"id": "workshop",
+			"label_de": "Workshop",
+			"label_en": "Workshop"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1056"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-871",
+		"title": "It´s a Bingo! - Herm und Nilz retten die Welt",
+		"abstract": "Eine re:publica ist immer nur so gut wie ihr Bingo.",
+		"description": "???",
+		"url": "http://re-publica.de/node/871",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "action",
+			"label_de": "Aktion",
+			"label_en": "Action"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			"rp14-speaker-1077"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-874",
+		"title": "The Podlove Matrix",
+		"abstract": "The Podlove Matrix is an open semantic metadata database for audiovisual recordings on the web. It is intended to cover both conferences and university lectures as well as the open podcast landscape, acting as a user-editable global directory of episodal content. Based on Wikibase, the technical foundation of Wikidata, it is both readable and writeable by machines and humans alike. Part of the Podlove project, the Matrix aims to be a viable alternative to current podcast directories.",
+		"description": "???",
+		"url": "http://re-publica.de/node/874",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "intermediate",
+			"label_de": "Fortgeschrittene",
+			"label_en": "Intermediate"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-453"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-879",
+		"title": "Black to Grey to Black: Lessons From Two Decades of Online Activism",
+		"abstract": "There's no museum of online activism; its history is told as a series of disconnected events. Without perspective, we are left to guess what will work next, while scrambling to recreate elements of earlier successes. What can we learn from two decades of online protests? What has made these campaigns work where so many others have failed? And how can the bloggers, activists, and others at re:publica take these lessons and apply them to the wild web of today—and tomorrow?",
+		"description": "???",
+		"url": "http://re-publica.de/node/879",
+		"begin": false,
+		"end": false,
+		"duration": 30,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1080"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-941",
+		"title": "Unmasking the Arzeshi - Iran's Conservative Cyber Activists",
+		"abstract": "The Small Media team will talk you through their latest piece of research, looking at Iran's army of conservative cyber activists - the Arzeshi.\r\n\r\nHaving tracked the conservative community from January - August 2013, Small Media was able to gain insights into the ways the Arzeshi built an online community dedicated to the country's Supreme Leader. The study blows apart state claims of a cyber army of tens of thousands of activists, demonstrating that the community is more fractured, and far less disciplined than the regime might like to admit.",
+		"description": "???",
+		"url": "http://re-publica.de/node/941",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1087",
+			"rp14-speaker-1703",
+			"rp14-speaker-1734"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	},
+	{
+		"id": "rp14-session-975",
+		"title": "Let's talk about sex baby, let's talk about PGP",
+		"abstract": "Using evidence from a stack of historical movements, including safer sex and harm reduction, this talk will address how advocates of liberty and privacy can ensure that their work touches the mainstream.",
+		"description": "???",
+		"url": "http://re-publica.de/node/975",
+		"begin": false,
+		"end": false,
+		"duration": 60,
+		"day": false,
+		"location": false,
+		"track": {
+			"id": "politics-society",
+			"label_de": "Politik & Gesellschaft",
+			"label_en": "Politics & Society"
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "beginner",
+			"label_de": "Anfänger",
+			"label_en": "Beginner"
+		},
+		"lang": {
+			"id": "en",
+			"label_de": "Englisch",
+			"label_en": "English"
+		},
+		"speakers": [
+			"rp14-speaker-1081"
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session"
+	}
+]
