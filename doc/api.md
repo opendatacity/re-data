@@ -186,11 +186,12 @@ Speakers are people performing sessions.
 
 ```` javascript
 [{
-	"id": "rp13-session-1",
+	"id": "rp13-speaker-1",
 	"event": "rp13",
 	"type": "speaker",
 	"name": "Johnny Haeusler",
 	"photo": "http://13.re-publica.de/sites/13.re-publica.de/files/pictures/picture-48.png",
+	"url": "http://13.re-publica.de/users/johnny",
 	"organization": "Spreeblick",
 	"position": "",
 	"biography": "Born in Berlin in 1964, Johnny Haeusler founded the award-winning weblog Spreeblick in 2002. He is also a radio DJ and a member of post-punkrock band Plan B, which is touring again since 2012.....",
