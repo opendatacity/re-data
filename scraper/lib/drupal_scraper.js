@@ -32,14 +32,14 @@ var locationTypes = {
 
 /* track slug conversion */
 var trackTypes = {
-	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation",  label_en:"Business & Innovation", sessions:[]},
-	"science-technology":  {id:"science-technology",  label_de:"Wissenschaft & Technik", label_en:"Science & Technology",  sessions:[]},
-	"politics-society":    {id:"politics-society",    label_de:"Politik & Gesellschaft", label_en:"Politics & Society",    sessions:[]},
-	"research-education":  {id:"research-education",  label_de:"Forschung & Bildung",    label_en:"Research & Education",  sessions:[]},
-	"culture":             {id:"culture",             label_de:"Kultur",                 label_en:"Culture",               sessions:[]},
-	"media":               {id:"media",               label_de:"Medien",                 label_en:"Media",                 sessions:[]},
-	"republica":           {id:"republica",           label_de:"re:publica",             label_en:"re:publica",            sessions:[]},
-	"recampaign":          {id:"recampaign",          label_de:"re:campaign",            label_en:"re:campaign",           sessions:[]}
+	"business-innovation": {id:"business-innovation", label_de:"Business & Innovation",  label_en:"Business & Innovation", sessions:[], color:[78.0, 209.0, 249.0, 1.0] },
+	"science-technology":  {id:"science-technology",  label_de:"Wissenschaft & Technik", label_en:"Science & Technology",  sessions:[], color:[248.0, 154.0, 61.0, 1.0] },
+	"politics-society":    {id:"politics-society",    label_de:"Politik & Gesellschaft", label_en:"Politics & Society",    sessions:[], color:[246.0, 105.0, 106.0, 1.0] },
+	"research-education":  {id:"research-education",  label_de:"Forschung & Bildung",    label_en:"Research & Education",  sessions:[], color:[244.0, 79.0, 244.0, 1.0] },
+	"culture":             {id:"culture",             label_de:"Kultur",                 label_en:"Culture",               sessions:[], color:[197.0, 167.0, 59.0, 1.0] },
+	"media":               {id:"media",               label_de:"Medien",                 label_en:"Media",                 sessions:[], color:[108.0, 196.0, 58.0, 1.0] },
+	"republica":           {id:"republica",           label_de:"re:publica",             label_en:"re:publica",            sessions:[], color:[7.0, 68.0, 85.0, 1.0] },
+	"recampaign":          {id:"recampaign",          label_de:"re:campaign",            label_en:"re:campaign",           sessions:[], color:[56.0, 196.0, 182.0, 1.0] }
 };
 
 /* format slug conversion */
@@ -269,7 +269,8 @@ exports.scrape = function (options, callback) {
 				'event': options.event_id,
 				'type': 'track',
 				'label_de': track.label_de,
-				'label_en': track.label_en
+				'label_en': track.label_en,
+				'color': track.color
 			})
 		});
 
