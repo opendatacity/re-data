@@ -226,11 +226,13 @@ Tracks are topic-based collections of sessions
 		"id": "research-education",
 		"label_de": "Forschung & Bildung",
 		"label_en": "Research & Education",
+		"color": [244.0, 79.0, 244.0, 1.0],
 		"last_modified": 1393611456.99
 	},{
 		"id": "politics-society",
 		"label_de": "Politik & Gesellschaft",
 		"label_en": "Politics & Society",
+		"color": [246.0, 105.0, 106.0, 1.0],
 		"last_modified": 1393611456.99
 	} //...
 ]
