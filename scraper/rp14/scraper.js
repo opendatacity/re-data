@@ -94,9 +94,6 @@ exports.scrape = function (callback) {
 			sessionList.forEach(function (session) {
 				session = session.session;
 
-				// console.log(speakerMap);
-
-
 				var entry = {
 					'id': 'rp14-session-' + session.nid,
 					'title': session.title,
@@ -116,7 +113,7 @@ exports.scrape = function (callback) {
 					'enclosures': [],
 					'links': []
 				}
-				// console.log("session roomid" + entry);
+
 				addEntry('session', entry);
 			})
 
