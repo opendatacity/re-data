@@ -34,9 +34,9 @@ var allLanguages = {
 };
 
 var allDays = {
-	'06.05.2014': { 'id':'1', 'label_de':'6. Mai', 'label_en':'6. May', 'date':'2014-05-06' },
-	'07.05.2014': { 'id':'2', 'label_de':'7. Mai', 'label_en':'7. May', 'date':'2014-05-07' },
-	'08.05.2014': { 'id':'3', 'label_de':'8. Mai', 'label_en':'8. May', 'date':'2014-05-08' },
+	'06.05.2014': { 'id':'rp14-day-1', 'label_de':'6. Mai', 'label_en':'6. May', 'date':'2014-05-06' },
+	'07.05.2014': { 'id':'rp14-day-2', 'label_de':'7. Mai', 'label_en':'7. May', 'date':'2014-05-07' },
+	'08.05.2014': { 'id':'rp14-day-3', 'label_de':'8. Mai', 'label_en':'8. May', 'date':'2014-05-08' },
 };
 
 
@@ -56,29 +56,8 @@ exports.scrape = function (callback) {
 			var speakerList  = toArray(result.speakers.speakers);
 			var locationList = toArray(result.rooms.rooms      );
 
-			sessionList.forEach(function (session) {
-				session = session.session;
-				var entry = {
-					'id': 'rp14-session-' + session.nid,
-					'title': session.title,
-					'abstract': session.abstract,
-					'description': '???',
-					'url': session.url,
-					'begin': parseDateTime(session.date, session.start),
-					'end': parseDateTime(session.date, session.end),
-					'duration': parseDuration(session.duration),
-					'day': parseDate(session.date),
-					'location': parseLocation(session.roomnid),
-					'track': parseTrack(session.category),
-					'format': parseFormat(session.format),
-					'level': parseLevel(session.experience),
-					'lang': parseLanguage(session.language),
-					'speakers': parseSpeakers(session.speakeruid),
-					'enclosures': [],
-					'links': []
-				}
-				addEntry('session', entry);
-			})
+			var locationMap = {};
+			var speakerMap = {};
 
 			speakerList.forEach(function (speaker) {
 				speaker = speaker.speaker;
@@ -92,15 +71,50 @@ exports.scrape = function (callback) {
 					'position': speaker.position,
 					'sessions': [],
 				}
+				speakerMap[entry.id] = entry;
 				addEntry('speaker', entry);
 			})
 
+
 			locationList.forEach(function (location) {
-				location = location.location;
-				console.log(location);
+				location = location.room;
+				console.log("location " + location);
 				var entry = {
+					'id': 'rp14-location-'+location.nid,
+					'label_de': location.title,
+					'label_en': location.title,
+					'type': 'location',
+					'event': 'rp14',
+					'is_stage': location.title.match(/stage /i) ? true : false
 				}
+				locationMap[entry.id] = entry;
 				addEntry('location', entry);
+			})
+
+			sessionList.forEach(function (session) {
+				session = session.session;
+
+				var entry = {
+					'id': 'rp14-session-' + session.nid,
+					'title': session.title,
+					'abstract': session.abstract,
+					'description': '???',
+					'url': session.url,
+					'begin': parseDateTime(session.date, session.start),
+					'end': parseDateTime(session.date, session.end),
+					'duration': parseDuration(session.duration),
+					'day': parseDay(session.date),
+					'location': parseLocation(locationMap, session.roomnid),
+					'track': parseTrack(session.category),
+					'format': parseFormat(session.format),
+					'level': parseLevel(session.experience),
+					'lang': parseLanguage(session.language),
+					'speakers': parseSpeakers(speakerMap, session.speakeruid),
+					'enclosures': [],
+					'links': []
+				}
+
+				addEntry('session', entry);
 			})
 
 			alsoAdd('track', allTracks);
@@ -133,7 +147,7 @@ exports.scrape = function (callback) {
 				})
 			}
 
-			//console.log(result);
+			// console.log(data);
 
 			callback(data);
 		}
@@ -144,17 +158,45 @@ function toArray(obj) {
 	return Object.keys(obj).map(function (key) { return obj[key] })
 }
 
+function parseDay(dateString) {
+	if (dateString == '') return false;
+
+	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d)/;
+	dateMatcher.exec(dateString);
+	var day = RegExp.$1;
+	var month = RegExp.$2;
+	var year = RegExp.$3;
+
+	var dayDict = allDays[day+'.'+month+'.'+year];
+	if (dayDict == undefined) return false;
+	return dayDict
+}
+
 function parseDate(text) {
-	switch (text) {
-		case '': return false;
-		default:
-			console.log('Unknown date "'+text+'"')
-			return false;
-	}
+	if (text == '') return false;
+
+	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d)/;
+	dateMatcher.exec(text);
+	var day = RegExp.$1;
+	var month = RegExp.$2;
+	var year = RegExp.$3;
+	return new Date(year, month, day, 0, 0, 0, 0);
 }
 
 function parseDateTime(date, time) {
 	if ((date == '') && (time == '')) return false;
+
+	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d) - (\d\d)\:(\d\d)/;
+	dateMatcher.exec(date);
+
+	var day = RegExp.$1;
+	var month = RegExp.$2;
+	var year = RegExp.$3;
+	var hour = RegExp.$4;
+	var minute = RegExp.$5;
+
+	return new Date(year, month, day, hour, minute, 0, 0);
+
 	console.log('Unknown date "'+date+'" and time "'+time+'"');
 	return false
 }
@@ -171,14 +213,24 @@ function parseDuration(text) {
 	}
 }
 
-function parseLocation(text) {
-	switch (text) {
-		case '': return false;
-		default:
-			console.log('Unknown location "'+text+'"')
-			return false;
+function parseLocation(locationMap, roomid) {
+	if (roomid == '') return false;
+
+	var id = "rp14-location-"+roomid;
+	var location = locationMap[id];
+
+	if (location == undefined) {
+		console.log("unknown location " + roomid);
+		return false;
 	}
+
+	return {
+					'id': location.id,
+					'label_en': location.label_en,
+					'label_de': location.label_de
+	};
 }
+
 
 function parseTrack(text) {
 	var track = allTracks[text];
@@ -208,10 +260,20 @@ function parseLanguage(text) {
 	return false;
 }
 
-function parseSpeakers(list) {
-	return Object.keys(list).map(function (key) {
-		return 'rp14-speaker-'+list[key]
-	});
+function parseSpeakers(speakerMap, speakeruidMap) {
+	var speakers = [];
+	for (var key in speakeruidMap) {
+		var speakerId = speakeruidMap[key];
+		var speaker = speakerMap['rp14-speaker-'+speakerId];
+		if (speaker != undefined) {
+			speakers.push({'id': speaker.id,
+											'name': speaker.name});
+		} else {
+				console.log("unknown speaker " + speakerId);
+		}
+	}
+
+	return speakers;
 }
 
 function clone(obj) {
