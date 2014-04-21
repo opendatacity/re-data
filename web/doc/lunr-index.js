@@ -166,7 +166,7 @@ documentTitles["api.html#get-event-idlocations"] = "GET `/&lt;event-id&gt;/locat
 index.add({
     url: "api.html#get-event-idlocations",
     title: "GET `/&lt;event-id&gt;/locations`",
-    body: "### GET `/&lt;event-id&gt;/locations`  ```` javascript [ 	{ 		\&quot;id\&quot;: \&quot;stage1\&quot;, // location_id 		\&quot;label_de\&quot;: \&quot;Stage 1\&quot;, 		\&quot;label_en\&quot;: \&quot;Stage 1\&quot;, 		\&quot;is_stage\&quot;: true, // is this a stage 		\&quot;floor\&quot;: 0, // floor in the building, 0 is ground 		\&quot;last_modified\&quot;: 1393611456.99 	}, //... ] ````  "
+    body: "### GET `/&lt;event-id&gt;/locations`  ```` javascript [ 	{ 		\&quot;id\&quot;: \&quot;stage1\&quot;, // location_id 		\&quot;label_de\&quot;: \&quot;Stage 1\&quot;, 		\&quot;label_en\&quot;: \&quot;Stage 1\&quot;, 		\&quot;is_stage\&quot;: true, // is this a stage 		\&quot;floor\&quot;: 0,  		\&quot;order_index\&quot;: 0, // order stage objects by this, when listed 		\&quot;last_modified\&quot;: 1393611456.99 	}, //... ] ````  - `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc. - `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels. - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority.   "
 });
 
 documentTitles["api.html#get-event-idlocationslocation-id"] = "GET `/&lt;event-id&gt;/locations/&lt;location-id&gt;`";
