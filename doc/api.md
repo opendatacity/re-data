@@ -205,10 +205,33 @@ Speakers are people performing sessions.
 			"title": "YouTube macht die Stars von heute"
 		} //...
 	],
+  "links": [
+  	{
+  		"url": "http://www.spreeblick.com",
+  		"title": "Spreeblick",
+  		"service": "web",
+  		"type": "speaker-link"
+  	},
+  	{
+  		"url": "https://twitter.com/spreeblick",
+  		"title": "Twitter @spreeblick",
+  		"service": "twitter",
+  		"type": "speaker-link",
+  		"username": "spreeblick"
+  	}
+  ],	
 	"last_modified": 1393611456.99
 } //...
 ]
 ````
+
+#### Speaker links
+
+Speaker `links` (optionally) contain links to web presences of the speaker. `url`, `service` and `title` are always present. Service can currently be: `web`, `twitter`, `facebook`, `github`, `app.net`. The default is `web`, which can be any valid http(s) URL. Optionally `username` contains the username on the social network.
+
+* Values of ```"type"```: ```"speaker-link"```
+* Values of ```"service"```: ```"twitter"```, ```"facebook"```, ```"app.net"```, ```"web"```, ```"github"```, `web` is default.
+
 
 ### GET `/<event-id>/speakers/<id>`
 
@@ -255,11 +278,16 @@ Locations are specified spaces on the compound and may be stages.
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
-		"floor": 0, // floor in the building, 0 is ground
+		"floor": 0, 
+		"order_index": 0, // order stage objects by this, when listed
 		"last_modified": 1393611456.99
 	}, //...
 ]
 ````
+
+- `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
+- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels.
+- `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
 
 ### GET `/<event-id>/locations/<location-id>`
 

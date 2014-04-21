@@ -222,21 +222,21 @@ function areEqual(obj1, obj2) {
 
 
 function recreateCouchDB(db, connection) {
-	
+
 
 	var events = [
-		// {
-		// 	'type': 'event',
-		// 	'id': 'rp14',
-		// 	'label': 're:publica 14',
-		// 	'title': 'into the wild',
-		// 	'date': ['2014-05-06','2014-05-08'],
-		// 	'locations': [{
-		// 		'label': 'Station Berlin',
-		// 		'coords': [52.49814,13.374538]
-		// 	}],
-		// 	'url': 'http://14.re-publica.de/'
-		// },
+		{
+			'type': 'event',
+			'id': 'rp14',
+			'label': 're:publica 14',
+			'title': 'into the wild',
+			'date': ['2014-05-06','2014-05-08'],
+			'locations': [{
+				'label': 'Station Berlin',
+				'coords': [52.49814,13.374538]
+			}],
+			'url': 'http://14.re-publica.de/'
+		},
 		{
 			'type': 'event',
 			'id': 'rp13',
