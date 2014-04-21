@@ -87,7 +87,7 @@ exports.scrape = function (callback) {
 
 			speakerList.forEach(function (speaker) {
 				// skip potential invalid speakers, those happen.
-				if (speaker.uid == "" || speaker.label) return;
+				if (speaker.uid == "" || speaker.label == "") return;
 
 				var entry = {
 					'id': 'rp14-speaker-'+speaker.uid,
@@ -146,7 +146,7 @@ exports.scrape = function (callback) {
 					'format': parseFormat(session.format),
 					'level': parseLevel(session.level),
 					'lang': parseLanguage(session.language),
-					'speakers': parseSpeakers(speakerMap, session.speakeruid),
+					'speakers': parseSpeakers(speakerMap, session.speaker_uids),
 					'enclosures': [],
 					'links': []
 				}
@@ -284,10 +284,10 @@ function parseLanguage(text) {
 	return false;
 }
 
-function parseSpeakers(speakerMap, speakeruidMap) {
+function parseSpeakers(speakerMap, speakeruids) {
 	var speakers = [];
-	for (var key in speakeruidMap) {
-		var speakerId = speakeruidMap[key];
+	for (var i = speakeruids.length - 1; i >= 0; i--){
+		var speakerId = speakeruids[i];
 		var speaker = speakerMap['rp14-speaker-'+speakerId];
 		if (speaker != undefined) {
 			speakers.push({'id': speaker.id,
