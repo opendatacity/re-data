@@ -75,6 +75,20 @@ var sort_types = {
 };
 
 
+var locationOrder = [ "rp13-location-stage-1",
+                      "rp13-location-stage-2",
+                      "rp13-location-stage-3",
+                      "rp13-location-stage-4",
+                      "rp13-location-stage-5",
+                      "rp13-location-stage-6",
+                      "rp13-location-stage-7",
+                      "rp13-location-workshop-a",
+                      "rp13-location-workshop-b",
+                      "rp13-location-workshop-c",
+                      "rp13-location-workshop-d",
+                      "rp13-location-re-publica",
+                      "rp13-location-newthinking",
+                      "rp13-location-global-innovation-lounge" ];
 
 /* helper functions */
 var _id_ifier = function(str) {
@@ -149,13 +163,14 @@ exports.scrape = function (options, callback) {
 						"label_en": location.label_en,
 						"is_stage": location.is_stage,
 						"floor": location.floor, // we don't know
+						"order_index": locationOrder.indexOf(location_id)
 					});
-				
+
 				}
-				
+
 				/* iterate sessions */
 				room.event.forEach(function(event){
-					
+
 					/* make id for session */
 					var session_id = [options.event_id, "session", event.$.id].join("-");
 
@@ -258,6 +273,7 @@ exports.scrape = function (options, callback) {
 				"organization": speaker.organization[0],
 				"position": speaker.position[0],
 				"biography": speaker.biography[0],
+				"links": [], // not supported for rp13
 				"sessions": [] // fill me later
 			});
 		});
