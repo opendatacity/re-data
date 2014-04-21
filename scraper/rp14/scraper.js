@@ -87,7 +87,7 @@ exports.scrape = function (callback) {
 
 			speakerList.forEach(function (speaker) {
 				// skip potential invalid speakers, those happen.
-				if (speaker.uid == "" || speaker.label == "") return;
+				if (speaker.uid == "" || speaker.label.trim() == "") return;
 
 				var entry = {
 					'id': 'rp14-speaker-'+speaker.uid,
