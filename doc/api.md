@@ -278,11 +278,16 @@ Locations are specified spaces on the compound and may be stages.
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
-		"floor": 0, // floor in the building, 0 is ground
+		"floor": 0, 
+		"order_index": 0, // order stage objects by this, when listed
 		"last_modified": 1393611456.99
 	}, //...
 ]
 ````
+
+- `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
+- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels.
+- `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
 
 ### GET `/<event-id>/locations/<location-id>`
 

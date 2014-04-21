@@ -39,37 +39,67 @@ var allDays = {
 	'08.05.2014': { 'id':'rp14-day-3', 'label_de':'8. Mai', 'label_en':'8. May', 'date':'2014-05-08' },
 };
 
+// we now supply a order preference with the location
+var locationOrderPreference = [
+		'rp14-location-2594', // stage 1
+		'rp14-location-2595', // stage 2
+		'rp14-location-2596', // stage 3
+		'rp14-location-2597', // stage 4
+		'rp14-location-2598', // stage 5
+		'rp14-location-2599', // stage 6
+		'rp14-location-2600', // stage A
+		'rp14-location-2601', // stage B
+		'rp14-location-2602', // stage C
+		'rp14-location-2603', // stage D
+		'rp14-location-2604', // stage E
+		'rp14-location-2693', // stage J
+		'rp14-location-2692', // stage T
+		'rp14-location-2708', // store
+		'rp14-location-2710', // GIG lounge
+		'rp14-location-2709', // GIG makerspace
+		'rp14-location-2711', // MIKZ
+		'rp14-location-2712', // new thinking
+		'rp14-location-2713', // republica
+];
+
+var eventURLPrefix = "https://14.re-publica.de/";
+
+
 
 exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'https://re-publica.de/event/1/sessions.json',
-				speakers: 'https://re-publica.de/event/1/speakers.json',
-				rooms:    'https://re-publica.de/event/1/rooms.json'
+				sessions: 'http://re-publica.de/event/1/sessions/json',
+				speakers: 'http://re-publica.de/event/1/speakers/json',
+				rooms:    'http://re-publica.de/event/1/rooms.json'
 			}
 		},
 		function (result) {
 			var data = [];
 
-			var sessionList  = toArray(result.sessions.sessions);
-			var speakerList  = toArray(result.speakers.speakers);
+			var sessionList  = result.sessions.items;
+			var speakerList  = result.speakers.items;
 			var locationList = toArray(result.rooms.rooms      );
 
 			var locationMap = {};
 			var speakerMap = {};
 
 			speakerList.forEach(function (speaker) {
-				speaker = speaker.speaker;
+				// skip potential invalid speakers, those happen.
+				if (speaker.uid == "" || speaker.label) return;
+
 				var entry = {
 					'id': 'rp14-speaker-'+speaker.uid,
-					'name': speaker.speakername,
-					'photo': speaker.picture,
-					'url': speaker.url,
-					'biography': speaker.bio,
-					'organization': speaker.organization,
+					'name': speaker.label,
+					'photo': speaker.image,
+					'url': eventURLPrefix + speaker.uri,
+					'biography': speaker.description_short,
+					'organization': speaker.org,
+					'organization_url': speaker.org_uri,
 					'position': speaker.position,
 					'sessions': [],
+					'links': parseSpeakerLinks(speaker.link_uris, speaker.link_labels)
 				}
 				speakerMap[entry.id] = entry;
 				addEntry('speaker', entry);
@@ -79,10 +109,13 @@ exports.scrape = function (callback) {
 			locationList.forEach(function (location) {
 				location = location.room;
 				console.log("location " + location);
+				var id = 'rp14-location-'+location.nid;
+				var orderPreference = locationOrderPreference.indexOf(id);
 				var entry = {
-					'id': 'rp14-location-'+location.nid,
+					'id': id,
 					'label_de': location.title,
 					'label_en': location.title,
+					'order_index': orderPreference,
 					'type': 'location',
 					'event': 'rp14',
 					'is_stage': location.title.match(/stage /i) ? true : false
@@ -92,22 +125,26 @@ exports.scrape = function (callback) {
 			})
 
 			sessionList.forEach(function (session) {
-				session = session.session;
+				if (session.nid == "") return; // skip invalid sessions
+
+				var begin = parseDateTime(session.datetime, session.start);
+				var end = parseDateTime(session.datetime, session.end);
+				var duration = (end - begin) / 1000;
 
 				var entry = {
 					'id': 'rp14-session-' + session.nid,
 					'title': session.title,
-					'abstract': session.abstract,
-					'description': '???',
+					'abstract': session.description_short,
+					'description': eventURLPrefix + session.uri,
 					'url': session.url,
-					'begin': parseDateTime(session.date, session.start),
-					'end': parseDateTime(session.date, session.end),
-					'duration': parseDuration(session.duration),
-					'day': parseDay(session.date),
-					'location': parseLocation(locationMap, session.roomnid),
+					'begin': begin,
+					'end': end,
+					'duration': duration,
+					'day': parseDay(session.datetime),
+					'location': parseLocation(locationMap, session.room_id),
 					'track': parseTrack(session.category),
 					'format': parseFormat(session.format),
-					'level': parseLevel(session.experience),
+					'level': parseLevel(session.level),
 					'lang': parseLanguage(session.language),
 					'speakers': parseSpeakers(speakerMap, session.speakeruid),
 					'enclosures': [],
@@ -122,15 +159,6 @@ exports.scrape = function (callback) {
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
 			alsoAdd('day', allDays);
-
-			checkSpeakerSessions();
-			checkTracks();
-			checkLocations();
-
-
-			function checkSpeakerSessions() {}
-			function checkTracks() {}
-			function checkLocations() {}
 
 			function addEntry(type, obj) {
 				obj.event = eventId;
@@ -147,7 +175,7 @@ exports.scrape = function (callback) {
 				})
 			}
 
-			// console.log(data);
+			console.log(data);
 
 			callback(data);
 		}
@@ -161,7 +189,7 @@ function toArray(obj) {
 function parseDay(dateString) {
 	if (dateString == '') return false;
 
-	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d)/;
+	var dateMatcher = /^(\d\d)\.(\d\d)\.(\d\d\d\d)/;
 	dateMatcher.exec(dateString);
 	var day = RegExp.$1;
 	var month = RegExp.$2;
@@ -186,31 +214,27 @@ function parseDate(text) {
 function parseDateTime(date, time) {
 	if ((date == '') && (time == '')) return false;
 
-	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d) - (\d\d)\:(\d\d)/;
+	var dateMatcher = /^(\d+)\.(\d+)\.(\d\d\d\d) /;
 	dateMatcher.exec(date);
+
 
 	var day = RegExp.$1;
 	var month = RegExp.$2;
 	var year = RegExp.$3;
-	var hour = RegExp.$4;
-	var minute = RegExp.$5;
 
-	return new Date(year, month, day, hour, minute, 0, 0);
+	var timeMatcher = /(\d+)\:(\d+)/
+	timeMatcher.exec(time);
+	var hour = RegExp.$1;
+	var minute = RegExp.$2;
+
+	// we parse the date stirng to ensure timezone compatibility if run on a computer
+	// which is not in CEST as the conference.
+	var dateString = year + "-" + month + "-" + day + "T" + hour + ":" + minute + ":" + "00+02:00";
+
+	return new Date(dateString);
 
 	console.log('Unknown date "'+date+'" and time "'+time+'"');
 	return false
-}
-
-function parseDuration(text) {
-	switch (text) {
-		case '15 Minuten': return 15;
-		case '30 Minuten': return 30;
-		case '60 Minuten': return 60;
-		case '90 Minuten': return 90;
-		default:
-			console.log('Unknown duration "'+text+'"')
-			return false;
-	}
 }
 
 function parseLocation(locationMap, roomid) {
@@ -275,6 +299,42 @@ function parseSpeakers(speakerMap, speakeruidMap) {
 
 	return speakers;
 }
+
+function parseSpeakerLinks(linkUrls, linkLabels) {
+
+	// google+ URLs are so ugly, what parsing them is non trivial, so we ignore them for now
+	var linkTypes = { 'github': /^https?\:\/\/github\.com\/(\w+)$/i,
+										'twitter': /^https?\:\/\/twitter\.com\/(\w+)$/i,
+										'facebook': /^https?\:\/\/facebook\.com\/(\w+)$/i,
+										'app.net': /^https?\:\/\/(alpha\.)?app.net\.com\/(\w+)$/i };
+
+	var links = [];
+
+	for (var i = 0; i < linkUrls.length; i++) {
+		var linkURL = linkUrls[i];
+		var label = linkLabels[i];
+		var username = false;
+		var service = 'web';
+
+		for (var serviceID in linkTypes) {
+			if (linkURL.match(linkTypes[serviceID])) {
+				service = serviceID;
+				username = RegExp.$1;
+			}
+		}
+
+		var linkItem = { 'url': linkURL,
+										 'title': label,
+										 'service': service,
+										 'type': 'speaker-link' };
+		if (username) linkItem['username'] = username;
+
+		links.push(linkItem);
+	}
+
+	return links;
+}
+
 
 function clone(obj) {
 	var newObj = {};
