@@ -304,10 +304,31 @@
             &quot;title&quot;: &quot;YouTube macht die Stars von heute&quot;
         } //...
     ],
+  &quot;links&quot;: [
+      {
+          &quot;url&quot;: &quot;http://www.spreeblick.com&quot;,
+          &quot;title&quot;: &quot;Spreeblick&quot;,
+          &quot;service&quot;: &quot;web&quot;,
+          &quot;type&quot;: &quot;speaker-link&quot;
+      },
+      {
+          &quot;url&quot;: &quot;https://twitter.com/spreeblick&quot;,
+          &quot;title&quot;: &quot;Twitter @spreeblick&quot;,
+          &quot;service&quot;: &quot;twitter&quot;,
+          &quot;type&quot;: &quot;speaker-link&quot;,
+          &quot;username&quot;: &quot;spreeblick&quot;
+      }
+  ],    
     &quot;last_modified&quot;: 1393611456.99
 } //...
 ]
 </code></pre>
+<h4 id="speaker-links">Speaker links</h4>
+<p>Speaker <code>links</code> (optionally) contain links to web presences of the speaker. <code>url</code>, <code>service</code> and <code>title</code> are always present. Service can currently be: <code>web</code>, <code>twitter</code>, <code>facebook</code>, <code>github</code>, <code>app.net</code>. The default is <code>web</code>, which can be any valid http(s) URL. Optionally <code>username</code> contains the username on the social network.</p>
+<ul>
+<li>Values of <code>&quot;type&quot;</code>: <code>&quot;speaker-link&quot;</code></li>
+<li>Values of <code>&quot;service&quot;</code>: <code>&quot;twitter&quot;</code>, <code>&quot;facebook&quot;</code>, <code>&quot;app.net&quot;</code>, <code>&quot;web&quot;</code>, <code>&quot;github&quot;</code>, <code>web</code> is default.</li>
+</ul>
 <h3 id="get-event-id-speakers-id-">GET <code>/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <h2 id="tracks">Tracks</h2>
