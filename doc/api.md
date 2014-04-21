@@ -205,10 +205,33 @@ Speakers are people performing sessions.
 			"title": "YouTube macht die Stars von heute"
 		} //...
 	],
+  "links": [
+  	{
+  		"url": "http://www.spreeblick.com",
+  		"title": "Spreeblick",
+  		"service": "web",
+  		"type": "speaker-link"
+  	},
+  	{
+  		"url": "https://twitter.com/spreeblick",
+  		"title": "Twitter @spreeblick",
+  		"service": "twitter",
+  		"type": "speaker-link",
+  		"username": "spreeblick"
+  	}
+  ],	
 	"last_modified": 1393611456.99
 } //...
 ]
 ````
+
+#### Speaker links
+
+Speaker `links` (optionally) contain links to web presences of the speaker. `url`, `service` and `title` are always present. Service can currently be: `web`, `twitter`, `facebook`, `github`, `app.net`. The default is `web`, which can be any valid http(s) URL. Optionally `username` contains the username on the social network.
+
+* Values of ```"type"```: ```"speaker-link"```
+* Values of ```"service"```: ```"twitter"```, ```"facebook"```, ```"app.net"```, ```"web"```, ```"github"```, `web` is default.
+
 
 ### GET `/<event-id>/speakers/<id>`
 
