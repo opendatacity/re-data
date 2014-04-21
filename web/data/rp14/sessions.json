@@ -44,12 +44,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1096",
+				"name": "Michał Woźniak"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1171",
@@ -96,12 +101,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1104",
+				"name": "Ksenia Ermoshina"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1290",
@@ -148,12 +158,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1120",
+				"name": "Marcin Koziej"
+			},
+			{
+				"id": "rp14-speaker-1110",
+				"name": "Maria Świetlik"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1337",
@@ -200,12 +219,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1137",
+				"name": "Muhammad  Radwan"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1575",
@@ -252,12 +276,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1138",
+				"name": "Jon Stever"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1719",
@@ -304,12 +333,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1145",
+				"name": "Silumesii Maboshe"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1720",
@@ -356,12 +390,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1146",
+				"name": "Oluwole Odetayo"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1727",
@@ -408,12 +447,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-255",
+				"name": "Balázs Bodó"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-1762",
@@ -460,12 +504,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1109",
+				"name": "Kate Miltner"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-187",
@@ -512,12 +561,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1774",
+				"name": "Konrad Lischka"
+			},
+			{
+				"id": "rp14-speaker-207",
+				"name": "Tom Hillenbrand"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-190",
@@ -616,12 +674,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-235",
+				"name": "Sascha Lobo"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-201",
@@ -668,12 +731,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1985",
+				"name": "Guido Kopp"
+			},
+			{
+				"id": "rp14-speaker-242",
+				"name": "Katrin Moser"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-204",
@@ -720,12 +792,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-247",
+				"name": "Marcus John Henry Brown"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2109",
@@ -772,12 +849,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-159",
+				"name": "Joab  Nist"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-219",
@@ -824,12 +906,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-286",
+				"name": "Jan C.  Rode "
+			},
+			{
+				"id": "rp14-speaker-197",
+				"name": "Anna Lena Schiller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-220",
@@ -876,12 +967,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2379",
+				"name": " "
+			},
+			{
+				"id": "rp14-speaker-2378",
+				"name": "Alexis Rossi"
+			},
+			{
+				"id": "rp14-speaker-281",
+				"name": "Paul Klimpel"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-223",
@@ -928,12 +1032,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1939",
+				"name": "Floyd Celluloyd"
+			},
+			{
+				"id": "rp14-speaker-1631",
+				"name": "Andreas Lorenz"
+			},
+			{
+				"id": "rp14-speaker-1499",
+				"name": "Patricia Cammarata"
+			},
+			{
+				"id": "rp14-speaker-290",
+				"name": "Sven Trautwein"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2276",
@@ -980,12 +1101,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1230",
+				"name": "Mugethi Gitau"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-233",
@@ -1032,12 +1158,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1918",
+				"name": "Hakan Tanriverdi"
+			},
+			{
+				"id": "rp14-speaker-303",
+				"name": "Ole Reißmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-234",
@@ -1084,12 +1219,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-307",
+				"name": "Annina Luzie Schmid"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2420",
@@ -1136,12 +1276,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1513",
+				"name": "Sven Peters"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2477",
@@ -1188,12 +1333,41 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1980",
+				"name": "Julian Möller"
+			},
+			{
+				"id": "rp14-speaker-1973",
+				"name": "Daniel Bode"
+			},
+			{
+				"id": "rp14-speaker-1921",
+				"name": "Charis Pape"
+			},
+			{
+				"id": "rp14-speaker-1868",
+				"name": "Wilfried Dülfer"
+			},
+			{
+				"id": "rp14-speaker-1981",
+				"name": "Matthias Huhn"
+			},
+			{
+				"id": "rp14-speaker-1861",
+				"name": "Waldemar Sobieroj"
+			},
+			{
+				"id": "rp14-speaker-1755",
+				"name": "Dietmar Johlen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2482",
@@ -1240,12 +1414,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1863",
+				"name": "Lorenz Matzat"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2488",
@@ -1292,12 +1471,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1867",
+				"name": "Rick Scavetta"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2494",
@@ -1344,12 +1528,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1865",
+				"name": "Lorenzo Tural Osorio"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2495",
@@ -1396,12 +1585,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1986",
+				"name": "Andrei Soldatov"
+			},
+			{
+				"id": "rp14-speaker-1884",
+				"name": "Erol Önderoglu"
+			},
+			{
+				"id": "rp14-speaker-1873",
+				"name": "Solana Larsen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-250",
@@ -1448,12 +1650,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-256",
+				"name": "Stephan Noller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2500",
@@ -1500,12 +1707,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1879",
+				"name": "Marco Vollmar"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2504",
@@ -1552,12 +1764,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1966",
+				"name": "Hannah Wilhelm "
+			},
+			{
+				"id": "rp14-speaker-1893",
+				"name": "Annabel  Oelmann "
+			},
+			{
+				"id": "rp14-speaker-1892",
+				"name": "Joachim  Goldberg"
+			},
+			{
+				"id": "rp14-speaker-1888",
+				"name": "Thomas  Knüwer "
+			},
+			{
+				"id": "rp14-speaker-1887",
+				"name": "Ulrich  Hegge "
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2516",
@@ -1604,12 +1837,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1906",
+				"name": "Lambert Heller"
+			},
+			{
+				"id": "rp14-speaker-2242",
+				"name": "Sönke Bartling"
+			},
+			{
+				"id": "rp14-speaker-2280",
+				"name": "Kaja Scheliga"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2518",
@@ -1656,12 +1902,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1866",
+				"name": "Marlis Prinzing"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2522",
@@ -1708,12 +1959,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1943",
+				"name": "Stasch Christoph"
+			},
+			{
+				"id": "rp14-speaker-1938",
+				"name": "Thomas Bartoschek"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2524",
@@ -1760,12 +2020,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1899",
+				"name": "Torsten Rehder"
+			},
+			{
+				"id": "rp14-speaker-1898",
+				"name": "Elfi Jäger"
+			},
+			{
+				"id": "rp14-speaker-1897",
+				"name": "Dr. Bettina Brinkmann"
+			},
+			{
+				"id": "rp14-speaker-1934",
+				"name": "Michael Praetorius"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2525",
@@ -1812,12 +2089,37 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1902",
+				"name": "Alexander Mazzara"
+			},
+			{
+				"id": "rp14-speaker-1903",
+				"name": "Ally  Castle"
+			},
+			{
+				"id": "rp14-speaker-1904",
+				"name": "Daniel Fiedler"
+			},
+			{
+				"id": "rp14-speaker-1905",
+				"name": "Conrad Fritzsch"
+			},
+			{
+				"id": "rp14-speaker-1907",
+				"name": "Alexander von Harling"
+			},
+			{
+				"id": "rp14-speaker-1901",
+				"name": "Panagiotis  Trakaliaridis"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2526",
@@ -1864,12 +2166,29 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1908",
+				"name": "Stefan Cordes"
+			},
+			{
+				"id": "rp14-speaker-1910",
+				"name": "Sabah Wahbe"
+			},
+			{
+				"id": "rp14-speaker-1909",
+				"name": "Eli Uzan"
+			},
+			{
+				"id": "rp14-speaker-1901",
+				"name": "Panagiotis  Trakaliaridis"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2527",
@@ -1916,12 +2235,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1914",
+				"name": "Paul Jones"
+			},
+			{
+				"id": "rp14-speaker-1913",
+				"name": "Mona Rübsamen"
+			},
+			{
+				"id": "rp14-speaker-1912",
+				"name": "Dr. Nicola Balkenhol"
+			},
+			{
+				"id": "rp14-speaker-191",
+				"name": "Christian Bollert"
+			},
+			{
+				"id": "rp14-speaker-1901",
+				"name": "Panagiotis  Trakaliaridis"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2528",
@@ -1968,12 +2308,37 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-960",
+				"name": "Kay Meseberg"
+			},
+			{
+				"id": "rp14-speaker-1929",
+				"name": "Christoph Fey"
+			},
+			{
+				"id": "rp14-speaker-1930",
+				"name": "Jochen Spangenberg"
+			},
+			{
+				"id": "rp14-speaker-1926",
+				"name": "Jonathan Dähne"
+			},
+			{
+				"id": "rp14-speaker-1927",
+				"name": "Christian Beetz"
+			},
+			{
+				"id": "rp14-speaker-1924",
+				"name": "Daniel Bröckerhoff"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2529",
@@ -2020,12 +2385,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1933",
+				"name": "Holger Klein"
+			},
+			{
+				"id": "rp14-speaker-1913",
+				"name": "Mona Rübsamen"
+			},
+			{
+				"id": "rp14-speaker-1932",
+				"name": "Stefan Westphal"
+			},
+			{
+				"id": "rp14-speaker-1931",
+				"name": "Jürgen Roth"
+			},
+			{
+				"id": "rp14-speaker-1924",
+				"name": "Daniel Bröckerhoff"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2530",
@@ -2072,12 +2458,29 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1935",
+				"name": "Niels t´Hooft"
+			},
+			{
+				"id": "rp14-speaker-1936",
+				"name": "Arthur Tolsma"
+			},
+			{
+				"id": "rp14-speaker-1937",
+				"name": "Jörn Kamphuis"
+			},
+			{
+				"id": "rp14-speaker-1934",
+				"name": "Michael Praetorius"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2531",
@@ -2124,12 +2527,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1951",
+				"name": "Mihaela Gladovic"
+			},
+			{
+				"id": "rp14-speaker-1934",
+				"name": "Michael Praetorius"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2532",
@@ -2176,12 +2588,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1945",
+				"name": "Morgan Marquis-Boire"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2547",
@@ -2228,12 +2645,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1959",
+				"name": "Saskia Sassen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2549",
@@ -2280,12 +2702,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1962",
+				"name": "Sarah Spiekermann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2550",
@@ -2332,12 +2759,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1965",
+				"name": "Greta Taubert"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2553",
@@ -2384,12 +2816,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1967",
+				"name": "The Yes Men  "
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2554",
@@ -2436,12 +2873,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1968",
+				"name": "Annalee Newitz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2555",
@@ -2488,12 +2930,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1969",
+				"name": "Evgeny Morozov"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2556",
@@ -2540,12 +2987,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1970",
+				"name": "Viktor  Mayer-Schönberger"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2557",
@@ -2592,12 +3044,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1971",
+				"name": "Ron Deibert"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2558",
@@ -2644,12 +3101,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1972",
+				"name": "Alexa Clay"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2563",
@@ -2696,12 +3158,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1949",
+				"name": "AC  Coppens"
+			},
+			{
+				"id": "rp14-speaker-1948",
+				"name": "Nicola Pinder"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2564",
@@ -2748,12 +3219,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1979",
+				"name": "Anatol Stefanowitsch"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2575",
@@ -2800,12 +3276,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1982",
+				"name": "Jarosław Lipszyc"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2576",
@@ -2904,12 +3385,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1983",
+				"name": "Aram Bartholl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2592",
@@ -2956,12 +3442,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2016",
+				"name": "Hannah Fry"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2593",
@@ -3008,12 +3499,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2019",
+				"name": "Markus Schaffrin"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2605",
@@ -3060,12 +3556,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2342",
+				"name": "Sam Taylor"
+			},
+			{
+				"id": "rp14-speaker-2325",
+				"name": "Helienne Lindvall"
+			},
+			{
+				"id": "rp14-speaker-2313",
+				"name": "Helen Smith"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2608",
@@ -3112,12 +3621,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2325",
+				"name": "Helienne Lindvall"
+			},
+			{
+				"id": "rp14-speaker-2219",
+				"name": "Johnny Haeusler"
+			},
+			{
+				"id": "rp14-speaker-2303",
+				"name": "crispin hunt"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2609",
@@ -3164,12 +3686,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2045",
+				"name": "Markus Hündgen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2610",
@@ -3216,12 +3743,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2036",
+				"name": "Alexander Mankowsky"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2624",
@@ -3268,12 +3800,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2063",
+				"name": "Jörg Dörnemann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2644",
@@ -3320,12 +3857,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2129",
+				"name": "Stefania Druga"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2648",
@@ -3372,12 +3914,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2149",
+				"name": "Matthias  Trénel "
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2655",
@@ -3424,12 +3971,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1062",
+				"name": "Kübra Gümüşay"
+			},
+			{
+				"id": "rp14-speaker-2217",
+				"name": "Ferda Ataman"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2656",
@@ -3476,12 +4032,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2219",
+				"name": "Johnny Haeusler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-266",
@@ -3528,12 +4089,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2009",
+				"name": "Rafael  Vilela"
+			},
+			{
+				"id": "rp14-speaker-360",
+				"name": "Sanjay Goel"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2662",
@@ -3580,12 +4150,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2243",
+				"name": "Sina Kamala"
+			},
+			{
+				"id": "rp14-speaker-2244",
+				"name": "Michaela Lampert"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2663",
@@ -3632,12 +4211,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2203",
+				"name": "Jeanette Hofmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2666",
@@ -3788,12 +4372,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2269",
+				"name": "Aleksey Stemmer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2677",
@@ -3840,12 +4429,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2267",
+				"name": "Julia Manske"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2678",
@@ -3892,12 +4486,29 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2226",
+				"name": "Jan Arpe"
+			},
+			{
+				"id": "rp14-speaker-2270",
+				"name": "Moritz Stefaner"
+			},
+			{
+				"id": "rp14-speaker-2266",
+				"name": "Tariq Khokhar"
+			},
+			{
+				"id": "rp14-speaker-686",
+				"name": "Maya Indira Ganesh"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-268",
@@ -3944,12 +4555,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-318",
+				"name": "Kixka Nebraska"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2680",
@@ -3996,12 +4612,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2174",
+				"name": "Bilal Ghalib"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2681",
@@ -4048,12 +4669,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1201",
+				"name": "Martha Chumo"
+			},
+			{
+				"id": "rp14-speaker-316",
+				"name": "Nanjira Sambuli"
+			},
+			{
+				"id": "rp14-speaker-2168",
+				"name": "Clarisse Iribagiza"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2682",
@@ -4100,12 +4734,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2230",
+				"name": "Faruq Hunter"
+			},
+			{
+				"id": "rp14-speaker-2232",
+				"name": "Fabian-Carlos Guhl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2691",
@@ -4152,12 +4795,29 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2207",
+				"name": "David Knight"
+			},
+			{
+				"id": "rp14-speaker-2033",
+				"name": "Jay Fajardo"
+			},
+			{
+				"id": "rp14-speaker-2259",
+				"name": "Paula Gutierrez"
+			},
+			{
+				"id": "rp14-speaker-1144",
+				"name": "Tayo Akinyemi"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2696",
@@ -4204,12 +4864,33 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1137",
+				"name": "Muhammad  Radwan"
+			},
+			{
+				"id": "rp14-speaker-2206",
+				"name": "Roger Dr. Fischer"
+			},
+			{
+				"id": "rp14-speaker-2344",
+				"name": "Stephanie Hankey"
+			},
+			{
+				"id": "rp14-speaker-2046",
+				"name": "Markos Lemma"
+			},
+			{
+				"id": "rp14-speaker-2220",
+				"name": "Almasri Reem"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2697",
@@ -4256,12 +4937,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2331",
+				"name": "Georg Wurth"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2699",
@@ -4308,12 +4994,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2351",
+				"name": "Thilo Kunzemann"
+			},
+			{
+				"id": "rp14-speaker-2343",
+				"name": "Sven Saekert"
+			},
+			{
+				"id": "rp14-speaker-2327",
+				"name": "Elisabeth Wisniewski"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-270",
@@ -4360,12 +5059,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-368",
+				"name": "Bernhard Pörksen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2700",
@@ -4412,12 +5116,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2326",
+				"name": "Tobias Wallisser"
+			},
+			{
+				"id": "rp14-speaker-2338",
+				"name": "Helmuth Ritzer"
+			},
+			{
+				"id": "rp14-speaker-2341",
+				"name": "Walter Matthias  Kunze"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2701",
@@ -4464,12 +5181,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2329",
+				"name": "Geraldine de Bastion"
+			},
+			{
+				"id": "rp14-speaker-2333",
+				"name": "Pranesh Prakash"
+			},
+			{
+				"id": "rp14-speaker-2237",
+				"name": "Friedrich Kitschelt"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2702",
@@ -4516,12 +5246,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2339",
+				"name": "Cem  Ergün-Müller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2703",
@@ -4563,12 +5298,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2221",
+				"name": "Nani Jansen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2704",
@@ -4615,12 +5355,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2032",
+				"name": "Sophie Lamprou"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2705",
@@ -4667,12 +5412,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2336",
+				"name": "Volker Tripp"
+			},
+			{
+				"id": "rp14-speaker-373",
+				"name": "Thomas Lohninger"
+			},
+			{
+				"id": "rp14-speaker-861",
+				"name": "Kirsten Fiedler"
+			},
+			{
+				"id": "rp14-speaker-2332",
+				"name": "Leonhard Dobusch"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2714",
@@ -4719,12 +5481,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2219",
+				"name": "Johnny Haeusler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2715",
@@ -4771,12 +5538,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-387",
+				"name": "Kathrin Passig"
+			},
+			{
+				"id": "rp14-speaker-166",
+				"name": "Anne Schüßler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2716",
@@ -4823,12 +5599,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2361",
+				"name": "Jamie Love"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2717",
@@ -4875,12 +5656,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2360",
+				"name": "Frank  Rieger"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2718",
@@ -4927,12 +5713,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2329",
+				"name": "Geraldine de Bastion"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2719",
@@ -4979,12 +5770,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2172",
+				"name": "AHMED BASTAWY"
+			},
+			{
+				"id": "rp14-speaker-2135",
+				"name": "Tiemo Ehmke"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-272",
@@ -5031,12 +5831,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-240",
+				"name": "Sascha Funk"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2720",
@@ -5083,12 +5888,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2367",
+				"name": "Constantin Seibt"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2721",
@@ -5187,12 +5997,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2349",
+				"name": "Jessica S. Marquis"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2723",
@@ -5239,12 +6054,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2372",
+				"name": "Fredrik Debong"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2724",
@@ -5343,12 +6163,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1873",
+				"name": "Solana Larsen"
+			},
+			{
+				"id": "rp14-speaker-2000",
+				"name": "Glyn  Moody "
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2731",
@@ -5395,12 +6224,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2115",
+				"name": "Elizaveta Barsegova"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-2732",
@@ -5447,12 +6281,74 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2115",
+				"name": "Elizaveta Barsegova"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
+	},
+	{
+		"id": "rp14-session-2742",
+		"title": "Big Data? Intelligente Maschinen!",
+		"abstract": "tba",
+		"description": "https://14.re-publica.de//session/big-data-intelligente-maschinen",
+		"begin": "2014-05-07T11:00:00.000Z",
+		"end": "2014-05-07T11:30:00.000Z",
+		"duration": 1800,
+		"day": {
+			"id": "rp14-day-2",
+			"label_de": "7. Mai",
+			"label_en": "7. May",
+			"date": "2014-05-07"
+		},
+		"location": {
+			"id": "rp14-location-2599",
+			"label_en": "stage 6",
+			"label_de": "stage 6"
+		},
+		"track": {
+			"id": "science-technology",
+			"label_de": "Wissenschaft & Technik",
+			"label_en": "Science & Technology",
+			"color": [
+				0,
+				0,
+				0,
+				1
+			]
+		},
+		"format": {
+			"id": "talk",
+			"label_de": "Vortrag",
+			"label_en": "Talk"
+		},
+		"level": {
+			"id": "advanced",
+			"label_de": "Experten",
+			"label_en": "Advanced"
+		},
+		"lang": {
+			"id": "de",
+			"label_de": "Deutsch",
+			"label_en": "German"
+		},
+		"speakers": [
+			{
+				"id": "rp14-speaker-2380",
+				"name": "Yvonne Hofstetter"
+			}
+		],
+		"enclosures": [],
+		"links": [],
+		"event": "rp14",
+		"type": "session",
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-275",
@@ -5499,12 +6395,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-373",
+				"name": "Thomas Lohninger"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-280",
@@ -5551,12 +6452,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-377",
+				"name": "Moritz Metz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-284",
@@ -5603,12 +6509,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-680",
+				"name": "Julian Finn"
+			},
+			{
+				"id": "rp14-speaker-168",
+				"name": "Sebastian Vollnhals"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-307",
@@ -5655,12 +6570,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-466",
+				"name": "Martin Vesper"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-314",
@@ -5707,12 +6627,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-481",
+				"name": "Susanne  Mierau"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-321",
@@ -5759,12 +6684,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-196",
+				"name": "Nicolas Wöhrl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-327",
@@ -5811,12 +6741,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-491",
+				"name": "Guido Brombach"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-333",
@@ -5863,12 +6798,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-235",
+				"name": "Sascha Lobo"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-334",
@@ -5915,12 +6855,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-504",
+				"name": "Jean Peters"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-337",
@@ -5967,12 +6912,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-509",
+				"name": "Shari Langemak"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-340",
@@ -6019,12 +6969,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-438",
+				"name": "Johanna Emge"
+			},
+			{
+				"id": "rp14-speaker-306",
+				"name": "Kathrin  Kaufmann"
+			},
+			{
+				"id": "rp14-speaker-356",
+				"name": "Ninia Binias"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-347",
@@ -6071,12 +7034,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-429",
+				"name": "Max Woodtli"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-348",
@@ -6123,12 +7091,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-518",
+				"name": "Eva Horn"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-365",
@@ -6175,12 +7148,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-531",
+				"name": "Maik Wagner"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-368",
@@ -6227,12 +7205,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-670",
+				"name": "Dan Weigl"
+			},
+			{
+				"id": "rp14-speaker-557",
+				"name": "Inken Meyer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-370",
@@ -6279,12 +7266,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-283",
+				"name": "Friedemann Karig"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-377",
@@ -6327,12 +7319,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1716",
+				"name": "Karsten Nohl"
+			},
+			{
+				"id": "rp14-speaker-568",
+				"name": "Linus Neumann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-378",
@@ -6379,12 +7380,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-392",
+				"name": "Joel Dullroy"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-379",
@@ -6431,12 +7437,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-574",
+				"name": "Teresa Bücker"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-380",
@@ -6483,12 +7494,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-545",
+				"name": "Jeffrey McGuire"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-383",
@@ -6535,12 +7551,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-586",
+				"name": "Holm Friebe"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-392",
@@ -6587,12 +7608,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-594",
+				"name": "Stefan Domke"
+			},
+			{
+				"id": "rp14-speaker-591",
+				"name": "David Ohrndorf"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-394",
@@ -6639,12 +7669,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-597",
+				"name": "Ralf Appelt"
+			},
+			{
+				"id": "rp14-speaker-595",
+				"name": "Britta Ullrich"
+			},
+			{
+				"id": "rp14-speaker-197",
+				"name": "Anna Lena Schiller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-402",
@@ -6691,12 +7734,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-432",
+				"name": "Nele Tabler"
+			},
+			{
+				"id": "rp14-speaker-348",
+				"name": "Andrea Meyer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-406",
@@ -6743,12 +7795,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-325",
+				"name": "Marco Maas"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-408",
@@ -6795,12 +7852,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-570",
+				"name": "Torsten Kleinz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-410",
@@ -6847,12 +7909,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-620",
+				"name": "Yasmina Banaszczuk"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-412",
@@ -6899,12 +7966,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-387",
+				"name": "Kathrin Passig"
+			},
+			{
+				"id": "rp14-speaker-166",
+				"name": "Anne Schüßler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-413",
@@ -6951,12 +8027,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-627",
+				"name": "Jürgen Kuri"
+			},
+			{
+				"id": "rp14-speaker-624",
+				"name": "Joerg Heidrich"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-428",
@@ -7003,12 +8088,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-638",
+				"name": "Katarzyna Szymielewicz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-430",
@@ -7055,12 +8145,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-640",
+				"name": "Jens Scholz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-439",
@@ -7107,12 +8202,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-656",
+				"name": "Daniel Seitz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-441",
@@ -7159,12 +8259,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-548",
+				"name": "Cornelis Kater"
+			},
+			{
+				"id": "rp14-speaker-510",
+				"name": "Martin Fischer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-446",
@@ -7211,12 +8320,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-601",
+				"name": "Journelle  "
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-447",
@@ -7263,12 +8377,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-678",
+				"name": "Lucie  Höhler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-455",
@@ -7315,12 +8434,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-562",
+				"name": "Elisabeth  Michelbach"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-460",
@@ -7367,12 +8491,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1598",
+				"name": "Anna-Sofie Gerth"
+			},
+			{
+				"id": "rp14-speaker-625",
+				"name": "Doreen und Max Kröber"
+			},
+			{
+				"id": "rp14-speaker-546",
+				"name": "Jens-Uwe Rumstich"
+			},
+			{
+				"id": "rp14-speaker-613",
+				"name": "Yoram Blumenberg"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-462",
@@ -7419,12 +8560,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1941",
+				"name": "Natalie  Tenberg"
+			},
+			{
+				"id": "rp14-speaker-1940",
+				"name": "Annika Stenzel"
+			},
+			{
+				"id": "rp14-speaker-1922",
+				"name": "Isabella David"
+			},
+			{
+				"id": "rp14-speaker-1920",
+				"name": "Juliane Wiedemeier"
+			},
+			{
+				"id": "rp14-speaker-303",
+				"name": "Ole Reißmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-468",
@@ -7471,12 +8633,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1999",
+				"name": "Vanessa Carmicino"
+			},
+			{
+				"id": "rp14-speaker-1944",
+				"name": "Wolfgang Lünenbürger-Reidenbach"
+			},
+			{
+				"id": "rp14-speaker-600",
+				"name": "Djure Meinen"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-478",
@@ -7523,12 +8698,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-719",
+				"name": "Thomas Friese"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-480",
@@ -7575,12 +8755,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1506",
+				"name": "Joerg Meyer"
+			},
+			{
+				"id": "rp14-speaker-697",
+				"name": "Matthias Bauer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-486",
@@ -7627,12 +8816,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-239",
+				"name": "Sophie Hiltner"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-502",
@@ -7679,12 +8873,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-771",
+				"name": "Elmar Geese"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-504",
@@ -7731,12 +8930,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-717",
+				"name": "Laura Sophie Dornheim"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-512",
@@ -7783,12 +8987,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-634",
+				"name": "Florian Alexander Schmidt"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-516",
@@ -7835,12 +9044,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-784",
+				"name": "Becky Kazansky"
+			},
+			{
+				"id": "rp14-speaker-779",
+				"name": "Zara  Rahman"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-521",
@@ -7887,12 +9105,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-330",
+				"name": "Sylke Gruhnwald"
+			},
+			{
+				"id": "rp14-speaker-197",
+				"name": "Anna Lena Schiller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-527",
@@ -7939,12 +9166,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-799",
+				"name": "Hilli Knixibix"
+			},
+			{
+				"id": "rp14-speaker-602",
+				"name": "Maxim Loick"
+			},
+			{
+				"id": "rp14-speaker-256",
+				"name": "Stephan Noller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-528",
@@ -7991,12 +9231,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-794",
+				"name": "Gili Vidan"
+			},
+			{
+				"id": "rp14-speaker-795",
+				"name": "Lilas  Guevara-Duvernois"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-533",
@@ -8043,12 +9292,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1814",
+				"name": "florian krakau"
+			},
+			{
+				"id": "rp14-speaker-847",
+				"name": "Stefanie Aßmann"
+			},
+			{
+				"id": "rp14-speaker-375",
+				"name": "Vivian Pein"
+			},
+			{
+				"id": "rp14-speaker-763",
+				"name": "Stefan Evertz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-545",
@@ -8095,12 +9361,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-801",
+				"name": "Walter Palmetshofer"
+			},
+			{
+				"id": "rp14-speaker-220",
+				"name": "Julia Kloiber"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-550",
@@ -8147,12 +9422,29 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2276",
+				"name": "Franziska Bluhm"
+			},
+			{
+				"id": "rp14-speaker-1888",
+				"name": "Thomas  Knüwer "
+			},
+			{
+				"id": "rp14-speaker-2197",
+				"name": "Richard Gutjahr"
+			},
+			{
+				"id": "rp14-speaker-819",
+				"name": "Ulrike Langer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-553",
@@ -8199,12 +9491,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-828",
+				"name": "Daniel  Guagnin"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-568",
@@ -8251,12 +9548,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-833",
+				"name": "Linnea Riensberg"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-577",
@@ -8303,12 +9605,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-938",
+				"name": "Steffi Fetz"
+			},
+			{
+				"id": "rp14-speaker-842",
+				"name": "Lisa Altmeier"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-586",
@@ -8355,12 +9666,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-760",
+				"name": "Henning Krieg"
+			},
+			{
+				"id": "rp14-speaker-440",
+				"name": "Thorsten Feldmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-604",
@@ -8403,12 +9723,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-529",
+				"name": "Peter Troxler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-606",
@@ -8455,12 +9780,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-889",
+				"name": "Stefan Wehrmeyer"
+			},
+			{
+				"id": "rp14-speaker-840",
+				"name": "Ansgar Koreng"
+			},
+			{
+				"id": "rp14-speaker-428",
+				"name": "Mathias Schindler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-607",
@@ -8507,12 +9845,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-853",
+				"name": "Maria Schröder"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-608",
@@ -8559,12 +9902,25 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2189",
+				"name": "Katina Sostmann"
+			},
+			{
+				"id": "rp14-speaker-1923",
+				"name": "Majid Albunni"
+			},
+			{
+				"id": "rp14-speaker-538",
+				"name": "Kai Schächtele"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-613",
@@ -8611,12 +9967,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-924",
+				"name": "Jakob Ohme "
+			},
+			{
+				"id": "rp14-speaker-2209",
+				"name": "Claudia Seifert"
+			},
+			{
+				"id": "rp14-speaker-881",
+				"name": "Rebecca Renatus"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-616",
@@ -8663,12 +10032,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-884",
+				"name": "fALk Gärtner"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-617",
@@ -8715,12 +10089,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-880",
+				"name": "Wiebke Loosen"
+			},
+			{
+				"id": "rp14-speaker-623",
+				"name": "Cindy Roitsch"
+			},
+			{
+				"id": "rp14-speaker-619",
+				"name": "Juliane Kirchner"
+			},
+			{
+				"id": "rp14-speaker-342",
+				"name": "Nele Heise"
+			},
+			{
+				"id": "rp14-speaker-662",
+				"name": "Ulrike Roth"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-630",
@@ -8767,12 +10162,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1953",
+				"name": "McNamee Joe"
+			},
+			{
+				"id": "rp14-speaker-861",
+				"name": "Kirsten Fiedler"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-632",
@@ -8819,12 +10223,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1051",
+				"name": "Konrad Buck"
+			},
+			{
+				"id": "rp14-speaker-425",
+				"name": "Stefan Holtel"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-644",
@@ -8871,12 +10284,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-907",
+				"name": "Carolin Thiem"
+			},
+			{
+				"id": "rp14-speaker-906",
+				"name": "Christina Pautsch"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-650",
@@ -8923,12 +10345,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2031",
+				"name": "Marcello Bonventre"
+			},
+			{
+				"id": "rp14-speaker-930",
+				"name": "Nils Meinzer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-653",
@@ -8975,12 +10406,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-860",
+				"name": "Wibke Ladwig"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-659",
@@ -9027,12 +10463,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-721",
+				"name": "Radoslav Albrecht"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-667",
@@ -9079,12 +10520,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-2021",
+				"name": "Christian Heise"
+			},
+			{
+				"id": "rp14-speaker-653",
+				"name": "Daniel Dietrich"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-675",
@@ -9131,12 +10581,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-941",
+				"name": "Jan Boelmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-676",
@@ -9183,12 +10638,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-784",
+				"name": "Becky Kazansky"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-680",
@@ -9235,12 +10695,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-220",
+				"name": "Julia Kloiber"
+			},
+			{
+				"id": "rp14-speaker-781",
+				"name": "Stefan Kaufmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-681",
@@ -9287,12 +10756,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-644",
+				"name": "Niko Para"
+			},
+			{
+				"id": "rp14-speaker-953",
+				"name": "Faith Bosworth"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-685",
@@ -9339,12 +10817,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1946",
+				"name": "Gabi Sobliye"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-690",
@@ -9391,12 +10874,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-952",
+				"name": "Bianca Praetorius"
+			},
+			{
+				"id": "rp14-speaker-958",
+				"name": "Eva-Maria  Zoll"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-696",
@@ -9495,12 +10987,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-948",
+				"name": "Michael Seemann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-714",
@@ -9547,12 +11044,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-967",
+				"name": "Lorenz Lorenz-Meyer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-716",
@@ -9599,12 +11101,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1073",
+				"name": "Katelyn  Rogers "
+			},
+			{
+				"id": "rp14-speaker-890",
+				"name": "Beatrice Martini"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-720",
@@ -9651,12 +11162,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-954",
+				"name": "Frederike Kaltheuner"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-727",
@@ -9703,12 +11219,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-971",
+				"name": "Dorothea Martin"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-728",
@@ -9751,12 +11272,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-560",
+				"name": "Jakob Jochmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-736",
@@ -9803,12 +11329,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-796",
+				"name": "Laura  Licari"
+			},
+			{
+				"id": "rp14-speaker-715",
+				"name": "Antonio De Pasquale"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-738",
@@ -9855,12 +11390,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-797",
+				"name": "Herbert Braun"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-739",
@@ -9907,12 +11447,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-811",
+				"name": "Heba Amin"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-746",
@@ -9959,12 +11504,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-935",
+				"name": "Felix Schwenzel"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-747",
@@ -10011,12 +11561,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-983",
+				"name": "Manuela Schauerhammer"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-748",
@@ -10063,12 +11618,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-978",
+				"name": "Stefan Aufenanger"
+			},
+			{
+				"id": "rp14-speaker-999",
+				"name": "Tabea Siebertz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-758",
@@ -10115,12 +11679,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-987",
+				"name": "Oona Leganovic"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-760",
@@ -10167,12 +11736,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1006",
+				"name": "Hendrik Menzl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-762",
@@ -10219,12 +11793,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-730",
+				"name": "Harald Klinke"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-767",
@@ -10271,12 +11850,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1827",
+				"name": "Robert M. Bauer"
+			},
+			{
+				"id": "rp14-speaker-824",
+				"name": "Thomas Gegenhuber"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-769",
@@ -10323,12 +11911,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-928",
+				"name": "Gloria   Spindle"
+			},
+			{
+				"id": "rp14-speaker-1008",
+				"name": "Paul von Ribbeck"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-770",
@@ -10375,12 +11972,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-996",
+				"name": "Wolfie Christl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-778",
@@ -10427,12 +12029,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-896",
+				"name": "Julia Krüger"
+			},
+			{
+				"id": "rp14-speaker-820",
+				"name": "Maximilian  Hösl"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-782",
@@ -10479,12 +12090,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-808",
+				"name": "Magdalena Reiter"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-785",
@@ -10531,12 +12147,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1011",
+				"name": "Sebastian Horn"
+			},
+			{
+				"id": "rp14-speaker-1005",
+				"name": "Thom Nagy"
+			},
+			{
+				"id": "rp14-speaker-378",
+				"name": "Florian Steglich"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-789",
@@ -10583,12 +12212,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-989",
+				"name": "Christiane  Frohmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-790",
@@ -10635,12 +12269,25 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1864",
+				"name": "Andrej Sandorf"
+			},
+			{
+				"id": "rp14-speaker-168",
+				"name": "Sebastian Vollnhals"
+			},
+			{
+				"id": "rp14-speaker-455",
+				"name": "Michael Kreil"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-792",
@@ -10687,12 +12334,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1919",
+				"name": "Martin Giesler"
+			},
+			{
+				"id": "rp14-speaker-708",
+				"name": "Jannis Kucharz"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-804",
@@ -10739,12 +12395,33 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1061",
+				"name": "Basti R"
+			},
+			{
+				"id": "rp14-speaker-1013",
+				"name": "Cornelia "
+			},
+			{
+				"id": "rp14-speaker-854",
+				"name": "Jörn Schultz"
+			},
+			{
+				"id": "rp14-speaker-973",
+				"name": "Fiona Krakenbürger"
+			},
+			{
+				"id": "rp14-speaker-857",
+				"name": "Katrin Rönicke"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-807",
@@ -10791,12 +12468,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1022",
+				"name": "Stephanie Wißmann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-814",
@@ -10843,12 +12525,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1025",
+				"name": "Karen Melchior"
+			},
+			{
+				"id": "rp14-speaker-934",
+				"name": "Anthony Zacharzewski"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-819",
@@ -10895,12 +12586,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-879",
+				"name": "Ulrich Tausend"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-820",
@@ -10947,12 +12643,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1029",
+				"name": "Michael Zöller"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-824",
@@ -10999,12 +12700,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1032",
+				"name": "Rin Räuber"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-826",
@@ -11051,12 +12757,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1028",
+				"name": "Florian Krapp"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-834",
@@ -11103,12 +12814,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-700",
+				"name": "Andreas Schmidt"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-837",
@@ -11155,12 +12871,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1038",
+				"name": "Renata Avila"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-840",
@@ -11207,12 +12928,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-549",
+				"name": "Johnny West"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-841",
@@ -11259,12 +12985,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1042",
+				"name": "Matt Jukes"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-852",
@@ -11311,12 +13042,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-876",
+				"name": "Oxblood Ruffin"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-857",
@@ -11363,12 +13099,21 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1657",
+				"name": "Frank Schwab"
+			},
+			{
+				"id": "rp14-speaker-1064",
+				"name": "Astrid  Carolus"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-865",
@@ -11415,12 +13160,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1069",
+				"name": "Laurie Penny"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-867",
@@ -11467,12 +13217,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1056",
+				"name": "Harley Aussoleil"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-870",
@@ -11519,12 +13274,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-629",
+				"name": "Marek Tuszynski"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-871",
@@ -11571,12 +13331,17 @@
 			"label_de": "Deutsch",
 			"label_en": "German"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1077",
+				"name": "Nilz Bokelberg"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-874",
@@ -11623,12 +13388,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-453",
+				"name": "Tim Pritlove"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-878",
@@ -11675,12 +13445,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1079",
+				"name": "Tatiana  Bazzichelli"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-879",
@@ -11727,12 +13502,17 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1080",
+				"name": "Parker Higgins"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-880",
@@ -11779,12 +13559,29 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1083",
+				"name": "Robert Bierkandt"
+			},
+			{
+				"id": "rp14-speaker-1084",
+				"name": "Leonie Wenz"
+			},
+			{
+				"id": "rp14-speaker-1085",
+				"name": "Sven Willner"
+			},
+			{
+				"id": "rp14-speaker-1082",
+				"name": "Anders Levermann"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-975",
@@ -11831,12 +13628,21 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1090",
+				"name": "Jacob Appelbaum"
+			},
+			{
+				"id": "rp14-speaker-1081",
+				"name": "Jillian York"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	},
 	{
 		"id": "rp14-session-992",
@@ -11883,11 +13689,20 @@
 			"label_de": "Englisch",
 			"label_en": "English"
 		},
-		"speakers": [],
+		"speakers": [
+			{
+				"id": "rp14-speaker-1089",
+				"name": "Michael Running Wolf Jr"
+			},
+			{
+				"id": "rp14-speaker-1091",
+				"name": "Caroline Running Wolf"
+			}
+		],
 		"enclosures": [],
 		"links": [],
 		"event": "rp14",
 		"type": "session",
-		"last_modified": 1398095700.988
+		"last_modified": 1398098859.544
 	}
 ]

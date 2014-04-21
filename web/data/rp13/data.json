@@ -27315,7 +27315,7 @@
 			"label_en": "Global Innovation Lounge",
 			"floor": 0,
 			"is_stage": false,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-global-innovation-lounge",
@@ -27326,7 +27326,7 @@
 			"is_stage": false,
 			"floor": 0,
 			"order_index": 13,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-newthinking",
@@ -27336,7 +27336,7 @@
 			"label_en": "Newthinking",
 			"floor": 0,
 			"is_stage": false,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-newthinking",
@@ -27347,7 +27347,7 @@
 			"is_stage": false,
 			"floor": 0,
 			"order_index": 12,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-re-publica",
@@ -27358,7 +27358,7 @@
 			"is_stage": false,
 			"floor": 0,
 			"order_index": 11,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-re-publica",
@@ -27368,7 +27368,7 @@
 			"label_en": "re:publica",
 			"floor": 0,
 			"is_stage": false,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-1",
@@ -27379,7 +27379,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 0,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-1",
@@ -27389,7 +27389,7 @@
 			"label_en": "Stage 1",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-2",
@@ -27399,7 +27399,7 @@
 			"label_en": "Stage 2",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-2",
@@ -27410,7 +27410,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 1,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-3",
@@ -27420,7 +27420,7 @@
 			"label_en": "Stage 3",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-3",
@@ -27431,7 +27431,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 2,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-4",
@@ -27442,7 +27442,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 3,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-4",
@@ -27452,7 +27452,7 @@
 			"label_en": "Stage 4",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-5",
@@ -27462,7 +27462,7 @@
 			"label_en": "Stage 5",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-5",
@@ -27473,7 +27473,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 4,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-6",
@@ -27484,7 +27484,7 @@
 			"is_stage": true,
 			"floor": 0,
 			"order_index": 5,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-stage-6",
@@ -27494,7 +27494,7 @@
 			"label_en": "Stage 6",
 			"floor": 0,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-7",
@@ -27504,7 +27504,7 @@
 			"label_en": "Stage 7",
 			"floor": 1,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-stage-7",
@@ -27515,7 +27515,7 @@
 			"is_stage": true,
 			"floor": 1,
 			"order_index": 6,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-workshop-a",
@@ -27525,7 +27525,7 @@
 			"label_en": "Workshop A",
 			"floor": 1,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-workshop-a",
@@ -27536,7 +27536,7 @@
 			"is_stage": true,
 			"floor": 1,
 			"order_index": 7,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-workshop-b",
@@ -27547,7 +27547,7 @@
 			"is_stage": true,
 			"floor": 1,
 			"order_index": 8,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-workshop-b",
@@ -27557,7 +27557,7 @@
 			"label_en": "Workshop B",
 			"floor": 1,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-workshop-c",
@@ -27568,7 +27568,7 @@
 			"is_stage": true,
 			"floor": 1,
 			"order_index": 9,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		},
 		{
 			"id": "rp13-location-workshop-c",
@@ -27578,7 +27578,7 @@
 			"label_en": "Workshop C",
 			"floor": 1,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-workshop-d",
@@ -27588,7 +27588,7 @@
 			"label_en": "Workshop D",
 			"floor": 1,
 			"is_stage": true,
-			"last_modified": 1397860006.972
+			"last_modified": 1398098671.984
 		},
 		{
 			"id": "rp13-location-workshop-d",
@@ -27599,7 +27599,7 @@
 			"is_stage": true,
 			"floor": 1,
 			"order_index": 10,
-			"last_modified": 1398096755.037
+			"last_modified": 1398098858.409
 		}
 	],
 	"tracks": [
