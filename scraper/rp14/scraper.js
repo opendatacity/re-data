@@ -114,7 +114,7 @@ exports.scrape = function (callback) {
 				var id = 'rp14-location-'+location.nid;
 				var orderPreference = locationOrderPreference.indexOf(id);
 				// put unknown locations at the end
-				if (orderPreference) < 0 {
+				if (orderPreference < 0) {
 					orderPreference = locationOrderPreference.length + 1;
 				}
 				var entry = {
