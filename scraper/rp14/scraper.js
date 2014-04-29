@@ -60,6 +60,8 @@ var locationOrderPreference = [
 		'rp14-location-2711', // MIKZ
 		'rp14-location-2712', // new thinking
 		'rp14-location-2713', // republica
+		'rp14-location-2855', // re/connect
+		'rp14-location-2871', // backyard
 ];
 
 var eventURLPrefix = "https://14.re-publica.de/";
@@ -111,6 +113,10 @@ exports.scrape = function (callback) {
 				console.log("location " + location);
 				var id = 'rp14-location-'+location.nid;
 				var orderPreference = locationOrderPreference.indexOf(id);
+				// put unknown locations at the end
+				if (orderPreference) < 0 {
+					orderPreference = locationOrderPreference.length + 1;
+				}
 				var entry = {
 					'id': id,
 					'label_de': location.title,
