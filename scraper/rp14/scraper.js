@@ -113,7 +113,7 @@ exports.scrape = function (callback) {
 					'id': 'rp14-speaker-'+speaker.uid,
 					'name': speaker.label,
 					'photo': speaker.image,
-					'url': eventURLPrefix + speaker.uri,
+					'url': eventURLPrefix + '/' + speaker.uri,
 					'biography': speaker.description_short,
 					'organization': speaker.org,
 					'organization_url': speaker.org_uri,
