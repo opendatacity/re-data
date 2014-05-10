@@ -77,7 +77,10 @@ exports.scrape = function (callback) {
 				sessions: 'http://re-publica.de/event/1/sessions/json',
 				speakers: 'http://re-publica.de/event/1/speakers/json',
 				rooms:    'http://re-publica.de/event/1/rooms.json',
-				youtubePlaylist: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json'
+				youtubePlaylist1: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50',
+				youtubePlaylist2: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=51',
+				youtubePlaylist3: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=101',
+			  youtubePlaylist4: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=151'
 				// note that Google is very open and will disable the YouTube v2 API (with unauthenticated use)
 				// at 15 Apr 2015, but until then this will work
 			}
@@ -88,7 +91,10 @@ exports.scrape = function (callback) {
 			var sessionList  = result.sessions.items;
 			var speakerList  = result.speakers.items;
 			var locationList = toArray(result.rooms.rooms      );
-			var ytPlaylist   = result.youtubePlaylist.feed.entry;
+			var ytPlaylist   = result.youtubePlaylist1.feed.entry;
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist2.feed.entry);
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist3.feed.entry);
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist4.feed.entry);
 
 			var ytVideoMap  = {};
 			var locationMap = {};
@@ -149,7 +155,7 @@ exports.scrape = function (callback) {
 				var duration = (end - begin) / 1000;
 				var permalink = eventURLPrefix + session.uri;
 				var links = [];
-				
+
 				var ytLink = ytVideoMap[permalink];
 				if (ytLink) {
 					links.push(ytLink);
@@ -224,9 +230,15 @@ function parseDay(dateString) {
 }
 
 function permalinkFromYouTubeEntry(entry) {
-	var desc = entry["media$group"]["media$description"]["$t"];
+	var mediaGroup = entry["media$group"];
+	if (mediaGroup == undefined) return false;
 
-	if (desc == undefined) return null;
+	var mediaDesc = mediaGroup["media$description"];
+	if (mediaDesc == undefined) return false;
+
+	var desc = mediaDesc["$t"];
+	if (desc == undefined) return false;
+
 
 	var permalinkMatcher = /(https?:\/\/14\.re-publica\.de\/session\/[a-z-0-9\-]+)/;
 	permalinkMatcher.exec(desc);
@@ -241,11 +253,15 @@ function permalinkFromYouTubeEntry(entry) {
 
 function linkFromYouTubeEntry(entry) {
 	var mediaGroup = entry["media$group"];
+	if (mediaGroup == undefined) return false;
 
-	if (mediaGroup["media$thumbnail"].length < 3) return false;
+	if (mediaGroup["media$thumbnail"] == undefined ||
+		  mediaGroup["media$thumbnail"].length < 3) return false;
+
 	var thumbnailURL = mediaGroup["media$thumbnail"][2]["url"];
 
-	if (mediaGroup["media$content"].length < 1) return false;
+	if (mediaGroup["media$content"] == undefined ||
+		  mediaGroup["media$content"].length < 1) return false;
 	var url = mediaGroup["media$content"][0]["url"];
 
 	// we use the https://www.youtube.com/v/12BYSqVGCUk format
