@@ -119,7 +119,9 @@ exports.scrape = function (callback) {
 					track.color = defaultColor;
 				}
 				allTracks[session.track.id] = track;
-				
+				if (session.speakers == undefined) {
+					session.speakers = [];
+				}
 				addEntry('session', session);
 			});
 			
