@@ -81,7 +81,8 @@ var allLevels = {
 
 var defaultColor = [ (107.0 / 255.0),
 					(219.0 / 255.0),
-					(67.0/ 255.0) ];
+					(67.0/ 255.0),
+					1.0 ];
 
 exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
