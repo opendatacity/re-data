@@ -79,6 +79,9 @@ var allLevels = {
 	'Experten':         { id:'advanced',     label_en:'Advanced'     }
 };
 
+var defaultColor = [ (107.0 / 255.0),
+					(219.0 / 255.0),
+					(67.0/ 255.0) ];
 
 exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
@@ -111,8 +114,12 @@ exports.scrape = function (callback) {
 				session.enclosures = [];
 				session.links = [];
 			
-				allTracks[session.track.id] = session.track;
-			
+				var track = session.track;
+				if (track.color == undefined) {
+					track.color = defaultColor;
+				}
+				allTracks[session.track.id] = track;
+				
 				addEntry('session', session);
 			});
 			
