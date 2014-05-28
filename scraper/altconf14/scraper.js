@@ -63,7 +63,7 @@ var allRooms = {
 };
 
 var allLanguages = {
-	'Englisch': { id:'en', label_en:'English' },
+	'en': { id:'en', label_en:'English' },
 };
 
 var allFormats = {
@@ -102,7 +102,7 @@ exports.scrape = function (callback) {
 				
 				session.day = day;
 				session.level = allLevels['Fortgeschrittene'];
-				session.lang = allLanguages["English"];
+				session.lang = allLanguages["en"];
 				if (session.location.id == "alt-location-mainstage") {
 					session.format = allFormats["Vortrag"];
 				} else {
