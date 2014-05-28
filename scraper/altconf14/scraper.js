@@ -118,7 +118,7 @@ exports.scrape = function (callback) {
 			
 			var speakerList  = result.speakers;
 			speakerList.forEach(function(speaker) {
-				console.log(speaker);
+				
 				
 				var speakerDict = {
 				  "id": speaker.id,
@@ -159,7 +159,6 @@ exports.scrape = function (callback) {
 				})
 			}
 
-			console.log(data);
 
 			callback(data);
 		}
@@ -173,13 +172,14 @@ function toArray(obj) {
 function parseDay(dateString) {
 	if (dateString == '') return false;
 
-	var dateMatcher = /^(\d\d)\-(\d\d)\-(\d\d\d\d)/;
-	dateMatcher.exec(dateString);
-	var day = RegExp.$1;
-	var month = RegExp.$2;
-	var year = RegExp.$3;
+	var date = new Date(dateString);
+	var day = date.getDay();
+	var month = date.getMonth() + 1;
+	var year = date.getFullYear();
 
-	var dayDict = allDays[year+'-'+month+'-'+day];
+	var key = year + '-' + (month < 10 ? '0'+month : month) + '-' + (day < 10 ? '0'+day : day);
+	var dayDict = allDays[key];
+
 	if (dayDict == undefined) return false;
 	return dayDict;
 }
@@ -187,11 +187,10 @@ function parseDay(dateString) {
 function parseDate(text) {
 	if (text == '') return false;
 
-	var dateMatcher = /(\d\d)\.(\d\d)\.(\d\d\d\d)/;
-	dateMatcher.exec(text);
-	var day = RegExp.$1;
-	var month = RegExp.$2;
-	var year = RegExp.$3;
+	var date = new Date(dateString);
+	var day = date.day;
+	var month = date.month + 1;
+	var year = date.year;
 	return new Date(year, month, day, 0, 0, 0, 0);
 }
 
