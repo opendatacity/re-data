@@ -115,7 +115,7 @@ exports.scrape = function (callback) {
 				session.enclosures = [];
 				session.links = [];
 			
-				var track = session.track;
+				var track = clone(session.track);
 				if (track.color == undefined) {
 					track.color = defaultColor;
 				}
