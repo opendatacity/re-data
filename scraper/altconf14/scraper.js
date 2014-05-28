@@ -173,7 +173,7 @@ function toArray(obj) {
 function parseDay(dateString) {
 	if (dateString == '') return false;
 
-	var dateMatcher = /^(\d\d)\.(\d\d)\.(\d\d\d\d)/;
+	var dateMatcher = /^(\d\d)\-(\d\d)\-(\d\d\d\d)/;
 	dateMatcher.exec(dateString);
 	var day = RegExp.$1;
 	var month = RegExp.$2;
