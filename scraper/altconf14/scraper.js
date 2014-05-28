@@ -100,6 +100,7 @@ exports.scrape = function (callback) {
 			sessionList.forEach(function (session) {
 				var day = parseDay(session.begin);
 				
+				session.day = day;
 				session.level = allLevels['Fortgeschrittene'];
 				session.lang = allLanguages["English"];
 				if (session.location.id == "alt-location-mainstage") {
