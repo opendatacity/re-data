@@ -80,8 +80,8 @@ var allLevels = {
 };
 
 var defaultColor = [ 92.0,
-					190.0,
-					57.0,
+					177.0,
+				201.0,
 					1.0 ];
 
 exports.scrape = function (callback) {
