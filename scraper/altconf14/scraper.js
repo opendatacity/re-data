@@ -173,9 +173,9 @@ function parseDay(dateString) {
 	if (dateString == '') return false;
 
 	var date = new Date(dateString);
-	var day = date.getDay();
-	var month = date.getMonth() + 1;
-	var year = date.getFullYear();
+	var day = date.getUTCDate();
+	var month = date.getUTCMonth() + 1;
+	var year = date.getUTCFullYear();
 
 	var key = year + '-' + (month < 10 ? '0'+month : month) + '-' + (day < 10 ? '0'+day : day);
 	var dayDict = allDays[key];
