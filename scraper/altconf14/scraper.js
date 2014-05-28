@@ -79,9 +79,9 @@ var allLevels = {
 	'Experten':         { id:'advanced',     label_en:'Advanced'     }
 };
 
-var defaultColor = [ (107.0 / 255.0),
-					(219.0 / 255.0),
-					(67.0/ 255.0),
+var defaultColor = [ 107.0,
+					219.0,
+					67.0,
 					1.0 ];
 
 exports.scrape = function (callback) {
