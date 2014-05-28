@@ -141,7 +141,7 @@ exports.scrape = function (callback) {
 				  "position": "",
 				  "biography": speaker.biography,
 				  "sessions": speaker.sessions,
-                   "links": []
+                   "links": speaker.links == undefined ? [] : speaker.links
 				};
 				
 				addEntry('speaker', speakerDict);
