@@ -9,45 +9,54 @@ var allDays = {
     "event": "alt",
     "type": "day",
     "label_en": "2nd June",
-    "date": "2014-06-02"
+    "date": "2014-06-03"
   },
   "2014-06-03": {
     "id": "alt-day-2",
     "event": "alt",
     "type": "day",
     "label_en": "3rd June",
-    "date": "2014-06-03"
+    "date": "2014-06-04"
   },
   "2014-06-04": {
     "id": "alt-day-3",
     "event": "alt",
     "type": "day",
     "label_en": "4th June",
-    "date": "2014-06-04"
+    "date": "2014-06-05"
   },
   "2014-06-05": {
     "id": "alt-day-4",
     "event": "alt",
     "type": "day",
     "label_en": "5th June",
-    "date": "2014-06-05"
+    "date": "2014-06-06"
   },
   "2014-06-06": {
     "id": "alt-day-5",
     "event": "alt",
     "type": "day",
     "label_en": "6th June",
-    "date": "2014-06-06"
+    "date": "2014-06-07"
   }
 };
 
 var allRooms = {
-  "alt-location-labs": {
-    "id": "alt-location-labs",
+  "alt-location-labs-1": {
+    "id": "alt-location-labs-1",
     "label_en": "Jillian's",
     "is_stage": false,
     "floor": 0,
     "order_index": 1,
+    "event": "alt",
+    "type": "location"
+  },
+  "alt-location-labs-2": {
+    "id": "alt-location-labs-2",
+    "label_en": "Jillian's",
+    "is_stage": false,
+    "floor": 0,
+    "order_index": 2,
     "event": "alt",
     "type": "location"
   },
@@ -88,22 +97,21 @@ exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'http://vonbelow.com/altconf/sessions.json',
-				speakers: 'http://vonbelow.com/altconf/speakers.json'
+				sessions: 'http://robelk.in/altconf-data/sessions.json',
+				speakers: 'http://robelk.in/altconf-data/speakers.json'
 			}
 		},
 		function (result) {
 			var data = [];
-			
+
 			var allDays = {};
 			var allTracks = {};
-			
+
 			var sessionList  = result.sessions;
-			console.log("log");
-			
+
 			sessionList.forEach(function (session) {
 				var day = parseDay(session.begin);
-				
+
 				session.day = day;
 				session.level = allLevels['Fortgeschrittene'];
 				session.lang = allLanguages["en"];
@@ -114,7 +122,7 @@ exports.scrape = function (callback) {
 				}
 				session.enclosures = [];
 				session.links = [];
-			
+
 				var track = clone(session.track);
 				if (track.color == undefined) {
 					track.color = defaultColor;
@@ -125,11 +133,11 @@ exports.scrape = function (callback) {
 				}
 				addEntry('session', session);
 			});
-			
+
 			var speakerList  = result.speakers;
 			speakerList.forEach(function(speaker) {
-				
-				
+
+
 				var speakerDict = {
 				  "id": speaker.id,
 				  "event": eventId,
@@ -143,10 +151,10 @@ exports.scrape = function (callback) {
 				  "sessions": speaker.sessions,
                    "links": speaker.links == undefined ? [] : speaker.links
 				};
-				
+
 				addEntry('speaker', speakerDict);
 			});
-			
+
 			alsoAdd('location', allRooms);
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
@@ -169,7 +177,7 @@ exports.scrape = function (callback) {
 				})
 			}
 
-
+      console.log("Updated dataset with " + data.length + " entries");
 			callback(data);
 		}
 	);
