@@ -120,7 +120,9 @@ exports.scrape = function (callback) {
 					session.format = allFormats["Workshop"];
 				}
 				session.enclosures = [];
-				session.links = [];
+				if (session.links == undefined) {
+			 	   session.links = [];
+			  }
 
 				var track = clone(session.track);
 				if (track.color == undefined) {
