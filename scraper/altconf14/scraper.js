@@ -97,8 +97,8 @@ exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'http://robelk.in/altconf-data/sessions.json',
-				speakers: 'http://robelk.in/altconf-data/speakers.json'
+				sessions: 'https://raw.githubusercontent.com/robelkin/altconf-data/master/sessions.json',
+				speakers: 'https://raw.githubusercontent.com/robelkin/altconf-data/master/seakers.json'
 			}
 		},
 		function (result) {
