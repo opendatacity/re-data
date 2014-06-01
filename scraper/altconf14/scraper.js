@@ -42,8 +42,8 @@ var allDays = {
 };
 
 var allRooms = {
-  "alt-location-labs-1": {
-    "id": "alt-location-labs-1",
+  "alt-location-lab-1": {
+    "id": "alt-location-lab-1",
     "label_en": "Jillian's",
     "is_stage": false,
     "floor": 0,
@@ -51,8 +51,8 @@ var allRooms = {
     "event": "alt",
     "type": "location"
   },
-  "alt-location-labs-2": {
-    "id": "alt-location-labs-2",
+  "alt-location-lab-2": {
+    "id": "alt-location-lab-2",
     "label_en": "Jillian's",
     "is_stage": false,
     "floor": 0,
