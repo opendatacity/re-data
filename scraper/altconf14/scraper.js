@@ -104,7 +104,6 @@ exports.scrape = function (callback) {
 		function (result) {
 			var data = [];
 
-			var allDays = {};
 			var allTracks = {};
 
 			var sessionList  = result.sessions;
@@ -161,6 +160,7 @@ exports.scrape = function (callback) {
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
 			alsoAdd('day', allDays);
+			// console.log(allDays);
 
 			function addEntry(type, obj) {
 				obj.event = eventId;
