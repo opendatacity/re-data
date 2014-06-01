@@ -98,7 +98,7 @@ exports.scrape = function (callback) {
 		{
 			urls: {
 				sessions: 'https://raw.githubusercontent.com/robelkin/altconf-data/master/sessions.json',
-				speakers: 'https://raw.githubusercontent.com/robelkin/altconf-data/master/seakers.json'
+				speakers: 'https://raw.githubusercontent.com/robelkin/altconf-data/master/speakers.json'
 			}
 		},
 		function (result) {
