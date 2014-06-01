@@ -94,6 +94,14 @@ function replyList(err, data, query, res) {
 		res.json({ok:false});
 	}
 
+	data.filter(function(item) {
+		if (item._deleted == undefined || item._deleted == false) {
+			return true;
+		} else {
+			return false;
+		};
+	});
+
 	// delete unnecessary fields _id and _rev
 	data = data.map(function (item) {
 		delete item._id;
@@ -117,7 +125,7 @@ function replyList(err, data, query, res) {
 	}
 
 	var count = data.length;
-	
+
 	// pagination
 	if (query.start || query.count) {
 		var startIndex = 0;
