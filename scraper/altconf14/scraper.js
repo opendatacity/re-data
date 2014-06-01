@@ -9,40 +9,40 @@ var allDays = {
     "event": "alt",
     "type": "day",
     "label_en": "2nd June",
-//    "date": "2014-06-03"
-    "date": "2014-06-02"
+   "date": "2014-06-03"
+    // "date": "2014-06-02"
   },
   "2014-06-03": {
     "id": "alt-day-2",
     "event": "alt",
     "type": "day",
     "label_en": "3rd June",
-//    "date": "2014-06-04"
-    "date": "2014-06-03"
+   "date": "2014-06-04"
+    // "date": "2014-06-03"
   },
   "2014-06-04": {
     "id": "alt-day-3",
     "event": "alt",
     "type": "day",
     "label_en": "4th June",
-  //"date": "2014-06-05"
-    "date": "2014-06-04"
+  "date": "2014-06-05"
+    // "date": "2014-06-04"
   },
   "2014-06-05": {
     "id": "alt-day-4",
     "event": "alt",
     "type": "day",
     "label_en": "5th June",
-//  "date": "2014-06-06"
-    "date": "2014-06-05"
+ "date": "2014-06-06"
+    // "date": "2014-06-05"
   },
   "2014-06-06": {
     "id": "alt-day-5",
     "event": "alt",
     "type": "day",
     "label_en": "6th June",
-//    "date": "2014-06-07"
-    "date": "2014-06-06"
+   "date": "2014-06-07"
+    // "date": "2014-06-06"
 
   }
 };
