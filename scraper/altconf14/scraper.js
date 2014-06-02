@@ -94,10 +94,29 @@ var allLevels = {
 	'Experten':         { id:'advanced',     label_en:'Advanced'     }
 };
 
-var defaultColor = [ 207.0,
-					           94.0,
-			   	           28.0,
-					           1.0 ];
+var allTracks = {
+  'development': { "color": [207,94,28,1],
+                   "id": "development",
+                   "label_en": "Development" },
+  'general': { "color": [160,160,160,1],
+               "id": "general",
+               "label_en": "General" },
+  'streaming': { "color": [43,81,160,1],
+                 "id": "general",
+                 "label_en": "Streaming" }
+};
+
+var trackMap = {
+  'general': [ 'alt-session-1',
+               'alt-lab-17',
+               'alt-session-3',
+               'alt-session-16',
+               'alt-session-29',
+               'alt-session-42',
+               'alt-session-53' ],
+  'streaming': [ 'alt-lab-18',
+                 'alt-session-2' ]
+};
 
 exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
@@ -109,8 +128,6 @@ exports.scrape = function (callback) {
 		},
 		function (result) {
 			var data = [];
-
-			var allTracks = {};
 
 			var sessionList  = result.sessions;
 
@@ -130,11 +147,14 @@ exports.scrape = function (callback) {
 			 	   session.links = [];
 			  }
 
-				var track = clone(session.track);
-				if (track.color == undefined) {
-					track.color = defaultColor;
-				}
-				allTracks[session.track.id] = track;
+        if (trackMap['general'].indexOf(session.id) > 0) {
+          session.track = allTracks['general'];
+        } else if (trackMap['streaming'].indexOf(session.id) > 0) {
+          session.track = allTracks['streaming'];
+        } else {
+          session.track = allTracks['development'];
+        }
+
 				if (session.speakers == undefined) {
 					session.speakers = [];
 				}
