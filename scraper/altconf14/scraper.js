@@ -120,7 +120,6 @@ var trackMap = {
                'alt-session-53',
                'alt-session-12',
                'alt-session-20',
-               'alt-session-21',
                'alt-session-25',
                'alt-session-32',
                'alt-session-38',
