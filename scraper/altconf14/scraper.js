@@ -147,13 +147,15 @@ exports.scrape = function (callback) {
 			 	   session.links = [];
 			  }
 
+        var track = allTracks['development'];
         if (trackMap['general'].indexOf(session.id) > 0) {
-          session.track = allTracks['general'];
+          track = allTracks['general'];
         } else if (trackMap['streaming'].indexOf(session.id) > 0) {
-          session.track = allTracks['streaming'];
-        } else {
-          session.track = allTracks['development'];
+          track = allTracks['streaming'];
         }
+
+        session.track = { 'id': track.id,
+                          'label_en': track.label_en };
 
 				if (session.speakers == undefined) {
 					session.speakers = [];
