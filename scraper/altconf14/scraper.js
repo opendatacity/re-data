@@ -102,7 +102,7 @@ var allTracks = {
                "id": "general",
                "label_en": "General" },
   'streaming': { "color": [43,81,160,1],
-                 "id": "general",
+                 "id": "streaming",
                  "label_en": "Streaming" }
 };
 
