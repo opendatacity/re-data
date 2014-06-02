@@ -148,9 +148,9 @@ exports.scrape = function (callback) {
 			  }
 
         var track = allTracks['development'];
-        if (trackMap['general'].indexOf(session.id) > 0) {
+        if (trackMap['general'].indexOf(session.id) >= 0) {
           track = allTracks['general'];
-        } else if (trackMap['streaming'].indexOf(session.id) > 0) {
+        } else if (trackMap['streaming'].indexOf(session.id) >= 0) {
           track = allTracks['streaming'];
         }
 
