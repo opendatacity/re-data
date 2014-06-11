@@ -64,8 +64,10 @@ var locationOrderPreference = [
 		'rp14-location-2871', // backyard
 ];
 
-var eventURLPrefix = "https://14.re-publica.de/";
+var eventURLPrefix = "https://14.re-publica.de";
 
+// the youtube playlist to which all videos are added
+var youtubePlaylistId = "PLAR_6-tD7IZV--8ydJQRCZNEWOp9vf6PY";
 
 
 exports.scrape = function (callback) {
@@ -74,7 +76,13 @@ exports.scrape = function (callback) {
 			urls: {
 				sessions: 'http://re-publica.de/event/1/sessions/json',
 				speakers: 'http://re-publica.de/event/1/speakers/json',
-				rooms:    'http://re-publica.de/event/1/rooms.json'
+				rooms:    'http://re-publica.de/event/1/rooms.json',
+				youtubePlaylist1: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50',
+				youtubePlaylist2: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=51',
+				youtubePlaylist3: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=101',
+			  youtubePlaylist4: 'https://gdata.youtube.com/feeds/api/playlists/' + youtubePlaylistId + '?v=2&alt=json&max-results=50&start-index=151'
+				// note that Google is very open and will disable the YouTube v2 API (with unauthenticated use)
+				// at 15 Apr 2015, but until then this will work
 			}
 		},
 		function (result) {
@@ -83,9 +91,19 @@ exports.scrape = function (callback) {
 			var sessionList  = result.sessions.items;
 			var speakerList  = result.speakers.items;
 			var locationList = toArray(result.rooms.rooms      );
+			var ytPlaylist   = result.youtubePlaylist1.feed.entry;
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist2.feed.entry);
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist3.feed.entry);
+		  ytPlaylist = ytPlaylist.concat(result.youtubePlaylist4.feed.entry);
 
+			var ytVideoMap  = {};
 			var locationMap = {};
-			var speakerMap = {};
+			var speakerMap  = {};
+
+			ytPlaylist.forEach(function (entry) {
+				var permalink = permalinkFromYouTubeEntry(entry);
+				ytVideoMap[permalink] = linkFromYouTubeEntry(entry);
+			});
 
 			speakerList.forEach(function (speaker) {
 				// skip potential invalid speakers, those happen.
@@ -95,7 +113,7 @@ exports.scrape = function (callback) {
 					'id': 'rp14-speaker-'+speaker.uid,
 					'name': speaker.label,
 					'photo': speaker.image,
-					'url': eventURLPrefix + speaker.uri,
+					'url': eventURLPrefix + '/' + speaker.uri,
 					'biography': speaker.description_short,
 					'organization': speaker.org,
 					'organization_url': speaker.org_uri,
@@ -105,12 +123,11 @@ exports.scrape = function (callback) {
 				}
 				speakerMap[entry.id] = entry;
 				addEntry('speaker', entry);
-			})
+			});
 
 
 			locationList.forEach(function (location) {
 				location = location.room;
-				console.log("location " + location);
 				var id = 'rp14-location-'+location.nid;
 				var orderPreference = locationOrderPreference.indexOf(id);
 				// put unknown locations at the end
@@ -128,7 +145,7 @@ exports.scrape = function (callback) {
 				}
 				locationMap[entry.id] = entry;
 				addEntry('location', entry);
-			})
+			});
 
 			sessionList.forEach(function (session) {
 				if (session.nid == "") return; // skip invalid sessions
@@ -136,13 +153,21 @@ exports.scrape = function (callback) {
 				var begin = parseDateTime(session.datetime, session.start);
 				var end = parseDateTime(session.datetime, session.end);
 				var duration = (end - begin) / 1000;
+				var permalink = eventURLPrefix + session.uri;
+				var links = [];
+
+				var ytLink = ytVideoMap[permalink];
+				if (ytLink) {
+					links.push(ytLink);
+				}
+
 
 				var entry = {
 					'id': 'rp14-session-' + session.nid,
 					'title': session.title,
 					'abstract': session.description_short,
 					'description': session.description,
-					'url': eventURLPrefix + session.uri,
+					'url': permalink,
 					'begin': begin,
 					'end': end,
 					'duration': duration,
@@ -154,11 +179,11 @@ exports.scrape = function (callback) {
 					'lang': parseLanguage(session.language),
 					'speakers': parseSpeakers(speakerMap, session.speaker_uids),
 					'enclosures': [],
-					'links': []
+					'links': links
 				}
 
 				addEntry('session', entry);
-			})
+			});
 
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
@@ -178,10 +203,8 @@ exports.scrape = function (callback) {
 					obj.event = eventId;
 					obj.type = type;
 					data.push(obj);
-				})
+				});
 			}
-
-			console.log(data);
 
 			callback(data);
 		}
@@ -204,6 +227,59 @@ function parseDay(dateString) {
 	var dayDict = allDays[day+'.'+month+'.'+year];
 	if (dayDict == undefined) return false;
 	return dayDict
+}
+
+function permalinkFromYouTubeEntry(entry) {
+	var mediaGroup = entry["media$group"];
+	if (mediaGroup == undefined) return false;
+
+	var mediaDesc = mediaGroup["media$description"];
+	if (mediaDesc == undefined) return false;
+
+	var desc = mediaDesc["$t"];
+	if (desc == undefined) return false;
+
+
+	var permalinkMatcher = /(https?:\/\/14\.re-publica\.de\/session\/[a-z-0-9\-]+)/;
+	permalinkMatcher.exec(desc);
+
+	var permalink = RegExp.$1;
+	// ensure all permalinks lead to https
+	if (permalink.match(/^http:/)) {
+		permalink = permalink.replace('http:', 'https:');
+	}
+	return permalink;
+}
+
+function linkFromYouTubeEntry(entry) {
+	var mediaGroup = entry["media$group"];
+	if (mediaGroup == undefined) return false;
+
+	if (mediaGroup["media$thumbnail"] == undefined ||
+		  mediaGroup["media$thumbnail"].length < 3) return false;
+
+	var thumbnailURL = mediaGroup["media$thumbnail"][2]["url"];
+
+	if (mediaGroup["media$content"] == undefined ||
+		  mediaGroup["media$content"].length < 1) return false;
+	var url = mediaGroup["media$content"][0]["url"];
+
+	// we use the https://www.youtube.com/v/12BYSqVGCUk format
+	// as this can be embedded nicely on iOS.
+	// Just strip all the params away.
+	url = url.replace(/\?.*$/, '');
+
+	var result =  {
+ 		"thumbnail": thumbnailURL,
+ 		"title": entry["title"]["$t"],
+ 		"url": url,
+ 		"service": "youtube",
+ 		"type": "recording"
+ };
+
+	console.log(result);
+
+ return result;
 }
 
 function parseDate(text) {
