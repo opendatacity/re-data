@@ -295,7 +295,9 @@ Locations are specified spaces on the compound and may be stages.
 
 ## Days
 
-Days enframe several session by a slice of time, usually one day.
+Days group several session by a slice of time, usually one day.
+
+__Note:__ The `date` property is a calendar date (aka symbolic date) not a point in time. Therefore it is interpreted in the timezone of the conference.
 
 ### GET `/<event-id>/days`
 
