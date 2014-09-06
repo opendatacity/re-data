@@ -249,6 +249,19 @@ function recreateCouchDB(db, connection) {
 			}],
 			'url': 'http://13.re-publica.de/',
 			'last_modified': (new Date()).getTime()/1000
+		},
+		{
+			'type': 'event',
+			'id': '30c3',
+			'label': '30C3',
+			'title': '30C3',
+			'date': ['2013-12-27','2013-12-30'],
+			'locations': [{
+				'label': 'Congress Center Hamburg',
+				'coords': [52.49814,13.374538]
+			}],
+			'url': 'http://events.ccc.de/congress/2013',
+			'last_modified': (new Date()).getTime()/1000
 		}
 	];
 
