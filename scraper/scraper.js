@@ -12,7 +12,8 @@ async.eachSeries(
 	[
 		// { module:require('./rp13/scraper.js'), db:true },
 		// { module:require('./rp14/scraper.js'), db:true }
-		{ module:require('./altconf14/scraper.js'), db:false }
+		// { module:require('./altconf14/scraper.js'), db:false }
+		{ module:require('./30C3/scraper.js'), db:false }
 	],
 	function (item, callback) {
 		item.module.scrape(function (data) {
