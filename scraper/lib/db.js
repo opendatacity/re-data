@@ -235,7 +235,8 @@ function recreateCouchDB(db, connection) {
 				'label': 'Station Berlin',
 				'coords': [52.49814,13.374538]
 			}],
-			'url': 'http://14.re-publica.de/'
+			'url': 'http://14.re-publica.de/',
+			'last_modified': (new Date()).getTime()/1000
 		},
 		{
 			'type': 'event',
@@ -258,7 +259,7 @@ function recreateCouchDB(db, connection) {
 			'date': ['2013-12-27','2013-12-30'],
 			'locations': [{
 				'label': 'Congress Center Hamburg',
-				'coords': [52.49814,13.374538]
+				'coords': [53.561583,9.985683]
 			}],
 			'url': 'http://events.ccc.de/congress/2013',
 			'last_modified': (new Date()).getTime()/1000
