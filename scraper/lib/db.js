@@ -25,7 +25,7 @@ exports.update = function (data, callback) {
 		}
 		
 		// (optionally destroy database and recreate it)
-		if (true) {
+		if (false) {
 			return recreateCouchDB(db, connection);
 		}
 
@@ -224,7 +224,8 @@ function areEqual(obj1, obj2) {
 
 function recreateCouchDB(db, connection) {
 	// read events from the config dir
-	var events = JSON.parse(fs.readFileSync("../config/events.json"));
+	var eventsJSONPath = path.resolve(__dirname, "../config/events.json");
+	var events = JSON.parse(fs.readFileSync(eventsJSONPath));
 	var modified = 	(new Date()).getTime()/1000;
 	events.forEach(function (event) {
 		event["last_modified"] = modified;
