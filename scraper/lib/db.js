@@ -25,7 +25,7 @@ exports.update = function (data, callback) {
 		}
 		
 		// (optionally destroy database and recreate it)
-		if (false) {
+		if (true) {
 			return recreateCouchDB(db, connection);
 		}
 

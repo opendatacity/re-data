@@ -9,14 +9,15 @@ var dump = require('./lib/dump');
 
 var log = require(path.resolve(__dirname, '../api/lib/log.js'));
 
-if (!fs.exists('./config/scrapers.js')) {
-	console.log("Please create config/scrapers.js. See config/scrapers.js.example for an example.");
+var scrapersPath = path.resolve(__dirname, 'config/scrapers.js');
+if (!fs.existsSync(scrapersPath)) {
+	console.log("Please create " + scrapersPath + ". See config/scrapers.js.example for an example.");
 	process.exit(-1);
 }
-var scrapers = require('./config/scrapers.js');
+var scrapers = require(scrapersPath);
 
 async.eachSeries(
-	scrapers,
+	scrapers.scrapers,
 	function (item, callback) {
 		item.module.scrape(function (data) {
 			if (item.db) {
