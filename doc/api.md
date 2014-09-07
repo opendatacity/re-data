@@ -118,6 +118,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 [{
 	"id": "rp14-session-1",
 	"title": "Eröffnung",
+	"subtitle": "Die erste session",	
 	"abstract": "...",
 	"description": "...",
 	"url": "http://14.re-publica.de/session/1"
@@ -147,7 +148,30 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		{ "id": "rp13-speaker-81", "name": "Sascha Lobo" }
 		//...
 	],
-	"enclosures": [],
+	"enclosures": [
+		{
+			"url": "http://example.com/files/live.m3u8",
+			"mimetype": "application/x-mpegURL",
+			"type": "livestream"
+		},	
+		{
+			"url": "http://example.com/files/video.mp4",
+			"mimetype": "video/mp4",
+			"type": "recording"
+			"thumbnail": "http://example.com/files/video_thumb.jpg"
+		},
+		{
+			"url": "http://example.com/files/audio.mp3",
+			"mimetype": "audio/mpeg",
+			"type": "recording",
+			"thumbnail": "http://example.com/files/audio_cover.jpg"
+		},
+		{
+			"url": "http://example.com/files/foo.pdf",
+			"mimetype": "application/pdf",
+			"type": "slides"
+		}
+	],
 	"links": [
 		{
 			"thumbnail": "http://i.ytimg.com/vi/18xQRtdrJhQ/mqdefault.jpg",
@@ -167,9 +191,18 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 
 Sessions also have two special fields: enclosures and links:
 
+Optional fields:
+
+- `subtitle`
+
 ### Enclosures
 
-Enclosures list files including mime type. The idea is to make it easy to generate e.g. podcast feeds. Currently this feature is not implemented yet.
+Enclosures list URLs of files including mime type. 
+
+- **url:** Required, the URL of the enclosure
+- **mimetype:** Required, the MIME type of the enclosure. 
+- **type:**  Required; indicates the kind of enclosure present. Is one of `slides`, `recording`, `live`.
+- **thumbnail:**  Optional; URL of a thumbnail imaged that can be used as a cover or video thumbnail for the enclosure. E.g. a video thumbnail for video enclosures, a cover for audio content or an image of the first slide for the slides. 
 
 ### Links
 
