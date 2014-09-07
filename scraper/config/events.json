@@ -1,0 +1,38 @@
+[
+		{
+			"type": "event",
+			"id": "rp14",
+			"label": "re:publica 14",
+			"title": "into the wild",
+			"date": ["2014-05-06","2014-05-08"],
+			"locations": [{
+				"label": "Station Berlin",
+				"coords": [52.49814,13.374538]
+			}],
+			"url": "http://14.re-publica.de/"
+		},
+		{
+			"type": "event",
+			"id": "rp13",
+			"label": "re:publica 13",
+			"title": "IN/SIDE/OUT",
+			"date": ["2013-05-06","2013-05-08"],
+			"locations": [{
+				"label": "Station Berlin",
+				"coords": [52.49814,13.374538]
+			}],
+			"url": "http://13.re-publica.de/"
+		},
+		{
+			"type": "event",
+			"id": "30c3",
+			"label": "30C3",
+			"title": "30C3",
+			"date": ["2013-12-27","2013-12-30"],
+			"locations": [{
+				"label": "Congress Center Hamburg",
+				"coords": [53.561583,9.985683]
+			}],
+			"url": "http://events.ccc.de/congress/2013"
+		}
+	];

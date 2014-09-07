@@ -1,6 +1,7 @@
 /* require node modules */
 var path = require('path');
 var async = require('async');
+var fs = require('fs');
 
 /* require npm modules */
 var cradle = require('cradle');
@@ -222,50 +223,13 @@ function areEqual(obj1, obj2) {
 
 
 function recreateCouchDB(db, connection) {
-
-
-	var events = [
-		{
-			'type': 'event',
-			'id': 'rp14',
-			'label': 're:publica 14',
-			'title': 'into the wild',
-			'date': ['2014-05-06','2014-05-08'],
-			'locations': [{
-				'label': 'Station Berlin',
-				'coords': [52.49814,13.374538]
-			}],
-			'url': 'http://14.re-publica.de/',
-			'last_modified': (new Date()).getTime()/1000
-		},
-		{
-			'type': 'event',
-			'id': 'rp13',
-			'label': 're:publica 13',
-			'title': 'IN/SIDE/OUT',
-			'date': ['2013-05-06','2013-05-08'],
-			'locations': [{
-				'label': 'Station Berlin',
-				'coords': [52.49814,13.374538]
-			}],
-			'url': 'http://13.re-publica.de/',
-			'last_modified': (new Date()).getTime()/1000
-		},
-		{
-			'type': 'event',
-			'id': '30c3',
-			'label': '30C3',
-			'title': '30C3',
-			'date': ['2013-12-27','2013-12-30'],
-			'locations': [{
-				'label': 'Congress Center Hamburg',
-				'coords': [53.561583,9.985683]
-			}],
-			'url': 'http://events.ccc.de/congress/2013',
-			'last_modified': (new Date()).getTime()/1000
-		}
-	];
-
+	// read events from the config dir
+	var events = JSON.parse(fs.readFileSync("../config/events.json"));
+	var modified = 	(new Date()).getTime()/1000;
+	events.forEach(function (event) {
+		event["last_modified"] = modified;
+	});
+	
 	async.series([
 		function (cb) {
 			if (!db) return cb();
