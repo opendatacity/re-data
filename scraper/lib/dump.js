@@ -54,6 +54,7 @@ exports.dump = function (data) {
 				id:            entry.id,
 				event:         entry.event,
 				title:         entry.title,
+				subtitle:      (entry.subtitle ? entry.subtitle : ""),				
 				url:           entry.url,
 				begin:         entry.begin,
 				end:           entry.end,

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var fs = require("fs");
 var path = require('path');
 var async = require('async');
 
@@ -8,12 +9,15 @@ var dump = require('./lib/dump');
 
 var log = require(path.resolve(__dirname, '../api/lib/log.js'));
 
+var scrapersPath = path.resolve(__dirname, 'config/scrapers.js');
+if (!fs.existsSync(scrapersPath)) {
+	console.log("Please create " + scrapersPath + ". See config/scrapers.js.example for an example.");
+	process.exit(-1);
+}
+var scrapers = require(scrapersPath);
+
 async.eachSeries(
-	[
-		// { module:require('./rp13/scraper.js'), db:true },
-		// { module:require('./rp14/scraper.js'), db:true }
-		{ module:require('./altconf14/scraper.js'), db:false }
-	],
+	scrapers.scrapers,
 	function (item, callback) {
 		item.module.scrape(function (data) {
 			if (item.db) {

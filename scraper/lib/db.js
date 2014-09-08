@@ -1,6 +1,7 @@
 /* require node modules */
 var path = require('path');
 var async = require('async');
+var fs = require('fs');
 
 /* require npm modules */
 var cradle = require('cradle');
@@ -222,36 +223,14 @@ function areEqual(obj1, obj2) {
 
 
 function recreateCouchDB(db, connection) {
-
-
-	var events = [
-		{
-			'type': 'event',
-			'id': 'rp14',
-			'label': 're:publica 14',
-			'title': 'into the wild',
-			'date': ['2014-05-06','2014-05-08'],
-			'locations': [{
-				'label': 'Station Berlin',
-				'coords': [52.49814,13.374538]
-			}],
-			'url': 'http://14.re-publica.de/'
-		},
-		{
-			'type': 'event',
-			'id': 'rp13',
-			'label': 're:publica 13',
-			'title': 'IN/SIDE/OUT',
-			'date': ['2013-05-06','2013-05-08'],
-			'locations': [{
-				'label': 'Station Berlin',
-				'coords': [52.49814,13.374538]
-			}],
-			'url': 'http://13.re-publica.de/',
-			'last_modified': (new Date()).getTime()/1000
-		}
-	];
-
+	// read events from the config dir
+	var eventsJSONPath = path.resolve(__dirname, "../config/events.json");
+	var events = JSON.parse(fs.readFileSync(eventsJSONPath));
+	var modified = 	(new Date()).getTime()/1000;
+	events.forEach(function (event) {
+		event["last_modified"] = modified;
+	});
+	
 	async.series([
 		function (cb) {
 			if (!db) return cb();

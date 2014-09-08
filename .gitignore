@@ -1,0 +1,5 @@
+scraper/config/scrapers.js
+node_modules
+web/data
+.cache
+config.js
