@@ -311,7 +311,6 @@ Locations are specified spaces on the compound and may be stages.
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
-		"floor": 0, 
 		"order_index": 0, // order stage objects by this, when listed
 		"last_modified": 1393611456.99
 	}, //...
@@ -319,12 +318,68 @@ Locations are specified spaces on the compound and may be stages.
 ````
 
 - `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
-- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels.
 - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
 
 ### GET `/<event-id>/locations/<location-id>`
 
 *single object as above*
+
+## Maps
+
+Maps represent maps of the conference venue. A map refrences on more points of interest (POIs). See below for POIs.
+
+### GET `/<event-id>/maps`
+
+
+```` javascript
+[
+	{
+		"id": "map-foor-1",
+		"event": "rp13",	
+		"type": "map",			
+		"label_de": "1. Etage",
+		"label_en": "1st floor",
+		"is_outdoor": true,
+		"is_indoor": true,		
+		"floor": 0,
+		"order_index": 23,
+		"area": {"width": 100.0, 
+		         "height": 200.0},
+		"images": {1.0: {"url": "http://example.com/foo_hq.jpg",
+		                  "size": {"width": 1000, "height": 2000},
+		           0.5: {"url": "http://example.com/foo_mq.jpg",
+		                  "size": {"width": 500, "height": 1000},
+		           0.25: {"url": "http://example.com/foo_lq.jpg",
+		                  "size": {"width": 250, "height": 500}},
+      "pois": [
+          "poi-5",
+          "poi-23",
+          "poi-42"
+      ]
+	}, //...
+]
+````
+
+- `id`: (Required) The identifier. Should be opaque to the user, is guranteed to be used only for exactly one map object of this event.
+- `event`: (Required) Identifier of the event
+- `type`: (Required) always `map` for maps
+- `is_outdoor`: (Required) `true` if any significant part of the map is outdoor (e.g. a courtyard, but not a small balcony)
+- `is_indoor`: (Required) `true` if  any significant part of the map is an indoor area (e.g. floor of an office building. **Note:** `is_indoor` and `is_outdoor` can both be true, if the map contains e.g. a gound floor plus the courtyard
+- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels. 
+- `order_index`: (Optional) Hint to using applications that *can* be used when ordering many maps relative to each other in e.g. a list or a pager. 
+- `area`: (Required) Specifies the area covered by this map:
+    - `width`, `height` (Required) *logical* size of the area the map covers in *meters*.
+- `images`: (Required) Specifies the URLs of background images comprising the actual map.  
+   **Note:** Ideally these should be label free images, as labels are added via POIs. If you cannot specify (all or any) POIs the images can also have text, but be aware that localisation does not work in this case.  
+   The keys of the `images` dictionary are percent of resolution, so `1.0` is the largest image availible, `0.5` (aka 50%) is half that size. For each `url` specifies the URL of the image, `width` and `height` specifies the pixel size. 
+   All images must show the same area. Smaller ones might have less    details though.
+- `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.
+
+### GET `/<event-id>/maps/<map-id>`
+
+Same as above, but returning only one map.
+
+## Points of Interest
 
 ## Days
 
