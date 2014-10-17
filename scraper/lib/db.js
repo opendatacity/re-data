@@ -59,7 +59,8 @@ function updateCouchDB(db, data, callback) {
 			'day':      'data/days',
 			'format':   'data/formats',
 			'level':    'data/levels',
-			'language': 'data/languages'
+			'language': 'data/languages',
+			'map':      'data/maps',			
 		}
 
 		// Here be caches
@@ -260,6 +261,7 @@ function recreateCouchDB(db, connection) {
 					formats:   { map: function(doc) { if (doc.type === 'format')   emit([doc.event, doc.id]); }},
 					levels:    { map: function(doc) { if (doc.type === 'level')    emit([doc.event, doc.id]); }},
 					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.id]); }}
+					maps:      { map: function(doc) { if (doc.type === 'map') emit([doc.event, doc.id]); }}					
 				}
 			}, cb);
 		},
