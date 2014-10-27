@@ -260,8 +260,8 @@ function recreateCouchDB(db, connection) {
 					days:      { map: function(doc) { if (doc.type === 'day')      emit([doc.event, doc.id]); }},
 					formats:   { map: function(doc) { if (doc.type === 'format')   emit([doc.event, doc.id]); }},
 					levels:    { map: function(doc) { if (doc.type === 'level')    emit([doc.event, doc.id]); }},
-					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.id]); }}
-					maps:      { map: function(doc) { if (doc.type === 'map') emit([doc.event, doc.id]); }}					
+					languages: { map: function(doc) { if (doc.type === 'language') emit([doc.event, doc.id]); }},
+					maps:      { map: function(doc) { if (doc.type === 'map') 	   emit([doc.event, doc.id]); }}					
 				}
 			}, cb);
 		},

@@ -12,7 +12,8 @@ var typeMatching = {
 	'track': 'tracks',
 	'format': 'formats',
 	'level': 'levels',
-	'language': 'languages'
+	'language': 'languages',
+	'map': 'maps'	
 };
 
 exports.dump = function (data) {
