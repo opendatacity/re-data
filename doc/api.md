@@ -345,12 +345,12 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 		"order_index": 23,
 		"area": {"width": 100.0, 
 		         "height": 200.0},
-		"images": {1.0: {"url": "http://example.com/foo_hq.jpg",
+		"images": [{"url": "http://example.com/foo_hq.jpg",
 		                  "size": {"width": 1000, "height": 2000},
-		           0.5: {"url": "http://example.com/foo_mq.jpg",
+		           {"url": "http://example.com/foo_mq.jpg",
 		                  "size": {"width": 500, "height": 1000},
-		           0.25: {"url": "http://example.com/foo_lq.jpg",
-		                  "size": {"width": 250, "height": 500}},
+		           {"url": "http://example.com/foo_lq.jpg",
+		                  "size": {"width": 250, "height": 500}],
       "pois": [
           "poi-5",
           "poi-23",
@@ -370,8 +370,8 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 - `area`: (Required) Specifies the area covered by this map:
     - `width`, `height` (Required) *logical* size of the area the map covers in *meters*.
 - `images`: (Required) Specifies the URLs of background images comprising the actual map.  
-   **Note:** Ideally these should be label free images, as labels are added via POIs. If you cannot specify (all or any) POIs the images can also have text, but be aware that localisation does not work in this case.  
-   The keys of the `images` dictionary are percent of resolution, so `1.0` is the largest image availible, `0.5` (aka 50%) is half that size. For each `url` specifies the URL of the image, `width` and `height` specifies the pixel size. 
+   **Note:** Ideally these should be label free images, as labels are added via POIs. If you cannot specify (all or any) POIs the images can also have text, but be aware that localisation does not work in this case. The images SHOULD be sorted by decreasng pixel count, but this may not be true all the time.
+   For image each `url` specifies the URL of the image, `width` and `height` specifies the pixel size. 
    All images must show the same area. Smaller ones might have less    details though.
 - `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.
 
