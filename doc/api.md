@@ -345,12 +345,7 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 		"order_index": 23,
 		"area": {"width": 100.0, 
 		         "height": 200.0},
-		"images": [{"url": "http://example.com/foo_hq.jpg",
-		                  "size": {"width": 1000, "height": 2000},
-		           {"url": "http://example.com/foo_mq.jpg",
-		                  "size": {"width": 500, "height": 1000},
-		           {"url": "http://example.com/foo_lq.jpg",
-		                  "size": {"width": 250, "height": 500}],
+		"image_tiles_base_url": "http://example.com/map/1/tiles",
       "pois": [
           "poi-5",
           "poi-23",
@@ -369,10 +364,7 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 - `order_index`: (Optional) Hint to using applications that *can* be used when ordering many maps relative to each other in e.g. a list or a pager. 
 - `area`: (Required) Specifies the area covered by this map:
     - `width`, `height` (Required) *logical* size of the area the map covers in *meters*.
-- `images`: (Required) Specifies the URLs of background images comprising the actual map.  
-   **Note:** Ideally these should be label free images, as labels are added via POIs. If you cannot specify (all or any) POIs the images can also have text, but be aware that localisation does not work in this case. The images SHOULD be sorted by decreasng pixel count, but this may not be true all the time.
-   For image each `url` specifies the URL of the image, `width` and `height` specifies the pixel size. 
-   All images must show the same area. Smaller ones might have less    details though.
+- `image_tiles_base_url`: (Required) Specifies the base URL for image tiles. Image tiles should be present in a structure compatible with the [OpenSeadragon project](http://openseadragon.github.io). For example generated using the [dzt](https://github.com/dblock/dzt) tool.
 - `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.
 
 ### GET `/<event-id>/maps/<map-id>`

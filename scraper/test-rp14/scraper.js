@@ -52,11 +52,14 @@ var allMaps = {
 		"order_index": 0,
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
-		"images": [	
-					{"url": "https://apps.opendatacity.de/relog/map.png",
-		             "size": {"width": 1477, 
-					 		  "height": 516}}
-				  ],
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/0floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/0floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
 	    "pois": []
 	}
 };
