@@ -345,7 +345,14 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 		"order_index": 23,
 		"area": {"width": 100.0, 
 		         "height": 200.0},
-		"image_tiles_base_url": "http://example.com/map/1/tiles",
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/0floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/0floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
       "pois": [
           "poi-5",
           "poi-23",
@@ -358,14 +365,23 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 - `id`: (Required) The identifier. Should be opaque to the user, is guranteed to be used only for exactly one map object of this event.
 - `event`: (Required) Identifier of the event
 - `type`: (Required) always `map` for maps
+- `label_en`, etc.:  (Required in at least 1 language) Label specifying the name of the map localized to the suffix language. The suffix is the 2 char ISO code of the language. E.g. "Berlin Congress Center"
+- `floor_label_en`: (Optional): Name of the floor, if there are multiple floors showing the same map area. E.g. "1st floor"
 - `is_outdoor`: (Required) `true` if any significant part of the map is outdoor (e.g. a courtyard, but not a small balcony)
 - `is_indoor`: (Required) `true` if  any significant part of the map is an indoor area (e.g. floor of an office building. **Note:** `is_indoor` and `is_outdoor` can both be true, if the map contains e.g. a gound floor plus the courtyard
 - `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels. 
 - `order_index`: (Optional) Hint to using applications that *can* be used when ordering many maps relative to each other in e.g. a list or a pager. 
 - `area`: (Required) Specifies the area covered by this map:
     - `width`, `height` (Required) *logical* size of the area the map covers in *meters*.
-- `image_tiles_base_url`: (Required) Specifies the base URL for image tiles. Image tiles should be present in a structure compatible with the [OpenSeadragon project](http://openseadragon.github.io). For example generated using the [dzt](https://github.com/dblock/dzt) tool.
-- `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.
+- `tiles`: (Required) Specifies the information for the tiled map. A dictionary with the following keys:
+	- **General** Image tiles should be present in a structure compatible with the [OpenSeadragon project](http://openseadragon.github.io). For example generated using the [dzt](https://github.com/dblock/dzt) tool.
+	- `base_url`: (Required) Base URL where the tile images can be found. Tiles themselves should be in a subdirectory called `tiles` structured as specified above.
+	- `large_image_url`: A large version of the map image. This can be used e.g. if no tiled image support is implemented. It tis recomended that the image size does not exceed 2080x2048 pixels on this image.
+	- `tile_size`: (Required) Size of the tiles in pixels. Tiles have to be square.
+	- `tile_file_extension`: (Required) File extension for the tile images to the URL can be constructed by a viewer. E.g. `png` 
+	- `size`: (Required): A dictionary specifiying `width` and `height` of the original image (not to be confused with the large image) in pixels.
+- `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.	
+Specifies the base URL for image tiles. 
 
 ### GET `/<event-id>/maps/<map-id>`
 

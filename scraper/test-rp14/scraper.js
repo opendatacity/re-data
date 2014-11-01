@@ -44,8 +44,10 @@ var allMaps = {
 		'event': eventId,
 		'id': eventId + "-" + "level0",
 		'type': "map",
-		'label_de': "Erdgeschoss",
-		'label_en': "Ground Floor",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",
+		'floor_label_de': "Erdgeschoss",
+		'floor_label_en': "Ground Floor",		
 		"is_outdoor": true,
 		"is_indoor": true,		
 		"floor": 0,
@@ -61,7 +63,103 @@ var allMaps = {
                              "height": 5007}
                 },
 	    "pois": []
-	}
+	},
+	'level1': {
+		'event': eventId,
+		'id': eventId + "-" + "level1",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "1. Obergeschoß",
+		'floor_label_en': "1st floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 1,
+		"order_index": 1,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/1floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/1floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
+	    "pois": []
+	},
+	'level2': {
+		'event': eventId,
+		'id': eventId + "-" + "level2",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "2. Obergeschoß",
+		'floor_label_en': "2nd floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 2,
+		"order_index": 2,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/2floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/2floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
+	    "pois": []
+	},
+	'level3': {
+		'event': eventId,
+		'id': eventId + "-" + "level3",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "3. Obergeschoß",
+		'floor_label_en': "3rd floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 3,
+		"order_index": 3,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/3floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/3floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
+	    "pois": []
+	},
+	'level4': {
+		'event': eventId,
+		'id': eventId + "-" + "level4",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "4. Obergeschoß",
+		'floor_label_en': "4th floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 4,
+		"order_index": 4,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/4floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/4floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
+	    "pois": []
+	}				
 };
 
 // we now supply a order preference with the location
