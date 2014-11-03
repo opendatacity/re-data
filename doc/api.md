@@ -424,6 +424,8 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 - `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. If this is present the `category` must be `session-location`.
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
 - `position`: (Required) Map of `x` and `y` positions. These are coordinates in the coordinate system of the `map` referenced of map id
+- `hidden`: (Optional) If not present should be assumed `false`, if `true` identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.
+- `priority`: (Optional) If not present should be assumed `0`. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.
 - `beacons`: (Optional) An array of maps, each representing a Bluetooth 4.0 LE beacon (aka [iBeacon](https://en.wikipedia.org/wiki/IBeacon)) marking this POI. 
 			 A beacon has `uuid`, `major` and `minor` ID, where UUID might be the same for the whole conference or even beyond, so only the three properties in combination identifiy a uniq beacon. All three are required.  
 			 Note: Only beacons whose presence identififies this POI should be here, not merely beacons who are close by. 
