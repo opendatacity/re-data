@@ -337,8 +337,10 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 		"id": "map-foor-1",
 		"event": "rp13",	
 		"type": "map",			
-		"label_de": "1. Etage",
-		"label_en": "1st floor",
+		"label_de": "Station Berlin",
+		"label_en": "Station Berlin",
+		"floor_label_de": "1. Etage",
+		"floor_label_en": "1st floor",
 		"is_outdoor": true,
 		"is_indoor": true,		
 		"floor": 0,
@@ -388,6 +390,44 @@ Specifies the base URL for image tiles.
 Same as above, but returning only one map.
 
 ## Points of Interest
+
+Represents a single point of interest on a map. Each POI belongs to a map object. 
+
+### GET `/<event-id>/pois
+
+```` javascript
+[
+	{
+		"id": "poi-1-map-1",
+		"event": "rp13",	
+		"type": "poi",			
+		"map": "map-1",		
+		"category": "session-location",		
+		"location": "location-1",
+		"label_de": "Sendezentrum",
+		"label_en": "Broadcast Center",		
+		"position": {"x": 100.0, "y": 200.0},
+		"hidden": false,
+		"priority": 100,
+		"beacons": [{"uuid": "55C1DAB7-9430-450C-B94C-DE174D202B8B",
+					 "major": 23,
+					 "minor": 42}]
+	}, //...
+]
+````
+
+- `id`: (Required) Identifier of the POI. Uniq per event.
+- `event`: (Required) Identifier of the event this POI belongs to
+- `type`: (Required) Always `poi`
+- `map`: (Required) Identifier of the map this POI belongs to
+- `category`: (Required) Category of the POI. One of `session-location`, `service`, `safety`, `community`, `food`, `entertainment`, `administration`, `restroom`, `elevate`, `escalator`, `shopping`, `other`
+- `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. If this is present the `category` must be `session-location`.
+- `label_en`, `label_de`, etc: (Required) Label of the POI in the language specified by the suffix
+
+
+
+
+### GET `/<event-id>/pois/<poi-id>`
 
 ## Days
 
