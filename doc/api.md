@@ -420,7 +420,19 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 - `event`: (Required) Identifier of the event this POI belongs to
 - `type`: (Required) Always `poi`
 - `map`: (Required) Identifier of the map this POI belongs to
-- `category`: (Required) Category of the POI. One of `session-location`, `service`, `safety`, `community`, `food`, `entertainment`, `administration`, `restroom`, `elevate`, `escalator`, `shopping`, `other`
+- `category`: (Required) Category of the POI. Pick one:
+	- `session-location` - If the POI represents a session location
+	- `service`
+	- `safety`
+	- `community`
+	- `food`
+	- `entertainment`
+	- `administration`
+	- `restroom`
+	- `elevate`
+	- `escalator`
+	- `shopping`
+	- `other`
 - `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. If this is present the `category` must be `session-location`.
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
 - `position`: (Required) Map of `x` and `y` positions. These are coordinates in the coordinate system of the `map` referenced of map id
