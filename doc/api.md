@@ -393,7 +393,7 @@ Same as above, but returning only one map.
 
 Represents a single point of interest on a map. Each POI belongs to a map object. 
 
-### GET `/<event-id>/pois
+### GET `/<event-id>/pois`
 
 ```` javascript
 [
