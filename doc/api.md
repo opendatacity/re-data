@@ -401,12 +401,12 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 		"id": "poi-1-map-1",
 		"event": "rp13",	
 		"type": "poi",			
-		"map": "map-1",		
-		"category": "session-location",		
+		"positions": [{"map": "level4",
+					   "x": 3520.0, "y": 2107.0}],
+		"category": "session-location",
 		"location": "location-1",
 		"label_de": "Sendezentrum",
 		"label_en": "Broadcast Center",		
-		"position": {"x": 100.0, "y": 200.0},
 		"hidden": false,
 		"priority": 100,
 		"beacons": [{"uuid": "55C1DAB7-9430-450C-B94C-DE174D202B8B",
@@ -419,7 +419,11 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 - `id`: (Required) Identifier of the POI. Uniq per event.
 - `event`: (Required) Identifier of the event this POI belongs to
 - `type`: (Required) Always `poi`
-- `map`: (Required) Identifier of the map this POI belongs to
+- `positions`: (Required) Identifier of the maps this POI belongs to and where it is on these maps. An array of dicts with the keys:
+	- `map`: (Required) Identifier of the map. **Note:** A map identifier may only occur once in the `positions` property (aka a POI may only be placed on a map once)
+	- `x` and `y` (Required) Position of this POI on the map. These are pixel coordinates in the coordinate system of the `map`. 
+	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
+	  The origin of the coordinate system is located on the *bottom left*. 
 - `category`: (Required) Category of the POI. Pick one:
 	- `session-location` - If the POI represents a session location
 	- `service`
@@ -435,7 +439,6 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `other`
 - `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. If this is present the `category` must be `session-location`.
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
-- `position`: (Required) Map of `x` and `y` positions. These are coordinates in the coordinate system of the `map` referenced of map id
 - `hidden`: (Optional) If not present should be assumed `false`, if `true` identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.
 - `priority`: (Optional) If not present should be assumed `0`. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.
 - `beacons`: (Optional) An array of maps, each representing a Bluetooth 4.0 LE beacon (aka [iBeacon](https://en.wikipedia.org/wiki/IBeacon)) marking this POI. 

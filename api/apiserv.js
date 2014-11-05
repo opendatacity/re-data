@@ -67,7 +67,8 @@ var types = [
 	'formats',
 	'levels',
 	'languages',
-	'maps'
+	'maps',
+	'pois'	
 ];
 
 types.forEach(function (type) {

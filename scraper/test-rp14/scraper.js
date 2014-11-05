@@ -162,6 +162,93 @@ var allMaps = {
 	}				
 };
 
+var allPOIs = {
+	"poi-hall1": {
+		"id": eventId + "-poi-hall1",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level4",
+					   "x": 3520.0, "y": 2107.0}],
+		"category": "session-location",
+		// "location": "location-1",
+		"label_de": "Saal 1",
+		"label_en": "Hall 1",		
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},
+	"poi-hall2": {
+		"id": eventId + "-poi-hall2",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level4",
+					   "x": 4694.0, "y": 1710.0}],
+		"category": "session-location",		
+		// "location": "location-1",
+		"label_de": "Saal 2",
+		"label_en": "Hall 2",
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},	
+	// "poi-hall3": {
+// 		"id": eventId + "-poi-hall3",
+// 		"event": eventId,
+// 		"type": "poi",
+// 		"map": "level0",
+// 		"category": "session-location",
+// 		// "location": "location-1",
+// 		"label_de": "Saal 6",
+// 		"label_en": "Hall 6",
+// 		"position": {"x": 4799.0, "y": 2751.0},
+// 		"hidden": false,
+// 		"priority": 1000,
+// 		"beacons": []
+// 	},
+// 	"poi-hall4": {
+// 		"id": eventId + "-poi-hall4",
+// 		"event": eventId,
+// 		"type": "poi",
+// 		"map": "level0",
+// 		"category": "session-location",
+// 		// "location": "location-1",
+// 		"label_de": "Saal 6",
+// 		"label_en": "Hall 6",
+// 		"position": {"x": 4799.0, "y": 2751.0},
+// 		"hidden": false,
+// 		"priority": 1000,
+// 		"beacons": []
+// 	},
+// 	"poi-hall5": {
+// 		"id": eventId + "-poi-hall5",
+// 		"event": eventId,
+// 		"type": "poi",
+// 		"map": "level0",
+// 		"category": "session-location",
+// 		// "location": "location-1",
+// 		"label_de": "Saal 6",
+// 		"label_en": "Hall 6",
+// 		"position": {"x": 4799.0, "y": 2751.0},
+// 		"hidden": false,
+// 		"priority": 1000,
+// 		"beacons": []
+// 	},
+	"poi-hall6": {
+		"id": eventId + "-poi-hall6",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level0",
+					   "x": 4799.0, "y": 2751.0}],	
+		"category": "session-location",		
+		// "location": "location-1",
+		"label_de": "Saal 6",
+		"label_en": "Hall 6",		
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	}
+};
+
 // we now supply a order preference with the location
 var locationOrderPreference = [
 		'rp14-location-2594', // stage 1
@@ -313,7 +400,9 @@ exports.scrape = function (callback) {
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
 			alsoAdd('day', allDays);
-			alsoAdd('map', allMaps);			
+			alsoAdd('map', allMaps);
+			alsoAdd('poi', allPOIs);			
+						
 
 			function addEntry(type, obj) {
 				obj.event = eventId;

@@ -13,7 +13,8 @@ var typeMatching = {
 	'format': 'formats',
 	'level': 'levels',
 	'language': 'languages',
-	'map': 'maps'	
+	'map': 'maps',
+	'poi': 'pois'		
 };
 
 exports.dump = function (data) {
