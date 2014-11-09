@@ -269,34 +269,20 @@ var allPOIs = {
 		"priority": 1000,
 		"beacons": []
 	},			
-// 	"poi-hall4": {
-// 		"id": eventId + "-poi-hall4",
-// 		"event": eventId,
-// 		"type": "poi",
-// 		"map": "level0",
-// 		"category": "session-location",
-// 		// "location": "location-1",
-// 		"label_de": "Saal 6",
-// 		"label_en": "Hall 6",
-// 		"position": {"x": 4799.0, "y": 2751.0},
-// 		"hidden": false,
-// 		"priority": 1000,
-// 		"beacons": []
-// 	},
-// 	"poi-hall5": {
-// 		"id": eventId + "-poi-hall5",
-// 		"event": eventId,
-// 		"type": "poi",
-// 		"map": "level0",
-// 		"category": "session-location",
-// 		// "location": "location-1",
-// 		"label_de": "Saal 6",
-// 		"label_en": "Hall 6",
-// 		"position": {"x": 4799.0, "y": 2751.0},
-// 		"hidden": false,
-// 		"priority": 1000,
-// 		"beacons": []
-// 	},
+	"poi-hall3": {
+		"id": eventId + "-poi-hall3",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level0",
+					   "x": 2267.0, "y": 2231.0}],
+		"category": "session-location",		
+		// "location": "location-1",
+		"label_de": "Saal 3",
+		"label_en": "Hall 3",
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},				
 	"poi-hall6": {
 		"id": eventId + "-poi-hall6",
 		"event": eventId,	
@@ -310,7 +296,50 @@ var allPOIs = {
 		"hidden": false,
 		"priority": 1000,
 		"beacons": []
-	}
+	},
+	"poi-hall13": {
+		"id": eventId + "-poi-hall13",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level1",
+					   "x": 4448.0, "y": 1498.0}],	
+		"category": "session-location",		
+		// "location": "location-1",
+		"label_de": "Saal 13",
+		"label_en": "Hall 13",		
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},
+	"poi-hall14": {
+		"id": eventId + "-poi-hall14",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level1",
+					   "x": 4625.0, "y": 1413.0}],	
+		"category": "session-location",		
+		// "location": "location-1",
+		"label_de": "Saal 14",
+		"label_en": "Hall 14",		
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},		
+	// entertainment
+	"poi-revolution9": {
+		"id": eventId + "-poi-revolution9",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level0",
+					   "x": 4216.0, "y": 3557.0}],	
+		"category": "entertainment",		
+		// "location": "location-1",
+		"label_de": "Revolution #9",
+		"label_en": "Revolution #9",		
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},	
 };
 
 // we now supply a order preference with the location
