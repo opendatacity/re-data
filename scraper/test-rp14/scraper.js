@@ -339,7 +339,21 @@ var allPOIs = {
 		"hidden": false,
 		"priority": 1000,
 		"beacons": []
-	},	
+	},
+	"poi-heaven": {
+		"id": eventId + "-poi-heaven",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level1",
+					   "x": 3663.0, "y": 2735.0}],	
+		"category": "organisation",		
+		// "location": "location-1",
+		"label_de": "Heaven",
+		"label_en": "Heaven",	
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},		
 };
 
 // we now supply a order preference with the location

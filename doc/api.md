@@ -431,7 +431,7 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `community`
 	- `food`
 	- `entertainment`
-	- `administration`
+	- `organisation`
 	- `restroom`
 	- `elevate`
 	- `escalator`
