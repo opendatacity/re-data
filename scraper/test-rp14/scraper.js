@@ -348,7 +348,7 @@ var allPOIs = {
 					   "x": 3663.0, "y": 2735.0}],	
 		"category": "organisation",		
 		// "location": "location-1",
-		"label_de": "Heaven",
+		"label_de": "Himmel",
 		"label_en": "Heaven",	
 		"hidden": false,
 		"priority": 1000,
