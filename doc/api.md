@@ -425,7 +425,7 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
 	  The origin of the coordinate system is located on the *bottom left*. 
 - `category`: (Required) Category of the POI. Pick one:
-	- `session-location` - If the POI represents a session location
+	- `session-location` - If the POI represents a typical session location (Auditorium, lecutre hall, etc.)
 	- `service`
 	- `safety`
 	- `community`
@@ -437,7 +437,7 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `escalator`
 	- `shopping`
 	- `other`
-- `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. If this is present the `category` must be `session-location`.
+- `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. 
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
 - `hidden`: (Optional) If not present should be assumed `false`, if `true` identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.
 - `priority`: (Optional) If not present should be assumed `0`. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.
