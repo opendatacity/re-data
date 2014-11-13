@@ -433,7 +433,7 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `entertainment`
 	- `organisation`
 	- `restroom`
-	- `elevate`
+	- `elevator`
 	- `escalator`
 	- `shopping`
 	- `other`
