@@ -425,10 +425,11 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
 	  The origin of the coordinate system is located on the *bottom left*. 
 - `category`: (Required) Category of the POI. Pick one:
-	- `session-location` - If the POI represents a typical session location (Auditorium, lecutre hall, etc.)
-	- `service`
+	- `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
+	- `workshop-location` - A workshop area 
+	- `service` - Cash desk, info point, etc.
 	- `safety`
-	- `community`
+	- `community` - Gathering spots, etc.
 	- `food`
 	- `entertainment`
 	- `organisation`
