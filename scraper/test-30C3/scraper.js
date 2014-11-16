@@ -13,6 +13,17 @@ var schedule_url = baseURL + "schedule.xml";
 var speakers_json = baseURL + "speakers.json";
 var eventId = "30c3";
 
+var colors = {
+	"30c3-hardware-making": [78.0, 209.0, 249.0, 1.0],	
+	"30c3-security-safety": [248.0, 154.0, 61.0, 1.0],
+	"30c3-ethics-society-politics": [246.0, 105.0, 106.0, 1.0],
+	"30c3-art-beauty": [244.0, 79.0, 244.0, 1.0],
+	"30c3-science-engineering": [197.0, 167.0, 59.0, 1.0],
+	"30c3-entertainment": [108.0, 196.0, 58.0, 1.0],
+	"30c3-ccc": [7.0, 68.0, 85.0, 1.0],
+	"30c3-other": [56.0, 196.0, 182.0, 1.0] 
+};
+
 var allFormats = {
 	'Diskussion': { id:'discussion', label_en:'Discussion' },
 	'lecture':    { id:'lecture',    label_en:'Talk'       },
@@ -536,9 +547,14 @@ function parseEnd(dateString, durationString) {
 
 function parseTrackFromEvent(eventXML) {
 	var trackName = eventXML.track;
+	var id = mkID(trackName);
+	var color = colors[id];
+	if (!color) {
+		color = [207,94,28,1];
+	}
 	return {
-		"id": mkID(trackName),
-		"color": [207,94,28,1],
+		"id": id,
+		"color":  color,
 		"label_en": trackName.toString()
 	};
 };
@@ -665,6 +681,7 @@ function handleResult(xml, speakers, eventRecordings) {
  alsoAdd('location', allRooms);
  alsoAdd('map', allMaps);
  alsoAdd('poi', allPOIs);  
+ alsoAdd('track', allTracks);
 }
 
 exports.scrape = function (callback) {
