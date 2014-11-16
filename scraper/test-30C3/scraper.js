@@ -433,11 +433,40 @@ function mkID(string) {
 
 function parseDay(dayXML) {
 var date = dayXML.$.date;
+
+var parseDate = new Date(date);
+var dateLabelDe = date;
+var dateLabelEn = date;
+// console.log("date: " + parseDate + "day: " +  parseDate.getDate());
+
+	var monthDay = parseDate.getDate();
+	switch (monthDay) {
+	case 27:
+		dateLabelDe = "Tag 1";
+		dateLabelEn = "Day 1";		
+		break;
+	case 28:
+		dateLabelDe = "Tag 2";
+		dateLabelEn = "Day 2";		
+		break;
+	case 29:
+		dateLabelDe = "Tag 3";
+		dateLabelEn = "Day 3";		
+		break;
+	case 30:
+		dateLabelDe = "Tag 4";
+		dateLabelEn = "Day 4";		
+		break;						
+	default:
+		
+	}
+	
 	return {
 	    "id": mkID(dayXML.$.index),
 	    "event": eventId,
 	    "type": "day",
-	    "label_en": date,
+	    "label_en": dateLabelEn,
+	    "label_de": dateLabelDe,
 		"date": date
 	};
 }
