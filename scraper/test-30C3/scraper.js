@@ -13,6 +13,11 @@ var schedule_url = baseURL + "schedule.xml";
 var speakers_json = baseURL + "speakers.json";
 var eventId = "30c3";
 
+// Livestream test
+var streamURLs = {
+	"30c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8"
+};
+
 var colors = {
 	"30c3-hardware-making": [78.0, 209.0, 249.0, 1.0],	
 	"30c3-security-safety": [248.0, 154.0, 61.0, 1.0],
@@ -646,6 +651,15 @@ function handleResult(xml, speakers, eventRecordings) {
 						"url": recordingMap[eventJSON.url].recording.recording_url,
 						"thumbnail": recordingMap[eventJSON.url].thumb
 					});
+					
+					var liveStreamURL = streamURLs[eventJSON.location.id];
+					if (liveStreamURL) {
+						eventJSON.enclosures.push({
+							"url": liveStreamURL,
+							"mimetype": "application/x-mpegURL",
+							"type": "livestream"
+						});
+					}
 				 }
     			 // console.log("event " + JSON.stringify(eventJSON));
     			 // if (!eventJSON.lang)
