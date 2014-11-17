@@ -15,7 +15,8 @@ var eventId = "30c3";
 
 // Livestream test
 var streamURLs = {
-	"30c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8"
+	"30c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
+	"30c3-saal-2": "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
 };
 
 var colors = {
