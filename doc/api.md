@@ -201,7 +201,7 @@ Enclosures list URLs of files including mime type.
 
 - **url:** Required, the URL of the enclosure
 - **mimetype:** Required, the MIME type of the enclosure. 
-- **type:**  Required; indicates the kind of enclosure present. Is one of `slides`, `recording`, `live`.
+- **type:**  Required; indicates the kind of enclosure present. Is one of `slides`, `recording`, `livestream`.
 - **thumbnail:**  Optional; URL of a thumbnail imaged that can be used as a cover or video thumbnail for the enclosure. E.g. a video thumbnail for video enclosures, a cover for audio content or an image of the first slide for the slides. 
 
 ### Links
