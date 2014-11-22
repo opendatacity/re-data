@@ -407,6 +407,15 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 		"location": "location-1",
 		"label_de": "Sendezentrum",
 		"label_en": "Broadcast Center",		
+		"description_de": "Das Sendezentrum ist ein Projekt des Kombinats für Angewandte Radiotheorie. Konkret besteht das Kernteam aus Tim Pritlove (Metaebene), Claudia Krell und Ralf Stockmann (beide Wikigeeks).",
+		"description_en": "The broadcast center…",				
+		"links": [
+			{
+            	"title": "Das Sendezentrum",
+				"url": "http://das-sendezentrum.de",
+				"type": "other"
+			}
+		]
 		"hidden": false,
 		"priority": 100,
 		"beacons": [{"uuid": "55C1DAB7-9430-450C-B94C-DE174D202B8B",
@@ -440,6 +449,11 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `other`
 - `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. 
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
+- `description_en`, `description_de`, etc: (Optional) more exhaustive description of the point of interest
+- `links`: (Required, but can be empty) A list of link objects related to this POI. E.g. the website of the porject, a link to the menu, etc. 
+	- `url` (Required) URL 
+	- `title` (Optional) Title of the link
+	- `type` (Required): Link type, see Session or Speaker above
 - `hidden`: (Optional) If not present should be assumed `false`, if `true` identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.
 - `priority`: (Optional) If not present should be assumed `0`. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.
 - `beacons`: (Optional) An array of maps, each representing a Bluetooth 4.0 LE beacon (aka [iBeacon](https://en.wikipedia.org/wiki/IBeacon)) marking this POI. 
