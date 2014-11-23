@@ -68,9 +68,16 @@ The same request with pagination [...sessions?start=100&count=20](http://data.re
 }
 ```
 
+
 # Reference
 
 In the following reference examples only the content of the ```data``` property will be shown.
+
+## Optional and Required Properties
+
+Several properties are marked as optional. If they are not marked as optional they should be considered required even if not marked as such. 
+
+If you want to specify an optional property as not present explicity (i.e. delete it if it has been there before) specify an explicit `null` value for the optional property. 
 
 ## Events
 
@@ -312,6 +319,11 @@ Locations are specified spaces on the compound and may be stages.
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
 		"order_index": 0, // order stage objects by this, when listed
+		"point_of_interest": {
+			"id": "poi-23",
+			"label_de": "Stage 1",
+			"label_en": "Stage 1"
+		}
 		"last_modified": 1393611456.99
 	}, //...
 ]
@@ -319,6 +331,7 @@ Locations are specified spaces on the compound and may be stages.
 
 - `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
 - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
+- `point_of_interest`: (Optional) Relationship to a point of interest, if any. `id` and at least one `label_` properties are required if present
 
 ### GET `/<event-id>/locations/<location-id>`
 
@@ -404,7 +417,11 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 		"positions": [{"map": "level4",
 					   "x": 3520.0, "y": 2107.0}],
 		"category": "session-location",
-		"location": "location-1",
+		"location": {
+			"id": "location-1", 
+			"label_de": "Sendezentrum", 
+			"label_en": "Broadcast Center"
+		},
 		"label_de": "Sendezentrum",
 		"label_en": "Broadcast Center",		
 		"description_de": "Das Sendezentrum ist ein Projekt des Kombinats für Angewandte Radiotheorie. Konkret besteht das Kernteam aus Tim Pritlove (Metaebene), Claudia Krell und Ralf Stockmann (beide Wikigeeks).",
@@ -447,7 +464,9 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `escalator`
 	- `shopping`
 	- `other`
-- `location`: (Optional) Identifier of the `location` this POI belongs to if it represents a location sessions take place at. 
+- `location`: (Optional) Object with identifiying the `location` this POI belongs to if it represents a location sessions take place at. 
+	- `id` (Required) Identifier of the location
+	- `label_de`, `label_en` (Required in at leat one language) Label
 - `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
 - `description_en`, `description_de`, etc: (Optional) more exhaustive description of the point of interest
 - `links`: (Required, but can be empty) A list of link objects related to this POI. E.g. the website of the porject, a link to the menu, etc. 
