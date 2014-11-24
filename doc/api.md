@@ -450,20 +450,21 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `x` and `y` (Required) Position of this POI on the map. These are pixel coordinates in the coordinate system of the `map`. 
 	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
 	  The origin of the coordinate system is located on the *bottom left*. 
-- `category`: (Required) Category of the POI. Pick one:
-	- `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
-	- `workshop-location` - A workshop area 
-	- `service` - Cash desk, info point, etc.
-	- `safety`
-	- `community` - Gathering spots, etc.
-	- `food`
-	- `entertainment`
-	- `organisation`
-	- `restroom`
-	- `elevator`
-	- `escalator`
-	- `shopping`
-	- `other`
+- `category`: (Required) Category of the POI.  Pick one:
+		- `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
+		- `workshop-location` - A workshop area 
+		- `service` - Cash desk, info point, etc.
+		- `safety`
+		- `community` - Gathering spots, etc.
+		- `food`
+		- `entertainment`
+		- `organisation`
+		- `restroom`
+		- `elevator`
+		- `escalator`
+		- `shopping`
+		- `other`
+
 - `location`: (Optional) Object with identifiying the `location` this POI belongs to if it represents a location sessions take place at. 
 	- `id` (Required) Identifier of the location
 	- `label_de`, `label_en` (Required in at leat one language) Label

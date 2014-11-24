@@ -3,6 +3,17 @@ var eventId = 'test-rp14';
 var fs = require('fs');
 var path = require('path');
 
+// for debugging we can just pretend rp14 was today
+var originalStartDate = new Date(2014, 4, 6, 8, 0, 0, 0);
+var fakeDate = new Date(2014, 10, 23, 8, 0, 0, 0);
+var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
+
+// Livestream test
+var streamURLs = {
+	"rp14-location-2594": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
+	"rp14-location-2595": "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+};
+
 var allTracks = {
 	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  label_en:'Business & Innovation', color:[194.0, 56.0, 24.0, 1.0] },
 	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', label_en:'Science & Technology' , color:[168.0, 146.0, 24.0, 1.0] },
@@ -34,9 +45,9 @@ var allLanguages = {
 };
 
 var allDays = {
-	'06.05.2014': { 'id':'rp14-day-1', 'label_de':'6. Mai', 'label_en':'6. May', 'date':'2014-05-06' },
-	'07.05.2014': { 'id':'rp14-day-2', 'label_de':'7. Mai', 'label_en':'7. May', 'date':'2014-05-07' },
-	'08.05.2014': { 'id':'rp14-day-3', 'label_de':'8. Mai', 'label_en':'8. May', 'date':'2014-05-08' },
+	'06.05.2014': { 'id':'rp14-day-1', 'label_de':'6. Mai', 'label_en':'6. May', 'date':'2014-11-23' },
+	'07.05.2014': { 'id':'rp14-day-2', 'label_de':'7. Mai', 'label_en':'7. May', 'date':'2014-11-24' },
+	'08.05.2014': { 'id':'rp14-day-3', 'label_de':'8. Mai', 'label_en':'8. May', 'date':'2014-11-25' },
 };
 
 var allMaps = {
@@ -174,7 +185,9 @@ var allPOIs = {
 					  {"map": eventId + "-" + "level2",
 					   "x": 3520.0, "y": 1957.0}],
 		"category": "session-location",
-		// "location": "location-1",
+		"location": {"id": "rp14-location-2594",
+					 "label_de": "stage 1",
+					 "label_en": "stage 1"},
 		"label_de": "Saal 1",
 		"label_en": "Hall 1",		
 		"hidden": false,
@@ -192,7 +205,9 @@ var allPOIs = {
 					  {"map": eventId + "-" + "level2",
 					   "x": 4694.0, "y": 1610.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": "rp14-location-2595",
+					 "label_de": "stage 2",
+					 "label_en": "stage 2"},
 		"label_de": "Saal 2",
 		"label_en": "Hall 2",
 		"hidden": false,
@@ -206,7 +221,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 4694.0, "y": 1710.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-d",
+					 "label_de": "Saal D",
+					 "label_en": "Hall D"},
 		"label_de": "Saal D",
 		"label_en": "Hall D",
 		"hidden": false,
@@ -220,7 +237,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 643.0, "y": 2360.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-e",
+					 "label_de": "Saal E",
+					 "label_en": "Hall E"},
 		"label_de": "Saal E",
 		"label_en": "Hall E",
 		"hidden": false,
@@ -234,7 +253,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 653.0, "y": 2030.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-f",
+					 "label_de": "Saal F",
+					 "label_en": "Hall F"},
 		"label_de": "Saal F",
 		"label_en": "Hall F",
 		"hidden": false,
@@ -248,7 +269,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 663.0, "y": 2720.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-d",
+					 "label_de": "Saal D",
+					 "label_en": "Hall D"},
 		"label_de": "Saal D",
 		"label_en": "Hall D",
 		"hidden": false,
@@ -262,7 +285,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 2027.0, "y": 2040.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-g",
+					 "label_de": "Saal G",
+					 "label_en": "Hall G"},
 		"label_de": "Saal G",
 		"label_en": "Hall G",
 		"hidden": false,
@@ -276,7 +301,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level0",
 					   "x": 2267.0, "y": 2231.0}],
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-3",
+					 "label_de": "Saal 3",
+					 "label_en": "Hall 3"},
 		"label_de": "Saal 3",
 		"label_en": "Hall 3",
 		"hidden": false,
@@ -290,7 +317,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level0",
 					   "x": 4799.0, "y": 2751.0}],	
 		"category": "session-location",		
-		// "location": "location-1",
+		"location": {"id": eventId + "-saal-6",
+					 "label_de": "Saal 6",
+					 "label_en": "Hall 6"},
 		"label_de": "Saal 6",
 		"label_en": "Hall 6",		
 		"hidden": false,
@@ -304,7 +333,9 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level1",
 					   "x": 4448.0, "y": 1498.0}],	
 		"category": "session-location",		
-		// "location": "location-1",
+		// "location": {"id": "30c3-saal-13",
+					 // "label_de": "Saal 13",
+					 // "label_en": "Hall 13"},
 		"label_de": "Saal 13",
 		"label_en": "Hall 13",		
 		"hidden": false,
@@ -353,7 +384,63 @@ var allPOIs = {
 		"hidden": false,
 		"priority": 1000,
 		"beacons": []
-	},		
+	},	
+	"poi-villa-straylight": {
+		"id": eventId + "-villa-straylight",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level4",
+					   "x": 3538.0, "y": 2764.0}],	
+		"category": "session-location",		
+		"location": "30c3-villa-straylight",
+		"label_de": "Villa Straylight",
+		"label_en": "Villa Straylight",	
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},	
+	"poi-wordlounge": {
+		"id": eventId + "-wordlounge",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level3",
+					   "x": 2885.0, "y": 2794.0}],	
+		"category": "session-location",		
+		"location": "30c3-wordlounge",
+		"label_de": "Wordlounge",
+		"label_en": "Wordlounge",	
+		"hidden": false,
+		"priority": 1000,
+		"beacons": []
+	},	
+	"poi-food-hall1-a": {
+		"id": eventId + "-poi-food-hall1-a",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level2",
+					   "x": 3881.0, "y": 2556.0}],	
+		"category": "food",		
+		// "location": "30c3-wordlounge",
+		"label_de": "Essen",
+		"label_en": "Food",	
+		"hidden": false,
+		"priority": 500,
+		"beacons": []
+	},					
+	"poi-food-hall1-b": {
+		"id": eventId + "-poi-food-hall1-b",
+		"event": eventId,	
+		"type": "poi",			
+		"positions": [{"map": eventId + "-" + "level2",
+					   "x": 3175.0, "y": 2395.0}],	
+		"category": "food",		
+		// "location": "30c3-wordlounge",
+		"label_de": "Essen",
+		"label_en": "Food",	
+		"hidden": false,
+		"priority": 500,
+		"beacons": []
+	}	
 };
 
 // we now supply a order preference with the location
@@ -498,6 +585,15 @@ exports.scrape = function (callback) {
 					'enclosures': [],
 					'links': links
 				}
+				
+				var liveStreamURL = streamURLs[entry.location.id];
+				if (liveStreamURL) {
+					entry.enclosures.push({
+						"url": liveStreamURL,
+						"mimetype": "application/x-mpegURL",
+						"type": "livestream"
+					});
+				}
 
 				addEntry('session', entry);
 			});
@@ -610,7 +706,11 @@ function parseDate(text) {
 	var day = RegExp.$1;
 	var month = RegExp.$2;
 	var year = RegExp.$3;
-	return new Date(year, month, day, 0, 0, 0, 0);
+	var date = new Date(year, month, day, 0, 0, 0, 0);
+	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
+	date.setTime(newMillis);
+	
+	return date;
 }
 
 function parseDateTime(date, time) {
@@ -633,7 +733,10 @@ function parseDateTime(date, time) {
 	// which is not in CEST as the conference.
 	var dateString = year + "-" + month + "-" + day + "T" + hour + ":" + minute + ":" + "00+02:00";
 
-	return new Date(dateString);
+	var date = new Date(dateString);
+	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
+	date.setTime(newMillis);
+	return date;
 
 	console.log('Unknown date "'+date+'" and time "'+time+'"');
 	return false
