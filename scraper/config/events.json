@@ -46,6 +46,17 @@
 				"coords": [53.561583,9.985683]
 			}],
 			"url": "http://events.ccc.de/congress/2013"
-		}
-		
+		},
+		{
+			"type": "event",
+			"id": "31c3",
+			"label": "31C3",
+			"title": "31C3",
+			"date": ["2014-12-27","2014-12-30"],
+			"locations": [{
+				"label": "Congress Center Hamburg",
+				"coords": [53.561583,9.985683]
+			}],
+			"url": "http://events.ccc.de/congress/2014"
+		}		
 ]

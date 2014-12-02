@@ -11,24 +11,37 @@ var json_requester = require('../lib/json_requester');
 var baseURL = "http://events.ccc.de/congress/2013/Fahrplan/"
 var schedule_url = baseURL + "schedule.xml";
 var speakers_json = baseURL + "speakers.json";
-var eventId = "30c3";
+var eventId = "31c3";
+
+// for debugging we can just pretend rp14 was today
+var originalStartDate = new Date(Date.UTC(2013, 11, 27, 10, 15, 0, 0));
+var fakeDate = new Date(Date.UTC(2014, 11, 27, 10, 15, 0, 0));
+var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
+
+var dayYearChange = 1;
+var dayMonthChange = 0;
+var dayDayChange = 0;
+
+
+console.log("Real date: " + originalStartDate);
+console.log("Fake date: " + fakeDate);
+
 
 // Livestream test
 var streamURLs = {
-	"30c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
-	"30c3-saal-2": "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+	"31c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
+	"31c3-saal-2": "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
 };
 
-var colors = {
-	"30c3-hardware-making": [78.0, 209.0, 249.0, 1.0],	
-	"30c3-security-safety": [248.0, 154.0, 61.0, 1.0],
-	"30c3-ethics-society-politics": [246.0, 105.0, 106.0, 1.0],
-	"30c3-art-beauty": [244.0, 79.0, 244.0, 1.0],
-	"30c3-science-engineering": [197.0, 167.0, 59.0, 1.0],
-	"30c3-entertainment": [108.0, 196.0, 58.0, 1.0],
-	"30c3-ccc": [7.0, 68.0, 85.0, 1.0],
-	"30c3-other": [56.0, 196.0, 182.0, 1.0] 
-};
+var colors = {};
+colors[eventId + "-hardware-making"] = [78.0, 209.0, 249.0, 1.0];
+colors[eventId + "-security-safety"] = [248.0, 154.0, 61.0, 1.0];
+colors[eventId + "-ethics-society-politics"] = [246.0, 105.0, 106.0, 1.0];
+colors[eventId + "-art-beauty"] = [244.0, 79.0, 244.0, 1.0];
+colors[eventId + "-science-engineering"] = [197.0, 167.0, 59.0, 1.0];
+colors[eventId + "-entertainment"] = [108.0, 196.0, 58.0, 1.0];
+colors[eventId + "-ccc"] = [7.0, 68.0, 85.0, 1.0];
+colors[eventId + "-other"] = [56.0, 196.0, 182.0, 1.0];
 
 var allFormats = {
 	'Diskussion': { id:'discussion', label_en:'Discussion' },
@@ -204,7 +217,7 @@ var allPOIs = {
 					  {"map": eventId + "-" + "level2",
 					   "x": 4694.0, "y": 1610.0}],
 		"category": "session-location",		
-		"location": {"id": "30c3-saal-2",
+		"location": {"id": eventId + "-saal-2",
 					 "label_de": "Saal 2",
 					 "label_en": "Hall 2"},
 		"label_de": "Saal 2",
@@ -332,7 +345,7 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level1",
 					   "x": 4448.0, "y": 1498.0}],	
 		"category": "session-location",		
-		// "location": {"id": "30c3-saal-13",
+		// "location": {"id": eventId + "-saal-13",
 					 // "label_de": "Saal 13",
 					 // "label_en": "Hall 13"},
 		"label_de": "Saal 13",
@@ -391,7 +404,7 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level4",
 					   "x": 3538.0, "y": 2764.0}],	
 		"category": "session-location",		
-		"location": "30c3-villa-straylight",
+		"location": "31c3-villa-straylight",
 		"label_de": "Villa Straylight",
 		"label_en": "Villa Straylight",	
 		"hidden": false,
@@ -405,7 +418,7 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level3",
 					   "x": 2885.0, "y": 2794.0}],	
 		"category": "session-location",		
-		"location": "30c3-wordlounge",
+		"location": "31c3-wordlounge",
 		"label_de": "Wordlounge",
 		"label_en": "Wordlounge",	
 		"hidden": false,
@@ -419,7 +432,7 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 3881.0, "y": 2556.0}],	
 		"category": "food",		
-		// "location": "30c3-wordlounge",
+		// "location": eventId + "-wordlounge",
 		"label_de": "Essen",
 		"label_en": "Food",	
 		"hidden": false,
@@ -433,7 +446,7 @@ var allPOIs = {
 		"positions": [{"map": eventId + "-" + "level2",
 					   "x": 3175.0, "y": 2395.0}],	
 		"category": "food",		
-		// "location": "30c3-wordlounge",
+		// "location": eventId + "-wordlounge",
 		"label_de": "Essen",
 		"label_en": "Food",	
 		"hidden": false,
@@ -469,14 +482,24 @@ function mkID(string) {
 }
 
 function parseDay(dayXML) {
-var date = dayXML.$.date;
-
-var parseDate = new Date(date);
-var dateLabelDe = date;
-var dateLabelEn = date;
-// console.log("date: " + parseDate + "day: " +  parseDate.getDate());
-
-	var monthDay = parseDate.getDate();
+	var date = dayXML.$.date;
+	console.log("XML date " + date);
+		
+	var comps = date.split("-");
+	
+		
+	var parseDate = new Date(date);
+	parseDate.setUTCFullYear(parseDate.getUTCFullYear() + dayYearChange);
+	parseDate.setUTCMonth(parseDate.getUTCMonth() + dayMonthChange);
+	parseDate.setUTCDate(parseDate.getUTCDate() + dayDayChange);		
+	
+	console.log("date " + date);
+	
+	var dateLabelDe = date;
+	var dateLabelEn = date;
+	console.log("date: " + parseDate + "day: " +  parseDate.getUTCDate());
+	
+	var monthDay = parseDate.getUTCDate();
 	switch (monthDay) {
 	case 27:
 		dateLabelDe = "Tag 1";
@@ -498,8 +521,10 @@ var dateLabelEn = date;
 		
 	}
 	
+	var id = mkID(dayXML.$.index);
+	
 	return {
-	    "id": mkID(dayXML.$.index),
+	    "id": id,
 	    "event": eventId,
 	    "type": "day",
 	    "label_en": dateLabelEn,
@@ -558,8 +583,11 @@ function parseRoom(roomXML, index) {
 };
 
 function parseDate(dateString) {
-	return new Date(dateString);
-}
+	var date = new Date(dateString);
+	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
+	date.setTime(newMillis);
+	return date;
+};
 
 function parseEnd(dateString, durationString) {
 	var date = new Date(dateString);
@@ -568,7 +596,10 @@ function parseEnd(dateString, durationString) {
 	var hours = new Number(match[1]);
 	var minutes = new Number(match[2]);
 	var seconds = time + (minutes * 60.0) + (hours * 60.0 * 60.0);
-	return new Date(seconds * 1000); 
+	date = new Date(seconds * 1000); 
+	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
+	date.setTime(newMillis);
+	return date;	
 }
 
 function parseTrackFromEvent(eventXML) {
@@ -585,6 +616,20 @@ function parseTrackFromEvent(eventXML) {
 	};
 };
 
+function normalizeXMLDayDateKey(date) {
+	var parseDate = new Date(date);
+	parseDate.setUTCFullYear(parseDate.getUTCFullYear() + dayYearChange);
+	parseDate.setUTCMonth(parseDate.getUTCMonth() + dayMonthChange);
+	parseDate.setUTCDate(parseDate.getUTCDate() + dayDayChange);		
+	
+	// console.log("normalized " + date );
+	date = "" + parseDate.getUTCFullYear() + "-" + (parseDate.getUTCMonth() + 1)  + "-" + parseDate.getUTCDate();
+	// console.log("to " + date );
+	
+	return date;
+	
+}
+
 function parseEvent(eventXML, dayXML, roomXML) {
 	var urlBase = "http://events.ccc.de/2013/";
 	
@@ -600,6 +645,8 @@ function parseEvent(eventXML, dayXML, roomXML) {
 		}
 	});
 	
+	var day = normalizeXMLDayDateKey(dayXML.$.date);
+	
 	var session = {
 		"id": mkID("session-" + eventXML.$.id),
 		"title": eventXML.title.toString(),
@@ -610,7 +657,7 @@ function parseEvent(eventXML, dayXML, roomXML) {
 		"begin": parseDate(eventXML.date),
 		"end": parseEnd(eventXML.date, eventXML.duration),
 		"track": allTracks[mkID(eventXML.track)],
-		"day": allDays[dayXML.$.date],
+		"day": allDays[day],
 		"location": allRooms[mkID(roomXML.$.name)],
 		"format": allFormats[eventXML.type.toString()],
 		"level": allLevels['advanced'],
@@ -647,7 +694,7 @@ function handleResult(xml, speakers, eventRecordings) {
  
     xml.schedule.day.forEach(function(day) {
     	 var dayJSON = parseDay(day);
-    	 allDays[dayJSON.date] = dayJSON;
+    	 allDays[normalizeXMLDayDateKey(dayJSON.date)] = dayJSON;
     	 
     	 var roomIndex = 0;
     	 day.room.forEach(function (room) {
@@ -664,7 +711,7 @@ function handleResult(xml, speakers, eventRecordings) {
     			 var eventJSON = parseEvent(event, day, room);
 
 				 if (recordingMap && recordingMap[eventJSON.url]) {
-					 console.log("Recording for " + eventJSON.title);
+					 // console.log("Recording for " + eventJSON.title);
 					 
 					eventJSON.enclosures.push({
 						"mimetype": "video/mp4",
@@ -745,7 +792,7 @@ exports.scrape = function (callback) {
 				// In case of erro bail out
 				if (!err) {
 					// set global eventID
-					eventId = (xml.schedule.conference[0].acronym + "").toLowerCase();
+					// eventId = (xml.schedule.conference[0].acronym + "").toLowerCase();
 					// 				    handleResult(xml,
 					// 				 	 		     result.speakers.schedule_speakers.speakers,
 					// 			 []);
@@ -754,7 +801,7 @@ exports.scrape = function (callback) {
 								
 								
 					result.conferences_videos.conferences.forEach(function (conference) {
-						if (conference.acronym == eventId) {
+						if (conference.acronym == eventId || conference.acronym == "30c3") {
 							json_requester.get({urls: {eventsForVideoJSON: conference.url}},
 								function (videoEventsResult) {
 									var videoAPICallURLs = {};
@@ -764,7 +811,7 @@ exports.scrape = function (callback) {
 									
 									json_requester.get({urls: videoAPICallURLs},
 													   function (eventResults) {
-														   console.log("result!");
+														   // console.log("result!");
 														   var eventRecordingJSONs = toArray(eventResults);
 														   eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
 
