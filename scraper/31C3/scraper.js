@@ -562,9 +562,14 @@ function parseSpeaker(speakerJSON) {
 		"links": links,
 		"sessions": [] // fill me later
 	};
-	var imageHost = "http://cccv.pentabarf.org";
+	var imageHost = "https://events.ccc.de/congress/2014/Fahrplan";
 	if (speakerJSON.photo) {
 		result['photo'] = speakerJSON.photo;
+	}
+	if (speakerJSON.image) {
+		var path = speakerJSON.image;
+		path = path.replace(/\/medium\//,'/large/');
+		result['photo'] = imageHost + path;
 	}
 	return result;
 };
