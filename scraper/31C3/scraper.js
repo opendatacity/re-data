@@ -673,6 +673,17 @@ function parseEvent(event, day, room) {
 		session["subtitle"] = event.subtitle.toString();
 	}
 	
+	// HACK: Fake one video for App Review
+	// IF for Fnord News show
+	if (session['id'] == '31c3-session-mw1wjnnzwxzskm3ip5lg0g') {
+		session.enclosures.push({
+        		"url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
+				"mimetype": "video/mp4",
+				"type": "recording",
+				"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+       	});
+	}
+	
 	return session;
 };
 
