@@ -24,18 +24,93 @@ exports.update = function (data, callback) {
 			return;
 		}
 		
-		// (optionally destroy database and recreate it)
-		if (false) {
-			return recreateCouchDB(db, connection);
-		}
-
-		// ... and update the database
-
 		updateCouchDB(db, data, function (data) {
 			callback(data);
 		})
 	})
-}
+};
+
+exports.delete = function(eventID, callback) {
+	
+	connectCouch(function (db, connection) {
+		if (!db) {
+			log.critical('Can not Update the Database');
+			callback("No database!");
+			return;
+		}
+	
+		deleteEvent(db, eventID, callback);
+	});
+};
+
+exports.reset = function () {
+	connectCouch(function (db, connection) {
+		if (!db) {
+			log.critical('Can not Update the Database');
+			return;
+		}		
+		
+		recreateCouchDB(db, connection);
+	});
+};
+
+function deleteEvent(db, eventID, callback) {
+	var couchDBViews = {
+		'session':  'data/sessions',
+		'speaker':  'data/speakers',
+		'track':    'data/tracks',
+		'location': 'data/locations',
+		'day':      'data/days',
+		'format':   'data/formats',
+		'level':    'data/levels',
+		'language': 'data/languages',
+		'map':      'data/maps',			
+		'poi':      'data/pois',						
+	};
+	
+
+
+	var allDocs = [];	
+	
+	async.eachSeries(Object.keys(couchDBViews), 
+					 function (key, callback) {
+
+				 		var opts = {
+				 		  startkey: [ eventID ],
+				 		  endkey: [ eventID, '\u9999']
+				 		};
+				
+				 		db.view(couchDBViews[key], opts, function (err, docs) {
+				 		  if (err) {
+				 			console.log(err);
+				 			callback();		
+				 		    return;
+				 		  }
+
+						  docs.forEach(function (doc) {
+							  allDocs.push(doc);	
+						  });
+				 		  
+						  
+						  callback();
+				 		});
+						
+					 },
+					 function () {
+						 var ids = allDocs.map(function (i) { return i.id });
+
+						 db.get(ids, function (err, docs) { 
+							
+							docs.forEach(function (doc) {
+								
+								console.log("Deleting " + doc["type"] + " " + doc["id"] + " (" + eventID + ")");
+								db.remove(doc._id, doc._rev, function (err, res) {
+									callback();
+								});																	
+							});							
+						 });
+					 });
+};
 
 function updateCouchDB(db, data, callback) {
 
