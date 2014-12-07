@@ -12,6 +12,11 @@ module.exports = {
 		args.unshift("[INFO]".inverse.bold.cyan);
 		console.error.apply(this, args);
 	},
+	warn: function() {
+		var args = module.exports.args(arguments)
+		args.unshift("[WARN]".inverse.bold.yellow);
+		console.error.apply(this, args);
+	},	
 	error: function() {
 		var args = module.exports.args(arguments)
 		args.unshift("[ERR!]".inverse.bold.red);

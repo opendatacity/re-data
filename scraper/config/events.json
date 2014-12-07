@@ -13,6 +13,18 @@
 		},
 		{
 			"type": "event",
+			"id": "test-rp14",
+			"label": "TESTDATA (from re:publica 14)",
+			"title": "A TEST into the wild",
+			"date": ["2014-05-06","2014-05-08"],
+			"locations": [{
+				"label": "Station Berlin",
+				"coords": [52.49814,13.374538]
+			}],
+			"url": "http://14.re-publica.de/"
+		},		
+		{
+			"type": "event",
 			"id": "rp13",
 			"label": "re:publica 13",
 			"title": "IN/SIDE/OUT",
@@ -34,5 +46,17 @@
 				"coords": [53.561583,9.985683]
 			}],
 			"url": "http://events.ccc.de/congress/2013"
-		}
-	];
+		},
+		{
+			"type": "event",
+			"id": "31c3",
+			"label": "31C3",
+			"title": "31C3",
+			"date": ["2014-12-27","2014-12-30"],
+			"locations": [{
+				"label": "Congress Center Hamburg",
+				"coords": [53.561583,9.985683]
+			}],
+			"url": "http://events.ccc.de/congress/2014"
+		}		
+]

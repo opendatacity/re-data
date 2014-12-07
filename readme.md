@@ -4,6 +4,10 @@ This project is the ongoing effort of providing an simple JSON interface for con
 
 Example data includes [re:publica](http://re-publica.de) or [30C3](http://events.ccc.de/congress/2013). Take a look at the `scrapers` directory.
 
+## Documentation
+
+Documentation on the API can be found [here](doc/api.md)
+
 ## Contributing 
 
 The infrastructure is still very rough as this is a side project of several people. If you are interested in helping out, send pull requests or join [the mailing list](https://lists.netzguerilla.net/mailman/listinfo/redata).

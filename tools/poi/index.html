@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<style type="text/css" media="screen">
+			#copyform {
+
+			}
+			
+			#toolbox {
+				position: fixed;
+				top: 10px;
+				left: 10px;
+				background-color: white;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				padding: 10px;				
+				
+			}
+		</style>
+		<script type="text/javascript">
+		
+			function pasteJSON() {
+				var form = document.getElementById('copyform');
+				
+				var values = {};
+				values['event_id'] = document.getElementById('event_id').value;				
+				values['label_de'] = document.getElementById('label_de').value;
+				values['label_en'] = document.getElementById('label_en').value;
+				values['id'] = values['event_id'] + "" + document.getElementById('identifier').value;
+				values['positions'] = [];
+				
+				var x = document.getElementById('poi_x').value;
+				var y = document.getElementById('poi_y').value;
+				
+				var map_ids = document.getElementById('map_ids').value.split(/, */)
+				
+				for (var i = map_ids.length - 1; i >= 0; i--) {
+					values['positions'].push({
+						'map': map_ids[i],
+						'x': x,
+						'y': y
+					});
+				}
+				
+				values['hidden'] = false;
+				values['priority'] = 100;
+				values['beacons'] = [];				
+				
+				
+				var jsonbox = document.getElementById('jsonbox');
+				jsonbox.value = JSON.stringify(values, null, "  ");
+				
+				return false;
+			}
+
+			
+			window.addEventListener("load", function () {		
+		
+				var map = document.getElementById('map');
+				map.addEventListener("click", function (e) {
+					console.log("x: " + e.pageX + " y:" + e.pageY);			
+					document.getElementById('poi_x').value = e.pageX;
+					document.getElementById('poi_y').value = e.pageY;					
+				}, false);
+			}, false);
+		</script>
+	</head>
+	<body>	
+
+		<div id="toolbox">
+		<form id="copyform" onsubmit="return pasteJSON()">
+			<p>
+				<label for="event_id">Event ID</label><input type="text" name="event_id" value="30c3" id="event_id" /><br/>
+				<label for="identifier">ID</label><input type="text" name="identifier" value="" id="identifier" />
+				<label for="map_ids">Map IDs</label><input type="text" name="map_ids" value="" id="map_ids" />
+			</p>			
+			<p>
+				<label for="label_de">Label (DE)</label>
+				<input type="text" name="label_de" value="" id="label_de" /><br/>
+				<label for="label_de">Label (EN)</label>
+				<input type="text" name="label_en" value="" id="label_en" />
+			</p>			
+			
+			<p>
+				<label for="poi_x">X</label><input type="text" name="poi_x" value="" id="poi_x" style="width: 30px" />
+				<label for="poi_y">Y</label><input type="text" name="poi_y" value="" id="poi_y" style="width: 30px" />				
+			</p>
+
+			<p>			
+				<input type="submit" value="To JSON" />
+			</p>
+		</form>			
+			<textarea name="json" id="jsonbox" rows="8" cols="40"></textarea>
+		
+		</div>
+		
+		<img id="map" src="file:///Users/toto/Downloads/30c3-svg/2950BD1706F65FE7.png" width="6506" height="5007" alt="2950BD1706F65FE7" />
+	</body>
+</html>

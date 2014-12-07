@@ -68,9 +68,16 @@ The same request with pagination [...sessions?start=100&count=20](http://data.re
 }
 ```
 
+
 # Reference
 
 In the following reference examples only the content of the ```data``` property will be shown.
+
+## Optional and Required Properties
+
+Several properties are marked as optional. If they are not marked as optional they should be considered required even if not marked as such. 
+
+If you want to specify an optional property as not present explicity (i.e. delete it if it has been there before) specify an explicit `null` value for the optional property. 
 
 ## Events
 
@@ -201,7 +208,7 @@ Enclosures list URLs of files including mime type.
 
 - **url:** Required, the URL of the enclosure
 - **mimetype:** Required, the MIME type of the enclosure. 
-- **type:**  Required; indicates the kind of enclosure present. Is one of `slides`, `recording`, `live`.
+- **type:**  Required; indicates the kind of enclosure present. Is one of `slides`, `recording`, `livestream`.
 - **thumbnail:**  Optional; URL of a thumbnail imaged that can be used as a cover or video thumbnail for the enclosure. E.g. a video thumbnail for video enclosures, a cover for audio content or an image of the first slide for the slides. 
 
 ### Links
@@ -311,20 +318,173 @@ Locations are specified spaces on the compound and may be stages.
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
 		"is_stage": true, // is this a stage
-		"floor": 0, 
 		"order_index": 0, // order stage objects by this, when listed
+		"point_of_interest": {
+			"id": "poi-23",
+			"label_de": "Stage 1",
+			"label_en": "Stage 1"
+		}
 		"last_modified": 1393611456.99
 	}, //...
 ]
 ````
 
 - `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
-- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels.
 - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
+- `point_of_interest`: (Optional) Relationship to a point of interest, if any. `id` and at least one `label_` properties are required if present
 
 ### GET `/<event-id>/locations/<location-id>`
 
 *single object as above*
+
+## Maps
+
+Maps represent maps of the conference venue. A map refrences on more points of interest (POIs). See below for POIs.
+
+### GET `/<event-id>/maps`
+
+
+```` javascript
+[
+	{
+		"id": "map-foor-1",
+		"event": "rp13",	
+		"type": "map",			
+		"label_de": "Station Berlin",
+		"label_en": "Station Berlin",
+		"floor_label_de": "1. Etage",
+		"floor_label_en": "1st floor",
+		"is_outdoor": true,
+		"is_indoor": true,		
+		"floor": 0,
+		"order_index": 23,
+		"area": {"width": 100.0, 
+		         "height": 200.0},
+		"tiles": {
+                    "base_url": "http://bitfever.de/~toto/test/31c3/0floor",
+                    "large_image_url": "http://bitfever.de/~toto/test/31c3/0floor/large.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 6506,
+                             "height": 5007}
+                },
+      "pois": [
+          "poi-5",
+          "poi-23",
+          "poi-42"
+      ]
+	}, //...
+]
+````
+
+- `id`: (Required) The identifier. Should be opaque to the user, is guranteed to be used only for exactly one map object of this event.
+- `event`: (Required) Identifier of the event
+- `type`: (Required) always `map` for maps
+- `label_en`, etc.:  (Required in at least 1 language) Label specifying the name of the map localized to the suffix language. The suffix is the 2 char ISO code of the language. E.g. "Berlin Congress Center"
+- `floor_label_en`: (Optional): Name of the floor, if there are multiple floors showing the same map area. E.g. "1st floor"
+- `is_outdoor`: (Required) `true` if any significant part of the map is outdoor (e.g. a courtyard, but not a small balcony)
+- `is_indoor`: (Required) `true` if  any significant part of the map is an indoor area (e.g. floor of an office building. **Note:** `is_indoor` and `is_outdoor` can both be true, if the map contains e.g. a gound floor plus the courtyard
+- `floor`: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels. 
+- `order_index`: (Optional) Hint to using applications that *can* be used when ordering many maps relative to each other in e.g. a list or a pager. 
+- `area`: (Required) Specifies the area covered by this map:
+    - `width`, `height` (Required) *logical* size of the area the map covers in *meters*.
+- `tiles`: (Required) Specifies the information for the tiled map. A dictionary with the following keys:
+	- **General** Image tiles should be present in a structure compatible with the [OpenSeadragon project](http://openseadragon.github.io). For example generated using the [dzt](https://github.com/dblock/dzt) tool.
+	- `base_url`: (Required) Base URL where the tile images can be found. Tiles themselves should be in a subdirectory called `tiles` structured as specified above.
+	- `large_image_url`: A large version of the map image. This can be used e.g. if no tiled image support is implemented. It tis recomended that the image size does not exceed 2080x2048 pixels on this image.
+	- `tile_size`: (Required) Size of the tiles in pixels. Tiles have to be square.
+	- `tile_file_extension`: (Required) File extension for the tile images to the URL can be constructed by a viewer. E.g. `png` 
+	- `size`: (Required): A dictionary specifiying `width` and `height` of the original image (not to be confused with the large image) in pixels.
+- `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.	
+Specifies the base URL for image tiles. 
+
+### GET `/<event-id>/maps/<map-id>`
+
+Same as above, but returning only one map.
+
+## Points of Interest
+
+Represents a single point of interest on a map. Each POI belongs to a map object. 
+
+### GET `/<event-id>/pois`
+
+```` javascript
+[
+	{
+		"id": "poi-1-map-1",
+		"event": "rp13",	
+		"type": "poi",			
+		"positions": [{"map": "level4",
+					   "x": 3520.0, "y": 2107.0}],
+		"category": "session-location",
+		"location": {
+			"id": "location-1", 
+			"label_de": "Sendezentrum", 
+			"label_en": "Broadcast Center"
+		},
+		"label_de": "Sendezentrum",
+		"label_en": "Broadcast Center",		
+		"description_de": "Das Sendezentrum ist ein Projekt des Kombinats für Angewandte Radiotheorie. Konkret besteht das Kernteam aus Tim Pritlove (Metaebene), Claudia Krell und Ralf Stockmann (beide Wikigeeks).",
+		"description_en": "The broadcast center…",				
+		"links": [
+			{
+            	"title": "Das Sendezentrum",
+				"url": "http://das-sendezentrum.de",
+				"type": "other"
+			}
+		]
+		"hidden": false,
+		"priority": 100,
+		"beacons": [{"uuid": "55C1DAB7-9430-450C-B94C-DE174D202B8B",
+					 "major": 23,
+					 "minor": 42}]
+	}, //...
+]
+````
+
+- `id`: (Required) Identifier of the POI. Uniq per event.
+- `event`: (Required) Identifier of the event this POI belongs to
+- `type`: (Required) Always `poi`
+- `positions`: (Required) Identifier of the maps this POI belongs to and where it is on these maps. An array of dicts with the keys:
+	- `map`: (Required) Identifier of the map. **Note:** A map identifier may only occur once in the `positions` property (aka a POI may only be placed on a map once)
+	- `x` and `y` (Required) Position of this POI on the map. These are pixel coordinates in the coordinate system of the `map`. 
+	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
+	  The origin of the coordinate system is located on the *bottom left*. 
+- `category`: (Required) Category of the POI.  Pick one:
+		- `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
+		- `workshop-location` - A workshop area 
+		- `service` - Cash desk, info point, etc.
+		- `safety`
+		- `community` - Gathering spots, etc.
+		- `food`
+		- `entertainment`
+		- `organisation`
+		- `restroom`
+		- `elevator`
+		- `escalator`
+		- `shopping`
+		- `other`
+
+- `location`: (Optional) Object with identifiying the `location` this POI belongs to if it represents a location sessions take place at. 
+	- `id` (Required) Identifier of the location
+	- `label_de`, `label_en` (Required in at leat one language) Label
+- `label_en`, `label_de`, etc: (Required in at least on language) Label of the POI in the language specified by the suffix
+- `description_en`, `description_de`, etc: (Optional) more exhaustive description of the point of interest
+- `links`: (Required, but can be empty) A list of link objects related to this POI. E.g. the website of the porject, a link to the menu, etc. 
+	- `url` (Required) URL 
+	- `title` (Optional) Title of the link
+	- `type` (Required): Link type, see Session or Speaker above
+- `hidden`: (Optional) If not present should be assumed `false`, if `true` identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.
+- `priority`: (Optional) If not present should be assumed `0`. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.
+- `beacons`: (Optional) An array of maps, each representing a Bluetooth 4.0 LE beacon (aka [iBeacon](https://en.wikipedia.org/wiki/IBeacon)) marking this POI. 
+			 A beacon has `uuid`, `major` and `minor` ID, where UUID might be the same for the whole conference or even beyond, so only the three properties in combination identifiy a uniq beacon. All three are required.  
+			 Note: Only beacons whose presence identififies this POI should be here, not merely beacons who are close by. 
+
+
+
+
+
+### GET `/<event-id>/pois/<poi-id>`
 
 ## Days
 

@@ -66,7 +66,9 @@ var types = [
 	'tracks',
 	'formats',
 	'levels',
-	'languages'
+	'languages',
+	'maps',
+	'pois'	
 ];
 
 types.forEach(function (type) {

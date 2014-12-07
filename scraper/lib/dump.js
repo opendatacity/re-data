@@ -12,7 +12,9 @@ var typeMatching = {
 	'track': 'tracks',
 	'format': 'formats',
 	'level': 'levels',
-	'language': 'languages'
+	'language': 'languages',
+	'map': 'maps',
+	'poi': 'pois'		
 };
 
 exports.dump = function (data) {
