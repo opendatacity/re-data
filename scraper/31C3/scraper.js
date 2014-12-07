@@ -566,8 +566,8 @@ function parseSpeaker(speakerJSON) {
 	// de-htmlize
 	// console.log(bio);	
 	// $ = cheerio.load(bio);
-	bio = sanitizeHtml(bio, {allowedTags: []});
-	console.log("bio " + bio);
+	result["biography"] = sanitizeHtml(bio, {allowedTags: []});
+	
 	// sys.puts(sys.inspect(handler.dom, false, null));
 	
 	
