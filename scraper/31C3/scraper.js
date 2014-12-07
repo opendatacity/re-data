@@ -14,9 +14,9 @@ var speakers_url = baseURL + "speakers.json";
 var eventId = "31c3";
 
 // for debugging we can just pretend rp14 was today
-var originalStartDate = new Date(Date.UTC(2013, 11, 27, 10, 15, 0, 0));
-var fakeDate = new Date(Date.UTC(2014, 11, 27, 10, 15, 0, 0));
-var sessionStartDateOffsetMilliSecs = 0;//fakeDate.getTime() - originalStartDate.getTime();
+var originalStartDate = new Date(Date.UTC(2014, 11, 27, 10, 15, 0, 0));
+var fakeDate = new Date(Date.UTC(2014, 11, 7, 0, 0, 0, 0));
+var sessionStartDateOffsetMilliSecs = 0; //fakeDate.getTime() - originalStartDate.getTime();
 
 var dayYearChange = 0;
 var dayMonthChange = 0;
@@ -34,14 +34,14 @@ var streamURLs = {
 };
 
 var colors = {};
-colors[eventId + "-hardware-making"] = [78.0, 209.0, 249.0, 1.0];
-colors[eventId + "-security-safety"] = [248.0, 154.0, 61.0, 1.0];
-colors[eventId + "-ethics-society-politics"] = [246.0, 105.0, 106.0, 1.0];
-colors[eventId + "-art-beauty"] = [244.0, 79.0, 244.0, 1.0];
-colors[eventId + "-science-engineering"] = [197.0, 167.0, 59.0, 1.0];
-colors[eventId + "-entertainment"] = [108.0, 196.0, 58.0, 1.0];
-colors[eventId + "-ccc"] = [7.0, 68.0, 85.0, 1.0];
-colors[eventId + "-other"] = [56.0, 196.0, 182.0, 1.0];
+colors[eventId + "-hardware-making"] = [65.0, 20.0, 90.0, 1.0]; // 5
+colors[eventId + "-security-safety"] = [255.0, 90.0, 70.0, 1.0]; // 1
+colors[eventId + "-ethics-society-politics"] = [255.0, 130.0, 50.0, 1.0]; // 2
+colors[eventId + "-art-beauty"] = [110.0, 80.0, 180.0, 1.0]; // 4
+colors[eventId + "-science-engineering"] = [4.0, 4.0, 4.0, 1.0];
+colors[eventId + "-entertainment"] = [255.0, 160.0, 0.0, 1.0]; // 3
+colors[eventId + "-ccc"] = [29.0, 29.0, 29.0, 1.0];
+colors[eventId + "-other"] = [107.0, 107.0, 107.0, 1.0];
 
 var allFormats = {
 	'Diskussion': { id:'discussion', label_en:'Discussion' },
@@ -688,6 +688,13 @@ function parseEvent(event, day, room) {
 				"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
        	});
 	}
+	
+	// session.enclosures.push({
+	// 	"url": streamURLs['31c3-saal-1'],
+	// 	"mimetype": "video/mp4",
+	// 	"type": "livestream",
+	// 	"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+	// });
 	
 	return session;
 };
