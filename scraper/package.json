@@ -1,14 +1,16 @@
 {
 	"private": true,
-	"name": "rp13-scraper",
-	"version": "0.0.1",
-	"description": "retrieve and convert xml dump of rp13 to importable json",
+	"name": "re-data-scraper",
+	"version": "0.0.3",
+	"description": "retrieve and convert dumps from various conferences to importable json",
 	"dependencies": {
 		"scrapyard": ">= 0.0.3",
 		"moment": ">= 2.2.1",
 		"ent": ">= 0.1.0",
 		"async": ">= 0.2.10",
-		"cradle": ">= 0.6.7"
+		"cradle": ">= 0.6.7",
+		"cheerio": ">= 0.18.0",
+		"sanitize-html": ">= 1.4.3"		
 	},
 	"engines": {
 		"node": "0.10.21"

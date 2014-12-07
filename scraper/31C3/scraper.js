@@ -2,10 +2,15 @@
 var fs = require('fs');
 var path = require('path');
 
+
 /* get npm modules */
 var scrapyard = require('scrapyard');
 var moment = require('moment');
 var ent = require('ent');
+var cheerio = require('cheerio');
+var sanitizeHtml = require('sanitize-html');
+
+var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/congress/2014/Fahrplan/"
@@ -23,8 +28,8 @@ var dayMonthChange = 0;
 var dayDayChange = 0;
 
 
-console.log("Real date: " + originalStartDate);
-console.log("Fake date: " + fakeDate);
+// console.log("Real date: " + originalStartDate);
+// console.log("Fake date: " + fakeDate);
 
 
 // Livestream test
@@ -483,21 +488,16 @@ function mkID(string) {
 
 function parseDay(dayXML) {
 	var date = dayXML.date;
-	console.log("XML date " + date);
 		
-	var comps = date.split("-");
-	
-		
+	var comps = date.split("-");	
 	var parseDate = new Date(date);
 	parseDate.setUTCFullYear(parseDate.getUTCFullYear() + dayYearChange);
 	parseDate.setUTCMonth(parseDate.getUTCMonth() + dayMonthChange);
 	parseDate.setUTCDate(parseDate.getUTCDate() + dayDayChange);		
 	
-	console.log("date " + date);
 	
 	var dateLabelDe = date;
 	var dateLabelEn = date;
-	console.log("date: " + parseDate + "day: " +  parseDate.getUTCDate());
 	
 	var monthDay = parseDate.getUTCDate();
 	switch (monthDay) {
@@ -562,6 +562,15 @@ function parseSpeaker(speakerJSON) {
 		"links": links,
 		"sessions": [] // fill me later
 	};
+	
+	// de-htmlize
+	// console.log(bio);	
+	// $ = cheerio.load(bio);
+	bio = sanitizeHtml(bio, {allowedTags: []});
+	console.log("bio " + bio);
+	// sys.puts(sys.inspect(handler.dom, false, null));
+	
+	
 	var imageHost = "https://events.ccc.de/congress/2014/Fahrplan";
 	if (speakerJSON.photo) {
 		result['photo'] = speakerJSON.photo;
@@ -670,7 +679,7 @@ function parseEvent(event, day, room) {
 	};
 	
 	if (!session.format) {
-		console.log("Session " + session.id + " (" + session.title + ") has no format")
+		log.warn("Session " + session.id + " (" + session.title + ") has no format")
 		session["format"] = allFormats['lecture'];
 	}
 	
