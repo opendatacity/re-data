@@ -34,12 +34,12 @@ var streamURLs = {
 };
 
 var colors = {};
-colors[eventId + "-hardware-making"] = [65.0, 20.0, 90.0, 1.0]; // 5
+colors[eventId + "-hardware-making"] = [110.0, 80.0, 180.0, 1.0]; // 4
 colors[eventId + "-security-safety"] = [255.0, 90.0, 70.0, 1.0]; // 1
 colors[eventId + "-ethics-society-politics"] = [255.0, 130.0, 50.0, 1.0]; // 2
-colors[eventId + "-art-beauty"] = [110.0, 80.0, 180.0, 1.0]; // 4
-colors[eventId + "-science-engineering"] = [4.0, 4.0, 4.0, 1.0];
-colors[eventId + "-entertainment"] = [255.0, 160.0, 0.0, 1.0]; // 3
+colors[eventId + "-art-beauty"] = [255.0, 160.0, 0.0, 1.0]; // 3
+colors[eventId + "-science"] = [132.0, 88.0, 223.0, 1.0]; // even lighter purple
+colors[eventId + "-entertainment"] = [65.0, 20.0, 90.0, 1.0]; // 5
 colors[eventId + "-ccc"] = [29.0, 29.0, 29.0, 1.0];
 colors[eventId + "-other"] = [107.0, 107.0, 107.0, 1.0];
 
