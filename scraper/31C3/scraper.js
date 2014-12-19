@@ -626,7 +626,8 @@ function parseTrackFromEvent(eventXML) {
 	return {
 		"id": id,
 		"color":  color,
-		"label_en": trackName.toString()
+		"label_en": trackName.toString(),
+        "label_de": trackName.toString()
 	};
 };
 
@@ -663,8 +664,8 @@ function parseEvent(event, day, room) {
 		"id": mkID("session-" + event["guid"]),
 		"title": event.title.toString(),
 		"url": baseURL + "events/" +  event.id + ".html",
-		"abstract": event.abstract.toString(),
-		"description": event.description.toString(),
+		"abstract": sanitizeHtml(event.abstract.toString(), {allowedTags: []}),
+		"description": sanitizeHtml(event.description.toString(), {allowedTags: []}),
 		"begin": parseDate(event.date),
 		"end": parseEnd(event.date, event.duration),
 		"track": allTracks[mkID(event.track)],
@@ -689,14 +690,14 @@ function parseEvent(event, day, room) {
 	
 	// HACK: Fake one video for App Review
 	// IF for Fnord News show
-	if (session['id'] == '31c3-session-mw1wjnnzwxzskm3ip5lg0g') {
-		session.enclosures.push({
-        		"url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
-				"mimetype": "video/mp4",
-				"type": "recording",
-				"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
-       	});
-	}
+    // if (session['id'] == '31c3-session-mw1wjnnzwxzskm3ip5lg0g') {
+    //     session.enclosures.push({
+    //                 "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
+    //             "mimetype": "video/mp4",
+    //             "type": "recording",
+    //             "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+    //            });
+    // }
 	
 	// session.enclosures.push({
 	// 	"url": streamURLs['31c3-saal-1'],
