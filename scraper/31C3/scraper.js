@@ -49,11 +49,9 @@ colors[eventId + "-ccc"] = [29.0, 29.0, 29.0, 1.0];
 colors[eventId + "-other"] = [107.0, 107.0, 107.0, 1.0];
 
 var allFormats = {
-	'Diskussion': { id:'discussion', label_en:'Discussion' },
-	'lecture':    { id:'lecture',    label_en:'Talk'       },
-	'workshop':   { id:'workshop',   label_en:'Workshop'   },
-	'Aktion':     { id:'action',     label_en:'Action'     },
-	'other':      { id:'other',      label_en:'Other'      },
+	'discussion': { id:'discussion', label_en:'Discussion' },
+	'talk':    { id:'talk',    label_en:'Talk'       },
+	'workshop':   { id:'workshop',   label_en:'Workshop'   }
 }
 
 var allLevels = {
@@ -660,6 +658,14 @@ function parseEvent(event, day, room) {
 	
 	var day = normalizeXMLDayDateKey(day["date"]);
 	
+	var eventTypeId = event.type.toString();
+	console.log("event type " + eventTypeId);
+	if (eventTypeId == 'lecture') {
+		eventTypeId = 'talk';
+	} else if (eventTypeId == 'other') {
+		eventTypeId = 'talk';
+	}
+
 	var session = {
 		"id": mkID("session-" + event["guid"]),
 		"title": event.title.toString(),
@@ -671,7 +677,7 @@ function parseEvent(event, day, room) {
 		"track": allTracks[mkID(event.track)],
 		"day": allDays[day],
 		"location": allRooms[room.id],
-		"format": allFormats[event.type.toString()],
+		"format": allFormats[eventTypeId],
 		"level": allLevels['advanced'],
 		"lang": allLanguages[event.language.toString() ? event.language.toString() : 'en'],
 		"speakers": [], // fill me later
