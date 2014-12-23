@@ -81,12 +81,12 @@ var allMaps = {
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/0floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/0floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor0",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor0/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+                    "size": {"width": 5940,
+                             "height": 4320}
                 },
 	    "pois": []
 	},
@@ -105,12 +105,12 @@ var allMaps = {
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/1floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/1floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor1",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor1/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+           "size": {"width": 5940,
+                    "height": 4320}
                 },
 	    "pois": []
 	},
@@ -129,12 +129,12 @@ var allMaps = {
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/2floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/2floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor2",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor2/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+           "size": {"width": 5940,
+                    "height": 4320}
                 },
 	    "pois": []
 	},
@@ -153,12 +153,12 @@ var allMaps = {
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/3floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/3floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor3",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor3/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+           "size": {"width": 5940,
+                    "height": 4320}
                 },
 	    "pois": []
 	},
@@ -177,12 +177,12 @@ var allMaps = {
 		"area": {"width": 1000.0, 
 		         "height": 530.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/4floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/4floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor4",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor4/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+           "size": {"width": 5940,
+                    "height": 4320}
                 },
 	    "pois": []
 	}				
