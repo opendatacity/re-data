@@ -687,7 +687,7 @@ function parseEvent(event, day, room) {
 	
 	if (!session.format) {
 		log.warn("Session " + session.id + " (" + session.title + ") has no format")
-		session["format"] = allFormats['lecture'];
+		session["format"] = allFormats['talk'];
 	}
 	
 	if (event.subtitle.toString() != "") {
