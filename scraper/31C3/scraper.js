@@ -9,6 +9,7 @@ var moment = require('moment');
 var ent = require('ent');
 var cheerio = require('cheerio');
 var sanitizeHtml = require('sanitize-html');
+var parseCSV = require('csv-parse');
 
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
@@ -463,6 +464,8 @@ var allPOIs = {
 	}	
 };
 
+var csvData = fs.readFileSync(__dirname + "/pois.csv");
+
 var data   = [];
 var allDays = {};
 var allRooms = {};
@@ -785,6 +788,7 @@ function handleResult(events, speakers, eventRecordings) {
 
 exports.scrape = function (callback) {
 	console.log("scrape");
+
 	
 	var scraper = new scrapyard({
 		cache: path.resolve(__dirname, '..', '.cache'), 
@@ -806,18 +810,90 @@ exports.scrape = function (callback) {
 			var schedule = result.schedule;
 			
 			handleResult(schedule, speakers, []);
-			
-		    alsoAdd('day', allDays);
-		    alsoAdd('location', allRooms);
-		    alsoAdd('map', allMaps);
-		    alsoAdd('poi', allPOIs);  
-		    alsoAdd('track', allTracks);
-			
-
-
-			callback(data);
+	
+			parsePOIsFromCSV(csvData, function (pois) {
+			    alsoAdd('day', allDays);
+			    alsoAdd('location', allRooms);
+			    alsoAdd('map', allMaps);
+			    alsoAdd('poi', pois);  
+			    alsoAdd('track', allTracks);
+				alsoAdd('format', allFormats);
+				alsoAdd('language', allLanguages);				
+				
+				callback(data);				
+			});
 		});
 };
+
+function parsePOIsFromCSV(data, callback) {
+	parseCSV(csvData, {"delimiter": ";", 
+					   "auto_parse": false,
+					   "skip_empty_lines": true}, function(err, output){
+						   // console.log(output);
+						   
+						   
+			var pois = [];
+			
+			output.forEach(function (row) {
+				console.log(row);
+				var id = row[0];
+				
+				if (id == 'id' || id == '') return;
+				
+				var poi = {
+					"id": (eventId + "-poi-" + id),
+					"type": "poi",
+					"label_en": row[4],
+ 				    "label_de": row[5],
+					"category": row[6],
+					"positions": [], // fill me later
+	                "hidden": false,
+	                "priority": 1000,
+					"beacons": []
+				};
+				
+				var x = parseInt(row[2]);
+				var y = parseInt(row[3]);
+				var floors = row[1].split(",");					   
+				for (var i = floors.length - 1; i >= 0; i--) {
+					var floorID = eventId + "-level" + floors[i];
+					poi.positions.push(
+						{"map": floorID,
+						 "x": x,
+						 "y": y}
+					);
+				}
+				
+				pois.push(poi);
+			});
+			
+			console.log(pois);
+			
+			callback(pois);		
+	});
+};
+
+//
+// "poi-hall1": {
+// 	"id": eventId + "-poi-hall1",
+// 	"event": eventId,
+// 	"type": "poi",
+// 	"positions": [{"map": eventId + "-" + "level4",
+// 				   "x": 3520.0, "y": 2107.0},
+// 				  {"map": eventId + "-" + "level3",
+// 				   "x": 3520.0, "y": 2107.0},
+// 				  {"map": eventId + "-" + "level2",
+// 				   "x": 3520.0, "y": 1957.0}],
+// 	"category": "session-location",
+// 	"location": {"id": eventId + "-saal-1",
+// 				 "label_de": "Saal 1",
+// 				 "label_en": "Hall 1"},
+// 	"label_de": "Saal 1",
+// 	"label_en": "Hall 1",
+// 	"hidden": false,
+// 	"priority": 1000,
+// 	"beacons": []
+// },
 
 ////////////////
 	//
