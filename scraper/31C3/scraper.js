@@ -838,7 +838,15 @@ function parsePOIsFromCSV(data, callback) {
 				console.log(row);
 				var id = row[0];
 				
-				if (id == 'id' || id == '') return;
+				if (id == 'id' || 
+					id == '' || 
+					id == ' ' || 					
+					row[2] == '' || row[2] == ' ' ||
+					row[3] == '' || row[3] == ' ') 
+				{
+					console.log("skipping "  + row);
+					return;
+				}
 				
 				var poi = {
 					"id": (eventId + "-poi-" + id),
@@ -854,20 +862,23 @@ function parsePOIsFromCSV(data, callback) {
 				
 				var x = parseInt(row[2]);
 				var y = parseInt(row[3]);
-				var floors = row[1].split(",");					   
-				for (var i = floors.length - 1; i >= 0; i--) {
-					var floorID = eventId + "-level" + floors[i];
-					poi.positions.push(
-						{"map": floorID,
-						 "x": x,
-						 "y": y}
-					);
+				var floors = row[1].split(",");				
+				if (floors.length > 0 && floors[0] != '') {  
+					for (var i = floors.length - 1; i >= 0; i--) {
+						var floorID = eventId + "-level" + floors[i];
+						poi.positions.push(
+							{"map": floorID,
+							 "x": x,
+							 "y": y}
+						);
+					}
 				}
+				
+				console.log(poi);
+				
 				
 				pois.push(poi);
 			});
-			
-			console.log(pois);
 			
 			callback(pois);		
 	});

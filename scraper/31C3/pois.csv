@@ -11,4 +11,9 @@ hall2;4,3,2;4052;1473;Hall 2;Saal 2;session-location
 anti-terror-lounge;4;2951;2435;Anti-Terror Lounge;Anti-Terror Lounge;entertainment
 heaven;1;4396;1895;Heaven;Himmel;organisation
 ;;;;;;
-villa-straylight;4;4695;1789;Coffee Nerds;Coffee Nerds;food
+villa-straylight;;4695;1789;Coffee Nerds;Coffee Nerds;food
+food-hall1-a;;4695;1789; ; ;
+food-hall1-b;;4695;1789; ; ;
+wordlounge;;4695;1789; ; ;
+hall14;;4695;1789; ; ;
+hall13;;4695;1789; ; ;
