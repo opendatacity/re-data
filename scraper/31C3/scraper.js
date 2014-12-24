@@ -32,10 +32,15 @@ var dayDayChange = 0;
 // console.log("Fake date: " + fakeDate);
 
 
+// http://hls.stream.c3voc.de/hls/sN_L_Q.m3u8
+// N ∈ [1;5], L ∈ {native, translated}, Q ∈ {hd, sd, slides}. 
+
 // Livestream test
 var streamURLs = {
-	"31c3-saal-1": "http://delive.artestras.cshls.lldns.net/artestras/contrib/delive.m3u8",
-	"31c3-saal-2": "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+	"31c3-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
+	"31c3-saal-2": "http://hls.stream.c3voc.de/hls/s2_native_hd.m3u8",
+	"31c3-saal-g": "http://hls.stream.c3voc.de/hls/s3_native_hd.m3u8",
+	"31c3-saal-6": "http://hls.stream.c3voc.de/hls/s4_native_hd.m3u8"
 };
 
 var colors = {};
@@ -705,12 +710,14 @@ function parseEvent(event, day, room) {
     //            });
     // }
 	
-	// session.enclosures.push({
-	// 	"url": streamURLs['31c3-saal-1'],
-	// 	"mimetype": "video/mp4",
-	// 	"type": "livestream",
-	// 	"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
-	// });
+	var streamURL = streamURLs[session.location.id];
+	if (streamURL) {
+		session.enclosures.push({
+			"url": streamURL,
+			"mimetype": "video/mp4",
+			"type": "livestream"
+		});	
+	}
 	
 	return session;
 };
