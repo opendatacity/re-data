@@ -72,9 +72,9 @@ var allLanguages = {
 };
 
 var allMaps = {
-	'level0': {
+	'map-level0': {
 		'event': eventId,
-		'id': eventId + "-" + "level0",
+		'id': eventId + "-map-" + "level0",
 		'type': "map",
 		'label_de': "Congress Center Hamburg",
 		'label_en': "Congress Center Hamburg",
@@ -96,9 +96,9 @@ var allMaps = {
                 },
 	    "pois": []
 	},
-	'level1': {
+	'map-level1': {
 		'event': eventId,
-		'id': eventId + "-" + "level1",
+		'id': eventId + "-map-" + "level1",
 		'type': "map",
 		'label_de': "Congress Center Hamburg",
 		'label_en': "Congress Center Hamburg",		
@@ -120,9 +120,9 @@ var allMaps = {
                 },
 	    "pois": []
 	},
-	'level2': {
+	'map-level2': {
 		'event': eventId,
-		'id': eventId + "-" + "level2",
+		'id': eventId + "-map-" + "level2",
 		'type': "map",
 		'label_de': "Congress Center Hamburg",
 		'label_en': "Congress Center Hamburg",		
@@ -144,9 +144,9 @@ var allMaps = {
                 },
 	    "pois": []
 	},
-	'level3': {
+	'map-level3': {
 		'event': eventId,
-		'id': eventId + "-" + "level3",
+		'id': eventId + "-map-" + "level3",
 		'type': "map",
 		'label_de': "Congress Center Hamburg",
 		'label_en': "Congress Center Hamburg",		
@@ -168,9 +168,9 @@ var allMaps = {
                 },
 	    "pois": []
 	},
-	'level4': {
+	'map-level4': {
 		'event': eventId,
-		'id': eventId + "-" + "level4",
+		'id': eventId + "-map-" + "level4",
 		'type': "map",
 		'label_de': "Congress Center Hamburg",
 		'label_en': "Congress Center Hamburg",		
@@ -193,6 +193,31 @@ var allMaps = {
 	    "pois": []
 	}				
 };
+
+// allMaps = {	'fake': {
+// 		'event': eventId,
+// 		'id': "fake",
+// 		'type': "map",
+// 		'label_de': "Congress Center Hamburg",
+// 		'label_en': "Congress Center Hamburg",
+// 		'floor_label_de': "Erdgeschoss",
+// 		'floor_label_en': "Ground Floor",
+// 		"is_outdoor": true,
+// 		"is_indoor": true,
+// 		"floor": 0,
+// 		"order_index": 0,
+// 		"area": {"width": 1000.0,
+// 		         "height": 530.0},
+// 		"tiles": {
+//                     "base_url": "http://data.conference.bits.io/maps/31c3/floor0",
+//                     "large_image_url": "http://data.conference.bits.io/maps/31c3/floor0/mini.png",
+//                     "tile_size": 512,
+//                     "tile_file_extension": "png",
+//                     "size": {"width": 5940,
+//                              "height": 4320}
+//                 },
+// 	    "pois": []
+// 	} };
 
 var allPOIs = {
 	"poi-hall1": {
@@ -828,9 +853,7 @@ exports.scrape = function (callback) {
 function parsePOIsFromCSV(data, callback) {
 	parseCSV(csvData, {"delimiter": ";", 
 					   "auto_parse": false,
-					   "skip_empty_lines": true}, function(err, output){
-						   // console.log(output);
-						   
+					   "skip_empty_lines": true}, function(err, output) {
 						   
 			var pois = [];
 			
@@ -849,7 +872,7 @@ function parsePOIsFromCSV(data, callback) {
 				}
 				
 				var poi = {
-					"id": (eventId + "-poi-" + id),
+					"id": (eventId + "-pointofinterest-" + id),
 					"type": "poi",
 					"label_en": row[4],
  				    "label_de": row[5],
@@ -865,17 +888,15 @@ function parsePOIsFromCSV(data, callback) {
 				var floors = row[1].split(",");				
 				if (floors.length > 0 && floors[0] != '') {  
 					for (var i = floors.length - 1; i >= 0; i--) {
-						var floorID = eventId + "-level" + floors[i];
-						poi.positions.push(
-							{"map": floorID,
-							 "x": x,
-							 "y": y}
-						);
+						var floorID = eventId + "-map-level" + floors[i];
+							poi.positions.push(
+								{"map": floorID,
+								 "x": x,
+								 "y": y}
+							);
+
 					}
 				}
-				
-				console.log(poi);
-				
 				
 				pois.push(poi);
 			});
