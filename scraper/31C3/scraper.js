@@ -692,7 +692,7 @@ function parseEvent(event, day, room) {
 	var day = normalizeXMLDayDateKey(day["date"]);
 	
 	var eventTypeId = event.type.toString();
-	console.log("event type " + eventTypeId);
+	// console.log("event type " + eventTypeId);
 	if (eventTypeId == 'lecture') {
 		eventTypeId = 'talk';
 	} else if (eventTypeId == 'other') {
@@ -858,7 +858,7 @@ function parsePOIsFromCSV(data, callback) {
 			var pois = [];
 			
 			output.forEach(function (row) {
-				console.log(row);
+				// console.log(row);
 				var id = row[0];
 				
 				if (id == 'id' || 
@@ -867,7 +867,7 @@ function parsePOIsFromCSV(data, callback) {
 					row[2] == '' || row[2] == ' ' ||
 					row[3] == '' || row[3] == ' ') 
 				{
-					console.log("skipping "  + row);
+					// console.log("skipping "  + row);
 					return;
 				}
 				
