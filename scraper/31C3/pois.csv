@@ -1,19 +1,19 @@
-id;floors;x;y;label_en;label_de;category
-hall3;0;1938;1900;Hall 3;Saal 3;session-location
-revolution9;0;3478;3179;Revolution #9;Revolution #9;entertainment
-hall6;0;4016;2464;Hall 6;Saal 6;session-location
-cert;0;4246;1163;CERT;CERT;safety
-speakers-room;0;4458;1032;Speakers Room;Speaker-Anmelung;organisation
-cash-desk;0;4065;1291;Cash Desk;Kasse;service
-merchendise;0;3875;1409;Merchendise;Merchendise;shopping
-hall1;4,3,2;2982;1899;Hall 1;Saal 1;session-location
-hall2;4,3,2;4052;1473;Hall 2;Saal 2;session-location
-anti-terror-lounge;4;2951;2435;Anti-Terror Lounge;Anti-Terror Lounge;entertainment
-heaven;1;4396;1895;Heaven;Himmel;organisation
-halla;1;735;2472;Hall A;Saal A;session-location
-hallb;1;625;2146;Hall B;Saal B;session-location
-hallc;1;555;1794;Hall C;Saal C;session-location
-;;;;;;
-;;;;;;
-;;;;;;
-;;;;;;
+id;floors;x;y;label_en;label_de;category;location_id;location_label_de;location_label_en
+hall3;0;1938;1900;Hall 3;Saal 3;session-location;;;
+revolution9;0;3478;3179;Revolution #9;Revolution #9;entertainment;;;
+hall6;0;4016;2464;Hall 6;Saal 6;session-location;;;
+cert;0;4246;1163;CERT;CERT;safety;;;
+speakers-room;0;4458;1032;Speakers Room;Speaker-Anmelung;organisation;;;
+cash-desk;0;4065;1291;Cash Desk;Kasse;service;;;
+merchendise;0;3875;1409;Merchendise;Merchendise;shopping;;;
+hall1;4,3,2;2982;1899;Hall 1;Saal 1;session-location;;;
+hall2;4,3,2;4052;1473;Hall 2;Saal 2;session-location;;;
+anti-terror-lounge;4;2951;2435;Anti-Terror Lounge;Anti-Terror Lounge;entertainment;;;
+heaven;1;4396;1895;Heaven;Himmel;organisation;;;
+halla;1;735;2472;Hall A;Saal A;session-location;;;
+hallb;1;625;2146;Hall B;Saal B;session-location;;;
+hallc;1;555;1794;Hall C;Saal C;session-location;;;
+info-desk;0;3157;2255;Info Desk;Info Desk;organisation;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
