@@ -10,9 +10,9 @@ hall1;4,3,2;2982;1899;Hall 1;Saal 1;session-location
 hall2;4,3,2;4052;1473;Hall 2;Saal 2;session-location
 anti-terror-lounge;4;2951;2435;Anti-Terror Lounge;Anti-Terror Lounge;entertainment
 heaven;1;4396;1895;Heaven;Himmel;organisation
-;;;;;;
-;;;;;;
-;;;;;;
+halla;1;735;2472;Hall A;Saal A;session-location
+hallb;1;625;2146;Hall B;Saal B;session-location
+hallc;1;555;1794;Hall C;Saal C;session-location
 ;;;;;;
 ;;;;;;
 ;;;;;;
