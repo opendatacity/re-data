@@ -18,4 +18,5 @@ hall13;1;3638;1277;Hall 13;Saal 13;session-location;;;
 hall14;1;3792;1177;Hall 14;Saal 14;session-location;;;
 hall15;1;3981;1089;Hall 15;Saal 15;session-location;;;
 hallgsm;1;3511;1370;GSM;GSM;session-location;;;
-;;;;;;;;;
+noc-helpdesk;1;2626;2336;NOC Helpdesk;NOC Helpdesk;service;;;
+noc;1;2972;2531;NOC;NOC;organisation;;;
