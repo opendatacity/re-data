@@ -809,8 +809,6 @@ function handleResult(events, speakers, eventRecordings) {
 				
 				// Videos
 				// ------
-				// console.log("find ", Object.keys(eventRecordings));
-				
 				var recordingJSON = null;
 				
 				eventRecordings.forEach(function (element) {
@@ -819,23 +817,14 @@ function handleResult(events, speakers, eventRecordings) {
 						recordingJSON = element;
 					}
 				});
-				if (recordingJSON) {
-					console.log("session ", recordingJSON.link, "title ", eventJSON.title);												
-					console.log("rec ", recordingJSON.recording);
+				if (recordingJSON && recordingJSON.recording) {
 					eventJSON.enclosures.push({
-						"url": recording,
+						"url": recordingJSON.recording.recording_url,
 						"mimetype": "video/mp4",
-						"type": "livestream"
+						"type": "recording",
+						"thumbnail": recordingJSON.thumb
 					});						
 				}
-					// if (eventJSON.url ==  element.link) {
-// 						console.log("session ", eventJSON.url);
-// 						return true;
-// 					} else {
-// 						return false;
-//
-// 					}
-// 				});
    				 
 				addEntry('session', eventJSON);
 			});
@@ -914,9 +903,11 @@ exports.scrape = function (callback) {
 										return rec.mime_type == "video/mp4" || rec.mime_type == "vnd.voc/h264-hd";
 									});
 												   
-									return {"link": er.link,
-									"thumb": er.thumb_url,
-									"recording": rercording.length > 0 ? rercording[0] : null};
+									return {
+										"link": er.link,
+										"thumb": er.thumb_url,
+										"recording": rercording.length > 0 ? rercording[0] : null
+									};
 								});
 								
 											   
@@ -937,9 +928,10 @@ exports.scrape = function (callback) {
 					}
 				});
 			},
-			sendezentrum: function (callback) {
-				callback(null, 'foo');
-				return;				
+			sendezentrum: function (callback) {	
+				callback(null, 'sende');
+				return;
+				
 			    ical.fromURL('https://www.google.com/calendar/ical/ck0ov9f0t6omf205r47uq6tnh4%40group.calendar.google.com/public/basic.ics', {}, function(err, data) {
 			         for (var k in data){
 			           if (data.hasOwnProperty(k)) {
@@ -973,7 +965,24 @@ exports.scrape = function (callback) {
 						   console.log("People: ", people);
 						   
 						   var event = {
- 							   "id": mkID(md5(ev.uid))
+ 							   "id": mkID(md5(ev.uid)),
+							   "event": eventId,
+							   "type": "session",
+							   "title": title,
+							   "abstract": "",
+							   "description": "",
+							   "begin": parseDate(start.toISOString()),
+							   "end": parseDate(ev.end.toISOString()),
+							   "lang": allLanguages["de"],
+							   "format": allFormats["talk"],
+							   "level": allLevels["advanced"],
+							   "enclosures": [],
+							   "location": {},
+							   "links": [],
+							   "location": {},
+							   "track": allTracks[""],
+							   "url": null,
+							   
  						   };
 						   
 			             console.log("Conference",
