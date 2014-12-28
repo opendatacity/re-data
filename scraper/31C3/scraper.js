@@ -991,7 +991,7 @@ exports.scrape = function (callback) {
 							   "begin": parseDate(start.toISOString()),
 							   "end": parseDate(ev.end.toISOString()),
 							   "lang": allLanguages["de"],
-							   "format": allFormats["talk"],
+							   "format": title.match(/Workshop/i) ? allFormats["workshop"] : allFormats["talk"],
 							   "level": allLevels["advanced"],
 							   "enclosures": [],
 							   "location": {},
