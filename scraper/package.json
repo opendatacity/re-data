@@ -11,7 +11,10 @@
 		"cradle": ">= 0.6.7",
 		"cheerio": ">= 0.18.0",
 		"sanitize-html": ">= 1.4.3",
-		"csv-parse": ">= 0.0.6"
+		"csv-parse": ">= 0.0.6",
+		"async": ">= 0.9.0",
+		"MD5": ">= 1.2.1",
+		"ical": ">= 0.3.1"	
 	},
 	"engines": {
 		"node": "0.10.21"
