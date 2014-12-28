@@ -929,9 +929,6 @@ exports.scrape = function (callback) {
 				});
 			},
 			sendezentrum: function (callback) {	
-				callback(null, 'sende');
-				return;
-				
 			    ical.fromURL('https://www.google.com/calendar/ical/ck0ov9f0t6omf205r47uq6tnh4%40group.calendar.google.com/public/basic.ics', {}, function(err, data) {
 			         for (var k in data){
 			           if (data.hasOwnProperty(k)) {
@@ -964,11 +961,31 @@ exports.scrape = function (callback) {
 						   console.log("Title: ", title);
 						   console.log("People: ", people);
 						   
+						   var speakers = people.map(function (personname) {
+							   var speaker = {
+								   "event": eventId,
+								   "id": mkID("sendezentrum-" + personname),
+								   "name": personname,
+								   "type": "speaker",
+								   "photo": "",
+								   "biography": "",
+								   "links": []
+							   };
+							   // Hardcode some people
+							   if (personname == "Tim Pritlove") {
+								   speaker = allSpeakers["31c3-3809"];
+							   } else if (personname == "Linus Neumann") {
+								   speaker = allSpeakers["31c3-3995"];
+							   }
+							   return speaker;
+						   });
+						   allSpeakers[speakers.id] = speakers;
+						   
 						   var event = {
  							   "id": mkID(md5(ev.uid)),
 							   "event": eventId,
 							   "type": "session",
-							   "title": title,
+							   "title": title.trim(),
 							   "abstract": "",
 							   "description": "",
 							   "begin": parseDate(start.toISOString()),
@@ -979,19 +996,43 @@ exports.scrape = function (callback) {
 							   "enclosures": [],
 							   "location": {},
 							   "links": [],
-							   "location": {},
-							   "track": allTracks[""],
-							   "url": null,
-							   
+							   "day": null,
+							   "location": {
+								   "event": eventId,
+								   "floor": 1,
+								   "id": "31c3-sendezentrum",
+								   "is_stage": false,
+								   "label_de": "Sendezentrum",
+								   "label_en": "Broadcast Center",
+								   "order_index": 10,
+								   "type": "location"
+							   },
+							   "track": allTracks["31c3-art-culture"],
+							   "url": ev.url,
+							   "speakers": speakers.map(function (speaker) {
+								   return {
+									   "id": speaker.id,
+									   "name": speaker.name
+								   };
+							   })
  						   };
 						   
-			             console.log("Conference",
-						   ev.uid,
-			               ev.summary,
-			               'is in',
-						   start,
-			               ev.location,
-			               'on the', ev.start.getDate(), 'of', months[ev.start.getMonth()]);
+						   
+						   
+						   var day = normalizeXMLDayDateKey(event.begin);
+						   event["day"] = allDays[day];
+						   
+						   allRooms[event.location.id] = event.location
+						   
+						   addEntry('session', event);
+						   
+						   // 			             console.log("Conference",
+						   // ev.uid,
+						   // 			               ev.summary,
+						   // 			               'is in',
+						   // start,
+						   // 			               ev.location,
+						   // 			               'on the', ev.start.getDate(), 'of', months[ev.start.getMonth()]);
 						   
 						   console.log(event);
 			           }
