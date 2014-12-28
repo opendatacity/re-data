@@ -1007,7 +1007,7 @@ exports.scrape = function (callback) {
 								   "order_index": 10,
 								   "type": "location"
 							   },
-							   "track": allTracks["31c3-art-culture"],
+							   "track": title.match(/Workshop/i) ? allTracks["31c3-art-culture"] : allTracks["31c3-entertainment"],
 							   "url": ev.url,
 							   "speakers": speakers.map(function (speaker) {
 								   return {
