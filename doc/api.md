@@ -119,7 +119,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 
 ## Sessions
 
-### GET `/<event-id>/sessions`
+### GET `/events/<event-id>/sessions`
 
 ```` javascript
 [{
@@ -192,7 +192,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }]
 ````
 
-### GET `/<event-id>/sessions/<session-id>`
+### GET `/events/<event-id>/sessions/<session-id>`
 
 *single object, as above*
 
@@ -222,7 +222,7 @@ Links is a list of related webpages. Currently we provide only links to youtube/
 
 Speakers are people performing sessions.
 
-### GET `/<event-id>/speakers`
+### GET `/events/<event-id>/speakers`
 
 ```` javascript
 [{
@@ -273,7 +273,7 @@ Speaker `links` (optionally) contain links to web presences of the speaker. `url
 * Values of ```"service"```: ```"twitter"```, ```"facebook"```, ```"app.net"```, ```"web"```, ```"github"```, `web` is default.
 
 
-### GET `/<event-id>/speakers/<id>`
+### GET `/events/<event-id>/speakers/<id>`
 
 *single object, as above*
 
@@ -281,7 +281,7 @@ Speaker `links` (optionally) contain links to web presences of the speaker. `url
 
 Tracks are topic-based collections of sessions
 
-### GET `/<event-id>/tracks`
+### GET `/events/<event-id>/tracks`
 
 ```` javascript
 [
@@ -301,7 +301,7 @@ Tracks are topic-based collections of sessions
 ]
 ````
 
-### GET `/<event-id>/tracks/<track-id>`
+### GET `/events/<event-id>/tracks/<track-id>`
 
 *single object, as above*
 
@@ -309,7 +309,7 @@ Tracks are topic-based collections of sessions
 
 Locations are specified spaces on the compound and may be stages.
 
-### GET `/<event-id>/locations`
+### GET `/events/<event-id>/locations`
 
 ```` javascript
 [
@@ -333,7 +333,7 @@ Locations are specified spaces on the compound and may be stages.
 - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
 - `point_of_interest`: (Optional) Relationship to a point of interest, if any. `id` and at least one `label_` properties are required if present
 
-### GET `/<event-id>/locations/<location-id>`
+### GET `/events/<event-id>/locations/<location-id>`
 
 *single object as above*
 
@@ -341,7 +341,7 @@ Locations are specified spaces on the compound and may be stages.
 
 Maps represent maps of the conference venue. A map refrences on more points of interest (POIs). See below for POIs.
 
-### GET `/<event-id>/maps`
+### GET `/events/<event-id>/maps`
 
 
 ```` javascript
@@ -398,7 +398,7 @@ Maps represent maps of the conference venue. A map refrences on more points of i
 - `pois`: (Required) List of the `id`s of all `pois` on this map. Can be empty.	
 Specifies the base URL for image tiles. 
 
-### GET `/<event-id>/maps/<map-id>`
+### GET `/events/<event-id>/maps/<map-id>`
 
 Same as above, but returning only one map.
 
@@ -406,7 +406,7 @@ Same as above, but returning only one map.
 
 Represents a single point of interest on a map. Each POI belongs to a map object. 
 
-### GET `/<event-id>/pois`
+### GET `/events/<event-id>/pois`
 
 ```` javascript
 [
@@ -484,7 +484,7 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 
 
 
-### GET `/<event-id>/pois/<poi-id>`
+### GET `/events/<event-id>/pois/<poi-id>`
 
 ## Days
 
@@ -492,7 +492,7 @@ Days group several session by a slice of time, usually one day.
 
 __Note:__ The `date` property is a calendar date (aka symbolic date) not a point in time. Therefore it is interpreted in the timezone of the conference.
 
-### GET `/<event-id>/days`
+### GET `/events/<event-id>/days`
 
 ```` javascript
 [
@@ -516,7 +516,7 @@ __Note:__ The `date` property is a calendar date (aka symbolic date) not a point
 ]
 ````
 
-### GET `/<event-id>/days/<day-id>`
+### GET `/events/<event-id>/days/<day-id>`
 
 *single object as above*
 
@@ -524,7 +524,7 @@ __Note:__ The `date` property is a calendar date (aka symbolic date) not a point
 
 Formats indicate the practical execution of a session, like talk, discussion, workshop etc.
 
-### GET `/<event-id>/formats`
+### GET `/events/<event-id>/formats`
 
 ```` javascript
 [
@@ -547,7 +547,7 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 ]
 ````
 
-### GET `/<event-id>/formats/<format-id>`
+### GET `/events/<event-id>/formats/<format-id>`
 
 *single object as above*
 
@@ -555,7 +555,7 @@ Formats indicate the practical execution of a session, like talk, discussion, wo
 
 Levels indivate the amount of preexisting knowledge expected from the respective audience
 
-### GET `/<event-id>/levels`
+### GET `/events/<event-id>/levels`
 
 ```` javascript
 [
@@ -578,13 +578,13 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ]
 ````
 
-### GET `/<event-id>/levels/<level-id>`
+### GET `/events/<event-id>/levels/<level-id>`
 
 *single object as above*
 
 ## Languages
 
-### GET `/<event-id>/languages`
+### GET `/events/<event-id>/languages`
 
 ```` javascript
 [
@@ -602,7 +602,7 @@ Levels indivate the amount of preexisting knowledge expected from the respective
 ]
 ````
 
-### GET `/<event-id>/languages/<language-id>`
+### GET `/events/<event-id>/languages/<language-id>`
 
 *single object as above*
 
