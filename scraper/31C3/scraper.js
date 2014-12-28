@@ -2,7 +2,6 @@
 var fs = require('fs');
 var path = require('path');
 
-
 /* get npm modules */
 var scrapyard = require('scrapyard');
 var moment = require('moment');
@@ -10,6 +9,11 @@ var ent = require('ent');
 var cheerio = require('cheerio');
 var sanitizeHtml = require('sanitize-html');
 var parseCSV = require('csv-parse');
+var async = require('async');
+var md5 = require('MD5');
+var ical = require('ical');
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
@@ -27,7 +31,6 @@ var sessionStartDateOffsetMilliSecs = 0; //fakeDate.getTime() - originalStartDat
 var dayYearChange = 0;
 var dayMonthChange = 0;
 var dayDayChange = 0;
-
 
 // console.log("Real date: " + originalStartDate);
 // console.log("Fake date: " + fakeDate);
@@ -803,6 +806,36 @@ function handleResult(events, speakers, eventRecordings) {
    							eventJSON.speakers.push(person);
 						}
    				});
+				
+				// Videos
+				// ------
+				// console.log("find ", Object.keys(eventRecordings));
+				
+				var recordingJSON = null;
+				
+				eventRecordings.forEach(function (element) {
+					if (eventJSON.url == element.link) {
+						console.log(element.link);
+						recordingJSON = element;
+					}
+				});
+				if (recordingJSON) {
+					console.log("session ", recordingJSON.link, "title ", eventJSON.title);												
+					console.log("rec ", recordingJSON.recording);
+					eventJSON.enclosures.push({
+						"url": recording,
+						"mimetype": "video/mp4",
+						"type": "livestream"
+					});						
+				}
+					// if (eventJSON.url ==  element.link) {
+// 						console.log("session ", eventJSON.url);
+// 						return true;
+// 					} else {
+// 						return false;
+//
+// 					}
+// 				});
    				 
 				addEntry('session', eventJSON);
 			});
@@ -823,31 +856,153 @@ exports.scrape = function (callback) {
 		connections: 10
 	});
 	
+	async.series(
+		{
+			// lectures: function (callback) {
+			// 	json_requester.get({
+			// 			urls: {
+			// 				speakers: speakers_url,
+			// 				schedule: schedule_url,
+			// 			}
+			// 		},
+			// 		function (result) {
+			// 			var speakers = result.speakers.schedule_speakers.speakers;
+			// 			var schedule = result.schedule;
+			//
+			// 			handleResult(schedule, speakers, []);
+			//
+			// 			parsePOIsFromCSV(csvData, function (pois) {
+			// 			    alsoAdd('day', allDays);
+			// 			    alsoAdd('location', allRooms);
+			// 			    alsoAdd('map', allMaps);
+			// 			    alsoAdd('poi', pois);
+			// 			    alsoAdd('track', allTracks);
+			// 				alsoAdd('format', allFormats);
+			// 				alsoAdd('language', allLanguages);
+			//
+			// 				callback(null, 'lectures');
+			// 			});
+			// 		});
+			// },
+			lectures: function (callback) {
+				json_requester.get({
+					urls: {conference: "http://api.media.ccc.de/public/conferences/54"}
+				},
+				function (result) {
+					if (result.conference.events) {
+						var videoAPICallURLs = {
+							speakers: speakers_url,
+							schedule: schedule_url,
+						};
+					console.log(result.conference.events);												
+						result.conference.events.forEach(function (event) {
+							videoAPICallURLs[event.guid] = event.url;
+						});
+
+						json_requester.get({urls: videoAPICallURLs},
+							function (result) {
+											   
+								var speakers = result.speakers.schedule_speakers.speakers;
+								var schedule = result.schedule;
+								delete result.schedule;
+								delete result.speakers;
+			
+								var eventRecordingJSONs = toArray(result);
+								// console.log("result! ", eventRecordingJSONs);
+								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
+									var rercording = er.recordings.filter(function (rec, index, all) {
+										return rec.mime_type == "video/mp4" || rec.mime_type == "vnd.voc/h264-hd";
+									});
+												   
+									return {"link": er.link,
+									"thumb": er.thumb_url,
+									"recording": rercording.length > 0 ? rercording[0] : null};
+								});
+								
+											   
+								handleResult(schedule, speakers, eventRecordingJSONs);
 	
-	json_requester.get({
-			urls: {
-				speakers: speakers_url,
-				schedule: schedule_url,
+								parsePOIsFromCSV(csvData, function (pois) {
+									alsoAdd('day', allDays);
+									alsoAdd('location', allRooms);
+									alsoAdd('map', allMaps);
+									alsoAdd('poi', pois);  
+									alsoAdd('track', allTracks);
+									alsoAdd('format', allFormats);
+									alsoAdd('language', allLanguages);				
+				
+									callback(null, 'lectures');				
+								});											   
+							});						
+					}
+				});
+			},
+			sendezentrum: function (callback) {
+				callback(null, 'foo');
+				return;				
+			    ical.fromURL('https://www.google.com/calendar/ical/ck0ov9f0t6omf205r47uq6tnh4%40group.calendar.google.com/public/basic.ics', {}, function(err, data) {
+			         for (var k in data){
+			           if (data.hasOwnProperty(k)) {
+						   
+						   var ev = data[k];
+						   var start = ev.start;
+						   
+						   var matches = ev.summary.match(/(.+ )\(([^)]+)\)/i);
+						   if (!matches) {
+							   
+							   console.log("Miss: " ,ev.summary);
+							   continue;
+							
+						   }
+						   var title = matches[1];
+						   var people = matches[2];
+						   if (people) {
+						   	  people = people.split(/\band|\bund|\b,/i).map(function (item) {
+								  return item.trim();
+						   	  });
+							  people = people.filter(function (item) {
+								  var match = item.match(/jemand|gast/i);
+								  if (match) {
+									  return false;
+								  } else {
+									  return true;
+								  }
+							  });
+						   }
+						   console.log("Title: ", title);
+						   console.log("People: ", people);
+						   
+						   var event = {
+ 							   "id": mkID(md5(ev.uid))
+ 						   };
+						   
+			             console.log("Conference",
+						   ev.uid,
+			               ev.summary,
+			               'is in',
+						   start,
+			               ev.location,
+			               'on the', ev.start.getDate(), 'of', months[ev.start.getMonth()]);
+						   
+						   console.log(event);
+			           }
+			         }
+					 callback(null, 'sendezentrum');
+			       });
+				
 			}
 		},
-		function (result) {
-			var speakers = result.speakers.schedule_speakers.speakers;
-			var schedule = result.schedule;
-			
-			handleResult(schedule, speakers, []);
+		function (err, results) {
+			if (!err) {
+				callback(data);
+			} else {
+				console.log(err);
+			}
+		}
+		
+	);
 	
-			parsePOIsFromCSV(csvData, function (pois) {
-			    alsoAdd('day', allDays);
-			    alsoAdd('location', allRooms);
-			    alsoAdd('map', allMaps);
-			    alsoAdd('poi', pois);  
-			    alsoAdd('track', allTracks);
-				alsoAdd('format', allFormats);
-				alsoAdd('language', allLanguages);				
-				
-				callback(data);				
-			});
-		});
+
 };
 
 function parsePOIsFromCSV(data, callback) {
