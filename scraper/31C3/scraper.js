@@ -980,6 +980,18 @@ exports.scrape = function (callback) {
 							   return speaker;
 						   });
 						   allSpeakers[speakers.id] = speakers;
+						   var theLocation = {
+								   "event": eventId,
+								   "floor": 1,
+								   "id": "31c3-sendezentrum",
+								   "is_stage": false,
+								   "label_de": "Sendezentrum",
+								   "label_en": "Broadcast Center",
+								   "order_index": 10,
+								   "type": "location"
+						   };
+							
+						   allRooms[theLocation.id] = theLocation;
 						   
 						   var event = {
  							   "id": mkID(md5(ev.uid)),
@@ -997,16 +1009,7 @@ exports.scrape = function (callback) {
 							   "location": {},
 							   "links": [],
 							   "day": null,
-							   "location": {
-								   "event": eventId,
-								   "floor": 1,
-								   "id": "31c3-sendezentrum",
-								   "is_stage": false,
-								   "label_de": "Sendezentrum",
-								   "label_en": "Broadcast Center",
-								   "order_index": 10,
-								   "type": "location"
-							   },
+							   "location": theLocation,
 							   "track": title.match(/Workshop/i) ? allTracks["31c3-art-culture"] : allTracks["31c3-entertainment"],
 							   "url": ev.url,
 							   "speakers": speakers.map(function (speaker) {
