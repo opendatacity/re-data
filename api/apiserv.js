@@ -40,6 +40,13 @@ var db = null;
 
 var app = express();
 
+// enable Cross-Origin Resource Sharing
+// http://enable-cors.org/server_expressjs.html
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // api: events
 
