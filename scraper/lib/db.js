@@ -167,15 +167,24 @@ function updateCouchDB(db, data, callback) {
 				log.info('Fetching "'+couchDBView+'" for "'+item.event+'"');
 				db.view(couchDBView, {include_docs: true, startkey: [item.event], endkey: [item.event, {}]}, function(err, docs) {
 
-					// ... and store these entries in a cache.
-					var cache = {};
-					docs.forEach(function (doc) {
-						cache[doc.id] = doc;
-					});
-					caches[cacheKey] = cache;
+					if(err) {
+						log.warn(err.name + ' ' + err.message);
+					}
 
-					// Well, we should return the found item
-					callback(cache[item.id]);
+					if(docs) {
+						// ... and store these entries in a cache.
+						var cache = {};
+						docs.forEach(function (doc) {
+							cache[doc.id] = doc;
+						});
+						caches[cacheKey] = cache;
+
+						// Well, we should return the found item
+						callback(cache[item.id]);
+					} else {
+						// run callback with empty element
+						callback({});
+					}
 				})
 			}
 		}
