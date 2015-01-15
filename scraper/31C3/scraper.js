@@ -913,14 +913,6 @@ exports.scrape = function (callback) {
 								handleResult(schedule, speakers, eventRecordingJSONs);
 	
 								parsePOIsFromCSV(csvData, function (pois) {
-									alsoAdd('day', allDays);
-									alsoAdd('location', allRooms);
-									alsoAdd('map', allMaps);
-									alsoAdd('poi', pois);  
-									alsoAdd('track', allTracks);
-									alsoAdd('format', allFormats);
-									alsoAdd('language', allLanguages);				
-				
 									callback(null, 'lectures');				
 								});											   
 							});						
@@ -1032,6 +1024,14 @@ exports.scrape = function (callback) {
 		},
 		function (err, results) {
 			if (!err) {
+				alsoAdd('day', allDays);
+				alsoAdd('location', allRooms);
+				alsoAdd('map', allMaps);
+				alsoAdd('poi', pois);  
+				alsoAdd('track', allTracks);
+				alsoAdd('format', allFormats);
+				alsoAdd('language', allLanguages);				
+				
 				callback(data);
 			} else {
 				console.log(err);
