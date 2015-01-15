@@ -938,8 +938,6 @@ exports.scrape = function (callback) {
 						   
 						   var matches = ev.summary.match(/(.+ )\(([^)]+)\)/i);
 						   if (!matches) {
-							   
-							   console.log("Miss: " ,ev.summary);
 							   continue;
 							
 						   }
@@ -958,8 +956,6 @@ exports.scrape = function (callback) {
 								  }
 							  });
 						   }
-						   console.log("Title: ", title);
-						   console.log("People: ", people);
 						   
 						   var speakers = people.map(function (personname) {
 							   var speaker = {
@@ -1028,16 +1024,6 @@ exports.scrape = function (callback) {
 						   allRooms[event.location.id] = event.location
 						   
 						   addEntry('session', event);
-						   
-						   // 			             console.log("Conference",
-						   // ev.uid,
-						   // 			               ev.summary,
-						   // 			               'is in',
-						   // start,
-						   // 			               ev.location,
-						   // 			               'on the', ev.start.getDate(), 'of', months[ev.start.getMonth()]);
-						   
-						   console.log(event);
 			           }
 			         }
 					 callback(null, 'sendezentrum');
