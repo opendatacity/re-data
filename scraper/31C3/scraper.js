@@ -913,6 +913,8 @@ exports.scrape = function (callback) {
 								handleResult(schedule, speakers, eventRecordingJSONs);
 	
 								parsePOIsFromCSV(csvData, function (pois) {
+									alsoAdd('poi', pois);  
+													
 									callback(null, 'lectures');				
 								});											   
 							});						
@@ -1027,7 +1029,6 @@ exports.scrape = function (callback) {
 				alsoAdd('day', allDays);
 				alsoAdd('location', allRooms);
 				alsoAdd('map', allMaps);
-				alsoAdd('poi', pois);  
 				alsoAdd('track', allTracks);
 				alsoAdd('format', allFormats);
 				alsoAdd('language', allLanguages);				
