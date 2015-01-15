@@ -813,7 +813,6 @@ function handleResult(events, speakers, eventRecordings) {
 				
 				eventRecordings.forEach(function (element) {
 					if (eventJSON.url == element.link) {
-						console.log(element.link);
 						recordingJSON = element;
 					}
 				});
@@ -883,7 +882,7 @@ exports.scrape = function (callback) {
 							speakers: speakers_url,
 							schedule: schedule_url,
 						};
-					console.log(result.conference.events);												
+										
 						result.conference.events.forEach(function (event) {
 							videoAPICallURLs[event.guid] = event.url;
 						});
@@ -897,7 +896,7 @@ exports.scrape = function (callback) {
 								delete result.speakers;
 			
 								var eventRecordingJSONs = toArray(result);
-								// console.log("result! ", eventRecordingJSONs);
+
 								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
 									var rercording = er.recordings.filter(function (rec, index, all) {
 										return rec.mime_type == "video/mp4" || rec.mime_type == "vnd.voc/h264-hd";
@@ -1052,7 +1051,6 @@ function parsePOIsFromCSV(data, callback) {
 			var pois = [];
 			
 			output.forEach(function (row) {
-				// console.log(row);
 				var id = row[0];
 				
 				if (id == 'id' || 
