@@ -898,14 +898,17 @@ exports.scrape = function (callback) {
 								var eventRecordingJSONs = toArray(result);
 
 								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
-									var rercording = er.recordings.filter(function (rec, index, all) {
+																			console.log("er: ", er);
+									var recording = er.recordings.filter(function (rec, index, all) {
 										return rec.mime_type == "video/mp4" || rec.mime_type == "vnd.voc/h264-hd";
 									});
-												   
+											
+											
+									
 									return {
 										"link": er.link,
 										"thumb": er.thumb_url,
-										"recording": rercording.length > 0 ? rercording[0] : null
+										"recording": recording.length > 0 ? recording[0] : null
 									};
 								});
 								

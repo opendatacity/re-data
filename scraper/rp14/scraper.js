@@ -64,6 +64,33 @@ var locationOrderPreference = [
 		'rp14-location-2871', // backyard
 ];
 
+var allMaps = {
+	'map-level0': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level0",
+		'type': "map",
+		'label_de': "Station Berlin",
+		'label_en': "Station Berlin",
+		'floor_label_de': "Station Berlin",
+		'floor_label_en': "Station Berlin",		
+		"is_outdoor": true,
+		"is_indoor": true,		
+		"floor": 0,
+		"order_index": 0,
+		"area": {"width": 1000.0, 
+		         "height": 516.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/rp14/floor0",
+                    "large_image_url": "http://data.conference.bits.io/maps/rp14/floor0/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 7941,
+                             "height": 4096}
+                },
+	    "pois": []
+	}
+};
+
 var eventURLPrefix = "https://14.re-publica.de";
 
 // the youtube playlist to which all videos are added
@@ -190,6 +217,7 @@ exports.scrape = function (callback) {
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
 			alsoAdd('day', allDays);
+			alsoAdd('map', allMaps);
 
 			function addEntry(type, obj) {
 				obj.event = eventId;
