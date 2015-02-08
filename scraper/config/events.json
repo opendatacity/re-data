@@ -1,16 +1,5 @@
 [
-		{
-			"type": "event",
-			"id": "rp14",
-			"label": "re:publica 14",
-			"title": "into the wild",
-			"date": ["2014-05-06","2014-05-08"],
-			"locations": [{
-				"label": "Station Berlin",
-				"coords": [52.49814,13.374538]
-			}],
-			"url": "http://14.re-publica.de/"
-		},
+	
 		{
 			"type": "event",
 			"id": "test-rp14",
@@ -39,7 +28,7 @@
 			"type": "event",
 			"id": "30c3",
 			"label": "30C3",
-			"title": "30C3",
+			"title": "30st Chaos Communication Congress",
 			"date": ["2013-12-27","2013-12-30"],
 			"locations": [{
 				"label": "Congress Center Hamburg",
@@ -49,9 +38,33 @@
 		},
 		{
 			"type": "event",
+			"id": "rp14",
+			"label": "re:publica 14",
+			"title": "into the wild",
+			"date": ["2014-05-06","2014-05-08"],
+			"locations": [{
+				"label": "Station Berlin",
+				"coords": [52.49814,13.374538]
+			}],
+			"url": "http://14.re-publica.de/"
+		},
+		{
+			"type": "event",
+			"id": "ds14",
+			"label": "Datenspuren 2014",
+			"title": "Datenspuren 2014",
+			"date": ["2014-09-13","2014-09-14"],
+			"locations": [{
+				"label": "Scheune",
+				"coords": [51.066246, 13.751621]
+			}],
+			"url": "https://datenspuren.de/2014/"
+		},			
+		{
+			"type": "event",
 			"id": "31c3",
 			"label": "31C3",
-			"title": "31C3",
+			"title": "31st Chaos Communication Congress – A New Dawn",
 			"date": ["2014-12-27","2014-12-30"],
 			"locations": [{
 				"label": "Congress Center Hamburg",
