@@ -2,10 +2,11 @@ var eventId = 'test-rp14';
 
 var fs = require('fs');
 var path = require('path');
+var parseCSV = require('csv-parse');
 
 // for debugging we can just pretend rp14 was today
 var originalStartDate = new Date(2014, 4, 6, 8, 0, 0, 0);
-var fakeDate = new Date(2014, 10, 23, 8, 0, 0, 0);
+var fakeDate = new Date(2015, 2, 15, 10, 0, 0, 0);
 var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
 
 // Livestream test
@@ -51,397 +52,38 @@ var allDays = {
 };
 
 var allMaps = {
-	'level0': {
+	'map-level0': {
 		'event': eventId,
-		'id': eventId + "-" + "level0",
+		'id': eventId + "-map-" + "level0",
 		'type': "map",
-		'label_de': "Congress Center Hamburg",
-		'label_en': "Congress Center Hamburg",
-		'floor_label_de': "Erdgeschoss",
-		'floor_label_en': "Ground Floor",		
+		'label_de': "Station Berlin",
+		'label_en': "Station Berlin",
+		'floor_label_de': "Station Berlin",
+		'floor_label_en': "Station Berlin",		
 		"is_outdoor": true,
 		"is_indoor": true,		
 		"floor": 0,
 		"order_index": 0,
 		"area": {"width": 1000.0, 
-		         "height": 530.0},
+		         "height": 516.0},
 		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/0floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/0floor/large.png",
+                    "base_url": "http://data.conference.bits.io/maps/rp14/floor0",
+                    "large_image_url": "http://data.conference.bits.io/maps/rp14/floor0/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
+                    "size": {"width": 7941,
+                             "height": 4096}
                 },
 	    "pois": []
-	},
-	'level1': {
-		'event': eventId,
-		'id': eventId + "-" + "level1",
-		'type': "map",
-		'label_de': "Congress Center Hamburg",
-		'label_en': "Congress Center Hamburg",		
-		'floor_label_de': "1. Obergeschoß",
-		'floor_label_en': "1st floor",
-		"is_outdoor": false,
-		"is_indoor": true,		
-		"floor": 1,
-		"order_index": 1,
-		"area": {"width": 1000.0, 
-		         "height": 530.0},
-		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/1floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/1floor/large.png",
-                    "tile_size": 512,
-                    "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
-                },
-	    "pois": []
-	},
-	'level2': {
-		'event': eventId,
-		'id': eventId + "-" + "level2",
-		'type': "map",
-		'label_de': "Congress Center Hamburg",
-		'label_en': "Congress Center Hamburg",		
-		'floor_label_de': "2. Obergeschoß",
-		'floor_label_en': "2nd floor",
-		"is_outdoor": false,
-		"is_indoor": true,		
-		"floor": 2,
-		"order_index": 2,
-		"area": {"width": 1000.0, 
-		         "height": 530.0},
-		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/2floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/2floor/large.png",
-                    "tile_size": 512,
-                    "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
-                },
-	    "pois": []
-	},
-	'level3': {
-		'event': eventId,
-		'id': eventId + "-" + "level3",
-		'type': "map",
-		'label_de': "Congress Center Hamburg",
-		'label_en': "Congress Center Hamburg",		
-		'floor_label_de': "3. Obergeschoß",
-		'floor_label_en': "3rd floor",
-		"is_outdoor": false,
-		"is_indoor": true,		
-		"floor": 3,
-		"order_index": 3,
-		"area": {"width": 1000.0, 
-		         "height": 530.0},
-		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/3floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/3floor/large.png",
-                    "tile_size": 512,
-                    "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
-                },
-	    "pois": []
-	},
-	'level4': {
-		'event': eventId,
-		'id': eventId + "-" + "level4",
-		'type': "map",
-		'label_de': "Congress Center Hamburg",
-		'label_en': "Congress Center Hamburg",		
-		'floor_label_de': "4. Obergeschoß",
-		'floor_label_en': "4th floor",
-		"is_outdoor": false,
-		"is_indoor": true,		
-		"floor": 4,
-		"order_index": 4,
-		"area": {"width": 1000.0, 
-		         "height": 530.0},
-		"tiles": {
-                    "base_url": "http://bitfever.de/~toto/test/31c3/4floor",
-                    "large_image_url": "http://bitfever.de/~toto/test/31c3/4floor/large.png",
-                    "tile_size": 512,
-                    "tile_file_extension": "png",
-                    "size": {"width": 6506,
-                             "height": 5007}
-                },
-	    "pois": []
-	}				
+	}
 };
 
+
 var allPOIs = {
-	"poi-hall1": {
-		"id": eventId + "-poi-hall1",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level4",
-					   "x": 3520.0, "y": 2107.0}, 
-					  {"map": eventId + "-" + "level3",
-					   "x": 3520.0, "y": 2107.0}, 
-					  {"map": eventId + "-" + "level2",
-					   "x": 3520.0, "y": 1957.0}],
-		"category": "session-location",
-		"location": {"id": "rp14-location-2594",
-					 "label_de": "stage 1",
-					 "label_en": "stage 1"},
-		"label_de": "Saal 1",
-		"label_en": "Hall 1",		
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},
-	"poi-hall2": {
-		"id": eventId + "-poi-hall2",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level4",
-					   "x": 4694.0, "y": 1710.0},
-					  {"map": eventId + "-" + "level3",
-					   "x": 4694.0, "y": 1710.0},
-					  {"map": eventId + "-" + "level2",
-					   "x": 4694.0, "y": 1610.0}],
-		"category": "session-location",		
-		"location": {"id": "rp14-location-2595",
-					 "label_de": "stage 2",
-					 "label_en": "stage 2"},
-		"label_de": "Saal 2",
-		"label_en": "Hall 2",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-halld": {
-		"id": eventId + "-poi-halld",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 4694.0, "y": 1710.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-d",
-					 "label_de": "Saal D",
-					 "label_en": "Hall D"},
-		"label_de": "Saal D",
-		"label_en": "Hall D",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},
-	"poi-halle": {
-		"id": eventId + "-poi-halle",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 643.0, "y": 2360.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-e",
-					 "label_de": "Saal E",
-					 "label_en": "Hall E"},
-		"label_de": "Saal E",
-		"label_en": "Hall E",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-hallf": {
-		"id": eventId + "-poi-hallf",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 653.0, "y": 2030.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-f",
-					 "label_de": "Saal F",
-					 "label_en": "Hall F"},
-		"label_de": "Saal F",
-		"label_en": "Hall F",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},		
-	"poi-halld": {
-		"id": eventId + "-poi-halld",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 663.0, "y": 2720.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-d",
-					 "label_de": "Saal D",
-					 "label_en": "Hall D"},
-		"label_de": "Saal D",
-		"label_en": "Hall D",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-hallg": {
-		"id": eventId + "-poi-hallg",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 2027.0, "y": 2040.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-g",
-					 "label_de": "Saal G",
-					 "label_en": "Hall G"},
-		"label_de": "Saal G",
-		"label_en": "Hall G",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},			
-	"poi-hall3": {
-		"id": eventId + "-poi-hall3",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level0",
-					   "x": 2267.0, "y": 2231.0}],
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-3",
-					 "label_de": "Saal 3",
-					 "label_en": "Hall 3"},
-		"label_de": "Saal 3",
-		"label_en": "Hall 3",
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},				
-	"poi-hall6": {
-		"id": eventId + "-poi-hall6",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level0",
-					   "x": 4799.0, "y": 2751.0}],	
-		"category": "session-location",		
-		"location": {"id": eventId + "-saal-6",
-					 "label_de": "Saal 6",
-					 "label_en": "Hall 6"},
-		"label_de": "Saal 6",
-		"label_en": "Hall 6",		
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},
-	"poi-hall13": {
-		"id": eventId + "-poi-hall13",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level1",
-					   "x": 4448.0, "y": 1498.0}],	
-		"category": "session-location",		
-		// "location": {"id": "30c3-saal-13",
-					 // "label_de": "Saal 13",
-					 // "label_en": "Hall 13"},
-		"label_de": "Saal 13",
-		"label_en": "Hall 13",		
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},
-	"poi-hall14": {
-		"id": eventId + "-poi-hall14",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level1",
-					   "x": 4625.0, "y": 1413.0}],	
-		"category": "session-location",		
-		// "location": "location-1",
-		"label_de": "Saal 14",
-		"label_en": "Hall 14",		
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},		
-	// entertainment
-	"poi-revolution9": {
-		"id": eventId + "-poi-revolution9",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level0",
-					   "x": 4216.0, "y": 3557.0}],	
-		"category": "entertainment",		
-		// "location": "location-1",
-		"label_de": "Revolution #9",
-		"label_en": "Revolution #9",		
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},
-	"poi-heaven": {
-		"id": eventId + "-poi-heaven",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level1",
-					   "x": 3663.0, "y": 2735.0}],	
-		"category": "organisation",		
-		// "location": "location-1",
-		"label_de": "Himmel",
-		"label_en": "Heaven",	
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-villa-straylight": {
-		"id": eventId + "-villa-straylight",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level4",
-					   "x": 3538.0, "y": 2764.0}],	
-		"category": "session-location",		
-		"location": "30c3-villa-straylight",
-		"label_de": "Villa Straylight",
-		"label_en": "Villa Straylight",	
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-wordlounge": {
-		"id": eventId + "-wordlounge",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level3",
-					   "x": 2885.0, "y": 2794.0}],	
-		"category": "session-location",		
-		"location": "30c3-wordlounge",
-		"label_de": "Wordlounge",
-		"label_en": "Wordlounge",	
-		"hidden": false,
-		"priority": 1000,
-		"beacons": []
-	},	
-	"poi-food-hall1-a": {
-		"id": eventId + "-poi-food-hall1-a",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 3881.0, "y": 2556.0}],	
-		"category": "food",		
-		// "location": "30c3-wordlounge",
-		"label_de": "Essen",
-		"label_en": "Food",	
-		"hidden": false,
-		"priority": 500,
-		"beacons": []
-	},					
-	"poi-food-hall1-b": {
-		"id": eventId + "-poi-food-hall1-b",
-		"event": eventId,	
-		"type": "poi",			
-		"positions": [{"map": eventId + "-" + "level2",
-					   "x": 3175.0, "y": 2395.0}],	
-		"category": "food",		
-		// "location": "30c3-wordlounge",
-		"label_de": "Essen",
-		"label_en": "Food",	
-		"hidden": false,
-		"priority": 500,
-		"beacons": []
-	}	
+	
 };
+
+var csvData = fs.readFileSync(__dirname + "/pois.csv");
 
 // we now supply a order preference with the location
 var locationOrderPreference = [
@@ -544,7 +186,7 @@ exports.scrape = function (callback) {
 					'label_en': location.title,
 					'order_index': orderPreference,
 					'type': 'location',
-					'event': 'rp14',
+					'event': eventId,
 					'is_stage': location.title.match(/stage /i) ? true : false
 				}
 				locationMap[entry.id] = entry;
@@ -622,7 +264,11 @@ exports.scrape = function (callback) {
 				});
 			}
 
-			callback(data);
+			parsePOIsFromCSV(csvData, function (pois) {
+				alsoAdd('poi', pois);  
+			
+				callback(data);
+			});
 		}
 	);
 }
@@ -848,3 +494,66 @@ function clone(obj) {
 	})
 	return newObj;
 }
+
+function parsePOIsFromCSV(data, callback) {
+	parseCSV(csvData, {"delimiter": ";", 
+					   "auto_parse": false,
+					   "skip_empty_lines": true}, function(err, output) {
+						   
+			var pois = [];
+			
+			output.forEach(function (row) {
+				var id = row[0];
+				
+				if (id == 'id' || 
+					id == '' || 
+					id == ' ' || 					
+					row[2] == '' || row[2] == ' ' ||
+					row[3] == '' || row[3] == ' ') 
+				{
+					// console.log("skipping "  + row);
+					return;
+				}
+				
+				var poi = {
+					"id": (eventId + "-pointofinterest-" + id),
+					"type": "poi",
+					"label_en": row[4],
+ 				    "label_de": row[5],
+					"category": row[6],
+					"positions": [], // fill me later
+	                "hidden": false,
+	                "priority": 1000,
+					"beacons": [],
+					"location": null,
+				};
+				
+				if (row[7] && row[7].length > 0 && row[8] && row[9]) {
+					poi["location"] = {
+					            "id": row[7], 
+					            "label_de": row[8], 
+					            "label_en": row[9]
+					};
+				}
+				
+				var x = parseInt(row[2]);
+				var y = parseInt(row[3]);
+				var floors = row[1].split(",");				
+				if (floors.length > 0 && floors[0] != '') {  
+					for (var i = floors.length - 1; i >= 0; i--) {
+						var floorID = eventId + "-map-level" + floors[i];
+							poi.positions.push(
+								{"map": floorID,
+								 "x": x,
+								 "y": y}
+							);
+
+					}
+				}
+				
+				pois.push(poi);
+			});
+			
+			callback(pois);		
+	});
+};

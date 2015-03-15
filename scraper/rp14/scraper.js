@@ -2,6 +2,7 @@ var eventId = 'rp14';
 
 var fs = require('fs');
 var path = require('path');
+var parseCSV = require('csv-parse');
 
 var allTracks = {
 	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  label_en:'Business & Innovation', color:[194.0, 56.0, 24.0, 1.0] },
@@ -90,6 +91,8 @@ var allMaps = {
 	    "pois": []
 	}
 };
+
+var csvData = fs.readFileSync(__dirname + "/pois.csv");
 
 var eventURLPrefix = "https://14.re-publica.de";
 
@@ -234,7 +237,11 @@ exports.scrape = function (callback) {
 				});
 			}
 
-			callback(data);
+			parsePOIsFromCSV(csvData, function (pois) {
+				alsoAdd('poi', pois);  
+			
+				callback(data);
+			});
 		}
 	);
 }
@@ -453,3 +460,57 @@ function clone(obj) {
 	})
 	return newObj;
 }
+
+function parsePOIsFromCSV(data, callback) {
+	parseCSV(csvData, {"delimiter": ";", 
+					   "auto_parse": false,
+					   "skip_empty_lines": true}, function(err, output) {
+						   
+			var pois = [];
+			
+			output.forEach(function (row) {
+				var id = row[0];
+				
+				if (id == 'id' || 
+					id == '' || 
+					id == ' ' || 					
+					row[2] == '' || row[2] == ' ' ||
+					row[3] == '' || row[3] == ' ') 
+				{
+					// console.log("skipping "  + row);
+					return;
+				}
+				
+				var poi = {
+					"id": (eventId + "-pointofinterest-" + id),
+					"type": "poi",
+					"label_en": row[4],
+ 				    "label_de": row[5],
+					"category": row[6],
+					"positions": [], // fill me later
+	                "hidden": false,
+	                "priority": 1000,
+					"beacons": []
+				};
+				
+				var x = parseInt(row[2]);
+				var y = parseInt(row[3]);
+				var floors = row[1].split(",");				
+				if (floors.length > 0 && floors[0] != '') {  
+					for (var i = floors.length - 1; i >= 0; i--) {
+						var floorID = eventId + "-map-level" + floors[i];
+							poi.positions.push(
+								{"map": floorID,
+								 "x": x,
+								 "y": y}
+							);
+
+					}
+				}
+				
+				pois.push(poi);
+			});
+			
+			callback(pois);		
+	});
+};
