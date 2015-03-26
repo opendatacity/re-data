@@ -6,8 +6,9 @@ var parseCSV = require('csv-parse');
 
 // for debugging we can just pretend rp14 was today
 var originalStartDate = new Date(2014, 4, 6, 8, 0, 0, 0);
-var fakeDate = new Date(2015, 2, 15, 10, 0, 0, 0);
+var fakeDate = new Date(2015, 2, 24, 10, 0, 0, 0);
 var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
+var removeTimesAndLocations = true;
 
 // Livestream test
 var streamURLs = {
@@ -156,9 +157,9 @@ exports.scrape = function (callback) {
 				if (speaker.uid == "" || speaker.label.trim() == "") return;
 
 				var entry = {
-					'id': 'rp14-speaker-'+speaker.uid,
+					'id': eventId + '-speaker-'+speaker.uid,
 					'name': speaker.label,
-					'photo': speaker.image,
+					'photo': speaker.image.src,
 					'url': eventURLPrefix + '/' + speaker.uri,
 					'biography': speaker.description_short,
 					'organization': speaker.org,
@@ -170,7 +171,6 @@ exports.scrape = function (callback) {
 				speakerMap[entry.id] = entry;
 				addEntry('speaker', entry);
 			});
-
 
 			locationList.forEach(function (location) {
 				location = location.room;
@@ -190,7 +190,9 @@ exports.scrape = function (callback) {
 					'is_stage': location.title.match(/stage /i) ? true : false
 				}
 				locationMap[entry.id] = entry;
-				addEntry('location', entry);
+				if (!removeTimesAndLocations) {
+					addEntry('location', entry);
+				}
 			});
 
 			sessionList.forEach(function (session) {
@@ -207,6 +209,7 @@ exports.scrape = function (callback) {
 					links.push(ytLink);
 				}
 
+				console.log("session:", session);
 
 				var entry = {
 					'id': 'rp14-session-' + session.nid,
@@ -226,6 +229,11 @@ exports.scrape = function (callback) {
 					'speakers': parseSpeakers(speakerMap, session.speaker_uids),
 					'enclosures': [],
 					'links': links
+				}
+				if (removeTimesAndLocations) {
+					entry["begin"] = null;
+					entry["end"] = null;					
+					entry["location"];
 				}
 				
 				var liveStreamURL = streamURLs[entry.location.id];
@@ -437,9 +445,16 @@ function parseLanguage(text) {
 
 function parseSpeakers(speakerMap, speakeruids) {
 	var speakers = [];
+	
+	if (typeof(speakeruids) == typeof("")) {
+		speakeruids = speakeruids.split(",").map(function (item) {
+			return item.trim();
+		});
+	}
+	
 	for (var i = speakeruids.length - 1; i >= 0; i--){
 		var speakerId = speakeruids[i];
-		var speaker = speakerMap['rp14-speaker-'+speakerId];
+		var speaker = speakerMap[eventId + '-speaker-'+speakerId];
 		if (speaker != undefined) {
 			speakers.push({'id': speaker.id,
 											'name': speaker.name});
@@ -452,7 +467,11 @@ function parseSpeakers(speakerMap, speakeruids) {
 }
 
 function parseSpeakerLinks(linkUrls, linkLabels) {
-
+	if (typeof(linkUrls) === typeof("")) {
+		linkUrls = linkUrls.split(",").map(function (item) {
+			return item.trim();
+		});
+	}
 	// google+ URLs are so ugly, what parsing them is non trivial, so we ignore them for now
 	var linkTypes = { 'github': /^https?\:\/\/github\.com\/(\w+)$/i,
 										'twitter': /^https?\:\/\/twitter\.com\/(\w+)$/i,
