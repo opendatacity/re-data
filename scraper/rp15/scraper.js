@@ -17,20 +17,27 @@ var streamURLs = {
 };
 
 var allTracks = {
-	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  label_en:'Business & Innovation', color:[194.0, 56.0, 24.0, 1.0] },
-	'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',     label_en:'City Of The Future', color:[194.0, 56.0, 24.0, 1.0] },	
-	'Culture':                { id:'culture',             label_de:'Kultur',                 label_en:'Culture'              , color:[193.0, 117.0, 28.0, 1.0] },
+	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  label_en:'Business & Innovation', color:[196.0, 55.0, 8.0, 1.0] }, //
+	
+	'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',     label_en:'City Of The Future', color:[102.0, 102.0, 102.0, 1.0] },	//
+
+	'Culture':                { id:'culture',             label_de:'Kultur',                 label_en:'Culture'              , color:[195.0, 118.0, 2.0, 1.0] }, //
+
 	'Fashiontech':            { id:'fashiontech',         label_de:'Fashiontech',            label_en:'Fashiontech'              , color:[193.0, 117.0, 28.0, 1.0] },
 	'GIG':            		  { id:'gig',         		  label_de:'Global Innovation Gathering',            label_en:'Global Innovation Gathering'              , color:[193.0, 117.0, 28.0, 1.0] },	
-	'Media':                  { id:'media',               label_de:'Medien',                 label_en:'Media'                , color:[78.0, 144.0, 178.0, 1.0] },
-	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       label_en:'Media Convention'                , color:[78.0, 144.0, 178.0, 1.0] },	
-	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', label_en:'Politics & Society'   , color:[111.0, 79.0, 132.0, 1.0] },
-	're:cord Musicday':       { id:'re-cord-musicday',           label_de:'re:cord Musicday',             label_en:'re:cord Musicday'           , color:[102.0, 156.0, 44.0, 1.0] },
+	'Media':                  { id:'media',               label_de:'Medien',                 label_en:'Media'                , color:[11.0, 87.0, 127.0, 1.0] }, //
+	
+	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       label_en:'Media Convention'                , color:[0.0, 0.0, 0.0, 1.0] },	//
+
+	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', label_en:'Politics & Society'   , color:[112.0, 77.0, 133.0, 1.0] }, //
+
+	're:cord Musicday':       { id:'re-cord-musicday',           label_de:'re:cord Musicday',             label_en:'re:cord Musicday'           , color:[51.0, 204.0, 102.0, 1.0] }, //
 	're:health':              { id:'re-health',           label_de:'re:health',             label_en:'re:health'           , color:[102.0, 156.0, 44.0, 1.0] },	
-	're:publica':             { id:'re-publica',           label_de:'re:health',             label_en:'re:health'           , color:[102.0, 156.0, 44.0, 1.0] },
+	're:publica':             { id:'re-publica',           label_de:'re:health',             label_en:'re:health'           , color:[99.0, 157.0, 36.0, 1.0] }, //
 	're:think Mobility':      { id:'re-think-mobility',           label_de:'re:think Mobility',             label_en:'re:think Mobility'           , color:[102.0, 156.0, 44.0, 1.0] },		
-	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', label_en:'Science & Technology' , color:[168.0, 146.0, 24.0, 1.0] },
-	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    label_en:'Research & Education' , color:[0.0, 0.0, 0.0, 1.0] },
+	
+	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', label_en:'Science & Technology' , color:[164.0, 148.0, 1.0, 1.0] }, //
+	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    label_en:'Research & Education' , color:[102.0, 102.0, 204.0, 1.0] }, //
 	'Other':                  { id:'other',               label_de:'Other',                  label_en:'Other'                , color:[101.0, 156.0, 45.0, 1.0] }
 };
 
@@ -117,8 +124,6 @@ var locationOrderPreference = [
 		'rp14-location-2871', // backyard
 ];
 
-var eventURLPrefix = "https://14.re-publica.de";
-
 // the youtube playlist to which all videos are added
 var youtubePlaylistId = "PLAR_6-tD7IZV--8ydJQRCZNEWOp9vf6PY";
 
@@ -127,7 +132,7 @@ exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'http://re-publica.de/event/3013/json/speakers', 
+				sessions: 'http://re-publica.de/event/3013/json/sessions', 
 				speakers: 'http://re-publica.de/event/3013/json/speakers',
 				rooms:    'http://re-publica.de/event/3013/rooms.json'
 			}
@@ -150,14 +155,19 @@ exports.scrape = function (callback) {
 			});
 
 			speakerList.forEach(function (speaker) {
+				var speakerName = speaker.label;
+				// if (speaker.label == undefined && speaker.gn != undefined && speaker.fn != undefined) {
+					speakerName = speaker.gn + " " + speaker.sn;
+				// }
+				
 				// skip potential invalid speakers, those happen.
-				if (speaker.uid == "" || speaker.label.trim() == "") return;
+				if (speaker.uid == "" || (speakerName == null || speakerName.trim() == "")) return;
 
 				var entry = {
 					'id': eventId + '-speaker-'+speaker.uid,
-					'name': speaker.label,
-					'photo': speaker.image.src,
-					'url': eventURLPrefix + '/' + speaker.uri,
+					'name': speakerName,
+					'photo': speaker.image,
+					'url': speaker.uri,
 					'biography': speaker.description_short,
 					'organization': speaker.org,
 					'organization_url': speaker.org_uri,
@@ -198,7 +208,7 @@ exports.scrape = function (callback) {
 				var begin = parseDateTime(session.datetime, session.start);
 				var end = parseDateTime(session.datetime, session.end);
 				var duration = (end - begin) / 1000;
-				var permalink = eventURLPrefix + session.uri;
+				var permalink = session.uri;
 				var links = [];
 
 				var ytLink = ytVideoMap[permalink];
@@ -206,7 +216,7 @@ exports.scrape = function (callback) {
 					links.push(ytLink);
 				}
 
-				// console.log("session:", session);
+				console.log("session:", session);
 
 				var entry = {
 					'id': eventId + '-session-' + session.nid,
@@ -246,7 +256,8 @@ exports.scrape = function (callback) {
 						});
 					}
 				}
-
+				entry = entry;
+				
 				addEntry('session', entry);
 			});
 
@@ -262,16 +273,16 @@ exports.scrape = function (callback) {
 						
 
 			function addEntry(type, obj) {
-				obj.event = eventId;
-				obj.type = type;
+				obj["event"] = eventId;
+				obj["type"] = type;
 				data.push(obj);
 			}
 
 			function alsoAdd(type, list) {
 				Object.keys(list).forEach(function (key) {
 					var obj = clone(list[key]);
-					obj.event = eventId;
-					obj.type = type;
+					obj["event"] = eventId;
+					obj["type"] = type;
 					data.push(obj);
 				});
 			}
@@ -372,7 +383,7 @@ function parseDate(text) {
 }
 
 function parseDateTime(date, time) {
-	if ((date == '') && (time == '')) return false;
+	if ((date == '') && (time == '')) return null;
 
 	var dateMatcher = /^(\d+)\.(\d+)\.(\d\d\d\d) /;
 	dateMatcher.exec(date);
@@ -397,18 +408,18 @@ function parseDateTime(date, time) {
 	return date;
 
 	console.log('Unknown date "'+date+'" and time "'+time+'"');
-	return false
+	return null;
 }
 
 function parseLocation(locationMap, roomid) {
-	if (roomid == '') return false;
+	if (roomid == '') return null;
 
 	var id = eventId + "-location-"+roomid;
 	var location = locationMap[id];
 
 	if (location == undefined) {
 		console.log("unknown location " + roomid);
-		return false;
+		return null;
 	}
 
 	return {
@@ -423,21 +434,21 @@ function parseTrack(text) {
 	var track = allTracks[text];
 	if (track) return track;
 	console.error('Unknown Track "'+text+'"');
-	return false;
+	return null;
 }
 
 function parseFormat(text) {
 	var format = allFormats[text];
 	if (format) return format;
 	console.error('Unknown Format "'+text+'"');
-	return false;
+	return null;
 }
 
 function parseLevel(text) {
 	var level = allLevels[text];
 	if (level) return level;
 	console.error('Unknown Level "'+text+'"');
-	return false;
+	return null;
 }
 
 function parseLanguage(text) {
@@ -449,6 +460,8 @@ function parseLanguage(text) {
 
 function parseSpeakers(speakerMap, speakeruids) {
 	var speakers = [];
+	
+	if (speakeruids == null) return [];
 	
 	if (typeof(speakeruids) == typeof("")) {
 		speakeruids = speakeruids.split(",").map(function (item) {
@@ -514,6 +527,13 @@ function parseSpeakerLinks(linkUrls, linkLabels) {
 	return links;
 }
 
+function removeNulls(obj){
+  var isArray = obj instanceof Array;
+  for (var k in obj){
+    if (obj[k]===null) isArray ? obj.splice(k,1) : delete obj[k];
+    else if (typeof obj[k]=="object") removeNulls(obj[k]);
+  }
+}
 
 function clone(obj) {
 	var newObj = {};
