@@ -17,28 +17,21 @@ var streamURLs = {
 };
 
 var allTracks = {
-	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  label_en:'Business & Innovation', color:[196.0, 55.0, 8.0, 1.0] }, //
-	
-	'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',     label_en:'City Of The Future', color:[102.0, 102.0, 102.0, 1.0] },	//
-
-	'Culture':                { id:'culture',             label_de:'Kultur',                 label_en:'Culture'              , color:[195.0, 118.0, 2.0, 1.0] }, //
-
-	'Fashiontech':            { id:'fashiontech',         label_de:'Fashiontech',            label_en:'Fashiontech'              , color:[193.0, 117.0, 28.0, 1.0] },
-	'GIG':            		  { id:'gig',         		  label_de:'Global Innovation Gathering',            label_en:'Global Innovation Gathering'              , color:[193.0, 117.0, 28.0, 1.0] },	
-	'Media':                  { id:'media',               label_de:'Medien',                 label_en:'Media'                , color:[11.0, 87.0, 127.0, 1.0] }, //
-	
-	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       label_en:'Media Convention'                , color:[0.0, 0.0, 0.0, 1.0] },	//
-
-	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', label_en:'Politics & Society'   , color:[112.0, 77.0, 133.0, 1.0] }, //
-
-	're:cord Musicday':       { id:'re-cord-musicday',           label_de:'re:cord Musicday',             label_en:'re:cord Musicday'           , color:[51.0, 204.0, 102.0, 1.0] }, //
-	're:health':              { id:'re-health',           label_de:'re:health',             label_en:'re:health'           , color:[102.0, 156.0, 44.0, 1.0] },	
-	're:publica':             { id:'re-publica',           label_de:'re:health',             label_en:'re:health'           , color:[99.0, 157.0, 36.0, 1.0] }, //
-	're:think Mobility':      { id:'re-think-mobility',           label_de:'re:think Mobility',             label_en:'re:think Mobility'           , color:[102.0, 156.0, 44.0, 1.0] },		
-	
-	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', label_en:'Science & Technology' , color:[164.0, 148.0, 1.0, 1.0] }, //
-	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    label_en:'Research & Education' , color:[102.0, 102.0, 204.0, 1.0] }, //
-	'Other':                  { id:'other',               label_de:'Other',                  label_en:'Other'                , color:[101.0, 156.0, 45.0, 1.0] }
+	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  		label_en:'Business & Innovation', color:[196.0, 55.0, 8.0, 1.0] },    //
+	'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',     		label_en:'City Of The Future'   , color:[102.0, 102.0, 102.0, 1.0] }, //
+	'Culture':                { id:'culture',             label_de:'Kultur',                 		label_en:'Culture'              , color:[195.0, 118.0, 2.0, 1.0] },   //
+	'Fashiontech':            { id:'fashiontech',         label_de:'Fashiontech',            	  	label_en:'Fashiontech'          , color:[193.0, 117.0, 28.0, 1.0] },
+	'GIG':            		  { id:'gig',         		  label_de:'Global Innovation Gathering', 	label_en:'Global Innovation Gathering' , color:[193.0, 117.0, 28.0, 1.0] },	
+	'Media':                  { id:'media',               label_de:'Medien',                 		label_en:'Media'                , color:[11.0, 87.0, 127.0, 1.0] },  //
+	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       		label_en:'Media Convention'     , color:[0.0, 0.0, 0.0, 1.0] },	     //
+	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', 		label_en:'Politics & Society'   , color:[112.0, 77.0, 133.0, 1.0] }, //
+	're:cord Musicday':       { id:'re-cord-musicday',    label_de:'re:cord Musicday',       		label_en:'re:cord Musicday'     , color:[51.0, 204.0, 102.0, 1.0] }, //
+	're:health':              { id:'re-health',           label_de:'re:health',              		label_en:'re:health'            , color:[102.0, 156.0, 44.0, 1.0] },	
+	're:publica':             { id:'re-publica',          label_de:'re:publica',              		label_en:'re:publica'            , color:[99.0, 157.0, 36.0, 1.0] },  //
+	're:think Mobility':      { id:'re-think-mobility',   label_de:'re:think Mobility',      		label_en:'re:think Mobility'    , color:[102.0, 156.0, 44.0, 1.0] },		
+	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', 		label_en:'Science & Technology' , color:[164.0, 148.0, 1.0, 1.0] },  //
+	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    		label_en:'Research & Education' , color:[102.0, 102.0, 204.0, 1.0] },//
+	'Other':                  { id:'other',               label_de:'Other',                  		label_en:'Other'                , color:[101.0, 156.0, 45.0, 1.0] }
 };
 
 var allFormats = {
@@ -97,31 +90,32 @@ var allPOIs = {
 	
 };
 
+
 var csvData = fs.readFileSync(__dirname + "/pois.csv");
 
 // we now supply a order preference with the location
 var locationOrderPreference = [
-		'rp14-location-2594', // stage 1
-		'rp14-location-2595', // stage 2
-		'rp14-location-2596', // stage 3
-		'rp14-location-2597', // stage 4
-		'rp14-location-2598', // stage 5
-		'rp14-location-2599', // stage 6
-		'rp14-location-2600', // stage A
-		'rp14-location-2601', // stage B
-		'rp14-location-2602', // stage C
-		'rp14-location-2603', // stage D
-		'rp14-location-2604', // stage E
-		'rp14-location-2693', // stage J
-		'rp14-location-2692', // stage T
-		'rp14-location-2708', // store
-		'rp14-location-2710', // GIG lounge
-		'rp14-location-2709', // GIG makerspace
-		'rp14-location-2711', // MIKZ
-		'rp14-location-2712', // new thinking
-		'rp14-location-2713', // republica
-		'rp14-location-2855', // re/connect
-		'rp14-location-2871', // backyard
+		eventId + '-location-5591', // stage 1
+		eventId + '-location-5929', // stage 2
+		eventId + '-location-5930', // stage 3
+		eventId + '-location-5931', // stage 4
+		eventId + '-location-5932', // stage 5
+		eventId + '-location-5933', // stage 6
+		eventId + '-location-5934', // stage 7
+		eventId + '-location-5935', // stage 8
+		eventId + '-location-5936', // stage 9
+		eventId + '-location-5937', // stage 10
+		eventId + '-location-5938', // stage 11
+		eventId + '-location-5940', // stage J
+		eventId + '-location-5939', // stage T
+		eventId + '-location-2708', // store
+		eventId + '-location-2710', // GIG lounge
+		eventId + '-location-2709', // GIG makerspace
+		eventId + '-location-2711', // MIKZ
+		eventId + '-location-2712', // new thinking
+		eventId + '-location-2713', // republica
+		eventId + '-location-2855', // re/connect
+		eventId + '-location-2871', // backyard
 ];
 
 // the youtube playlist to which all videos are added
@@ -144,6 +138,9 @@ exports.scrape = function (callback) {
 			var speakerList  = result.speakers.items;
 			var locationList = toArray(result.rooms.rooms);
 			var ytPlaylist   = [];
+			
+
+			
 
 			var ytVideoMap  = {};
 			var locationMap = {};
@@ -202,6 +199,55 @@ exports.scrape = function (callback) {
 				// }
 			});
 
+			var fakeSessions = [{
+              "updated_date": "08.04.2015 - 10:56",
+              "nid": "2666",
+              "type": "session",
+              "uri": "http://re-publica.de/session/welcome",
+              "title": "Welcome!",
+              "label": "Welcome!",
+              "datetime": "05.05.2015 - 09:00 bis 10:00",
+              "start": "09:00",
+              "end": "10:00",
+              "room_id": "5591",
+              "room": "stage 1",
+              "speaker_uids": [
+                "2460",
+                "2472",
+                "2419",
+                "2219",
+                "2520"
+              ],
+              "speaker_names": [
+                "Andreas Gebhard",
+                "Tanja Haeusler",
+                "Markus Beckedahl",
+                "Johnny Haeusler",
+                "Elmar Giglinger"
+              ],
+              "category_id": "31",
+              "category": "re:publica",
+              "format_id": "10",
+              "format": "Vortrag",
+              "level_id": "3",
+              "level": "Beginner",
+              "language_id": "5",
+              "language": "Deutsch",
+              "curator_ids": [],
+              "curator_names": [],
+              "description_short": "Opening ceremony for re:publica and MEDIA CONVENTION.",
+              "description": "",
+              "video": [
+                "http://www.youtube.com/watch?v=hfjNOk97qn8"
+              ],
+              "event_title": "re:publica 2015",
+              "event_date": "",
+              "event_description": "Finding Europe"
+            }];
+
+			Array.prototype.push.apply(sessionList, fakeSessions);
+
+
 			sessionList.forEach(function (session) {
 				if (session.nid == "") return; // skip invalid sessions
 
@@ -214,6 +260,25 @@ exports.scrape = function (callback) {
 				var ytLink = ytVideoMap[permalink];
 				if (ytLink) {
 					links.push(ytLink);
+				}
+				if (session["video"]) {	
+					
+					session.video.forEach(function (videoURL) {
+						
+						if (videoURL.match(/^http\:\/\/www\.youtube\.com\/watch\?v=(.+)/i)) {
+							if (RegExp.$1) {
+								// https://www.youtube.com/v/12BYSqVGCUk
+								var result =  {
+						 			"thumbnail": "http://img.youtube.com/vi/" + RegExp.$1 + "/hqdefault.jpg",
+						 			"title": session.title,
+						 			"url": "https://www.youtube.com/v/" + RegExp.$1,
+						 			"service": "youtube",
+						 			"type": "recording"
+								};
+								links.push(result);
+							}
+						 };
+					});
 				}
 
 				console.log("session:", session);
@@ -260,7 +325,7 @@ exports.scrape = function (callback) {
 				
 				addEntry('session', entry);
 			});
-
+			
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
 			alsoAdd('level', allLevels);

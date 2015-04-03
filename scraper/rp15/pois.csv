@@ -1,7 +1,7 @@
 id;floors;x;y;label_en;label_de;category;location_id;location_label_de;location_label_en
-stage1;0;1728;1962;Stage 1;Stage 1;session-location;rp14-location-2594;Stage 1;Stage 1
-stage2;0;3090;1434;Stage 2;Stage 2;session-location;rp14-location-2595;Stage 2;Stage 2
-stage3;0;3931;1442;Stage 3;Stage 3;session-location;rp14-location-2596;Stage 3;Stage 3
-stage4;0;4521;1495;Stage 4;Stage 4;session-location;rp14-location-2597;Stage 4;Stage 4
-stage5;0;1954;2901;Stage 5;Stage 5;session-location;rp14-location-2598;Stage 5;Stage 5
-stage6;0;419;2268;Stage 6;Stage 6;session-location;rp14-location-2599;Stage 6;Stage 6
+stage1;0;1728;1962;Stage 1;Stage 1;session-location;rp15-location-5591;Stage 1;Stage 1
+stage2;0;3090;1434;Stage 2;Stage 2;session-location;rp15-location-5929;Stage 2;Stage 2
+stage3;0;3931;1442;Stage 3;Stage 3;session-location;rp15-location-5930;Stage 3;Stage 3
+stage4;0;4521;1495;Stage 4;Stage 4;session-location;rp15-location-5931;Stage 4;Stage 4
+stage5;0;1954;2901;Stage 5;Stage 5;session-location;rp15-location-5932;Stage 5;Stage 5
+stage6;0;419;2268;Stage 6;Stage 6;session-location;rp15-location-5933;Stage 6;Stage 6
