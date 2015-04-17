@@ -501,28 +501,28 @@ function parseTrack(text) {
 	var track = allTracks[text];
 	if (track) return track;
 	console.error('Unknown Track "'+text+'"');
-	return null;
+	return allTracks["re:publica"];
 }
 
 function parseFormat(text) {
 	var format = allFormats[text];
 	if (format) return format;
 	console.error('Unknown Format "'+text+'"');
-	return null;
+	return allLevels["Vortrag"];
 }
 
 function parseLevel(text) {
 	var level = allLevels[text];
 	if (level) return level;
 	console.error('Unknown Level "'+text+'"');
-	return null;
+	return allLevels["Beginner"];
 }
 
 function parseLanguage(text) {
 	var language = allLanguages[text];
 	if (language) return language;
 	console.error('Unknown Language "'+text+'"');
-	return false;
+	return allLanguages["Deutsch"];
 }
 
 function parseSpeakers(speakerMap, speakeruids) {
