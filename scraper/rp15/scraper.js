@@ -262,6 +262,8 @@ exports.scrape = function (callback) {
 				var begin = parseDateTime(session.datetime, session.start);
 				var end = parseDateTime(session.datetime, session.end);
 				var duration = (end - begin) / 1000;
+				if (duration < 0) return;
+				
 				var permalink = session.uri;
 				var links = [];
 
