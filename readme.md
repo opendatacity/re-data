@@ -2,7 +2,7 @@
 
 This project is the ongoing effort of providing an simple JSON API interface for conferences and under heavy development.
 
-Example data includes [re:publica](http://re-publica.de) or [30C3](http://events.ccc.de/congress/2013). Take a look at the `scrapers` directory.
+Example data includes [re:publica](http://re-publica.de), [30C3](http://events.ccc.de/congress/2013), [31C3](http://events.ccc.de/congress/2014). Take a look at the `scrapers` directory.
 
 ## Documentation
 
@@ -16,6 +16,7 @@ The infrastructure is still very rough as this is a side project of several peop
 
 - Several apps for [Android and iOS for the re:publica 2014](http://14.re-publica.de/session/developed-republica-apps-2014)
 - An app for [AltConf](https://itunes.apple.com/us/app/id881934035) based on one of the re-publica apps.
+- [re:publica - rp15](http://republica.conference.bits.io)
 - [Congress – 31C3](https://itunes.apple.com/de/app/congress-31c3/id941205524) for the [31st Chaos Communication Congress](https://events.ccc.de/congress/2014)
 - More…
 
