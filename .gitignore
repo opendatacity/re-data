@@ -1,6 +1,8 @@
 scraper/config/scrapers.js
 node_modules
-web/data/
+web/data/rp13
+web/data/rp14
+web/data/rp15
 .cache
 config.js
 
