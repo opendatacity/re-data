@@ -114,6 +114,9 @@ var locationOrderPreference = [
 		eventId + '-location-5938', // stage 11
 		eventId + '-location-5940', // stage J
 		eventId + '-location-5939', // stage T
+		eventId + '-location-6144', // Makerspace rp15     
+		eventId + '-location-6145', // MIZ rp15
+        eventId + '-location-6148', // re: rp15
 		eventId + '-location-2708', // store
 		eventId + '-location-2710', // GIG lounge
 		eventId + '-location-2709', // GIG makerspace
