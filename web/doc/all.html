@@ -5,13 +5,13 @@
     <title>re:data</title>
 
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
-    <link type="text/css" rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/sunburst.min.css">
+    <link type="text/css" rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/sunburst.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/docs.css">
     <link type="text/css" rel="stylesheet" href="assets/css/print.css" media="print">
     
 
     <script type="text/javascript" src="assets/js/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script type="text/javascript" src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
     <script type="text/javascript" src="assets/js/lunr.min.js"></script>
 
     
@@ -22,7 +22,6 @@
     
 </head>
 <body>
-
     <div id="page">
         <a name="top" />
         <header id="header">
@@ -75,6 +74,11 @@
     <ol>
     
         <li>
+            <a href="api.html#optional-and-required-properties">Optional and Required Properties</a>
+            
+        </li>
+    
+        <li>
             <a href="api.html#events">Events</a>
             
         </li>
@@ -96,6 +100,16 @@
     
         <li>
             <a href="api.html#locations">Locations</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#maps">Maps</a>
+            
+        </li>
+    
+        <li>
+            <a href="api.html#points-of-interest">Points of Interest</a>
             
         </li>
     
@@ -192,6 +206,9 @@
 </code></pre>
 <h1 id="reference">Reference</h1>
 <p>In the following reference examples only the content of the <code>data</code> property will be shown.</p>
+<h2 id="optional-and-required-properties">Optional and Required Properties</h2>
+<p>Several properties are marked as optional. If they are not marked as optional they should be considered required even if not marked as such. </p>
+<p>If you want to specify an optional property as not present explicity (i.e. delete it if it has been there before) specify an explicit <code>null</code> value for the optional property. </p>
 <h2 id="events">Events</h2>
 <p>An event is one chronologically delimited total of sessions. Like a yearly conference.</p>
 <h3 id="get-events-">GET <code>/events</code></h3>
@@ -224,10 +241,11 @@
 <h3 id="get-events-event-id-">GET <code>/events/&lt;event-id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <h2 id="sessions">Sessions</h2>
-<h3 id="get-event-id-sessions-">GET <code>/&lt;event-id&gt;/sessions</code></h3>
+<h3 id="get-events-event-id-sessions-">GET <code>/events/&lt;event-id&gt;/sessions</code></h3>
 <pre><code class="lang-javascript">[{
     &quot;id&quot;: &quot;rp14-session-1&quot;,
     &quot;title&quot;: &quot;Eröffnung&quot;,
+    &quot;subtitle&quot;: &quot;Die erste session&quot;,    
     &quot;abstract&quot;: &quot;...&quot;,
     &quot;description&quot;: &quot;...&quot;,
     &quot;url&quot;: &quot;http://14.re-publica.de/session/1&quot;
@@ -257,7 +275,30 @@
         { &quot;id&quot;: &quot;rp13-speaker-81&quot;, &quot;name&quot;: &quot;Sascha Lobo&quot; }
         //...
     ],
-    &quot;enclosures&quot;: [],
+    &quot;enclosures&quot;: [
+        {
+            &quot;url&quot;: &quot;http://example.com/files/live.m3u8&quot;,
+            &quot;mimetype&quot;: &quot;application/x-mpegURL&quot;,
+            &quot;type&quot;: &quot;livestream&quot;
+        },    
+        {
+            &quot;url&quot;: &quot;http://example.com/files/video.mp4&quot;,
+            &quot;mimetype&quot;: &quot;video/mp4&quot;,
+            &quot;type&quot;: &quot;recording&quot;
+            &quot;thumbnail&quot;: &quot;http://example.com/files/video_thumb.jpg&quot;
+        },
+        {
+            &quot;url&quot;: &quot;http://example.com/files/audio.mp3&quot;,
+            &quot;mimetype&quot;: &quot;audio/mpeg&quot;,
+            &quot;type&quot;: &quot;recording&quot;,
+            &quot;thumbnail&quot;: &quot;http://example.com/files/audio_cover.jpg&quot;
+        },
+        {
+            &quot;url&quot;: &quot;http://example.com/files/foo.pdf&quot;,
+            &quot;mimetype&quot;: &quot;application/pdf&quot;,
+            &quot;type&quot;: &quot;slides&quot;
+        }
+    ],
     &quot;links&quot;: [
         {
             &quot;thumbnail&quot;: &quot;http://i.ytimg.com/vi/18xQRtdrJhQ/mqdefault.jpg&quot;,
@@ -270,11 +311,21 @@
     &quot;last_modified&quot;: 1393611456.99
 }]
 </code></pre>
-<h3 id="get-event-id-sessions-session-id-">GET <code>/&lt;event-id&gt;/sessions/&lt;session-id&gt;</code></h3>
+<h3 id="get-events-event-id-sessions-session-id-">GET <code>/events/&lt;event-id&gt;/sessions/&lt;session-id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <p>Sessions also have two special fields: enclosures and links:</p>
+<p>Optional fields:</p>
+<ul>
+<li><code>subtitle</code></li>
+</ul>
 <h3 id="enclosures">Enclosures</h3>
-<p>Enclosures list files including mime type. The idea is to make it easy to generate e.g. podcast feeds. Currently this feature is not implemented yet.</p>
+<p>Enclosures list URLs of files including mime type. </p>
+<ul>
+<li><strong>url:</strong> Required, the URL of the enclosure</li>
+<li><strong>mimetype:</strong> Required, the MIME type of the enclosure. </li>
+<li><strong>type:</strong>  Required; indicates the kind of enclosure present. Is one of <code>slides</code>, <code>recording</code>, <code>livestream</code>.</li>
+<li><strong>thumbnail:</strong>  Optional; URL of a thumbnail imaged that can be used as a cover or video thumbnail for the enclosure. E.g. a video thumbnail for video enclosures, a cover for audio content or an image of the first slide for the slides. </li>
+</ul>
 <h3 id="links">Links</h3>
 <p>Links is a list of related webpages. Currently we provide only links to youtube/vimeo recordings. Later we also want to provide links to Etherpads, Slideshare, etc.</p>
 <ul>
@@ -283,7 +334,7 @@
 </ul>
 <h2 id="speakers">Speakers</h2>
 <p>Speakers are people performing sessions.</p>
-<h3 id="get-event-id-speakers-">GET <code>/&lt;event-id&gt;/speakers</code></h3>
+<h3 id="get-events-event-id-speakers-">GET <code>/events/&lt;event-id&gt;/speakers</code></h3>
 <pre><code class="lang-javascript">[{
     &quot;id&quot;: &quot;rp13-speaker-1&quot;,
     &quot;event&quot;: &quot;rp13&quot;,
@@ -329,11 +380,11 @@
 <li>Values of <code>&quot;type&quot;</code>: <code>&quot;speaker-link&quot;</code></li>
 <li>Values of <code>&quot;service&quot;</code>: <code>&quot;twitter&quot;</code>, <code>&quot;facebook&quot;</code>, <code>&quot;app.net&quot;</code>, <code>&quot;web&quot;</code>, <code>&quot;github&quot;</code>, <code>web</code> is default.</li>
 </ul>
-<h3 id="get-event-id-speakers-id-">GET <code>/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
+<h3 id="get-events-event-id-speakers-id-">GET <code>/events/&lt;event-id&gt;/speakers/&lt;id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <h2 id="tracks">Tracks</h2>
 <p>Tracks are topic-based collections of sessions</p>
-<h3 id="get-event-id-tracks-">GET <code>/&lt;event-id&gt;/tracks</code></h3>
+<h3 id="get-events-event-id-tracks-">GET <code>/events/&lt;event-id&gt;/tracks</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;research-education&quot;,
@@ -350,33 +401,181 @@
     } //...
 ]
 </code></pre>
-<h3 id="get-event-id-tracks-track-id-">GET <code>/&lt;event-id&gt;/tracks/&lt;track-id&gt;</code></h3>
+<h3 id="get-events-event-id-tracks-track-id-">GET <code>/events/&lt;event-id&gt;/tracks/&lt;track-id&gt;</code></h3>
 <p><em>single object, as above</em></p>
 <h2 id="locations">Locations</h2>
 <p>Locations are specified spaces on the compound and may be stages.</p>
-<h3 id="get-event-id-locations-">GET <code>/&lt;event-id&gt;/locations</code></h3>
+<h3 id="get-events-event-id-locations-">GET <code>/events/&lt;event-id&gt;/locations</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;stage1&quot;, // location_id
         &quot;label_de&quot;: &quot;Stage 1&quot;,
         &quot;label_en&quot;: &quot;Stage 1&quot;,
         &quot;is_stage&quot;: true, // is this a stage
-        &quot;floor&quot;: 0, 
         &quot;order_index&quot;: 0, // order stage objects by this, when listed
+        &quot;point_of_interest&quot;: {
+            &quot;id&quot;: &quot;poi-23&quot;,
+            &quot;label_de&quot;: &quot;Stage 1&quot;,
+            &quot;label_en&quot;: &quot;Stage 1&quot;
+        }
         &quot;last_modified&quot;: 1393611456.99
     }, //...
 ]
 </code></pre>
 <ul>
 <li><code>is_stage</code>: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.</li>
-<li><code>floor</code>: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels.</li>
 <li><code>order_index</code>: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. </li>
+<li><code>point_of_interest</code>: (Optional) Relationship to a point of interest, if any. <code>id</code> and at least one <code>label_</code> properties are required if present</li>
 </ul>
-<h3 id="get-event-id-locations-location-id-">GET <code>/&lt;event-id&gt;/locations/&lt;location-id&gt;</code></h3>
+<h3 id="get-events-event-id-locations-location-id-">GET <code>/events/&lt;event-id&gt;/locations/&lt;location-id&gt;</code></h3>
 <p><em>single object as above</em></p>
+<h2 id="maps">Maps</h2>
+<p>Maps represent maps of the conference venue. A map refrences on more points of interest (POIs). See below for POIs.</p>
+<h3 id="get-events-event-id-maps-">GET <code>/events/&lt;event-id&gt;/maps</code></h3>
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;map-foor-1&quot;,
+        &quot;event&quot;: &quot;rp13&quot;,    
+        &quot;type&quot;: &quot;map&quot;,            
+        &quot;label_de&quot;: &quot;Station Berlin&quot;,
+        &quot;label_en&quot;: &quot;Station Berlin&quot;,
+        &quot;floor_label_de&quot;: &quot;1. Etage&quot;,
+        &quot;floor_label_en&quot;: &quot;1st floor&quot;,
+        &quot;is_outdoor&quot;: true,
+        &quot;is_indoor&quot;: true,        
+        &quot;floor&quot;: 0,
+        &quot;order_index&quot;: 23,
+        &quot;area&quot;: {&quot;width&quot;: 100.0, 
+                 &quot;height&quot;: 200.0},
+        &quot;tiles&quot;: {
+                    &quot;base_url&quot;: &quot;http://bitfever.de/~toto/test/31c3/0floor&quot;,
+                    &quot;large_image_url&quot;: &quot;http://bitfever.de/~toto/test/31c3/0floor/large.png&quot;,
+                    &quot;tile_size&quot;: 512,
+                    &quot;tile_file_extension&quot;: &quot;png&quot;,
+                    &quot;size&quot;: {&quot;width&quot;: 6506,
+                             &quot;height&quot;: 5007}
+                },
+      &quot;pois&quot;: [
+          &quot;poi-5&quot;,
+          &quot;poi-23&quot;,
+          &quot;poi-42&quot;
+      ]
+    }, //...
+]
+</code></pre>
+<ul>
+<li><code>id</code>: (Required) The identifier. Should be opaque to the user, is guranteed to be used only for exactly one map object of this event.</li>
+<li><code>event</code>: (Required) Identifier of the event</li>
+<li><code>type</code>: (Required) always <code>map</code> for maps</li>
+<li><code>label_en</code>, etc.:  (Required in at least 1 language) Label specifying the name of the map localized to the suffix language. The suffix is the 2 char ISO code of the language. E.g. &quot;Berlin Congress Center&quot;</li>
+<li><code>floor_label_en</code>: (Optional): Name of the floor, if there are multiple floors showing the same map area. E.g. &quot;1st floor&quot;</li>
+<li><code>is_outdoor</code>: (Required) <code>true</code> if any significant part of the map is outdoor (e.g. a courtyard, but not a small balcony)</li>
+<li><code>is_indoor</code>: (Required) <code>true</code> if  any significant part of the map is an indoor area (e.g. floor of an office building. <strong>Note:</strong> <code>is_indoor</code> and <code>is_outdoor</code> can both be true, if the map contains e.g. a gound floor plus the courtyard</li>
+<li><code>floor</code>: (Optional) Floor in the building, 0 is ground. May be negative to indicate basement levels. </li>
+<li><code>order_index</code>: (Optional) Hint to using applications that <em>can</em> be used when ordering many maps relative to each other in e.g. a list or a pager. </li>
+<li><code>area</code>: (Required) Specifies the area covered by this map:<ul>
+<li><code>width</code>, <code>height</code> (Required) <em>logical</em> size of the area the map covers in <em>meters</em>.</li>
+</ul>
+</li>
+<li><code>tiles</code>: (Required) Specifies the information for the tiled map. A dictionary with the following keys:<ul>
+<li><strong>General</strong> Image tiles should be present in a structure compatible with the <a href="http://openseadragon.github.io">OpenSeadragon project</a>. For example generated using the <a href="https://github.com/dblock/dzt">dzt</a> tool.</li>
+<li><code>base_url</code>: (Required) Base URL where the tile images can be found. Tiles themselves should be in a subdirectory called <code>tiles</code> structured as specified above.</li>
+<li><code>large_image_url</code>: A large version of the map image. This can be used e.g. if no tiled image support is implemented. It tis recomended that the image size does not exceed 2080x2048 pixels on this image.</li>
+<li><code>tile_size</code>: (Required) Size of the tiles in pixels. Tiles have to be square.</li>
+<li><code>tile_file_extension</code>: (Required) File extension for the tile images to the URL can be constructed by a viewer. E.g. <code>png</code> </li>
+<li><code>size</code>: (Required): A dictionary specifiying <code>width</code> and <code>height</code> of the original image (not to be confused with the large image) in pixels.</li>
+</ul>
+</li>
+<li><code>pois</code>: (Required) List of the <code>id</code>s of all <code>pois</code> on this map. Can be empty.<br>Specifies the base URL for image tiles. </li>
+</ul>
+<h3 id="get-events-event-id-maps-map-id-">GET <code>/events/&lt;event-id&gt;/maps/&lt;map-id&gt;</code></h3>
+<p>Same as above, but returning only one map.</p>
+<h2 id="points-of-interest">Points of Interest</h2>
+<p>Represents a single point of interest on a map. Each POI belongs to a map object. </p>
+<h3 id="get-events-event-id-pois-">GET <code>/events/&lt;event-id&gt;/pois</code></h3>
+<pre><code class="lang-javascript">[
+    {
+        &quot;id&quot;: &quot;poi-1-map-1&quot;,
+        &quot;event&quot;: &quot;rp13&quot;,    
+        &quot;type&quot;: &quot;poi&quot;,            
+        &quot;positions&quot;: [{&quot;map&quot;: &quot;level4&quot;,
+                       &quot;x&quot;: 3520.0, &quot;y&quot;: 2107.0}],
+        &quot;category&quot;: &quot;session-location&quot;,
+        &quot;location&quot;: {
+            &quot;id&quot;: &quot;location-1&quot;, 
+            &quot;label_de&quot;: &quot;Sendezentrum&quot;, 
+            &quot;label_en&quot;: &quot;Broadcast Center&quot;
+        },
+        &quot;label_de&quot;: &quot;Sendezentrum&quot;,
+        &quot;label_en&quot;: &quot;Broadcast Center&quot;,        
+        &quot;description_de&quot;: &quot;Das Sendezentrum ist ein Projekt des Kombinats für Angewandte Radiotheorie. Konkret besteht das Kernteam aus Tim Pritlove (Metaebene), Claudia Krell und Ralf Stockmann (beide Wikigeeks).&quot;,
+        &quot;description_en&quot;: &quot;The broadcast center…&quot;,                
+        &quot;links&quot;: [
+            {
+                &quot;title&quot;: &quot;Das Sendezentrum&quot;,
+                &quot;url&quot;: &quot;http://das-sendezentrum.de&quot;,
+                &quot;type&quot;: &quot;other&quot;
+            }
+        ]
+        &quot;hidden&quot;: false,
+        &quot;priority&quot;: 100,
+        &quot;beacons&quot;: [{&quot;uuid&quot;: &quot;55C1DAB7-9430-450C-B94C-DE174D202B8B&quot;,
+                     &quot;major&quot;: 23,
+                     &quot;minor&quot;: 42}]
+    }, //...
+]
+</code></pre>
+<ul>
+<li><code>id</code>: (Required) Identifier of the POI. Uniq per event.</li>
+<li><code>event</code>: (Required) Identifier of the event this POI belongs to</li>
+<li><code>type</code>: (Required) Always <code>poi</code></li>
+<li><code>positions</code>: (Required) Identifier of the maps this POI belongs to and where it is on these maps. An array of dicts with the keys:<ul>
+<li><code>map</code>: (Required) Identifier of the map. <strong>Note:</strong> A map identifier may only occur once in the <code>positions</code> property (aka a POI may only be placed on a map once)</li>
+<li><code>x</code> and <code>y</code> (Required) Position of this POI on the map. These are pixel coordinates in the coordinate system of the <code>map</code>. 
+The coorinates are pixels on the original size of the map (<code>tiles.size.width</code> and <code>tiles.size.height</code> properties). 
+The origin of the coordinate system is located on the <em>bottom left</em>. </li>
+</ul>
+</li>
+<li><p><code>category</code>: (Required) Category of the POI.  Pick one:</p>
+<pre><code>  - `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
+  - `workshop-location` - A workshop area 
+  - `service` - Cash desk, info point, etc.
+  - `safety`
+  - `community` - Gathering spots, etc.
+  - `food`
+  - `entertainment`
+  - `organisation`
+  - `restroom`
+  - `elevator`
+  - `escalator`
+  - `shopping`
+  - `other`
+</code></pre></li>
+<li><p><code>location</code>: (Optional) Object with identifiying the <code>location</code> this POI belongs to if it represents a location sessions take place at. </p>
+<ul>
+<li><code>id</code> (Required) Identifier of the location</li>
+<li><code>label_de</code>, <code>label_en</code> (Required in at leat one language) Label</li>
+</ul>
+</li>
+<li><code>label_en</code>, <code>label_de</code>, etc: (Required in at least on language) Label of the POI in the language specified by the suffix</li>
+<li><code>description_en</code>, <code>description_de</code>, etc: (Optional) more exhaustive description of the point of interest</li>
+<li><code>links</code>: (Required, but can be empty) A list of link objects related to this POI. E.g. the website of the porject, a link to the menu, etc. <ul>
+<li><code>url</code> (Required) URL </li>
+<li><code>title</code> (Optional) Title of the link</li>
+<li><code>type</code> (Required): Link type, see Session or Speaker above</li>
+</ul>
+</li>
+<li><code>hidden</code>: (Optional) If not present should be assumed <code>false</code>, if <code>true</code> identifies a POI that should not be shown in UI (e.g. only for beacon positioning), might be ignored by the client if deemed appropriate.</li>
+<li><code>priority</code>: (Optional) If not present should be assumed <code>0</code>. Can be used to identify the relative priority of this POI to others. Use full e.g. if clustering is needed or filtering needs to be performed for performance reasons on the client.</li>
+<li><code>beacons</code>: (Optional) An array of maps, each representing a Bluetooth 4.0 LE beacon (aka <a href="https://en.wikipedia.org/wiki/IBeacon">iBeacon</a>) marking this POI. <pre><code>       A beacon has `uuid`, `major` and `minor` ID, where UUID might be the same for the whole conference or even beyond, so only the three properties in combination identifiy a uniq beacon. All three are required.  
+       Note: Only beacons whose presence identififies this POI should be here, not merely beacons who are close by. 
+</code></pre></li>
+</ul>
+<h3 id="get-events-event-id-pois-poi-id-">GET <code>/events/&lt;event-id&gt;/pois/&lt;poi-id&gt;</code></h3>
 <h2 id="days">Days</h2>
-<p>Days enframe several session by a slice of time, usually one day.</p>
-<h3 id="get-event-id-days-">GET <code>/&lt;event-id&gt;/days</code></h3>
+<p>Days group several session by a slice of time, usually one day.</p>
+<p><strong>Note:</strong> The <code>date</code> property is a calendar date (aka symbolic date) not a point in time. Therefore it is interpreted in the timezone of the conference.</p>
+<h3 id="get-events-event-id-days-">GET <code>/events/&lt;event-id&gt;/days</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;1&quot;,
@@ -397,11 +596,11 @@
     } //...
 ]
 </code></pre>
-<h3 id="get-event-id-days-day-id-">GET <code>/&lt;event-id&gt;/days/&lt;day-id&gt;</code></h3>
+<h3 id="get-events-event-id-days-day-id-">GET <code>/events/&lt;event-id&gt;/days/&lt;day-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="formats">Formats</h2>
 <p>Formats indicate the practical execution of a session, like talk, discussion, workshop etc.</p>
-<h3 id="get-event-id-formats-">GET <code>/&lt;event-id&gt;/formats</code></h3>
+<h3 id="get-events-event-id-formats-">GET <code>/events/&lt;event-id&gt;/formats</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;talk&quot;,
@@ -421,11 +620,11 @@
     } //...
 ]
 </code></pre>
-<h3 id="get-event-id-formats-format-id-">GET <code>/&lt;event-id&gt;/formats/&lt;format-id&gt;</code></h3>
+<h3 id="get-events-event-id-formats-format-id-">GET <code>/events/&lt;event-id&gt;/formats/&lt;format-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="levels">Levels</h2>
 <p>Levels indivate the amount of preexisting knowledge expected from the respective audience</p>
-<h3 id="get-event-id-levels-">GET <code>/&lt;event-id&gt;/levels</code></h3>
+<h3 id="get-events-event-id-levels-">GET <code>/events/&lt;event-id&gt;/levels</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;beginner&quot;,
@@ -445,10 +644,10 @@
     } //...
 ]
 </code></pre>
-<h3 id="get-event-id-levels-level-id-">GET <code>/&lt;event-id&gt;/levels/&lt;level-id&gt;</code></h3>
+<h3 id="get-events-event-id-levels-level-id-">GET <code>/events/&lt;event-id&gt;/levels/&lt;level-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 <h2 id="languages">Languages</h2>
-<h3 id="get-event-id-languages-">GET <code>/&lt;event-id&gt;/languages</code></h3>
+<h3 id="get-events-event-id-languages-">GET <code>/events/&lt;event-id&gt;/languages</code></h3>
 <pre><code class="lang-javascript">[
     {
         &quot;id&quot;: &quot;de&quot;,
@@ -463,7 +662,7 @@
     } //...
 ]
 </code></pre>
-<h3 id="get-event-id-languages-language-id-">GET <code>/&lt;event-id&gt;/languages/&lt;language-id&gt;</code></h3>
+<h3 id="get-events-event-id-languages-language-id-">GET <code>/events/&lt;event-id&gt;/languages/&lt;language-id&gt;</code></h3>
 <p><em>single object as above</em></p>
 
 
@@ -476,7 +675,7 @@
             <a href="#top">Back to top</a> - <a href="all.html">Everything on a single page</a>
             - <a href="?print=1">Print current page</a> - <a href="all.html?print=1">Print all pages</a>
             
-                - <a href="https://github.com/opendatacity/re-data">Code is on Github</a>
+                <a href="https://github.com/opendatacity/re-data">Code is on Github</a>
             
         </footer>
     </div>
