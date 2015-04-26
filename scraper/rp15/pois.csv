@@ -12,4 +12,14 @@ stage10;0;1759;153;STG-10;STG-10;session-location;rp15-location-5937;STG-10;STG-
 stage11;0;1446;159;STG-11;STG-11;session-location;rp15-location-5934;STG-11;STG-11
 staget;0;3128;884;STG-T;STG-T;session-location;rp15-location-5934;STG-T;STG-T
 stagej;0;3150;1093;STG-J;STG-J;session-location;rp15-location-5934;STG-J;STG-J
-
+viparea;0;2715;925;VIP Area;VIP Area;session-location;rp15-location-5934;VIP Area;VIP Area
+entry0;0;3721;283;Entry;Entry;other;;Entry;Entry
+store;0;3507;278;Store;Store;shopping;;Store;Store
+registration;0;3617;206;Registration;Registration;service;;Registration;Registration
+jazzbar;0;3449;488;Jazzbar;Jazzbar;entertainment;;Jazzbar;Jazzbar
+backyard;0;3325;235;Backyard;Backyard;community;;Backyard;Backyard
+refill;0;3002;342;re:fill Bar;re:fill Bar;entertainment;;re:fill Bar;re:fill Bar
+courtyard;0;2784;633;Courtyard;Courtyard;community;;Courtyard;Courtyard
+reception;0;2574;749;re:ception;re:ception;service;;re:ception;re:ception
+entry1;0;3718;587;Entry;Entry;other;;Entry;Entry
+patio;0;2736;1186;Patio;Patio;other;;Patio;Patio
