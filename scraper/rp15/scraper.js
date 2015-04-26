@@ -80,8 +80,8 @@ var allMaps = {
 		"area": {"width": 3936.0, 
 		         "height": 1407.0},
 		"tiles": {
-                    "base_url": "http://data.conference.bits.io/maps/rp15/floor0",
-                    "large_image_url": "http://data.conference.bits.io/maps/rp15/floor0/mini.png",
+                    "base_url": "http://data.conference.bits.io/maps/rp15/station",
+                    "large_image_url": "http://data.conference.bits.io/maps/rp15/station/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
                     "size": {"width": 3936,
