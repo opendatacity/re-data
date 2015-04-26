@@ -77,15 +77,15 @@ var allMaps = {
 		"is_indoor": true,		
 		"floor": 0,
 		"order_index": 0,
-		"area": {"width": 1000.0, 
-		         "height": 516.0},
+		"area": {"width": 3936.0, 
+		         "height": 1407.0},
 		"tiles": {
-                    "base_url": "http://data.conference.bits.io/maps/rp14/floor0",
-                    "large_image_url": "http://data.conference.bits.io/maps/rp14/floor0/mini.png",
+                    "base_url": "http://data.conference.bits.io/maps/rp15/floor0",
+                    "large_image_url": "http://data.conference.bits.io/maps/rp15/floor0/mini.png",
                     "tile_size": 512,
                     "tile_file_extension": "png",
-                    "size": {"width": 7941,
-                             "height": 4096}
+                    "size": {"width": 3936,
+                             "height": 1407}
                 },
 	    "pois": []
 	}
