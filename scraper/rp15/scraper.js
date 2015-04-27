@@ -136,8 +136,7 @@ exports.scrape = function (callback) {
 		{
 			urls: {
 				sessions: 'http://re-publica.de/event/3013/json/sessions', 
-				speakers: 'http://re-publica.de/event/3013/json/speakers',
-				rooms:    'http://re-publica.de/event/3013/rooms.json'
+				speakers: 'http://re-publica.de/event/3013/json/speakers'
 			}
 		},
 		function (result) {
@@ -145,7 +144,6 @@ exports.scrape = function (callback) {
 
 			var sessionList  = result.sessions.items;
 			var speakerList  = result.speakers.items;
-			var locationList = toArray(result.rooms.rooms);
 			var ytPlaylist   = [];
 			
 
@@ -185,9 +183,23 @@ exports.scrape = function (callback) {
 				addEntry('speaker', entry);
 			});
 
-			locationList.forEach(function (location) {
-				location = location.room;
-				var id = eventId + '-location-'+location.nid;
+			// first get rooms out of the sessions
+			sessionList.forEach(function (session) {
+				
+				var locationName = session['room'];
+				var locationId = session['room_id'];				
+
+				if (locationName == null || locationId == null ||
+					locationName == '' || locationId == '') {
+					return;
+				}
+				
+				var id = eventId + '-location-'+ locationId;
+				// only uniq rooms 
+				if (locationMap[id]) {
+					return;
+				}
+				
 				var orderPreference = locationOrderPreference.indexOf(id);
 				// put unknown locations at the end
 				if (orderPreference < 0) {
@@ -195,17 +207,16 @@ exports.scrape = function (callback) {
 				}
 				var entry = {
 					'id': id,
-					'label_de': location.title,
-					'label_en': location.title,
+					'label_de': locationName,
+					'label_en': locationName,
 					'order_index': orderPreference,
 					'type': 'location',
 					'event': eventId,
-					'is_stage': location.title.match(/stage /i) ? true : false
+					'is_stage': locationName.match(/stage /i) ? true : false
 				}
 				locationMap[entry.id] = entry;
-				// if (!removeTimesAndLocations) {
-					addEntry('location', entry);
-				// }
+
+				addEntry('location', entry);
 			});
 
 			var fakeSessions = [
