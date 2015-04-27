@@ -1,25 +1,25 @@
 id;floors;x;y;label_en;label_de;category;location_id;location_label_de;location_label_en
-stage1;0;786;459;STG-01;STG-01;session-location;rp15-location-5591;STG-01;STG-01
-stage2;0;171;227;STG-02;STG-02;session-location;rp15-location-5929;STG-02;STG-02
-stage3;0;365;575;STG-03;STG-03;session-location;rp15-location-5930;STG-03;STG-03
-stage4;0;1087;862;STG-04;STG-04;session-location;rp15-location-5931;STG-04;STG-04
-stage5;0;1665;883;STG-05;STG-05;session-location;rp15-location-5932;STG-05;STG-05
-stage6;0;1837;1235;STG-06;STG-06;session-location;rp15-location-5933;STG-06;STG-06
-stage7;0;2941;1286;STG-07;STG-07;session-location;rp15-location-5934;STG-07;STG-07
-stage8;0;2282;177;STG-08;STG-08;session-location;rp15-location-5935;STG-08;STG-08
-stage9;0;1969;150;STG-09;STG-09;session-location;rp15-location-5936;STG-09;STG-09
-stage10;0;1759;153;STG-10;STG-10;session-location;rp15-location-5937;STG-10;STG-10
-stage11;0;1446;159;STG-11;STG-11;session-location;rp15-location-5934;STG-11;STG-11
-staget;0;3128;884;STG-T;STG-T;session-location;rp15-location-5934;STG-T;STG-T
-stagej;0;3150;1093;STG-J;STG-J;session-location;rp15-location-5934;STG-J;STG-J
-viparea;0;2715;925;VIP Area;VIP Area;session-location;rp15-location-5934;VIP Area;VIP Area
-entry0;0;3721;283;Entry;Entry;other;;Entry;Entry
-store;0;3507;278;Store;Store;shopping;;Store;Store
-registration;0;3617;206;Registration;Registration;service;;Registration;Registration
-jazzbar;0;3449;488;Jazzbar;Jazzbar;entertainment;;Jazzbar;Jazzbar
-backyard;0;3325;235;Backyard;Backyard;community;;Backyard;Backyard
-refill;0;3002;342;re:fill Bar;re:fill Bar;entertainment;;re:fill Bar;re:fill Bar
-courtyard;0;2784;633;Courtyard;Courtyard;community;;Courtyard;Courtyard
-reception;0;2574;749;re:ception;re:ception;service;;re:ception;re:ception
-entry1;0;3718;587;Entry;Entry;other;;Entry;Entry
-patio;0;2736;1186;Patio;Patio;other;;Patio;Patio
+stage1;0;1536;918;STG-01;STG-01;session-location;rp15-location-5591;STG-01;STG-01
+stage2;0;342;454;STG-02;STG-02;session-location;rp15-location-5929;STG-02;STG-02
+stage3;0;730;1150;STG-03;STG-03;session-location;rp15-location-5930;STG-03;STG-03
+stage4;0;2174;1724;STG-04;STG-04;session-location;rp15-location-5931;STG-04;STG-04
+stage5;0;3330;1766;STG-05;STG-05;session-location;rp15-location-5932;STG-05;STG-05
+stage6;0;3674;2470;STG-06;STG-06;session-location;rp15-location-5933;STG-06;STG-06
+stage7;0;5882;2572;STG-07;STG-07;session-location;rp15-location-5934;STG-07;STG-07
+stage8;0;4564;354;STG-08;STG-08;session-location;rp15-location-5935;STG-08;STG-08
+stage9;0;3938;300;STG-09;STG-09;session-location;rp15-location-5936;STG-09;STG-09
+stage10;0;3518;306;STG-10;STG-10;session-location;rp15-location-5937;STG-10;STG-10
+stage11;0;2892;318;STG-11;STG-11;session-location;rp15-location-5934;STG-11;STG-11
+staget;0;6256;1768;STG-T;STG-T;session-location;rp15-location-5934;STG-T;STG-T
+stagej;0;6300;2186;STG-J;STG-J;session-location;rp15-location-5934;STG-J;STG-J
+viparea;0;5430;1850;VIP Area;VIP Area;session-location;rp15-location-5934;VIP Area;VIP Area
+entry0;0;7442;566;Entry;Entry;other;;Entry;Entry
+store;0;7014;556;Store;Store;shopping;;Store;Store
+registration;0;7234;412;Registration;Registration;service;;Registration;Registration
+jazzbar;0;6898;976;Jazzbar;Jazzbar;entertainment;;Jazzbar;Jazzbar
+backyard;0;6650;470;Backyard;Backyard;community;;Backyard;Backyard
+refill;0;6004;684;re:fill Bar;re:fill Bar;entertainment;;re:fill Bar;re:fill Bar
+courtyard;0;5568;1266;Courtyard;Courtyard;community;;Courtyard;Courtyard
+reception;0;5148;1498;re:ception;re:ception;service;;re:ception;re:ception
+entry1;0;7436;1174;Entry;Entry;other;;Entry;Entry
+patio;0;5472;2372;Patio;Patio;other;;Patio;Patio
