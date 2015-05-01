@@ -126,6 +126,7 @@ var locationOrderPreference = [
 		eventId + '-location-2713', // republica
 		eventId + '-location-2855', // re/connect
 		eventId + '-location-2871', // backyard
+		eventId + '-location-6147'  // newthinkging rp15
 ];
 
 // the youtube playlist to which all videos are added
