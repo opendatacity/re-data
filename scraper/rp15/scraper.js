@@ -305,7 +305,7 @@ exports.scrape = function (callback) {
 					});
 				}
 
-				console.log("session:", session);
+				console.log("session:", session.nid);
 
 				var entry = {
 					'id': eventId + '-session-' + session.nid,
@@ -496,7 +496,7 @@ function parseDateTime(date, time) {
 	date.setTime(newMillis);
 	return date;
 
-	console.log('Unknown date "'+date+'" and time "'+time+'"');
+	console.error('Unknown date "'+date+'" and time "'+time+'"');
 	return null;
 }
 
@@ -507,7 +507,7 @@ function parseLocation(locationMap, roomid) {
 	var location = locationMap[id];
 
 	if (location == undefined) {
-		console.log("unknown location " + roomid);
+		console.error("unknown location " + roomid);
 		return null;
 	}
 
@@ -561,10 +561,9 @@ function parseSpeakers(speakerMap, speakeruids) {
 	speakeruids.forEach(function (speakerId) {
 		var speaker = speakerMap[eventId + '-speaker-'+speakerId];
 		if (speaker != undefined) {
-			speakers.push({'id': speaker.id,
-											'name': speaker.name});
+			speakers.push({'id': speaker.id, 'name': speaker.name});
 		} else {
-				console.log("unknown speaker " + speakerId);
+			console.error("unknown speaker " + speakerId);
 		}
 	})
 
