@@ -558,8 +558,7 @@ function parseSpeakers(speakerMap, speakeruids) {
 		});
 	}
 	
-	for (var i = speakeruids.length - 1; i >= 0; i--){
-		var speakerId = speakeruids[i];
+	speakeruids.forEach(function (speakerId) {
 		var speaker = speakerMap[eventId + '-speaker-'+speakerId];
 		if (speaker != undefined) {
 			speakers.push({'id': speaker.id,
@@ -567,7 +566,7 @@ function parseSpeakers(speakerMap, speakeruids) {
 		} else {
 				console.log("unknown speaker " + speakerId);
 		}
-	}
+	})
 
 	return speakers;
 }
