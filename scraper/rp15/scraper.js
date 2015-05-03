@@ -48,8 +48,9 @@ var allLevels = {
 };
 
 var allLanguages = {
-	'Englisch': { id:'en', label_de:'Englisch', label_en:'English' },
-	'Deutsch':  { id:'de', label_de:'Deutsch',  label_en:'German'  }
+	'Englisch':         { id:'en',    label_de:'Englisch',         label_en:'English'         },
+	'Deutsch':          { id:'de',    label_de:'Deutsch',          label_en:'German'          },
+	'Deutsch/Englisch': { id:'de+en', label_de:'Deutsch/Englisch', label_en:'German/English'  }
 };
 
 var allDays = {
