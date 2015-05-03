@@ -1,6 +1,18 @@
 [
 	{
 		"type": "event",
+		"id": "alt",
+		"label": "AltConf",
+		"title": "AltConf 14",
+		"date": ["2014-06-03","2014-06-07"],
+		"locations": [{
+			"label": "Children's Creativity Museum",
+			"coords": [37.783273, -122.401827]
+		}],
+		"url": "http://altconf.com/"
+	},		
+	{
+		"type": "event",
 		"id": "test-rp14",
 		"label": "TESTDATA (from re:publica 14)",
 		"title": "A TEST into the wild",
@@ -10,7 +22,7 @@
 			"coords": [52.49814,13.374538]
 		}],
 		"url": "http://14.re-publica.de/"
-	},		
+	},			
 	{
 		"type": "event",
 		"id": "rp13",

@@ -51,6 +51,7 @@ var allRooms = {
   "alt-location-lab-1": {
     "id": "alt-location-lab-1",
     "label_en": "Jillian's A",
+    "label_de": "Jillian's A",	  
     "is_stage": false,
     "floor": 0,
     "order_index": 1,
@@ -60,6 +61,7 @@ var allRooms = {
   "alt-location-lab-2": {
     "id": "alt-location-lab-2",
     "label_en": "Jillian's B",
+    "label_de": "Jillian's B",	  
     "is_stage": false,
     "floor": 0,
     "order_index": 2,
@@ -69,6 +71,7 @@ var allRooms = {
   "alt-location-mainstage": {
     "id": "alt-location-mainstage",
     "label_en": "Creativity Museum",
+    "label_de": "Creativity Museum",	  
     "is_stage": true,
     "floor": 0,
     "order_index": 0,
