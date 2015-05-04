@@ -12,7 +12,7 @@ stage10;0;3518;306;STG-10;STG-10;session-location;rp15-location-5937;STG-10;STG-
 stage11;0;2892;318;STG-11;STG-11;session-location;rp15-location-5934;STG-11;STG-11
 staget;0;6256;1768;STG-T;STG-T;session-location;rp15-location-5934;STG-T;STG-T
 stagej;0;6300;2186;STG-J;STG-J;session-location;rp15-location-5934;STG-J;STG-J
-viparea;0;5430;1850;VIP Area;VIP Area;session-location;rp15-location-5934;VIP Area;VIP Area
+viparea;0;5430;1850;VIP Area;VIP Area;other;;VIP Area;VIP Area
 entry0;0;7442;566;Entry;Entry;other;;Entry;Entry
 store;0;7014;556;Store;Store;shopping;rp15-location-6289;Store;Store
 registration;0;7234;412;Registration;Registration;service;;Registration;Registration
