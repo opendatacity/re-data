@@ -150,9 +150,6 @@ exports.scrape = function (callback) {
 			var sessionList  = result.sessions.items;
 			var speakerList  = result.speakers.items;
 			var ytPlaylist   = [];
-			
-
-			
 
 			var ytVideoMap  = {};
 			var locationMap = {};
