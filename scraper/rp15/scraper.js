@@ -291,11 +291,11 @@ exports.scrape = function (callback) {
 					
 					session.video.forEach(function (videoURL) {
 						
-						if (videoURL.match(/^http\:\/\/www\.youtube\.com\/watch\?v=(.+)/i)) {
+						if (videoURL.match(/^https?\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9\-\_]+)/i)) {
 							if (RegExp.$1) {
 								// https://www.youtube.com/v/12BYSqVGCUk
 								var result =  {
-						 			"thumbnail": "http://img.youtube.com/vi/" + RegExp.$1 + "/hqdefault.jpg",
+						 			"thumbnail": "https://img.youtube.com/vi/" + RegExp.$1 + "/hqdefault.jpg",
 						 			"title": session.title,
 						 			"url": "https://www.youtube.com/v/" + RegExp.$1,
 						 			"service": "youtube",
