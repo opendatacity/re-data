@@ -1,83 +1,83 @@
-var eventId = 'alt';
+var eventId = 'altconf15';
 
 var fs = require('fs');
 var path = require('path');
 
 var allDays = {
-  "2014-06-02": {
+  "2015-06-08": {
     "id": "alt-day-1",
-    "event": "alt",
+    "event": eventId,
     "type": "day",
-    "label_en": "2nd June",
-   "date": "2014-06-03"
-    // "date": "2014-06-02"
+    "label_en": "8th June",
+   "date": "2015-06-08"
+    // "date": "2015-06-02"
   },
-  "2014-06-03": {
+  "2015-06-09": {
     "id": "alt-day-2",
-    "event": "alt",
+    "event": eventId,
     "type": "day",
-    "label_en": "3rd June",
-   "date": "2014-06-04"
-    // "date": "2014-06-03"
+    "label_en": "9th June",
+   "date": "2015-06-09"
+    // "date": "2015-06-03"
   },
-  "2014-06-04": {
+  "2015-06-10": {
     "id": "alt-day-3",
-    "event": "alt",
+    "event": eventId,
     "type": "day",
-    "label_en": "4th June",
-  "date": "2014-06-05"
-    // "date": "2014-06-04"
+    "label_en": "10th June",
+  "date": "2015-06-10"
+    // "date": "2015-06-04"
   },
-  "2014-06-05": {
+  "2015-06-11": {
     "id": "alt-day-4",
-    "event": "alt",
+    "event": eventId,
     "type": "day",
-    "label_en": "5th June",
- "date": "2014-06-06"
-    // "date": "2014-06-05"
+    "label_en": "11th June",
+ "date": "2015-06-11"
+    // "date": "2015-06-05"
   },
-  "2014-06-06": {
+  "2015-06-12": {
     "id": "alt-day-5",
-    "event": "alt",
+    "event": eventId,
     "type": "day",
-    "label_en": "6th June",
-   "date": "2014-06-07"
-    // "date": "2014-06-06"
+    "label_en": "12th June",
+   "date": "2015-06-12"
+    // "date": "2015-06-06"
 
   }
 };
 
 var allRooms = {
-  "alt-location-lab-1": {
-    "id": "alt-location-lab-1",
-    "label_en": "Jillian's A",
-    "label_de": "Jillian's A",	  
-    "is_stage": false,
-    "floor": 0,
-    "order_index": 1,
-    "event": "alt",
-    "type": "location"
-  },
-  "alt-location-lab-2": {
-    "id": "alt-location-lab-2",
-    "label_en": "Jillian's B",
-    "label_de": "Jillian's B",	  
-    "is_stage": false,
-    "floor": 0,
-    "order_index": 2,
-    "event": "alt",
-    "type": "location"
-  },
-  "alt-location-mainstage": {
-    "id": "alt-location-mainstage",
-    "label_en": "Creativity Museum",
-    "label_de": "Creativity Museum",	  
-    "is_stage": true,
-    "floor": 0,
-    "order_index": 0,
-    "event": "alt",
-    "type": "location",
-  }
+  // "alt-location-lab-1": {
+  //   "id": "alt-location-lab-1",
+  //   "label_en": "Jillian's A",
+  //   "label_de": "Jillian's A",
+  //   "is_stage": false,
+  //   "floor": 0,
+  //   "order_index": 1,
+  //   "event": "alt",
+  //   "type": "location"
+  // },
+  // "alt-location-lab-2": {
+  //   "id": "alt-location-lab-2",
+  //   "label_en": "Jillian's B",
+  //   "label_de": "Jillian's B",
+  //   "is_stage": false,
+  //   "floor": 0,
+  //   "order_index": 2,
+  //   "event": "alt",
+  //   "type": "location"
+  // },
+  // "alt-location-mainstage": {
+  //   "id": "alt-location-mainstage",
+  //   "label_en": "Creativity Museum",
+  //   "label_de": "Creativity Museum",
+  //   "is_stage": true,
+  //   "floor": 0,
+  //   "order_index": 0,
+  //   "event": "alt",
+  //   "type": "location",
+  // }
 };
 
 var allLanguages = {
@@ -85,16 +85,16 @@ var allLanguages = {
 };
 
 var allFormats = {
-	'Diskussion': { id:'discussion', label_en:'Discussion' },
-	'Vortrag':    { id:'talk',       label_en:'Talk'       },
-	'Workshop':   { id:'workshop',   label_en:'Workshop'   },
-	'Aktion':     { id:'action',     label_en:'Action'     }
+	'discussion': { id:'discussion', label_en:'Discussion' },
+	'talk':    { id:'talk',       label_en:'Talk'       },
+	'workshop':   { id:'workshop',   label_en:'Workshop'   },
+	'action':     { id:'action',     label_en:'Action'     }
 }
 
 var allLevels = {
-	'Beginner':         { id:'beginner',     label_en:'Beginner'     },
-	'Fortgeschrittene': { id:'intermediate', label_en:'Intermediate' },
-	'Experten':         { id:'advanced',     label_en:'Advanced'     }
+	'beginner':         { id:'beginner',     label_en:'Beginner'     },
+	'intermediate':     { id:'intermediate', label_en:'Intermediate' },
+	'advanced':         { id:'advanced',     label_en:'Advanced'     }
 };
 
 var allTracks = {
@@ -106,109 +106,118 @@ var allTracks = {
                "label_en": "General" },
   'streaming': { "color": [43,81,160,1],
                  "id": "streaming",
-                 "label_en": "Streaming" }
+                 "label_en": "Streaming" },
+  'design': { "color": [43,81,160,1],
+                 "id": "design",
+                 "label_en": "Design" },	
+  'community': { "color": [43,81,160,1],
+                 "id": "community",
+				  "label_en": "Community" }		
 };
 
 var trackMap = {
-  'general': [ 'alt-session-1',
-               'alt-lab-17',
-               'alt-session-3',
-               'alt-session-6',
-               'alt-session-12',
-               'alt-session-16',
-               'alt-session-20',
-               'alt-session-25',
-               'alt-session-29',
-               'alt-session-42',
-               'alt-session-53',
-               'alt-session-12',
-               'alt-session-20',
-               'alt-session-25',
-               'alt-session-32',
-               'alt-session-38',
-               'alt-session-44',
-               'alt-session-50',
-               'alt-session-57',
-               'alt-session-6',
-                ],
-  'streaming': [ 'alt-lab-18',
-                 'alt-session-2' ]
+  'development':   [ 
+  				],
+  'streaming': [ 
+  	 			],
+  'design': [ 
+  			],
+  'community': [ 
+				]			
 };
+
+function parseSpeaker(dict) {
+	var speaker = dict;
+	
+	if (speaker['name'].match(/TBA/)) {
+		return null;
+	}
+	
+	return speaker;
+}
+
+function parseSession(dict) {
+	var session = dict;
+	
+	if (session['title'] == "") {
+		return null;
+	};
+	
+	if (!session['format']) {
+		session['format'] = allFormats['talk'];
+	}
+	if (!session['level']) {
+		session['level'] = allLevels['intermediate'];
+	}	
+	if (!session['lang']) {
+		session['lang'] = allLanguages['en'];
+	}
+	if (!session['day']) {
+		session['begin'] = null;
+		session['end'] = null;		
+	}
+	
+	var speakers = session['speakers'];
+	if (speakers) {
+		speakers = speakers.filter(function (speaker) {
+			return !(speaker['name'].match(/TBA/));
+		});
+		session['speakers'] = speakers;
+	}
+	
+	
+	return session;
+};
+
+function mkID(string) {
+	return eventId + "-" + string.toString().replace(/[^A-Za-z0-9]+/g, '-').toLowerCase();
+}
 
 exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
 				sessions: 'http://altconf.com/schedule/sessions.json',
-				speakers: 'http://altconf.com/schedule/sessions.json'
+				speakers: 'http://altconf.com/schedule/speakers.json'
 			}
 		},
 		function (result) {
 			var data = [];
-
 			var sessionList  = result.sessions;
+			var speakerList  = result.speakers;			
 
-			sessionList.forEach(function (session) {
-				var day = parseDay(session.begin);
-
-				session.day = day;
-				session.level = allLevels['Fortgeschrittene'];
-				session.lang = allLanguages["en"];
-				if (session.location.id == "alt-location-mainstage") {
-					session.format = allFormats["Vortrag"];
-				} else {
-					session.format = allFormats["Workshop"];
+			// Speakers
+			// -----------
+			speakerList.forEach(function (speakerDict) {
+				var speaker = parseSpeaker(speakerDict);
+				
+				if (speaker != null) {
+					addEntry('speaker', speaker);
 				}
-				session.enclosures = [];
-				if (session.links == undefined) {
-			 	   session.links = [];
-			  }
-
-        var track = allTracks['development'];
-        if (trackMap['general'].indexOf(session.id) >= 0) {
-          track = allTracks['general'];
-        } else if (trackMap['streaming'].indexOf(session.id) >= 0) {
-          track = allTracks['streaming'];
-        }
-
-        session.track = { 'id': track.id,
-                          'label_en': track.label_en };
-
-				if (session.speakers == undefined) {
-					session.speakers = [];
-				}
-				addEntry('session', session);
+			});
+			
+			// Sessions
+			// -----------
+			sessionList.forEach(function (sessionDict) {
+				var session = parseSession(sessionDict);
+				
+				if (session != null) {
+					addEntry('session', session);
+				}				
 			});
 
-			var speakerList  = result.speakers;
-			speakerList.forEach(function(speaker) {
-
-
-				var speakerDict = {
-				  "id": speaker.id,
-				  "event": eventId,
-				  "type": "speaker",
-				  "name": speaker.name,
-				  "photo": speaker.photo == undefined ?  "" : speaker.photo,
-				  "url": speaker.url,
-				  "organization": speaker.organization == undefined ? "" : speaker.organization,
-				  "position": speaker.position == undefined ? "" : speaker.position,
-				  "biography": speaker.biography,
-				  "sessions": speaker.sessions,
-          "links": speaker.links == undefined ? [] : speaker.links
-				};
-
-				addEntry('speaker', speakerDict);
-			});
-
-			alsoAdd('location', allRooms);
+			// Additional Data
+			// -----------
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
-			alsoAdd('day', allDays);
-			// console.log(allDays);
-
+			
+			// Done
+			console.log("Updated dataset with " + data.length + " entries");
+			callback(data);
+			// -----------------------------
+			
 			function addEntry(type, obj) {
 				obj.event = eventId;
 				obj.type = type;
@@ -223,12 +232,12 @@ exports.scrape = function (callback) {
 					data.push(obj);
 				})
 			}
-
-      console.log("Updated dataset with " + data.length + " entries");
-			callback(data);
+			
 		}
 	);
 }
+
+
 
 function toArray(obj) {
 	return Object.keys(obj).map(function (key) { return obj[key] })
