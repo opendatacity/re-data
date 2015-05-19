@@ -183,8 +183,8 @@ exports.scrape = function (callback) {
 		},
 		function (result) {
 			var data = [];
-			var sessionList  = result.sessions;
-			var speakerList  = result.speakers;			
+			var sessionList  = result.sessions.data;
+			var speakerList  = result.speakers.data;			
 
 			// Speakers
 			// -----------
