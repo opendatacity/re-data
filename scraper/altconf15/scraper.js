@@ -152,6 +152,16 @@ function parseSession(dict) {
 	if (!session['lang']) {
 		session['lang'] = allLanguages['en'];
 	}
+	if (session['begin'] != null && session['end'] != null) {
+
+		var beginDate = new Date(session['begin']);
+		var endDate = new Date(session['end']);	
+		var month = beginDate.getMonth() + 1;	
+		var day = beginDate.getDate();	
+		var key = beginDate.getFullYear() + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
+		session['day'] = allDays[key];
+	}
+	
 	if (!session['day']) {
 		session['begin'] = null;
 		session['end'] = null;		
@@ -212,6 +222,7 @@ exports.scrape = function (callback) {
 			alsoAdd('format', allFormats);
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
+			alsoAdd('day', allDays);
 			
 			// Done
 			console.log("Updated dataset with " + data.length + " entries");
