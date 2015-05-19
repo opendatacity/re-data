@@ -175,7 +175,7 @@ function parseSession(dict) {
 		if (session['track']['id'] != '') {
 			allTracks[session['track']['id']] = session['track'];
 		} else {
-			allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108]}
+			allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108, 1]}
 			session['track'] = allTracks['WWDC'];
 		}
 	} 
