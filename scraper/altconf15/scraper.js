@@ -174,8 +174,11 @@ function parseSession(dict) {
 	if (session['track']) {
 		if (session['track']['id'] != '') {
 			allTracks[session['track']['id']] = session['track'];
+		} else {
+			allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108]}
+			session['track'] = allTracks['WWDC'];
 		}
-	}
+	} 
 	
 	if (!session['day']) {
 		session['begin'] = null;
