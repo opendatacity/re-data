@@ -115,6 +115,10 @@ var allTracks = {
   // 				  "label_en": "Community" }	
 };
 
+var allTrackColors = {
+	'default': [43,81,160,1]
+};
+
 var trackMap = {
   'development':   [ 
   				],
@@ -236,6 +240,14 @@ exports.scrape = function (callback) {
 				index++;				
 			}
 
+			for (var key in allTracks) {
+				var value = allTracks[key];
+				var color = allTrackColors[key];
+				if (!color) {
+					color = allTrackColors['default'];
+				}
+				value['color'] = color;
+			}
 			
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
