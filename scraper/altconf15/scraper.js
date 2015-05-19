@@ -229,6 +229,14 @@ exports.scrape = function (callback) {
 
 			// Additional Data
 			// -----------
+			var index = 0;
+			for (var key in allRooms) {
+				var value = allRooms[key];
+				value['order_index'] = index;
+				index++;				
+			}
+
+			
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
 			alsoAdd('level', allLevels);
