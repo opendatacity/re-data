@@ -160,12 +160,13 @@ function parseSession(dict) {
 		var day = beginDate.getDate();	
 		var key = beginDate.getFullYear() + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
 		session['day'] = allDays[key];
+		session['duration'] = (endDate.getTime() - beginDate.getTime()) / 1000.0;
 	}
 	
 	if (!session['day']) {
 		session['begin'] = null;
 		session['end'] = null;		
-	}
+	} 
 	
 	var speakers = session['speakers'];
 	if (speakers) {
