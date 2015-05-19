@@ -161,6 +161,10 @@ function parseSession(dict) {
 		var key = beginDate.getFullYear() + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
 		session['day'] = allDays[key];
 		session['duration'] = (endDate.getTime() - beginDate.getTime()) / 1000.0;
+		
+		if (session['location']) {
+			allRooms[session['location']['id']] = session['location'];
+		}
 	}
 	
 	if (!session['day']) {
@@ -224,6 +228,7 @@ exports.scrape = function (callback) {
 			alsoAdd('level', allLevels);
 			alsoAdd('language', allLanguages);
 			alsoAdd('day', allDays);
+			alsoAdd('location', allRooms);
 			
 			// Done
 			console.log("Updated dataset with " + data.length + " entries");
