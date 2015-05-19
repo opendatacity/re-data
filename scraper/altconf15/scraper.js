@@ -98,21 +98,21 @@ var allLevels = {
 };
 
 var allTracks = {
-  'development': { "color": [207,94,28,1],
-                   "id": "development",
-                   "label_en": "Development" },
-  'general': { "color": [160,160,160,1],
-               "id": "general",
-               "label_en": "General" },
-  'streaming': { "color": [43,81,160,1],
-                 "id": "streaming",
-                 "label_en": "Streaming" },
-  'design': { "color": [43,81,160,1],
-                 "id": "design",
-                 "label_en": "Design" },	
-  'community': { "color": [43,81,160,1],
-                 "id": "community",
-				  "label_en": "Community" }		
+  // 'development': { "color": [207,94,28,1],
+  //                  "id": "development",
+  //                  "label_en": "Development" },
+  // 'general': { "color": [160,160,160,1],
+  //              "id": "general",
+  //              "label_en": "General" },
+  // 'streaming': { "color": [43,81,160,1],
+  //                "id": "streaming",
+  //                "label_en": "Streaming" },
+  // 'design': { "color": [43,81,160,1],
+  //                "id": "design",
+  //                "label_en": "Design" },
+  // 'community': { "color": [43,81,160,1],
+  //                "id": "community",
+  // 				  "label_en": "Community" }	
 };
 
 var trackMap = {
@@ -164,6 +164,12 @@ function parseSession(dict) {
 		
 		if (session['location']) {
 			allRooms[session['location']['id']] = session['location'];
+		}
+	}
+	
+	if (session['track']) {
+		if (session['track']['id'] != '') {
+			allTracks[session['track']['id']] = session['track'];
 		}
 	}
 	
