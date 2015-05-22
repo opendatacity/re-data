@@ -164,7 +164,7 @@ function parseSession(dict) {
 		var day = beginDate.getDate();	
 		var key = beginDate.getFullYear() + "-" + (month < 10 ? "0" + month : month) + "-" + (day < 10 ? "0" + day : day);
 		session['day'] = allDays[key];
-		session['duration'] = ()(endDate.getTime() - beginDate.getTime()) / 1000.0) / 60.0; // duration is in minutes
+		session['duration'] = (((endDate.getTime() - beginDate.getTime()) / 1000.0) / 60.0; // duration is in minutes
 		
 		if (session['location']) {
 			allRooms[session['location']['id']] = session['location'];
