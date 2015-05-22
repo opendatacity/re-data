@@ -146,6 +146,9 @@ function parseSession(dict) {
 	if (session['title'] == "") {
 		return null;
 	};
+	if (session['id'] == null || session['id'] == undefined || session['id'].trim() == "") {
+		return null;
+	}
 	
 	if (!session['format']) {
 		session['format'] = allFormats['talk'];
