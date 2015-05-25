@@ -8,7 +8,7 @@ var allDays = {
     "id": "alt-day-1",
     "event": eventId,
     "type": "day",
-    "label_en": "8th June",
+    "label_en": "Monday",
    "date": "2015-06-08"
     // "date": "2015-06-02"
   },
@@ -16,7 +16,7 @@ var allDays = {
     "id": "alt-day-2",
     "event": eventId,
     "type": "day",
-    "label_en": "9th June",
+    "label_en": "Tuesday",
    "date": "2015-06-09"
     // "date": "2015-06-03"
   },
@@ -24,7 +24,7 @@ var allDays = {
     "id": "alt-day-3",
     "event": eventId,
     "type": "day",
-    "label_en": "10th June",
+    "label_en": "Wednesday",
   "date": "2015-06-10"
     // "date": "2015-06-04"
   },
@@ -32,7 +32,7 @@ var allDays = {
     "id": "alt-day-4",
     "event": eventId,
     "type": "day",
-    "label_en": "11th June",
+    "label_en": "Thursday",
  "date": "2015-06-11"
     // "date": "2015-06-05"
   },
@@ -40,7 +40,7 @@ var allDays = {
     "id": "alt-day-5",
     "event": eventId,
     "type": "day",
-    "label_en": "12th June",
+    "label_en": "Friday",
    "date": "2015-06-12"
     // "date": "2015-06-06"
 
