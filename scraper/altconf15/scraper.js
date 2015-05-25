@@ -121,7 +121,7 @@ var allTrackColors = {
 	'Engineering (has code) - Beginner level': [33, 102, 52, 1],	
 	'Engineering (has code) - Advanced Level': [33, 102, 52, 1],	
 	'Bussiness': [53, 143, 197,1],		
-	'Ethics': [208, 225, 193,1],		
+	'Ethics': [186, 201, 122,1],		
 	'Legal': [27, 85, 44,1],
 	'Product': [47, 131, 67,1],
 	'User Experience': [86, 179, 78,1],
