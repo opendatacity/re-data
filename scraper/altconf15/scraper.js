@@ -140,6 +140,29 @@ function parseSpeaker(dict) {
 	return speaker;
 }
 
+function parseTrack(value) {
+	if (value['label_en'].match(/Engineering \(has code\) - Advanced Level/i)) {
+		value['label_en'] = "Engineering (Advanced)";
+	} else if (value['label_en'].match(/Engineering \(has code\) - Beginner level/i)) {
+		value['label_en'] = "Engineering (Beginner)";
+	}
+	var color = allTrackColors[value['id']];
+	if (!color) {
+		color = allTrackColors['default'];
+	}
+	value['color'] = color;
+	
+	if (value['id'] != '') {
+		allTracks[value['id']] = value;
+	} else {
+		allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108, 1]}
+		value = allTracks['WWDC'];
+	}
+	
+	console.log(value);
+	return value;
+}
+
 function parseSession(dict) {
 	var session = dict;
 	
@@ -153,9 +176,7 @@ function parseSession(dict) {
 	if (!session['format']) {
 		session['format'] = allFormats['talk'];
 	}
-	if (!session['level']) {
-		session['level'] = allLevels['intermediate'];
-	}	
+
 	if (!session['lang']) {
 		session['lang'] = allLanguages['en'];
 	}
@@ -176,13 +197,21 @@ function parseSession(dict) {
 	}
 	
 	if (session['track']) {
-		if (session['track']['id'] != '') {
-			allTracks[session['track']['id']] = session['track'];
-		} else {
-			allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108, 1]}
-			session['track'] = allTracks['WWDC'];
-		}
+		session['track'] = parseTrack(session['track']);
 	} 
+	if (!session['level']) {
+		session['level'] = allLevels['intermediate'];
+		if (session['track']['label_en'] &&
+			session['track']['label_en'].match(/Beginner/)) 
+		{
+				session['level'] = 	allLevels['beginner'];
+				
+		} else if (session['track']['label_en'] &&
+			session['track']['label_en'].match(/Advanced/)) 
+		{
+				session['level'] = 	allLevels['advanced'];
+		}		
+	}	
 	
 	if (!session['day']) {
 		session['begin'] = null;
@@ -209,8 +238,8 @@ exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'http://altconf.com/schedule/sessions.json',
-				speakers: 'http://altconf.com/schedule/speakers.json'
+				sessions: 'http://altconf.com/schedule/sessions.json?no=chache',
+				speakers: 'http://altconf.com/schedule/speakers.json?no=chache'
 			}
 		},
 		function (result) {
@@ -247,14 +276,6 @@ exports.scrape = function (callback) {
 				index++;				
 			}
 
-			for (var key in allTracks) {
-				var value = allTracks[key];
-				var color = allTrackColors[key];
-				if (!color) {
-					color = allTrackColors['default'];
-				}
-				value['color'] = color;
-			}
 			
 			alsoAdd('track', allTracks);
 			alsoAdd('format', allFormats);
