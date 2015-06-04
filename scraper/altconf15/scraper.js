@@ -145,6 +145,9 @@ function parseSpeaker(dict) {
 	if (speaker['name'].match(/TBA/)) {
 		return null;
 	}
+	if (speaker['name'].trim() == "") {
+		return null;
+	}
 	
 	return speaker;
 }
@@ -167,8 +170,7 @@ function parseTrack(value) {
 		allTracks['WWDC'] = {"id": "WWDC", "label_en": "WWDC", "color": [108, 108, 108, 1]}
 		value = allTracks['WWDC'];
 	}
-	
-	console.log(value);
+
 	return value;
 }
 
@@ -243,7 +245,7 @@ function parseSession(dict) {
 	var speakers = session['speakers'];
 	if (speakers) {
 		speakers = speakers.filter(function (speaker) {
-			return !(speaker['name'].match(/TBA/));
+			return !(speaker['name'].match(/TBA/) || speaker['name'].trim() == "");
 		});
 		session['speakers'] = speakers;
 	}
