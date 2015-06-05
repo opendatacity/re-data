@@ -148,6 +148,9 @@ function parseSpeaker(dict) {
 	if (speaker['name'].trim() == "") {
 		return null;
 	}
+	if (speaker['id'].trim() == "") {
+		return null;
+	}	
 	
 	return speaker;
 }
@@ -245,7 +248,7 @@ function parseSession(dict) {
 	var speakers = session['speakers'];
 	if (speakers) {
 		speakers = speakers.filter(function (speaker) {
-			return !(speaker['name'].match(/TBA/) || speaker['name'].trim() == "");
+			return !(speaker['name'].match(/TBA/) || speaker['name'].trim() == "" || speaker['id'].trim() == "" );
 		});
 		session['speakers'] = speakers;
 	}
