@@ -67,7 +67,7 @@ exports.dump = function (data) {
 				format:        entry.format.id,
 				level:         entry.level.id,
 				lang:          entry.lang.id,
-				speakers:      entry.speakers.map(function (speaker) { return speaker.name }).join(', '),
+				speakers:      (entry.speakers ? entry.speakers.map(function (speaker) { return speaker.name }).join(', ') : null),
 				last_modified: entry.last_modified
 			}
 		}));
