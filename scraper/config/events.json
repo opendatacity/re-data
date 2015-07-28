@@ -94,5 +94,17 @@
 			"coords": [53.561583,9.985683]
 		}],
 		"url": "http://events.ccc.de/congress/2014"
-	}		
+	},
+	{
+		"type": "event",
+		"id": "camp15",
+		"label": "Camp 2015",
+		"title": "Chaos Communication Camp 2015",
+		"date": ["2015-08-13","2015-08-17"],
+		"locations": [{
+			"label": "Ziegeleipark Mildenberg",
+			"coords": [53.031111,13.310278]
+		}],
+		"url": "http://events.ccc.de/camp/2015"
+	}
 ]
