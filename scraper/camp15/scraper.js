@@ -482,6 +482,54 @@ exports.scrape = function (callback) {
 					}
 				});
 			},
+			village_pois: function (callback) {
+				json_requester.get({
+					urls: {conference: "http://campmap.mazdermind.de/api/villages/"}
+				},
+				function (result) {
+					var pois = [];
+					
+					result.conference.forEach(function (item) {						
+						if (item.names.length < 1) return;
+						
+						var primaryName = item.names[0];
+						var poi = {
+							"id": mkID(item.maplink), // maplink contains a unique ID
+							"type": "poi",							
+							"label_en": primaryName,
+							"label_de": primaryName,							
+							"category": "other",
+							"positions": [],
+							"geo_position": {
+								"lat": item.y,
+								"long": item.x
+							},
+							"links": [], // fill later
+							"hidden": false,
+							"beacons": [],
+							"priority": 100
+						};
+
+						if (item['websites']) {
+							item.websites.forEach(function (link) {
+								if (link.length == 0) return;
+								poi.links.push({
+									"url": link,
+									"title": primaryName,
+									"type": "location-link"
+								});
+							});
+						}
+						
+						pois.push(poi);
+					});
+					
+					
+					alsoAdd('poi', pois);
+					
+					callback(null, 'village_pois')
+				});
+			},
 			// sendezentrum: function (callback) {
 					 // 			    ical.fromURL('https://www.google.com/calendar/ical/ck0ov9f0t6omf205r47uq6tnh4%40group.calendar.google.com/public/basic.ics', {}, function(err, data) {
 					 // 			         for (var k in data){
