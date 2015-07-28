@@ -19,7 +19,7 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
-var schedule_url = baseURL + "schedule.json";
+var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
 var speakers_url = baseURL + "speakers.json";
 var eventId = "camp15";
 
@@ -228,7 +228,7 @@ function parseDate(dateString) {
 function parseEnd(dateString, durationString) {
 	var date = new Date(dateString);
 	var time = date.getTime() / 1000;
-	var match = durationString.toString().match(/(\d\d):(\d\d)/);
+	var match = durationString.toString().match(/(\d?\d):(\d\d)/);
 	var hours = new Number(match[1]);
 	var minutes = new Number(match[2]);
 	var seconds = time + (minutes * 60.0) + (hours * 60.0 * 60.0);
