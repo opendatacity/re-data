@@ -416,6 +416,8 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 		"type": "poi",			
 		"positions": [{"map": "level4",
 					   "x": 3520.0, "y": 2107.0}],
+		"geo_position": {"lat": 53.20200, 
+						 "long": 32.2342},
 		"category": "session-location",
 		"location": {
 			"id": "location-1", 
@@ -450,6 +452,10 @@ Represents a single point of interest on a map. Each POI belongs to a map object
 	- `x` and `y` (Required) Position of this POI on the map. These are pixel coordinates in the coordinate system of the `map`. 
 	  The coorinates are pixels on the original size of the map (`tiles.size.width` and `tiles.size.height` properties). 
 	  The origin of the coordinate system is located on the *bottom left*. 
+- `geo_position`: (Optional) Location of this POI in the WGS84 coordinate system. Single map with the following keys:
+	 - `lat`: (Required) Geographical latitude in WGS84 coordinates in degrees (float)
+	 - `long`: (Required) Geographical longitude in WGS84 coordinates in degrees (float)
+
 - `category`: (Required) Category of the POI.  Pick one:
 		- `session-location` - A typical session location (Auditorium, lecutre hall, etc.)
 		- `workshop-location` - A workshop area 
