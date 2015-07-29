@@ -257,6 +257,11 @@ function parseEnd(dateString, durationString) {
 	date = new Date(seconds * 1000); 
 	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
 	date.setTime(newMillis);
+	if (date.getUTCMonth() != 7) {
+		console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
+		date.setUTCMonth(7);
+	}	
+	
 	return date;	
 }
 
