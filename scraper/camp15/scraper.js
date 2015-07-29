@@ -268,18 +268,32 @@ function normalizeXMLDayDateKey(date) {
 }
 
 function parseEvent(event, day, room) {
-	var urlBase = "http://events.ccc.de/2014/";
+	var urlBase = "http://events.ccc.de/2015/";
 	
 	var links = [];
 	
 	event.links.forEach(function (link) {
+		var url = null;
+		var title = null;
+		if (typeof(link) === "string") {
+			url = link;
+			title = link;
+		} else if (typeof(link) === "object" && link["title"] && link["url"]) {
+			title = link["title"];
+			url = link["url"];
+		}
+		if (url.indexOf("//") == 0) {
+			url = "http:" + url;
+		}
+		
 		links.push({
-			"title": link["title"],
-			"url": link["url"],
-			"type": "other"
-		});
+			"title": title,
+			"url": url,
+			"type": "session-link"
+		});			
+		
 	});
-	
+
 	var day = normalizeXMLDayDateKey(day["date"]);
 	
 	var eventTypeId = event.type.toString();
@@ -636,6 +650,20 @@ exports.scrape = function (callback) {
 		function (err, results) {
 			if (!err) {
 				alsoAdd('day', allDays);
+				// console.log(allRooms);
+				var maxIndex = -1;
+				toArray(allRooms).forEach(function (item, index) {
+					if (item["order_index"]) {
+						item["order_index"] > maxIndex ? maxIndex = item["order_index"] : maxIndex = maxIndex;
+					}
+				});
+				toArray(allRooms).forEach(function (item, index) {
+					maxIndex++;					
+					if (!item["order_index"]) {
+						item["order_index"] = maxIndex;
+					}
+				});				
+				
 				alsoAdd('location', allRooms);
 				alsoAdd('map', allMaps);
 				alsoAdd('track', allTracks);
