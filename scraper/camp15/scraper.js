@@ -19,7 +19,8 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
-var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
+// var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
+var schedule_url = baseURL + "schedule.json";
 var speakers_url = baseURL + "speakers.json";
 var eventId = "camp15";
 
