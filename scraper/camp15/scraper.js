@@ -677,7 +677,7 @@ exports.scrape = function (callback) {
 				// console.log(allRooms);
 				
 				var moreIDs = sortOrderOfLocations.length;
-				toArray(allRooms).forEach(function (item) {
+				toArray(allRooms).sort().forEach(function (item) {
 					if (sortOrderOfLocations.indexOf(item["id"]) >= 0) {
 						item["order_index"] = sortOrderOfLocations.indexOf(item["id"]);
 					} else {
