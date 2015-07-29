@@ -39,6 +39,23 @@ var dayDayChange = 0;
 // http://hls.stream.c3voc.de/hls/sN_L_Q.m3u8
 // N ∈ [1;5], L ∈ {native, translated}, Q ∈ {hd, sd, slides}. 
 
+var sortOrderOfLocations = [
+	"camp15-a",
+	"camp15-b",
+	"camp15-hackcenter-1",	
+	"camp15-hackcenter-2",
+	"camp15-hackcenter-3",
+	"camp15-workshop-1",	
+	"camp15-workshop-2",
+	"camp15-noisy-square",
+	"camp15-spacevillage",
+	"camp15-milliways",	
+	"camp15-v01d",
+	"camp15-amateur-radio",
+	"camp15-foodhackingbase",
+	"camp15-"
+];
+
 // Livestream test
 var streamURLs = {
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
@@ -651,18 +668,17 @@ exports.scrape = function (callback) {
 			if (!err) {
 				alsoAdd('day', allDays);
 				// console.log(allRooms);
-				var maxIndex = -1;
-				toArray(allRooms).forEach(function (item, index) {
-					if (item["order_index"]) {
-						item["order_index"] > maxIndex ? maxIndex = item["order_index"] : maxIndex = maxIndex;
+				
+				var moreIDs = sortOrderOfLocations.length;
+				toArray(allRooms).forEach(function (item) {
+					if (sortOrderOfLocations.indexOf(item["id"]) >= 0) {
+						item["order_index"] = sortOrderOfLocations.indexOf(item["id"]);
+					} else {
+						item["order_index"] = moreIDs;
+						moreIDs++;
+						
 					}
-				});
-				toArray(allRooms).forEach(function (item, index) {
-					maxIndex++;					
-					if (!item["order_index"]) {
-						item["order_index"] = maxIndex;
-					}
-				});				
+				});			
 				
 				alsoAdd('location', allRooms);
 				alsoAdd('map', allMaps);
