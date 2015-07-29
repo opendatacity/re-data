@@ -338,7 +338,11 @@ function parseEvent(event, day, room) {
 		"end": parseEnd(event.date, event.duration),
 		"track": allTracks[mkID(event.track)],
 		"day": allDays[day],
-		"location": allRooms[room.id],
+		"location": {
+			"id": allRooms[room.id]["id"],
+			"label_de": allRooms[room.id]["label_de"],
+			"label_en": allRooms[room.id]["label_en"]
+		},
 		"format": allFormats[eventTypeId],
 		"level": allLevels['advanced'],
 		"lang": allLanguages[event.language.toString() ? event.language.toString() : 'en'],
