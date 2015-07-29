@@ -540,12 +540,12 @@ exports.scrape = function (callback) {
 					result.conference.forEach(function (item) {						
 						if (item.names.length < 1) return;
 						
-						var primaryName = item.names[0];
+						var names = item.names.join(", ")
 						var poi = {
 							"id": mkID(item.maplink), // maplink contains a unique ID
 							"type": "poi",							
-							"label_en": primaryName,
-							"label_de": primaryName,							
+							"label_en": names,
+							"label_de": names,							
 							"category": "other",
 							"positions": [],
 							"geo_position": {
@@ -559,11 +559,11 @@ exports.scrape = function (callback) {
 						};
 
 						if (item['websites']) {
-							item.websites.forEach(function (link) {
+							item.websites.forEach(function (link, index) {
 								if (link.length == 0) return;
 								poi.links.push({
 									"url": link,
-									"title": primaryName,
+									"title": names[index],
 									"type": "location-link"
 								});
 							});
