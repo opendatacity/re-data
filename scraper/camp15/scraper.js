@@ -239,6 +239,11 @@ function parseDate(dateString) {
 	var date = new Date(dateString);
 	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
 	date.setTime(newMillis);
+	if (date.getUTCMonth() != 7) {
+		console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
+		date.setUTCMonth(7);
+
+	}
 	return date;
 };
 
@@ -312,13 +317,15 @@ function parseEvent(event, day, room) {
 	});
 
 	var day = normalizeXMLDayDateKey(day["date"]);
-	
+		
 	var eventTypeId = event.type.toString();
 	// console.log("event type " + eventTypeId);
 	if (eventTypeId == 'lecture') {
 		eventTypeId = 'talk';
 	} else if (eventTypeId == 'other') {
 		eventTypeId = 'talk';
+	} else if (eventTypeId == 'meeting') {
+		eventTypeId = 'workshop';		
 	}
 
 	var session = {
@@ -675,8 +682,7 @@ exports.scrape = function (callback) {
 						item["order_index"] = sortOrderOfLocations.indexOf(item["id"]);
 					} else {
 						item["order_index"] = moreIDs;
-						moreIDs++;
-						
+						moreIDs++;	
 					}
 				});			
 				
