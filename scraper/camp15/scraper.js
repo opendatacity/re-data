@@ -19,8 +19,8 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
-// var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
-var schedule_url = baseURL + "schedule.json";
+var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
+// var schedule_url = baseURL + "schedule.json";
 var speakers_url = baseURL + "speakers.json";
 var eventId = "camp15";
 
@@ -62,15 +62,23 @@ var streamURLs = {
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
 };
 
+// green [111.0, 139.0, 49.0, 1.0] 
+// grey  [109.0, 109.0, 109.0, 1.0] 
+// orange [221.0, 155.0, 64.0, 1.0]
+// blue [98.0, 113.0, 152.0, 1.0]
+// brown [147.0, 97.0, 63.0, 1.0]
+
 var colors = {};
-colors[eventId + "-hardware-making"] = [110.0, 80.0, 180.0, 1.0]; // 4
-colors[eventId + "-security-safety"] = [255.0, 90.0, 70.0, 1.0]; // 1
-colors[eventId + "-ethics-society-politics"] = [255.0, 130.0, 50.0, 1.0]; // 2
-colors[eventId + "-art-beauty"] = [255.0, 160.0, 0.0, 1.0]; // 3
-colors[eventId + "-science"] = [132.0, 88.0, 223.0, 1.0]; // even lighter purple
-colors[eventId + "-entertainment"] = [65.0, 20.0, 90.0, 1.0]; // 5
-colors[eventId + "-ccc"] = [29.0, 29.0, 29.0, 1.0];
-colors[eventId + "-other"] = [107.0, 107.0, 107.0, 1.0];
+colors[eventId + "-hardware-making"] = [110.0, 80.0, 180.0, 1.0]; // 
+colors[eventId + "-security-safety"] = [255.0, 90.0, 70.0, 1.0]; // 
+colors[eventId + "-ethics-society-politics"] = [111.0, 139.0, 49.0, 1.0]; // green
+colors[eventId + "-art-beauty"] = [255.0, 160.0, 0.0, 1.0]; // 
+colors[eventId + "-science"] = [111.0, 139.0, 49.0, 1.0]; // green
+colors[eventId + "-entertainment"] = [221.0, 155.0, 64.0, 1.0]; // orange
+colors[eventId + "-failosophy"] = [147.0, 97.0, 63.0, 1.0]; // brown
+colors[eventId + "-ccc"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-self-orgnaized-sessions"] = [147.0, 97.0, 63.0, 1.0]; // brown
+colors[eventId + "-other"] = [109.0, 109.0, 109.0, 1.0]; // grey
 
 var allFormats = {
 	'discussion': { id:'discussion', label_en:'Discussion' },
@@ -334,16 +342,33 @@ function parseEvent(event, day, room) {
 		eventTypeId = 'workshop';		
 	}
 
+	var begin = parseDate(event.date);
+	var otherDay = begin.getUTCFullYear() + "-" + (begin.getUTCMonth() + 1) + "-" + begin.getUTCDate();
+	// console.log("--- " + event.title.toString() + " ---");
+	// console.log("day " + day);
+	// console.log("begin " + otherDay );
+
+
+	var day = allDays[otherDay];
+	// console.log("day ", day);
+	// console.log(allDays);
+	// console.log("------------");
+
+	if (!day) {
+		console.log("No valid day for " + event.title.toString() + " " + otherDay);
+		return null;
+	}
+
 	var session = {
 		"id": mkID("session-" + event["guid"]),
 		"title": event.title.toString(),
 		"url": baseURL + "events/" +  event.id + ".html",
 		"abstract": sanitizeHtml(event.abstract.toString(), {allowedTags: []}),
 		"description": sanitizeHtml(event.description.toString(), {allowedTags: []}),
-		"begin": parseDate(event.date),
+		"begin": begin,
 		"end": parseEnd(event.date, event.duration),
 		"track": allTracks[mkID(event.track)],
-		"day": allDays[day],
+		"day": day,
 		"location": {
 			"id": allRooms[room.id]["id"],
 			"label_de": allRooms[room.id]["label_de"],
@@ -404,7 +429,8 @@ function handleResult(events, speakers, eventRecordings) {
 		// ---
    		var dayJSON = parseDay(day);
 		allDays[normalizeXMLDayDateKey(dayJSON.date)] = dayJSON;
-   	 	
+	});
+	events.schedule.conference.days.forEach(function(day) {
    	 	var roomIndex = 0;
 		var rooms = day.rooms;
 		Object.keys(rooms).forEach(function (roomLabel) {
@@ -461,7 +487,9 @@ function handleResult(events, speakers, eventRecordings) {
 					});						
 				}
    				 
-				addEntry('session', eventJSON);
+				if (eventJSON != null) {
+					addEntry('session', eventJSON);
+				}
 			});
 		});
 		
