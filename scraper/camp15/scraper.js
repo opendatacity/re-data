@@ -19,8 +19,8 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
-var schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
-// var schedule_url = baseURL + "schedule.json";
+var additional_schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
+var schedule_url = baseURL + "schedule.json";
 var speakers_url = baseURL + "speakers.json";
 var eventId = "camp15";
 
@@ -49,11 +49,11 @@ var sortOrderOfLocations = [
 	"camp15-workshop-1",	
 	"camp15-workshop-2",
 	"camp15-noisy-square",
-	"camp15-spacevillage",
 	"camp15-milliways",	
 	"camp15-v01d",
 	"camp15-amateur-radio",
 	"camp15-foodhackingbase",
+	"camp15-spacevillage",	
 	"camp15-"
 ];
 
@@ -69,10 +69,10 @@ var streamURLs = {
 // brown [147.0, 97.0, 63.0, 1.0]
 
 var colors = {};
-colors[eventId + "-hardware-making"] = [110.0, 80.0, 180.0, 1.0]; // 
-colors[eventId + "-security-safety"] = [255.0, 90.0, 70.0, 1.0]; // 
+colors[eventId + "-hardware-making"] = [221.0, 155.0, 64.0, 1.0]; // orange
+colors[eventId + "-security-safety"] = [98.0, 113.0, 152.0, 1.0]; // blue 
 colors[eventId + "-ethics-society-politics"] = [111.0, 139.0, 49.0, 1.0]; // green
-colors[eventId + "-art-beauty"] = [255.0, 160.0, 0.0, 1.0]; // 
+colors[eventId + "-art-beauty"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-science"] = [111.0, 139.0, 49.0, 1.0]; // green
 colors[eventId + "-entertainment"] = [221.0, 155.0, 64.0, 1.0]; // orange
 colors[eventId + "-failosophy"] = [147.0, 97.0, 63.0, 1.0]; // brown
@@ -519,6 +519,7 @@ exports.scrape = function (callback) {
 						var videoAPICallURLs = {
 							speakers: speakers_url,
 							schedule: schedule_url,
+							additional_schedule: additional_schedule_url
 						};
 										
 						result.conference.events.forEach(function (event) {
@@ -530,9 +531,12 @@ exports.scrape = function (callback) {
 											   
 								var speakers = result.speakers.schedule_speakers.speakers;
 								var schedule = result.schedule;
+								var additional_schedule = result.additional_schedule;
+								
 								delete result.schedule;
 								delete result.speakers;
-			
+								delete result.additional_schedule;
+
 								var eventRecordingJSONs = toArray(result);
 
 								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
@@ -550,7 +554,8 @@ exports.scrape = function (callback) {
 									};
 								});
 								
-											   
+
+								handleResult(additional_schedule, speakers, eventRecordingJSONs);											   
 								handleResult(schedule, speakers, eventRecordingJSONs);
 						
 								callback(null, 'lectures');				
