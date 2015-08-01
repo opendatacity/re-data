@@ -57,6 +57,14 @@ var sortOrderOfLocations = [
 	"camp15-"
 ];
 
+var poi2locationMapping = {
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio",
+	// "camp15-hackcenter-1"
+};
+
 // Livestream test
 var streamURLs = {
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
@@ -601,6 +609,19 @@ exports.scrape = function (callback) {
 								});
 							});
 						}
+						
+						if (poi2locationMapping[poi.id]) {
+							console.log("Matched ", poi.id, " to ", poi2locationMapping[poi.id]);
+							poi["location"] = {"id": poi2locationMapping[poi.id],
+											   "label_en": names,
+											   "label_de": names};
+							if (poi.category == "other") {
+								poi["category"] = "session-location";
+							}
+						} else {
+							console.log("Not matched ", poi.io);
+						}
+						console.log("POI");						
 						
 						pois.push(poi);
 					});
