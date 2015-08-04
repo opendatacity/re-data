@@ -41,6 +41,8 @@ var dayDayChange = 0;
 // N ∈ [1;5], L ∈ {native, translated}, Q ∈ {hd, sd, slides}. 
 
 var sortOrderOfLocations = [
+	"camp15-project-2501",
+	"camp15-simulacron-3",
 	"camp15-a",
 	"camp15-b",
 	"camp15-hackcenter-1",	
