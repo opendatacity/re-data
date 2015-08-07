@@ -1,6 +1,7 @@
 /* get node modules */
 var fs = require('fs');
 var path = require('path');
+var eventId = "camp15";
 
 /* get npm modules */
 var scrapyard = require('scrapyard');
@@ -22,7 +23,7 @@ var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
 var additional_schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
 var schedule_url = baseURL + "schedule.json";
 var speakers_url = baseURL + "speakers.json";
-var eventId = "camp15";
+
 
 // for debugging we can just pretend rp14 was today
 var originalStartDate = new Date(Date.UTC(2015, 7, 13, 10, 15, 0, 0));
@@ -286,6 +287,8 @@ function parseEnd(dateString, durationString) {
 
 function parseTrackFromEvent(eventXML) {
 	var trackName = eventXML.track;
+	if (trackName == null) trackName = "Other";
+	// console.log(trackName);
 	var id = mkID(trackName);
 	var color = colors[id];
 	if (!color) {
@@ -369,6 +372,9 @@ function parseEvent(event, day, room) {
 		return null;
 	}
 
+	var track = event.track;
+	if (track == null) track = "Other";
+	
 	var session = {
 		"id": mkID("session-" + event["guid"]),
 		"title": event.title.toString(),
@@ -377,7 +383,7 @@ function parseEvent(event, day, room) {
 		"description": sanitizeHtml(event.description.toString(), {allowedTags: []}),
 		"begin": begin,
 		"end": parseEnd(event.date, event.duration),
-		"track": allTracks[mkID(event.track)],
+		"track": allTracks[mkID(track)],
 		"day": day,
 		"location": {
 			"id": allRooms[room.id]["id"],
@@ -403,14 +409,14 @@ function parseEvent(event, day, room) {
 	
 	// HACK: Fake one video for App Review
 	// IF for Fnord News show
-    // if (session['id'] == '31c3-session-mw1wjnnzwxzskm3ip5lg0g') {
-    //     session.enclosures.push({
-    //                 "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
-    //             "mimetype": "video/mp4",
-    //             "type": "recording",
-    //             "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
-    //            });
-    // }
+    if (session['id'] == 'camp15-session-3064add4-ab1e-4d05-84b8-d753b9733097') {
+        session.enclosures.push({
+                    "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
+                "mimetype": "video/mp4",
+                "type": "recording",
+                "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+               });
+    }
 	
 	var streamURL = streamURLs[session.location.id];
 	if (streamURL) {
@@ -528,8 +534,8 @@ exports.scrape = function (callback) {
 					if (result.conference.events) {
 						var videoAPICallURLs = {
 							speakers: speakers_url,
-							schedule: schedule_url,
-							additional_schedule: additional_schedule_url
+							schedule: schedule_url //,
+//							additional_schedule: additional_schedule_url
 						};
 										
 						result.conference.events.forEach(function (event) {
@@ -541,11 +547,11 @@ exports.scrape = function (callback) {
 											   
 								var speakers = result.speakers.schedule_speakers.speakers;
 								var schedule = result.schedule;
-								var additional_schedule = result.additional_schedule;
+//								var additional_schedule = result.additional_schedule;
 								
 								delete result.schedule;
 								delete result.speakers;
-								delete result.additional_schedule;
+//								delete result.additional_schedule;
 
 								var eventRecordingJSONs = toArray(result);
 
@@ -565,7 +571,7 @@ exports.scrape = function (callback) {
 								});
 								
 
-								handleResult(additional_schedule, speakers, eventRecordingJSONs);											   
+//								handleResult(additional_schedule, speakers, eventRecordingJSONs);											   
 								handleResult(schedule, speakers, eventRecordingJSONs);
 						
 								callback(null, 'lectures');				
