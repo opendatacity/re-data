@@ -20,7 +20,7 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
-var additional_schedule_url = "http://data.c3voc.de/camp15/everything.schedule.json";
+var additional_schedule_url = "http://data.conference.bits.io/data/camp15/voc/workshops.schedule.json";
 var schedule_url = baseURL + "schedule.json";
 var speakers_url = baseURL + "speakers.json";
 
@@ -534,8 +534,8 @@ exports.scrape = function (callback) {
 					if (result.conference.events) {
 						var videoAPICallURLs = {
 							speakers: speakers_url,
-							schedule: schedule_url //,
-//							additional_schedule: additional_schedule_url
+							schedule: schedule_url,
+							additional_schedule: additional_schedule_url
 						};
 										
 						result.conference.events.forEach(function (event) {
@@ -547,11 +547,11 @@ exports.scrape = function (callback) {
 											   
 								var speakers = result.speakers.schedule_speakers.speakers;
 								var schedule = result.schedule;
-//								var additional_schedule = result.additional_schedule;
+								var additional_schedule = result.additional_schedule;
 								
 								delete result.schedule;
 								delete result.speakers;
-//								delete result.additional_schedule;
+								delete result.additional_schedule;
 
 								var eventRecordingJSONs = toArray(result);
 
@@ -571,7 +571,7 @@ exports.scrape = function (callback) {
 								});
 								
 
-//								handleResult(additional_schedule, speakers, eventRecordingJSONs);											   
+								handleResult(additional_schedule, speakers, eventRecordingJSONs);
 								handleResult(schedule, speakers, eventRecordingJSONs);
 						
 								callback(null, 'lectures');				
