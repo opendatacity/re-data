@@ -68,6 +68,49 @@ var poi2locationMapping = {
 	// "camp15-hackcenter-1"
 };
 
+var additionalPOIs = [
+	{
+		"label_de": "Project 2501",
+		"label_en": "Project 2501",	
+		"id": mkID("poi-project-2501"),
+		"category": "session-location",
+        "location": {
+            "id": "camp15-project-2501", 
+            "label_de": "Project 2501", 
+            "label_en": "Project 2501"
+        },		
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.030516375738,
+			"long": 13.306140096802
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi"
+	},
+	{
+		"label_de": "Simulacron-3",
+		"label_en": "Simulacron-3",	
+		"id": mkID("poi-simulacron-3"),
+        "location": {
+            "id": "camp15-simulacron-3", 
+            "label_de": "Simulacron-3", 
+            "label_en": "Simulacron-3"
+        },				
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.032598292561,
+			"long": 13.307631479837
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi",
+		"category": "other"
+	}	
+];
+
 // Livestream test
 var streamURLs = {
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
@@ -409,14 +452,14 @@ function parseEvent(event, day, room) {
 	
 	// HACK: Fake one video for App Review
 	// IF for Fnord News show
-    if (session['id'] == 'camp15-session-3064add4-ab1e-4d05-84b8-d753b9733097') {
-        session.enclosures.push({
-                    "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
-                "mimetype": "video/mp4",
-                "type": "recording",
-                "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
-               });
-    }
+    // if (session['id'] == 'camp15-session-3064add4-ab1e-4d05-84b8-d753b9733097') {
+    //     session.enclosures.push({
+    //                 "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
+    //             "mimetype": "video/mp4",
+    //             "type": "recording",
+    //             "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+    //            });
+    // }
 	
 	var streamURL = streamURLs[session.location.id];
 	if (streamURL) {
@@ -634,6 +677,9 @@ exports.scrape = function (callback) {
 						pois.push(poi);
 					});
 					
+					additionalPOIs.forEach(function (poi) {
+						pois.push(poi);
+					});
 					
 					alsoAdd('poi', pois);
 					
