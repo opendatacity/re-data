@@ -118,9 +118,9 @@ var additionalPOIs = [
 		"label_en": "Sendezentrum",	
 		"id": mkID("poi-sendezentrum"),
         "location": {
-            "id": "camp15-sendezentrum", 
-            "label_de": "Sendezentrum", 
-            "label_en": "Sendezentrum"
+            "id": "camp15-stage", 
+            "label_de": "Stage", 
+            "label_en": "Stage"
         },				
 		"hidden": false,
 		"geo_position": {
