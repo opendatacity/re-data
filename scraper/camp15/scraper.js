@@ -19,10 +19,11 @@ var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oc
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
-var baseURL = "http://events.ccc.de/camp/2015/Fahrplan/"
 var additional_schedule_url = "http://data.conference.bits.io/data/camp15/voc/workshops.schedule.json";
-var schedule_url = baseURL + "schedule.json";
-var speakers_url = baseURL + "speakers.json";
+var sendezentrum_schedule_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/schedule.json";
+var sendezentrum_speaker_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/speakers.json";
+var schedule_url = "http://events.ccc.de/camp/2015/Fahrplan/schedule.json";
+var speakers_url = "http://events.ccc.de/camp/2015/Fahrplan/speakers.json";
 
 
 // for debugging we can just pretend rp14 was today
@@ -46,6 +47,9 @@ var sortOrderOfLocations = [
 	"camp15-simulacron-3",
 	"camp15-a",
 	"camp15-b",
+	"camp15-stage",
+	"camp15-workshop-tent",
+	"camp15-dome",	
 	"camp15-hackcenter-1",	
 	"camp15-hackcenter-2",
 	"camp15-hackcenter-3",
@@ -359,9 +363,7 @@ function normalizeXMLDayDateKey(date) {
 	
 }
 
-function parseEvent(event, day, room) {
-	var urlBase = "http://events.ccc.de/2015/";
-	
+function parseEvent(event, day, room, urlBase) {
 	var links = [];
 	
 	event.links.forEach(function (link) {
@@ -421,7 +423,7 @@ function parseEvent(event, day, room) {
 	var session = {
 		"id": mkID("session-" + event["guid"]),
 		"title": event.title.toString(),
-		"url": baseURL + "events/" +  event.id + ".html",
+		"url": urlBase + event.id + ".html",
 		"abstract": sanitizeHtml(event.abstract.toString(), {allowedTags: []}),
 		"description": sanitizeHtml(event.description.toString(), {allowedTags: []}),
 		"begin": begin,
@@ -474,8 +476,7 @@ function parseEvent(event, day, room) {
 };
 
 
-function handleResult(events, speakers, eventRecordings) {
-	
+function handleResult(events, speakers, eventRecordings, urlBase) {
 	speakers.forEach(function (speaker) {
 		var speakerJSON = parseSpeaker(speaker);
 		addEntry('speaker', speakerJSON);
@@ -508,7 +509,7 @@ function handleResult(events, speakers, eventRecordings) {
    			 
 			 	// Event
 				// -----
-				var eventJSON = parseEvent(event, day, roomJSON);
+				var eventJSON = parseEvent(event, day, roomJSON, urlBase);
 				
 				// Event Speakers
 				// --------------
@@ -578,7 +579,9 @@ exports.scrape = function (callback) {
 						var videoAPICallURLs = {
 							speakers: speakers_url,
 							schedule: schedule_url,
-							additional_schedule: additional_schedule_url
+							additional_schedule: additional_schedule_url,
+							sendezentrum_schedule: sendezentrum_schedule_url,
+							sendezentrum_speakers: sendezentrum_speaker_url
 						};
 										
 						result.conference.events.forEach(function (event) {
@@ -588,13 +591,22 @@ exports.scrape = function (callback) {
 						json_requester.get({urls: videoAPICallURLs},
 							function (result) {
 											   
+								// Main Events
 								var speakers = result.speakers.schedule_speakers.speakers;
 								var schedule = result.schedule;
+								
+								// Wiki Events								
 								var additional_schedule = result.additional_schedule;
+								
+								// Sendezentrum Events																
+								var sendezentrum_schedule = result.sendezentrum_schedule;
+								var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;								
 								
 								delete result.schedule;
 								delete result.speakers;
 								delete result.additional_schedule;
+								delete result.sendezentrum_schedule;
+								delete result.sendezentrum_speakers;																
 
 								var eventRecordingJSONs = toArray(result);
 
@@ -614,9 +626,10 @@ exports.scrape = function (callback) {
 								});
 								
 
-								handleResult(additional_schedule, speakers, eventRecordingJSONs);
-								handleResult(schedule, speakers, eventRecordingJSONs);
-						
+								handleResult(additional_schedule, speakers, eventRecordingJSONs, "http://events.ccc.de/2015/events/");
+								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/");
+								handleResult(schedule, speakers, eventRecordingJSONs, "http://events.ccc.de/2015/events/");
+								
 								callback(null, 'lectures');				
 							});						
 					}
