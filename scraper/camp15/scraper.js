@@ -112,7 +112,27 @@ var additionalPOIs = [
 		"priority": 100,
 		"type": "poi",
 		"category": "other"
-	}	
+	},
+	{
+		"label_de": "Sendezentrum",
+		"label_en": "Sendezentrum",	
+		"id": mkID("poi-sendezentrum"),
+        "location": {
+            "id": "camp15-sendezentrum", 
+            "label_de": "Sendezentrum", 
+            "label_en": "Sendezentrum"
+        },				
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.031577,
+			"long": 13.308339
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi",
+		"category": "other"
+	}		
 ];
 
 // Livestream test
