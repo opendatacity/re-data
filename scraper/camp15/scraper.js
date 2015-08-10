@@ -69,6 +69,7 @@ var poi2locationMapping = {
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio",
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1720": "camp15-dome"
 	// "camp15-hackcenter-1"
 };
 
@@ -112,27 +113,7 @@ var additionalPOIs = [
 		"priority": 100,
 		"type": "poi",
 		"category": "other"
-	},
-	{
-		"label_de": "Sendezentrum",
-		"label_en": "Sendezentrum",	
-		"id": mkID("poi-sendezentrum"),
-        "location": {
-            "id": "camp15-stage", 
-            "label_de": "Stage", 
-            "label_en": "Stage"
-        },				
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.031577,
-			"long": 13.308339
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi",
-		"category": "other"
-	}		
+	}	
 ];
 
 // Livestream test
