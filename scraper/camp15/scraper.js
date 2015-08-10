@@ -50,6 +50,9 @@ var sortOrderOfLocations = [
 	"camp15-stage",
 	"camp15-workshop-tent",
 	"camp15-dome",	
+	"camp15-ber-stage",
+	"camp15-ber-workshop-tent",
+	"camp15-ber-dome",		
 	"camp15-hackcenter-1",	
 	"camp15-hackcenter-2",
 	"camp15-hackcenter-3",
@@ -290,12 +293,18 @@ function parseSpeaker(speakerJSON) {
 	return result;
 };
 
-function parseRoom(roomName, index) {
+function parseRoom(roomName, index, namePrefix) {
+	
+	var roomName = roomName;
+	if (namePrefix != null) {
+		roomName = namePrefix + roomName;
+	}
+	
     return {
       "id": mkID(roomName),
-      "label_en": roomName.toString(),
-      "label_de": roomName.toString(),		
-      "is_stage": roomName.toString().match(/Saal /i) ? true : false,
+      "label_en": roomName,
+      "label_de": roomName,		
+      "is_stage": roomName.toString().match(/Stage/i) ? true : false,
       "floor": 0,
       "order_index": index,
       "event": eventId,
@@ -364,7 +373,7 @@ function normalizeXMLDayDateKey(date) {
 	
 }
 
-function parseEvent(event, day, room, urlBase) {
+function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 	var links = [];
 	
 	event.links.forEach(function (link) {
@@ -420,6 +429,13 @@ function parseEvent(event, day, room, urlBase) {
 
 	var track = event.track;
 	if (track == null) track = "Other";
+	
+	var locationNameDe = allRooms[room.id]["label_de"];
+	var locationNameEn = allRooms[room.id]["label_en"];
+	if (locationNamePrefix != null) {
+		locationNameDe = locationNamePrefix + locationNameDe;
+		locationNameEn = locationNamePrefix + locationNameEn;		
+	}		
 	
 	var session = {
 		"id": mkID("session-" + event["guid"]),
@@ -477,7 +493,10 @@ function parseEvent(event, day, room, urlBase) {
 };
 
 
-function handleResult(events, speakers, eventRecordings, urlBase) {
+function handleResult(events, speakers, eventRecordings, urlBase, locationNamePrefix) {
+	if (locationNamePrefix == null) {
+		locationNamePrefix = "";
+	}
 	speakers.forEach(function (speaker) {
 		var speakerJSON = parseSpeaker(speaker);
 		addEntry('speaker', speakerJSON);
@@ -497,7 +516,7 @@ function handleResult(events, speakers, eventRecordings, urlBase) {
 		Object.keys(rooms).forEach(function (roomLabel) {
 			// Room
 			// ----
-			var roomJSON = parseRoom(roomLabel, roomIndex);
+			var roomJSON = parseRoom(roomLabel, roomIndex, locationNamePrefix);
 			allRooms[roomJSON.id] = roomJSON;
 			roomIndex++;
 			
@@ -510,7 +529,7 @@ function handleResult(events, speakers, eventRecordings, urlBase) {
    			 
 			 	// Event
 				// -----
-				var eventJSON = parseEvent(event, day, roomJSON, urlBase);
+				var eventJSON = parseEvent(event, day, roomJSON, urlBase, locationNamePrefix);
 				
 				// Event Speakers
 				// --------------
@@ -627,9 +646,9 @@ exports.scrape = function (callback) {
 								});
 								
 
-								handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/");
-								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/");
-								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/");
+								handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
+								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/", "");
+								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
 								
 								callback(null, 'lectures');				
 							});						
