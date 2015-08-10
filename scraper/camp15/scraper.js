@@ -626,9 +626,9 @@ exports.scrape = function (callback) {
 								});
 								
 
-								handleResult(additional_schedule, speakers, eventRecordingJSONs, "http://events.ccc.de/2015/events/");
+								handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/");
 								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/");
-								handleResult(schedule, speakers, eventRecordingJSONs, "http://events.ccc.de/2015/events/");
+								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/");
 								
 								callback(null, 'lectures');				
 							});						
