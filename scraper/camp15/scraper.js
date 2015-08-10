@@ -264,7 +264,7 @@ function parseSpeaker(speakerJSON) {
 	}
 	
 	var result = {
-		"id": mkID(speakerJSON.id),
+		"id": mkID(speakerJSON.full_public_name),
 		"type": "speaker",
 		"event": eventId,
 		"name": speakerJSON.full_public_name,
@@ -501,7 +501,9 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 		var speakerJSON = parseSpeaker(speaker);
 		addEntry('speaker', speakerJSON);
 		
-		allSpeakers[speakerJSON.id] = speakerJSON;
+		if (!allSpeakers[speakerJSON.id]) {
+			allSpeakers[speakerJSON.id] = speakerJSON;
+		}
 	});
 	
 	events.schedule.conference.days.forEach(function(day) {
@@ -534,7 +536,7 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				// Event Speakers
 				// --------------
 				event.persons.forEach(function (person) {
-   						var personID = mkID(person["id"]);
+   						var personID = mkID(person["full_public_name"]);
    						var speaker = allSpeakers[personID];
    						
 						if (speaker) {
@@ -621,6 +623,9 @@ exports.scrape = function (callback) {
 								// Sendezentrum Events																
 								var sendezentrum_schedule = result.sendezentrum_schedule;
 								var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;								
+								
+								var allSpeakers = {};
+								
 								
 								delete result.schedule;
 								delete result.speakers;
