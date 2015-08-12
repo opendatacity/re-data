@@ -71,8 +71,7 @@ var poi2locationMapping = {
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1720": "camp15-dome"
+	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
 	// "camp15-hackcenter-1"
 };
 
@@ -116,7 +115,42 @@ var additionalPOIs = [
 		"priority": 100,
 		"type": "poi",
 		"category": "other"
-	}	
+	},
+	{
+		"label_de": "BER-Stage",
+		"label_en": "BER-Stage",	
+		"id": mkID("ber-stage"),
+        "location": {
+            "id": "camp15-stage", 
+            "label_de": "Stage", 
+            "label_en": "Stage"
+        },				
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.03143,
+			"long": 13.30917
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi",
+		"category": "other"
+	},
+	{
+		"label_de": "Sendezentrum Hack-Zelt",
+		"label_en": "Sendezentrum Hacking-Tent",	
+		"id": mkID("sendezentrum-hacking-tent"),
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.03163,
+			"long": 13.30828
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi",
+		"category": "other"
+	}    	    	
 ];
 
 // Livestream test
