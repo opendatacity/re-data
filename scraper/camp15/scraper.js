@@ -48,6 +48,7 @@ var sortOrderOfLocations = [
 	"camp15-a",
 	"camp15-b",
 	"camp15-stage",
+	"camp15-stage-ber",	
 	"camp15-workshop-tent",
 	"camp15-dome",	
 	"camp15-ber-stage",
@@ -74,6 +75,7 @@ var poi2locationMapping = {
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
 	// "camp15-hackcenter-1"
 };
+
 
 var additionalPOIs = [
 	{
@@ -155,6 +157,9 @@ var additionalPOIs = [
 
 // Livestream test
 var streamURLs = {
+	"camp15-simulacron-3": "http://cdn.c3voc.de/hls/s2_native_hd.m3u8",
+	"camp15-project-2501": 	"http://cdn.c3voc.de/hls/s1_native_hd.m3u8",
+	"camp15-stage-ber":    "http://cdn.c3voc.de/hls/s3_native_hd.m3u8"
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
 };
 
@@ -590,7 +595,7 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				var recordingJSON = null;
 				
 				eventRecordings.forEach(function (element) {
-					if (eventJSON.url == element.link) {
+					if (eventJSON && eventJSON.url == element.link) {
 						recordingJSON = element;
 					}
 				});
