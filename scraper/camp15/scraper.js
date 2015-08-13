@@ -48,7 +48,6 @@ var sortOrderOfLocations = [
 	"camp15-a",
 	"camp15-b",
 	"camp15-stage",
-	"camp15-stage-ber",	
 	"camp15-workshop-tent",
 	"camp15-dome",	
 	"camp15-ber-stage",
@@ -75,7 +74,6 @@ var poi2locationMapping = {
 	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
 	// "camp15-hackcenter-1"
 };
-
 
 var additionalPOIs = [
 	{
@@ -152,14 +150,26 @@ var additionalPOIs = [
 		"priority": 100,
 		"type": "poi",
 		"category": "other"
-	}    	    	
+	},
+	{
+		"label_de": "Hacker Kino",
+		"label_en": "Hacker Kino",	
+		"id": mkID("hacker-kino"),
+		"hidden": false,
+		"geo_position": {
+			"lat": 53.030833,
+			"long": 13.308333
+		},
+		"positions": [],
+		"links": [],
+		"priority": 100,
+		"type": "poi",
+		"category": "entertainment"
+	} 	   	    	
 ];
 
 // Livestream test
 var streamURLs = {
-	"camp15-simulacron-3": "http://cdn.c3voc.de/hls/s2_native_hd.m3u8",
-	"camp15-project-2501": 	"http://cdn.c3voc.de/hls/s1_native_hd.m3u8",
-	"camp15-stage-ber":    "http://cdn.c3voc.de/hls/s3_native_hd.m3u8"
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
 };
 
