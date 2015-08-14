@@ -14,7 +14,7 @@ var async = require('async');
 var md5 = require('MD5');
 var ical = require('ical');
 var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
+var icalendar = require('icalendar');
 
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
@@ -390,7 +390,10 @@ function generateIcalData(allSessions) {
 	});
 
 	// console.log(ical.toString());
-	fs.writeFile("web/data/camp15/sessions.ics", ical.toString(), function (err) {
+	var filepath = __dirname + "/../../web/data/camp15/sessions.ics";
+	filepath = path.normalize(filepath);
+	console.log("PATH>>> ", path);
+	fs.writeFile(filepath, ical.toString(), function (err) {
 	});
 };
 
@@ -742,6 +745,10 @@ exports.scrape = function (callback) {
 								handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
 								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/", "");
 								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
+								
+								generateIcalData(data.filter(function (i) {
+									return i.type == "session";
+								}));
 								
 								callback(null, 'lectures');				
 							});						
