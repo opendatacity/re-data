@@ -4,17 +4,18 @@
   "version": "0.0.3",
   "description": "retrieve and convert dumps from various conferences to importable json",
   "dependencies": {
-    "MD5": ">= 1.2.1",
-    "async": ">= 0.9.0",
-    "cheerio": ">= 0.18.0",
+    "MD5": "1.2.1",
+    "async": "0.9.0",
+    "cheerio": "0.18.0",
     "colors": "^1.1.0",
-    "cradle": ">= 0.6.7",
-    "csv-parse": ">= 0.0.6",
-    "ent": ">= 0.1.0",
-    "ical": ">= 0.3.1",
-    "moment": ">= 2.2.1",
-    "sanitize-html": ">= 1.4.3",
-    "scrapyard": ">= 0.0.8"
+    "cradle": "0.6.7",
+    "csv-parse": "0.0.6",
+    "ent": "0.1.0",
+    "ical": "0.3.1",
+    "moment": "2.2.1",
+    "sanitize-html": "1.4.3",
+    "scrapyard": "0.0.8",
+	"icalendar": "0.7.1"
   },
   "engines": {
     "node": "0.10.21"

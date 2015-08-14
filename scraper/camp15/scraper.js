@@ -361,6 +361,39 @@ function parseRoom(roomName, index, namePrefix) {
     };
 };
 
+function generateIcalData(allSessions) {
+	var ical = new icalendar.iCalendar();
+
+	allSessions.forEach(function (session) {
+		var event = new icalendar.VEvent(session.id);
+		event["TZID"] = "Europe/Berlin";
+		var summary = session.title;
+		if (session.subtitle) {
+			summary = summary + " – " + session.subtitle
+		}
+		event.setSummary(summary);
+
+		var description = "";
+		if (session.abstract && session.description) {
+			description = session.abstract + "\n\n" + session.description;
+		} else if (session.abstract) {
+			description = session.abstract;
+		} else if (session.description) {
+			description = session.description;
+		}
+		event.setDescription(description);
+
+		event.setLocation(session.location.label_en);
+		event.setDate(session.begin, session.end);
+
+		ical.addComponent(event);
+	});
+
+	// console.log(ical.toString());
+	fs.writeFile("web/data/camp15/sessions.ics", ical.toString(), function (err) {
+	});
+};
+
 function parseDate(dateString) {
 	var date = new Date(dateString);
 	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
@@ -459,7 +492,13 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 		eventTypeId = 'workshop';		
 	}
 
+	console.log("-- -- -- -- -- --");
 	var begin = parseDate(event.date);
+	console.log(event.title);
+	console.log(event.date);
+	console.log(begin);	
+	console.log("-- -- -- -- -- --");
+		
 	var otherDay = begin.getUTCFullYear() + "-" + (begin.getUTCMonth() + 1) + "-" + begin.getUTCDate();
 	// console.log("--- " + event.title.toString() + " ---");
 	// console.log("day " + day);
