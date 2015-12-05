@@ -43,16 +43,21 @@ var sortOrderOfLocations = [
 
 ];
 
-var poi2locationMapping = {
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
-	// "camp15-hackcenter-1"
-};
+var testVideoURLs = {
+	"32c3-7205": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk: Netzpolitik in der Schweiz 2015/16 Video: Das Transparenzportal Hamburg
+}; 
 
-var colors = {};
-
+// for app review we only show limited innocent content…
+var whitelistedSessionIDs = [
+	"32c3-7205", // "Netzpolitik in der Schweiz 2015/16"
+	"32c3-7549", // "20 OSCILLATORS IN 20 MINUTES"
+	"32c3-7387", // "Net Neutrality in Europe"
+	"32c3-7415", // "Wie Jugendschutzprogramme nicht nur die Jugend schädigen"
+	"32c3-7238", // "Vector retrogaming"
+	"32c3-7520", // "Compileroptimierungen für Forth im Microcontroller"
+	"32c3-7367", // "Ling - High level system programming"
+	"32c3-7138"  // "G'scheitern"
+];
 
 var allFormats = {
 	'discussion': { id:'discussion', label_en:'Discussion' },
@@ -282,6 +287,21 @@ function sessionFromJSON(json, id_prefix) {
 		"links": []
 	};
 	
+	// if whitelist is present and this id is not whitelisted return null
+	if (whitelistedSessionIDs.length > 0 && whitelistedSessionIDs.indexOf(session.id) == -1) {
+		return null;
+	}
+	
+	var testVideoURL = testVideoURLs[session.id];
+	if (testVideoURL) {
+		session.enclosures.push({
+			"url": testVideoURL,
+			"mimetype": "video/mp4",
+			"type": "recording",
+			"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+		});
+	}
+	
 	return session;
 };
 
@@ -351,9 +371,11 @@ exports.scrape = function (callback) {
 					result.halfnarp.forEach(function (item, index) {				
 						var session = sessionFromJSON(item, '');
 						
-						addEntry('session', session);
+						// if session could be parsed add it
+						if (session != null) {
+							addEntry('session', session);
+						}
 					});
-					
 					
 					callback(null, 'halfnarp');
 				});
