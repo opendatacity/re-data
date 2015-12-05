@@ -196,7 +196,32 @@ var allMaps = {
 
 var allPOIs = {};
 var data   = [];
-var allDays = {};
+var allDays = {
+	"2015-12-27": {
+		"date": "2015-12-27",
+		"id": mkID("day-1"),
+		"label_de": "Tag 1",
+		"label_en": "Day 1"
+	},
+	"2015-12-28": {
+		"date": "2015-12-28",
+		"id": mkID("day-2"),
+		"label_de": "Tag 2",
+		"label_en": "Day 2"
+	},
+	"2015-12-29": {
+		"date": "2015-12-29",
+		"id": mkID("day-3"),
+		"label_de": "Tag 3",
+		"label_en": "Day 3"
+	},
+	"2015-12-30": {
+		"date": "2015-12-30",
+		"id": mkID("day-4"),
+		"label_de": "Tag 4",
+		"label_en": "Day 4"
+	}	
+};
 var allRooms = {};
 var allSpeakers = {};
 var allTracks = {
