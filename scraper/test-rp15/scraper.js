@@ -6,7 +6,7 @@ var parseCSV = require('csv-parse');
 
 // for debugging we can just pretend rp15 was today
 var originalStartDate = new Date(2015, 4, 5, 9, 0, 0, 0);
-var fakeDate = new Date(2015, 10, 27, 10, 0, 0, 0);
+var fakeDate = new Date(2015, 11, 4, 11, 0, 0, 0);
 var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
 var removeTimesAndLocations = false;
 
@@ -187,7 +187,7 @@ exports.scrape = function (callback) {
 					'position': speaker.position,
 					'sessions': [],
 					'links': parseSpeakerLinks(speaker.link_uris, speaker.link_labels)
-				}
+				};
 				speakerMap[entry.id] = entry;
 				addEntry('speaker', entry);
 			});

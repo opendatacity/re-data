@@ -1,7 +1,7 @@
 /* get node modules */
 var fs = require('fs');
 var path = require('path');
-var eventId = "32C3";
+var eventId = "32c3";
 
 /* get npm modules */
 var scrapyard = require('scrapyard');
