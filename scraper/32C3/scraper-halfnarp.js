@@ -44,12 +44,11 @@ var sortOrderOfLocations = [
 ];
 
 var testVideoURLs = {
-	"32c3-7205": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk: Netzpolitik in der Schweiz 2015/16 Video: Das Transparenzportal Hamburg
+	"32c3-7415": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
 }; 
 
 // for app review we only show limited innocent content…
 var whitelistedSessionIDs = [
-	"32c3-7205", // "Netzpolitik in der Schweiz 2015/16"
 	"32c3-7549", // "20 OSCILLATORS IN 20 MINUTES"
 	"32c3-7387", // "Net Neutrality in Europe"
 	"32c3-7415", // "Wie Jugendschutzprogramme nicht nur die Jugend schädigen"
