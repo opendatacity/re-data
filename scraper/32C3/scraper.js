@@ -116,8 +116,10 @@ var testVideoURLs = {
 var colors = {};
 colors[eventId + "-hardware-making"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-security-safety"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-security"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-ethics-society-politics"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-art-beauty"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-art-culture"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-science"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-entertainment"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-failosophy"] = [109.0, 109.0, 109.0, 1.0]; // grey
@@ -487,7 +489,7 @@ function parseTrackFromEvent(eventXML) {
 	var id = mkID(trackName);
 	var color = colors[id];
 	if (!color) {
-		color = [207,94,28,1];
+		color = [109.0, 109.0, 109.0, 1.0]; // grey by default
 	}
 	return {
 		"id": id,
