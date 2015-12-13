@@ -19,11 +19,11 @@ var icalendar = require('icalendar');
 var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
-var additional_schedule_url = "http://data.conference.bits.io/data/camp15/voc/workshops.schedule.json";
-var sendezentrum_schedule_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/schedule.json";
-var sendezentrum_speaker_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/speakers.json";
-var schedule_url = "http://events.ccc.de/camp/2015/Fahrplan/schedule.json";
-var speakers_url = "http://events.ccc.de/camp/2015/Fahrplan/speakers.json";
+// var additional_schedule_url = "http://data.conference.bits.io/data/camp15/voc/workshops.schedule.json";
+// var sendezentrum_schedule_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/schedule.json";
+// var sendezentrum_speaker_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/speakers.json";
+var schedule_url = "http://events.ccc.de/congress/2015/Fahrplan/schedule.json";
+var speakers_url = "http://events.ccc.de/congress/2015/Fahrplan/speakers.json";
 
 
 // for debugging we can just pretend rp14 was today
@@ -43,129 +43,59 @@ var dayDayChange = 0;
 // N ∈ [1;5], L ∈ {native, translated}, Q ∈ {hd, sd, slides}. 
 
 var sortOrderOfLocations = [
-	"camp15-project-2501",
-	"camp15-simulacron-3",
-	"camp15-a",
-	"camp15-b",
-	"camp15-stage",
-	"camp15-workshop-tent",
-	"camp15-dome",	
-	"camp15-ber-stage",
-	"camp15-ber-workshop-tent",
-	"camp15-ber-dome",		
-	"camp15-hackcenter-1",	
-	"camp15-hackcenter-2",
-	"camp15-hackcenter-3",
-	"camp15-workshop-1",	
-	"camp15-workshop-2",
-	"camp15-noisy-square",
-	"camp15-milliways",	
-	"camp15-v01d",
-	"camp15-amateur-radio",
-	"camp15-foodhackingbase",
-	"camp15-spacevillage",	
-	"camp15-"
+    // "camp15-project-2501",
+    // "camp15-simulacron-3",
+    // "camp15-a",
+    // "camp15-b",
+    // "camp15-stage",
+    // "camp15-workshop-tent",
+    // "camp15-dome",
+    // "camp15-ber-stage",
+    // "camp15-ber-workshop-tent",
+    // "camp15-ber-dome",
+    // "camp15-hackcenter-1",
+    // "camp15-hackcenter-2",
+    // "camp15-hackcenter-3",
+    // "camp15-workshop-1",
+    // "camp15-workshop-2",
+    // "camp15-noisy-square",
+    // "camp15-milliways",
+    // "camp15-v01d",
+    // "camp15-amateur-radio",
+    // "camp15-foodhackingbase",
+    // "camp15-spacevillage",
+    // "camp15-"
 ];
 
 var poi2locationMapping = {
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
-	"camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
+    // "camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
+    // "camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
+    // "camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
+    // "camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
 	// "camp15-hackcenter-1"
 };
 
 var additionalPOIs = [
-	{
-		"label_de": "Project 2501",
-		"label_en": "Project 2501",	
-		"id": mkID("poi-project-2501"),
-		"category": "session-location",
-        "location": {
-            "id": "camp15-project-2501", 
-            "label_de": "Project 2501", 
-            "label_en": "Project 2501"
-        },		
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.030516375738,
-			"long": 13.306140096802
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi"
-	},
-	{
-		"label_de": "Simulacron-3",
-		"label_en": "Simulacron-3",	
-		"id": mkID("poi-simulacron-3"),
-        "location": {
-            "id": "camp15-simulacron-3", 
-            "label_de": "Simulacron-3", 
-            "label_en": "Simulacron-3"
-        },				
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.032598292561,
-			"long": 13.307631479837
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi",
-		"category": "other"
-	},
-	{
-		"label_de": "BER-Stage",
-		"label_en": "BER-Stage",	
-		"id": mkID("ber-stage"),
-        "location": {
-            "id": "camp15-stage", 
-            "label_de": "Stage", 
-            "label_en": "Stage"
-        },				
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.03143,
-			"long": 13.30917
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi",
-		"category": "other"
-	},
-	{
-		"label_de": "Sendezentrum Hack-Zelt",
-		"label_en": "Sendezentrum Hacking-Tent",	
-		"id": mkID("sendezentrum-hacking-tent"),
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.03163,
-			"long": 13.30828
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi",
-		"category": "other"
-	},
-	{
-		"label_de": "Hacker Kino",
-		"label_en": "Hacker Kino",	
-		"id": mkID("hacker-kino"),
-		"hidden": false,
-		"geo_position": {
-			"lat": 53.030833,
-			"long": 13.308333
-		},
-		"positions": [],
-		"links": [],
-		"priority": 100,
-		"type": "poi",
-		"category": "entertainment"
-	} 	   	    	
+    // {
+    //     "label_de": "Project 2501",
+    //     "label_en": "Project 2501",
+    //     "id": mkID("poi-project-2501"),
+    //     "category": "session-location",
+    //         "location": {
+    //             "id": "camp15-project-2501",
+    //             "label_de": "Project 2501",
+    //             "label_en": "Project 2501"
+    //         },
+    //     "hidden": false,
+    //     "geo_position": {
+    //         "lat": 53.030516375738,
+    //         "long": 13.306140096802
+    //     },
+    //     "positions": [],
+    //     "links": [],
+    //     "priority": 100,
+    //     "type": "poi"
+    // } 	    	
 ];
 
 // Livestream test
@@ -208,7 +138,128 @@ var allLanguages = {
 	'de': { id:'de', label_en:'German' },	
 };
 
-var allMaps = {};
+var allMaps = {
+	'map-level0': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level0",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",
+		'floor_label_de': "Erdgeschoss",
+		'floor_label_en': "Ground Floor",		
+		"is_outdoor": true,
+		"is_indoor": true,		
+		"floor": 0,
+		"order_index": 0,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor0",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor0/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+                    "size": {"width": 5940,
+                             "height": 4320}
+                },
+	    "pois": []
+	},
+	'map-level1': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level1",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "1. Obergeschoß",
+		'floor_label_en': "1st floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 1,
+		"order_index": 1,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor1",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor1/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+           "size": {"width": 5940,
+                    "height": 4320}
+                },
+	    "pois": []
+	},
+	'map-level2': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level2",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "2. Obergeschoß",
+		'floor_label_en': "2nd floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 2,
+		"order_index": 2,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor2",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor2/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+           "size": {"width": 5940,
+                    "height": 4320}
+                },
+	    "pois": []
+	},
+	'map-level3': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level3",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "3. Obergeschoß",
+		'floor_label_en': "3rd floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 3,
+		"order_index": 3,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor3",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor3/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+           "size": {"width": 5940,
+                    "height": 4320}
+                },
+	    "pois": []
+	},
+	'map-level4': {
+		'event': eventId,
+		'id': eventId + "-map-" + "level4",
+		'type': "map",
+		'label_de': "Congress Center Hamburg",
+		'label_en': "Congress Center Hamburg",		
+		'floor_label_de': "4. Obergeschoß",
+		'floor_label_en': "4th floor",
+		"is_outdoor": false,
+		"is_indoor": true,		
+		"floor": 4,
+		"order_index": 4,
+		"area": {"width": 1000.0, 
+		         "height": 530.0},
+		"tiles": {
+                    "base_url": "http://data.conference.bits.io/maps/31c3/floor4",
+                    "large_image_url": "http://data.conference.bits.io/maps/31c3/floor4/mini.png",
+                    "tile_size": 512,
+                    "tile_file_extension": "png",
+           "size": {"width": 5940,
+                    "height": 4320}
+                },
+	    "pois": []
+	}				
+};
 
 
 
@@ -216,7 +267,9 @@ var allPOIs = {};
 
 
 var data   = [];
-var allDays = {};
+var allDays = {
+    
+};
 var allRooms = {};
 var allSpeakers = {};
 var allTracks = {};
@@ -256,26 +309,22 @@ function parseDay(dayXML) {
 	
 	var monthDay = parseDate.getUTCDate();
 	switch (monthDay) {
-	case 13:
+	case 27:
 		dateLabelDe = "Tag 1";
 		dateLabelEn = "Day 1";		
 		break;
-	case 14:
+	case 28:
 		dateLabelDe = "Tag 2";
 		dateLabelEn = "Day 2";		
 		break;
-	case 15:
+	case 29:
 		dateLabelDe = "Tag 3";
 		dateLabelEn = "Day 3";		
 		break;
-	case 16:
+	case 30:
 		dateLabelDe = "Tag 4";
 		dateLabelEn = "Day 4";		
 		break;						
-	case 17:
-		dateLabelDe = "Tag 5";
-		dateLabelEn = "Day 5";		
-		break;								
 	default:
 		
 	}
@@ -330,7 +379,7 @@ function parseSpeaker(speakerJSON) {
 	// sys.puts(sys.inspect(handler.dom, false, null));
 	
 	
-	var imageHost = "https://events.ccc.de/congress/2014/Fahrplan";
+	var imageHost = "https://events.ccc.de/congress/2015/Fahrplan";
 	if (speakerJSON.photo) {
 		result['photo'] = speakerJSON.photo;
 	}
@@ -401,11 +450,11 @@ function parseDate(dateString) {
 	var date = new Date(dateString);
 	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
 	date.setTime(newMillis);
-	if (date.getUTCMonth() != 7) {
-		console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
-		date.setUTCMonth(7);
-
-	}
+    // if (date.getUTCMonth() != 12) {
+    //     console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
+    //     date.setUTCMonth(7);
+    //
+    // }
 	return date;
 };
 
@@ -419,10 +468,10 @@ function parseEnd(dateString, durationString) {
 	date = new Date(seconds * 1000); 
 	var newMillis = date.getTime() + sessionStartDateOffsetMilliSecs;
 	date.setTime(newMillis);
-	if (date.getUTCMonth() != 7) {
-		console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
-		date.setUTCMonth(7);
-	}	
+    // if (date.getUTCMonth() != 7) {
+    //     console.warn("WRONG DATE MONTH: ", date, " from date string ", dateString);
+    //     date.setUTCMonth(7);
+    // }
 	
 	return date;	
 }
@@ -627,7 +676,8 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				// Event Speakers
 				// --------------
 				event.persons.forEach(function (person) {
-   						var personID = mkID(person["full_public_name"]);
+                    console.log(person);
+   						var personID = mkID(person["public_name"]);
    						var speaker = allSpeakers[personID];
    						
 						if (speaker) {
@@ -692,9 +742,9 @@ exports.scrape = function (callback) {
 						var videoAPICallURLs = {
 							speakers: speakers_url,
 							schedule: schedule_url,
-							additional_schedule: additional_schedule_url,
-							sendezentrum_schedule: sendezentrum_schedule_url,
-							sendezentrum_speakers: sendezentrum_speaker_url
+                            // additional_schedule: additional_schedule_url,
+                            // sendezentrum_schedule: sendezentrum_schedule_url,
+                            // sendezentrum_speakers: sendezentrum_speaker_url
 						};
 										
 						result.conference.events.forEach(function (event) {
@@ -709,20 +759,20 @@ exports.scrape = function (callback) {
 								var schedule = result.schedule;
 								
 								// Wiki Events								
-								var additional_schedule = result.additional_schedule;
+                                // var additional_schedule = result.additional_schedule;
 								
 								// Sendezentrum Events																
-								var sendezentrum_schedule = result.sendezentrum_schedule;
-								var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;								
+                                // var sendezentrum_schedule = result.sendezentrum_schedule;
+                                // var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;
 								
 								var allSpeakers = {};
 								
 								
 								delete result.schedule;
 								delete result.speakers;
-								delete result.additional_schedule;
-								delete result.sendezentrum_schedule;
-								delete result.sendezentrum_speakers;																
+                                // delete result.additional_schedule;
+                                // delete result.sendezentrum_schedule;
+                                // delete result.sendezentrum_speakers;
 
 								var eventRecordingJSONs = toArray(result);
 
@@ -742,8 +792,8 @@ exports.scrape = function (callback) {
 								});
 								
 
-								handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
-								handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/", "");
+                                // handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
+                                // handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/", "");
 								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/camp/2015/Fahrplan/events/", "");
 								
 								generateIcalData(data.filter(function (i) {
