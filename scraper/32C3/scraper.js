@@ -104,7 +104,7 @@ var streamURLs = {
 };
 
 var testVideoURLs = {
-    "32c3-session-5f57ffa9-631c-429d-a11b-5b51bebe0f0f": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
+    "32c3-7415": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
 };
 
 // green [111.0, 139.0, 49.0, 1.0] 
