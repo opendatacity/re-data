@@ -114,15 +114,15 @@ var testVideoURLs = {
 // brown [147.0, 97.0, 63.0, 1.0]
 
 var colors = {};
-colors[eventId + "-hardware-making"] = [221.0, 155.0, 64.0, 1.0]; // orange
-colors[eventId + "-security-safety"] = [98.0, 113.0, 152.0, 1.0]; // blue 
-colors[eventId + "-ethics-society-politics"] = [111.0, 139.0, 49.0, 1.0]; // green
+colors[eventId + "-hardware-making"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-security-safety"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-ethics-society-politics"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-art-beauty"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-science"] = [111.0, 139.0, 49.0, 1.0]; // green
-colors[eventId + "-entertainment"] = [98.0, 113.0, 152.0, 1.0]; // blue
-colors[eventId + "-failosophy"] = [147.0, 97.0, 63.0, 1.0]; // brown
-colors[eventId + "-ccc"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-self-orgnaized-sessions"] = [147.0, 97.0, 63.0, 1.0]; // brown
+colors[eventId + "-science"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-entertainment"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-failosophy"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-ccc"] = [0.0,0.0,0.0, 1.0]; // black
+colors[eventId + "-self-orgnaized-sessions"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-other"] = [109.0, 109.0, 109.0, 1.0]; // grey
 
 var allFormats = {
