@@ -103,6 +103,10 @@ var streamURLs = {
 	// "camp15-saal-1": "http://hls.stream.c3voc.de/hls/s1_native_hd.m3u8",
 };
 
+var testVideoURLs = {
+    "32c3-session-5f57ffa9-631c-429d-a11b-5b51bebe0f0f": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
+};
+
 // green [111.0, 139.0, 49.0, 1.0] 
 // grey  [109.0, 109.0, 109.0, 1.0] 
 // orange [221.0, 155.0, 64.0, 1.0]
@@ -578,7 +582,7 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 	}		
 	
 	var session = {
-		"id": mkID("session-" + event["guid"]),
+		"id": mkID(event["id"]), // Do not use GUID so we keep in line with Halfnarp IDs
 		"title": event.title.toString(),
 		"url": urlBase + event.id + ".html",
 		"abstract": sanitizeHtml(event.abstract.toString(), {allowedTags: []}),
@@ -610,15 +614,15 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 	}
 	
 	// HACK: Fake one video for App Review
-	// IF for Fnord News show
-    // if (session['id'] == 'camp15-session-3064add4-ab1e-4d05-84b8-d753b9733097') {
-    //     session.enclosures.push({
-    //                 "url": "http://cdn.media.ccc.de/congress/2013/mp4/30c3-5490-de-en-Fnord_News_Show_h264-hq.mp4",
-    //             "mimetype": "video/mp4",
-    //             "type": "recording",
-    //             "thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
-    //            });
-    // }
+	var testVideoURL = testVideoURLs[session.id];
+	if (testVideoURL) {
+		session.enclosures.push({
+			"url": testVideoURL,
+			"mimetype": "video/mp4",
+			"type": "recording",
+			"thumbnail": "http://static.media.ccc.de/media/congress/2013/5490-h264-iprod_preview.jpg"
+		});
+	}
 	
 	var streamURL = streamURLs[session.location.id];
 	if (streamURL) {
