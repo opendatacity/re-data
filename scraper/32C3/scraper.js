@@ -360,7 +360,11 @@ function parseSpeaker(speakerJSON) {
 	
 	if (speakerJSON.links) {
 		speakerJSON.links.forEach(function (link) {
-			links.push({"url": link.url,
+            var url = link.url
+            if (url.indexOf("http") != 0) {           
+                 url = "http://" + url;
+            } 
+			links.push({"url": url,
 				        "title": link.title,
 				        "service": "web",
 				        "type": "speaker-link"});
