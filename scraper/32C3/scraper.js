@@ -124,7 +124,7 @@ colors[eventId + "-science"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-entertainment"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-failosophy"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-ccc"] = [0.0,0.0,0.0, 1.0]; // black
-colors[eventId + "-self-orgnaized-sessions"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-self-organized-sessions"] = [109.0, 109.0, 109.0, 1.0]; // grey
 colors[eventId + "-other"] = [109.0, 109.0, 109.0, 1.0]; // grey
 
 var allFormats = {
