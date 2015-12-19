@@ -107,29 +107,46 @@ var testVideoURLs = {
     // "32c3-7415": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
 };
 
-var blue    = [ 14.0, 109.0, 142.0, 1.0];
+// Security #5057af blue
+// Politics #b550bd violett 
+// Science #45b9b3 turqise 
+// Hardware #a8563f brown 
+// Art #b99745 orange
+// Failosophy #c0ba59 yellow
+// CCC #45b964 green
+// Entertainment #45b964 (same as CCC) green
+// 
+// official from https://events.ccc.de/congress/2015/wiki/Static:Design
+var blue    = [ 80.0,  87.0, 175.0, 1.0];
+var violett = [181.0,  80.0, 189.0, 1.0];
+var turquise= [ 69.0, 185.0, 179.0, 1.0]; 
+var brown   = [168.0,  86.0,  63.0, 1.0]; 
+var orange  = [185.0, 151.0,  69.0, 1.0];
+var yellow  = [192.0, 186.0,  89.0, 1.0];
+var green   = [ 69.0, 185.0, 100.0, 1.0];
+
+// non-official
 var red     = [118.0,  26.0,  61.0, 1.0];
-var yellow  = [167.0, 104.0,   5.0, 1.0];
-var orange  = [ 93.0,  53.0,  15.0, 1.0];
 var grey    = [ 97.0,  97.0,  97.0, 1.0];
-var green   = [ 14.0,  85.0,  43.0, 1.0];
 var black   = [  0.0,   0.0,   0.0, 1.0];
-var violett = [ 83.0,  59.0, 121.0, 1.0];
 var cream   = [135.0,  81.0,  86.0, 1.0]; 
-var turquise= [  5.0,  81.0,  86.0, 1.0]; 
+
 
 var colors = {};
-colors[eventId + "-art-culture"] = green;
-colors[eventId + "-ccc"] = black;
-colors[eventId + "-entertainment"] = orange;
-colors[eventId + "-ethics-society-politics"] = blue;
-colors[eventId + "-failosophy"] = red;
-colors[eventId + "-hardware-making"] = yellow;
-colors[eventId + "-science"] = cream;
-colors[eventId + "-security"] = turquise;
-colors[eventId + "-self-organized-sessions"] = grey;
-colors[eventId + "-podcast"] = violett;
+colors[eventId + "-security"] = blue;
+colors[eventId + "-ethics-society-politics"] = violett;
+colors[eventId + "-science"] = turquise;
+colors[eventId + "-hardware-making"] = brown;
+colors[eventId + "-art-culture"] = orange;
+colors[eventId + "-failosophy"] = yellow;
+colors[eventId + "-ccc"] = green;
+colors[eventId + "-entertainment"] = green;
+
+
+colors[eventId + "-self-organized-sessions"] = cream;
+colors[eventId + "-podcast"] = red;
 colors[eventId + "-other"] = grey;
+
 
 var allFormats = {
 	'discussion': { id:'discussion', label_en:'Discussion' },
