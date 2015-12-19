@@ -107,25 +107,29 @@ var testVideoURLs = {
     // "32c3-7415": "http://cdn.media.ccc.de/congress/2014/h264-hd/31c3-6582-de-Das_Transparenzportal_Hamburg_hd.mp4" // Talk:Wie Jugendschutzprogramme nicht nur die Jugend schädigen Video: Das Transparenzportal Hamburg
 };
 
-// green [111.0, 139.0, 49.0, 1.0] 
-// grey  [109.0, 109.0, 109.0, 1.0] 
-// orange [221.0, 155.0, 64.0, 1.0]
-// blue [98.0, 113.0, 152.0, 1.0]
-// brown [147.0, 97.0, 63.0, 1.0]
+var blue    = [ 14.0, 109.0, 142.0, 1.0];
+var red     = [118.0,  26.0,  61.0, 1.0];
+var yellow  = [167.0, 104.0,   5.0, 1.0];
+var orange  = [ 93.0,  53.0,  15.0, 1.0];
+var grey    = [ 97.0,  97.0,  97.0, 1.0];
+var green   = [ 14.0,  85.0,  43.0, 1.0];
+var black   = [  0.0,   0.0,   0.0, 1.0];
+var violett = [ 83.0,  59.0, 121.0, 1.0];
+var cream   = [135.0,  81.0,  86.0, 1.0]; 
+var turquise= [  5.0,  81.0,  86.0, 1.0]; 
 
 var colors = {};
-colors[eventId + "-hardware-making"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-security-safety"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-security"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-ethics-society-politics"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-art-beauty"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-art-culture"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-science"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-entertainment"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-failosophy"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-ccc"] = [0.0,0.0,0.0, 1.0]; // black
-colors[eventId + "-self-organized-sessions"] = [109.0, 109.0, 109.0, 1.0]; // grey
-colors[eventId + "-other"] = [109.0, 109.0, 109.0, 1.0]; // grey
+colors[eventId + "-art-culture"] = green;
+colors[eventId + "-ccc"] = black;
+colors[eventId + "-entertainment"] = orange;
+colors[eventId + "-ethics-society-politics"] = blue;
+colors[eventId + "-failosophy"] = red;
+colors[eventId + "-hardware-making"] = yellow;
+colors[eventId + "-science"] = cream;
+colors[eventId + "-security"] = turquise;
+colors[eventId + "-self-organized-sessions"] = grey;
+colors[eventId + "-podcast"] = violett;
+colors[eventId + "-other"] = grey;
 
 var allFormats = {
 	'discussion': { id:'discussion', label_en:'Discussion' },
