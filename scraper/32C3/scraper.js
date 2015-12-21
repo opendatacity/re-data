@@ -20,8 +20,8 @@ var log = require(path.resolve(__dirname, '../../api/lib/log.js'));
 var json_requester = require('../lib/json_requester');
 
 var additional_schedule_url = "http://data.conference.bits.io/data/32c3/voc/workshops.schedule.json";
-// var sendezentrum_schedule_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/schedule.json";
-// var sendezentrum_speaker_url = "https://frab.camp.berlin.ccc.de/en/ber15/public/speakers.json";
+var sendezentrum_schedule_url = "https://frab.das-sendezentrum.de/de/32c3/public/schedule.json";
+var sendezentrum_speaker_url = "https://frab.das-sendezentrum.de/de/32c3/public/speakers.json";
 var schedule_url = "http://events.ccc.de/congress/2015/Fahrplan/schedule.json";
 var speakers_url = "http://events.ccc.de/congress/2015/Fahrplan/speakers.json";
 
@@ -47,8 +47,8 @@ var sortOrderOfLocations = [
     '32c3-hall-2',
     '32c3-hall-g',
     '32c3-hall-6',
-    "32c3-hall-13",
-    "32c3-hall-14",
+    '32c3-b-hne',
+    '32c3-podcaster-tisch',    
     "32c3-hall-a-1",
     "32c3-hall-a-2",
     "32c3-hall-b",
@@ -56,8 +56,9 @@ var sortOrderOfLocations = [
     "32c3-hall-c-2",
     "32c3-hall-c-3",
     "32c3-hall-c-4",
-    "32c3-hall-f",
-    "32c3-hall-g"    
+    "32c3-hall-f",        
+    "32c3-hall-13",
+    "32c3-hall-14"
 ];
 
 var poi2locationMapping = {
@@ -316,7 +317,8 @@ function mkID(string) {
 
 function parseDay(dayXML) {
 	var date = dayXML.date;
-		
+	console.log("parsing: ", dayXML);
+    		
 	var comps = date.split("-");	
 	var parseDate = new Date(date);
 	parseDate.setUTCFullYear(parseDate.getUTCFullYear() + dayYearChange);
@@ -504,9 +506,12 @@ function parseEnd(dateString, durationString) {
 	return date;	
 }
 
-function parseTrackFromEvent(eventXML) {
+function parseTrackFromEvent(eventXML, defaultTrack) {
 	var trackName = eventXML.track;
-	if (trackName == null) trackName = "Other";
+    // if no track name is given we just return the default
+	if (trackName == null) {
+	    return defaultTrack;
+	}
 	// console.log(trackName);
 	var id = mkID(trackName);
 	var color = colors[id];
@@ -535,7 +540,7 @@ function normalizeXMLDayDateKey(date) {
 	
 }
 
-function parseEvent(event, day, room, urlBase, locationNamePrefix) {
+function parseEvent(event, day, room, urlBase, locationNamePrefix, trackJSON) {
 	var links = [];
 	
 	event.links.forEach(function (link) {
@@ -572,12 +577,12 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 		eventTypeId = 'workshop';		
 	}
 
-	console.log("-- -- -- -- -- --");
+    // console.log("-- -- -- -- -- --");
 	var begin = parseDate(event.date);
-	console.log(event.title);
-	console.log(event.date);
-	console.log(begin);	
-	console.log("-- -- -- -- -- --");
+    // console.log(event.title);
+    // console.log(event.date);
+    // console.log(begin);
+    // console.log("-- -- -- -- -- --");
 		
 	var otherDay = begin.getUTCFullYear() + "-" + (begin.getUTCMonth() + 1) + "-" + begin.getUTCDate();
 	// console.log("--- " + event.title.toString() + " ---");
@@ -613,7 +618,7 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 		"description": sanitizeHtml(event.description.toString(), {allowedTags: []}),
 		"begin": begin,
 		"end": parseEnd(event.date, event.duration),
-		"track": allTracks[mkID(track)],
+		"track": {"id": trackJSON.id, "label_de": trackJSON.label_de, "label_en": trackJSON.label_en},
 		"day": day,
 		"format": allFormats[eventTypeId],
 		"level": allLevels['advanced'],
@@ -666,17 +671,44 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix) {
 };
 
 
-function handleResult(events, speakers, eventRecordings, urlBase, locationNamePrefix) {
+function handleResult(events, speakers, eventRecordings, urlBase, locationNamePrefix, defaultTrack) {
 	if (locationNamePrefix == null) {
 		locationNamePrefix = "";
 	}
 	speakers.forEach(function (speaker) {
 		var speakerJSON = parseSpeaker(speaker);
-		addEntry('speaker', speakerJSON);
 		
-		if (!allSpeakers[speakerJSON.id]) {
-			allSpeakers[speakerJSON.id] = speakerJSON;
-		}
+		if (allSpeakers[speakerJSON.id]) { 
+            var speaker = allSpeakers[speakerJSON.id];
+            // ["links", "sessions"].forEach(function(item){
+            //     // concat + uniq
+            //     var concated = speaker[item].concat(speakerJSON[item]);
+            //
+            //     speakerJSON[item] = concated.filter(function(elem, pos) {
+            //         return concated.indexOf(elem) == pos;
+            //     });
+            // });
+            ["biography",  "photo"].forEach(function (item) {
+                // if the old thing has be
+                if (speaker[item] && speakerJSON[item] && speaker[item].length > speakerJSON[item].length) {
+                    speakerJSON[item] = speaker[item];
+                } else {
+                    speaker[item] = speakerJSON[item];
+                }
+                
+            });
+            // var result = {
+            //     "id": mkID(speakerJSON.full_public_name),
+            //     "type": "speaker",
+            //     "event": eventId,
+            //     "name": speakerJSON.full_public_name,
+            //     "biography": bio,
+            //     "links": links,
+            //     "sessions": [] // fill me later
+            // };                
+        } 
+            
+		allSpeakers[speakerJSON.id] = speakerJSON;
 	});
 	
 	events.schedule.conference.days.forEach(function(day) {
@@ -699,12 +731,15 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 			events.forEach(function (event) {
 				// Track
 				// -----
-				var trackJSON = parseTrackFromEvent(event);
+				var trackJSON = parseTrackFromEvent(event, defaultTrack);
+                if (parseTrackFromEvent.id == trackJSON.id) {
+                    console.log("!!!! DEFAULT TRACK FOR !!!!")
+                }
 				allTracks[trackJSON.id] = trackJSON;
    			 
 			 	// Event
 				// -----
-				var eventJSON = parseEvent(event, day, roomJSON, urlBase, locationNamePrefix);
+				var eventJSON = parseEvent(event, day, roomJSON, urlBase, locationNamePrefix, trackJSON);
 				
 				// Event Speakers
 				// --------------
@@ -779,8 +814,8 @@ exports.scrape = function (callback) {
 							speakers: speakers_url,
 							schedule: schedule_url,
                             additional_schedule: additional_schedule_url,
-                            // sendezentrum_schedule: sendezentrum_schedule_url,
-                            // sendezentrum_speakers: sendezentrum_speaker_url
+                            sendezentrum_schedule: sendezentrum_schedule_url,
+                            sendezentrum_speakers: sendezentrum_speaker_url
 						};
                         
                         // DISABLE VOC FOR NOW
@@ -799,8 +834,8 @@ exports.scrape = function (callback) {
                                 var additional_schedule = result.additional_schedule;
 								
 								// Sendezentrum Events																
-                                // var sendezentrum_schedule = result.sendezentrum_schedule;
-                                // var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;
+                                var sendezentrum_schedule = result.sendezentrum_schedule;
+                                var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;
 								
 								var allSpeakers = {};
 								
@@ -808,8 +843,8 @@ exports.scrape = function (callback) {
 								delete result.schedule;
 								delete result.speakers;
                                 delete result.additional_schedule;
-                                // delete result.sendezentrum_schedule;
-                                // delete result.sendezentrum_speakers;
+                                delete result.sendezentrum_schedule;
+                                delete result.sendezentrum_speakers;
 
 								var eventRecordingJSONs = toArray(result);
 
@@ -828,10 +863,37 @@ exports.scrape = function (callback) {
 									};
 								});
 								
+                                var defaultTrack = {"id": mkID("other"),
+                                                    "color": [97.0,97.0,97.0,1.0], // grey
+                                                    "label_de": "Other",
+                                                    "label_en": "Other"};
 
-                                handleResult(additional_schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/congress/2015/Fahrplan/events/", "");
-                                // handleResult(sendezentrum_schedule, sendezentrum_speakers, eventRecordingJSONs, "https://frab.camp.berlin.ccc.de/en/ber15/public/events/", "");
-								handleResult(schedule, speakers, eventRecordingJSONs, "https://events.ccc.de/congress/2015/Fahrplan/events/", "");
+                                // Extra Data from Wiki
+                                handleResult(additional_schedule, 
+                                             speakers, 
+                                             eventRecordingJSONs, 
+                                             "https://events.ccc.de/congress/2015/Fahrplan/events/", 
+                                             "",
+                                             defaultTrack);
+                                
+                                // Sendezentrum Frap
+                                handleResult(sendezentrum_schedule, 
+                                             sendezentrum_speakers, 
+                                             eventRecordingJSONs, 
+                                             "https://frab.das-sendezentrum.de/de/32c3/public/events/", 
+                                             "",
+                                                   {"id": mkID("sendezentrum"),
+                                                    "color": [0.0,0.0,0.0,1.0], // black
+                                                    "label_de": "Sendezentrum",
+                                                    "label_en": "Sendezentrum"});
+								
+                                // 32C3 Frap
+                                handleResult(schedule, 
+                                             speakers, 
+                                             eventRecordingJSONs, 
+                                             "https://events.ccc.de/congress/2015/Fahrplan/events/", 
+                                             "",
+                                             defaultTrack);
 								
 								generateIcalData(data.filter(function (i) {
 									return i.type == "session";
@@ -841,176 +903,11 @@ exports.scrape = function (callback) {
 							});						
 					}
 				});
-			},
-			//village_pois: function (callback) {
-			//	json_requester.get({
-			//		urls: {conference: "http://campmap.mazdermind.de/api/villages/"}
-			//	},
-			//	function (result) {
-			//		var pois = [];
-			//		
-			//		result.conference.forEach(function (item) {						
-			//			if (item.names.length < 1) return;
-			//			
-			//			var names = item.names.join(", ")
-			//			var poi = {
-			//				"id": mkID(item.maplink), // maplink contains a unique ID
-			//				"type": "poi",							
-			//				"label_en": names,
-			//				"label_de": names,							
-			//				"category": "other",
-			//				"positions": [],
-			//				"geo_position": {
-			//					"lat": item.y,
-			//					"long": item.x
-			//				},
-			//				"links": [], // fill later
-			//				"hidden": false,
-			//				"beacons": [],
-			//				"priority": 100
-			//			};
-            //
-			//			if (item['websites']) {
-			//				item.websites.forEach(function (link, index) {
-			//					if (link.length == 0) return;
-			//					poi.links.push({
-			//						"url": link,
-			//						"title": names[index],
-			//						"type": "location-link"
-			//					});
-			//				});
-			//			}
-			//			
-			//			if (poi2locationMapping[poi.id]) {
-			//				console.log("Matched ", poi.id, " to ", poi2locationMapping[poi.id]);
-			//				poi["location"] = {"id": poi2locationMapping[poi.id],
-			//								   "label_en": names,
-			//								   "label_de": names};
-			//				if (poi.category == "other") {
-			//					poi["category"] = "session-location";
-			//				}
-			//			} else {
-			//				console.log("Not matched ", poi.io);
-			//			}
-			//			console.log("POI");						
-			//			
-			//			pois.push(poi);
-			//		});
-			//		
-			//		additionalPOIs.forEach(function (poi) {
-			//			pois.push(poi);
-			//		});
-			//		
-			//		alsoAdd('poi', pois);
-			//		
-			//		callback(null, 'village_pois')
-			//	});
-			//},
-			// sendezentrum: function (callback) {
-					 // 			    ical.fromURL('https://www.google.com/calendar/ical/ck0ov9f0t6omf205r47uq6tnh4%40group.calendar.google.com/public/basic.ics', {}, function(err, data) {
-					 // 			         for (var k in data){
-					 // 			           if (data.hasOwnProperty(k)) {
-					 //
-					 // 						   var ev = data[k];
-					 // 						   var start = ev.start;
-					 //
-					 // 						   var matches = ev.summary.match(/(.+ )\(([^)]+)\)/i);
-					 // 						   if (!matches) {
-					 // 							   continue;
-					 //
-					 // 						   }
-					 // 						   var title = matches[1];
-					 // 						   var people = matches[2];
-					 // 						   if (people) {
-					 // 						   	  people = people.split(/\band|\bund|\b,/i).map(function (item) {
-					 // 								  return item.trim();
-					 // 						   	  });
-					 // 							  people = people.filter(function (item) {
-					 // 								  var match = item.match(/jemand|gast/i);
-					 // 								  if (match) {
-					 // 									  return false;
-					 // 								  } else {
-					 // 									  return true;
-					 // 								  }
-					 // 							  });
-					 // 						   }
-					 //
-					 // 						   var speakers = people.map(function (personname) {
-					 // 							   var speaker = {
-					 // 								   "event": eventId,
-					 // 								   "id": mkID("sendezentrum-" + personname),
-					 // 								   "name": personname,
-					 // 								   "type": "speaker",
-					 // 								   "photo": "",
-					 // 								   "biography": "",
-					 // 								   "links": []
-					 // 							   };
-					 // 							   // Hardcode some people
-					 // 							   if (personname == "Tim Pritlove") {
-					 // 								   speaker = allSpeakers["31c3-3809"];
-					 // 							   } else if (personname == "Linus Neumann") {
-					 // 								   speaker = allSpeakers["31c3-3995"];
-					 // 							   }
-					 // 							   return speaker;
-					 // 						   });
-					 // 						   allSpeakers[speakers.id] = speakers;
-					 // 						   var theLocation = {
-					 // 								   "event": eventId,
-					 // 								   "floor": 1,
-					 // 								   "id": "31c3-sendezentrum",
-					 // 								   "is_stage": false,
-					 // 								   "label_de": "Sendezentrum",
-					 // 								   "label_en": "Broadcast Center",
-					 // 								   "order_index": 10,
-					 // 								   "type": "location"
-					 // 						   };
-					 //
-					 // 						   allRooms[theLocation.id] = theLocation;
-					 //
-					 // 						   var event = {
-					 //  							   "id": mkID(md5(ev.uid)),
-					 // 							   "event": eventId,
-					 // 							   "type": "session",
-					 // 							   "title": title.trim(),
-					 // 							   "abstract": "",
-					 // 							   "description": "",
-					 // 							   "begin": parseDate(start.toISOString()),
-					 // 							   "end": parseDate(ev.end.toISOString()),
-					 // 							   "lang": allLanguages["de"],
-					 // 							   "format": title.match(/Workshop/i) ? allFormats["workshop"] : allFormats["talk"],
-					 // 							   "level": allLevels["advanced"],
-					 // 							   "enclosures": [],
-					 // 							   "location": {},
-					 // 							   "links": [],
-					 // 							   "day": null,
-					 // 							   "location": theLocation,
-					 // 							   "track": title.match(/Workshop/i) ? allTracks["31c3-art-culture"] : allTracks["31c3-entertainment"],
-					 // 							   "url": ev.url,
-					 // 							   "speakers": speakers.map(function (speaker) {
-					 // 								   return {
-					 // 									   "id": speaker.id,
-					 // 									   "name": speaker.name
-					 // 								   };
-					 // 							   })
-					 //  						   };
-					 //
-					 //
-					 //
-					 // 						   var day = normalizeXMLDayDateKey(event.begin);
-					 // 						   event["day"] = allDays[day];
-					 //
-					 // 						   allRooms[event.location.id] = event.location
-					 //
-					 // 						   addEntry('session', event);
-					 // 			           }
-					 // 			         }
-					 // callback(null, 'sendezentrum');
-					 // 			       });
-					 //
-			// }
+			}
 		},
 		function (err, results) {
 			if (!err) {
+                alsoAdd('speaker', allSpeakers);
 				alsoAdd('day', allDays);
 				// console.log(allRooms);
 				
