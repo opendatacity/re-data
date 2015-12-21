@@ -365,7 +365,7 @@ function parseDay(dayXML) {
     return day;
 }
 
-function parseSpeaker(speakerJSON) {
+function parseSpeaker(speakerJSON, imageURLPrefix) {
 	var bio = "";
 	if (speakerJSON.abstract) {
 		bio = speakerJSON.abstract;
@@ -407,7 +407,7 @@ function parseSpeaker(speakerJSON) {
 	// sys.puts(sys.inspect(handler.dom, false, null));
 	
 	
-	var imageHost = "https://events.ccc.de/congress/2015/Fahrplan";
+	var imageHost = imageURLPrefix;
 	if (speakerJSON.photo) {
 		result['photo'] = speakerJSON.photo;
 	}
@@ -671,12 +671,12 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix, trackJSON) {
 };
 
 
-function handleResult(events, speakers, eventRecordings, urlBase, locationNamePrefix, defaultTrack) {
+function handleResult(events, speakers, eventRecordings, urlBase, locationNamePrefix, defaultTrack, speakerImageURLPrefix) {
 	if (locationNamePrefix == null) {
 		locationNamePrefix = "";
 	}
 	speakers.forEach(function (speaker) {
-		var speakerJSON = parseSpeaker(speaker);
+		var speakerJSON = parseSpeaker(speaker, speakerImageURLPrefix);
 		
 		if (allSpeakers[speakerJSON.id]) { 
             var speaker = allSpeakers[speakerJSON.id];
@@ -874,7 +874,8 @@ exports.scrape = function (callback) {
                                              eventRecordingJSONs, 
                                              "https://events.ccc.de/congress/2015/Fahrplan/events/", 
                                              "",
-                                             defaultTrack);
+                                             defaultTrack,
+                                             "https://events.ccc.de/congress/2015/Fahrplan");
                                 
                                 // Sendezentrum Frap
                                 handleResult(sendezentrum_schedule, 
@@ -882,10 +883,11 @@ exports.scrape = function (callback) {
                                              eventRecordingJSONs, 
                                              "https://frab.das-sendezentrum.de/de/32c3/public/events/", 
                                              "",
-                                                   {"id": mkID("sendezentrum"),
-                                                    "color": [0.0,0.0,0.0,1.0], // black
-                                                    "label_de": "Sendezentrum",
-                                                    "label_en": "Sendezentrum"});
+                                             {"id": mkID("sendezentrum"),
+                                              "color": [0.0,0.0,0.0,1.0], // black
+                                              "label_de": "Sendezentrum",
+                                              "label_en": "Sendezentrum"},
+                                             "https://frab.das-sendezentrum.de/");
 								
                                 // 32C3 Frap
                                 handleResult(schedule, 
@@ -893,7 +895,8 @@ exports.scrape = function (callback) {
                                              eventRecordingJSONs, 
                                              "https://events.ccc.de/congress/2015/Fahrplan/events/", 
                                              "",
-                                             defaultTrack);
+                                             defaultTrack,
+                                             "https://events.ccc.de/congress/2015/Fahrplan");
 								
 								generateIcalData(data.filter(function (i) {
 									return i.type == "session";
