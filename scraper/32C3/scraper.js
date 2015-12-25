@@ -149,6 +149,7 @@ colors[eventId + "-entertainment"] = green;
 
 colors[eventId + "-self-organized-sessions"] = grey;
 colors[eventId + "-podcast"] = red;
+colors[eventId + "-sendezentrum"] = red;
 colors[eventId + "-other"] = grey;
 
 
