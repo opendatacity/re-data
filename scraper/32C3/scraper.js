@@ -536,12 +536,30 @@ function parseTrackFromEvent(eventXML, defaultTrack) {
 	};
 };
 
-function normalizeXMLDayDateKey(date) {
+function normalizeXMLDayDateKey(date, begin) {
 	var parseDate = new Date(date);
 	parseDate.setUTCFullYear(parseDate.getUTCFullYear() + dayYearChange);
 	parseDate.setUTCMonth(parseDate.getUTCMonth() + dayMonthChange);
 	parseDate.setUTCDate(parseDate.getUTCDate() + dayDayChange);		
 	
+    // if this is for a session we sanatize the date in case of strange input
+    if (begin) {
+        if (begin.getUTCDate() != parseDate.getUTCDate() ||
+            begin.getUTCMonth() != parseDate.getUTCMonth() ||
+            begin.getUTCDate() != parseDate.getUTCDate()) 
+        {
+            // TODO: get day begin as input
+            if (begin.getHours() >= 9) {
+                // this is ok only if the session is very early, so we return the date from begin
+                var realBegin = "" + begin.getUTCFullYear() + "-" + (begin.getUTCMonth() + 1)  + "-" + begin.getUTCDate();                
+
+                log.warn("Given 'day' date and 'begin' date of the session don't match and this is not an early morning session! date says:", parseDate, " vs begin:", begin, " returning ", realBegin);
+
+                return realBegin;
+            }
+        }
+    }
+    
 	// console.log("normalized " + date );
 	date = "" + parseDate.getUTCFullYear() + "-" + (parseDate.getUTCMonth() + 1)  + "-" + parseDate.getUTCDate();
 	// console.log("to " + date );
@@ -575,10 +593,10 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix, trackJSON, st
 		
 	});
 
-	var day = normalizeXMLDayDateKey(day["date"]);
+	var begin = parseDate(event.date);
+	var dayKey = normalizeXMLDayDateKey(day["date"], begin);
 		
 	var eventTypeId = event.type.toString();
-	// console.log("event type " + eventTypeId);
 	if (eventTypeId == 'lecture') {
 		eventTypeId = 'talk';
 	} else if (eventTypeId == 'other') {
@@ -587,26 +605,10 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix, trackJSON, st
 		eventTypeId = 'workshop';		
 	}
 
-    // console.log("-- -- -- -- -- --");
-	var begin = parseDate(event.date);
-    // console.log(event.title);
-    // console.log(event.date);
-    // console.log(begin);
-    // console.log("-- -- -- -- -- --");
-		
-	var otherDay = begin.getUTCFullYear() + "-" + (begin.getUTCMonth() + 1) + "-" + begin.getUTCDate();
-	// console.log("--- " + event.title.toString() + " ---");
-	// console.log("day " + day);
-	// console.log("begin " + otherDay );
-
-
-	var day = allDays[otherDay];
-	// console.log("day ", day);
-	// console.log(allDays);
-	// console.log("------------");
+	var day = allDays[dayKey];
 
 	if (!day) {
-		console.log("No valid day for " + event.title.toString() + " " + otherDay);
+		console.log("No valid day for " + event.title.toString() + " " + day);
 		return null;
 	}
 
