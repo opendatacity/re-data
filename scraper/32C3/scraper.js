@@ -147,7 +147,7 @@ colors[eventId + "-ccc"] = green;
 colors[eventId + "-entertainment"] = green;
 
 
-colors[eventId + "-self-organized-sessions"] = cream;
+colors[eventId + "-self-organized-sessions"] = grey;
 colors[eventId + "-podcast"] = red;
 colors[eventId + "-other"] = grey;
 
@@ -608,7 +608,7 @@ function parseEvent(event, day, room, urlBase, locationNamePrefix, trackJSON, st
 	var day = allDays[dayKey];
 
 	if (!day) {
-		console.log("No valid day for " + event.title.toString() + " " + day);
+		console.log("No valid day for " + event.title.toString() + " " + dayKey);
 		return null;
 	}
 
