@@ -936,7 +936,7 @@ exports.scrape = function (callback) {
                                              "https://frab.das-sendezentrum.de/de/32c3/public/events/", 
                                              "",
                                              {"id": mkID("sendezentrum"),
-                                              "color": [0.0,0.0,0.0,1.0], // black
+                                              "color": red, // black
                                               "label_de": "Sendezentrum",
                                               "label_en": "Sendezentrum"},
                                              "https://frab.das-sendezentrum.de/",
