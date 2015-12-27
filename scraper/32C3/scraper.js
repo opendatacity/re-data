@@ -95,26 +95,29 @@ var poi2locationMapping = {
 };
 
 var additionalPOIs = [
-    // {
-    //     "label_de": "Project 2501",
-    //     "label_en": "Project 2501",
-    //     "id": mkID("poi-project-2501"),
-    //     "category": "session-location",
-    //         "location": {
-    //             "id": "camp15-project-2501",
-    //             "label_de": "Project 2501",
-    //             "label_en": "Project 2501"
-    //         },
-    //     "hidden": false,
-    //     "geo_position": {
-    //         "lat": 53.030516375738,
-    //         "long": 13.306140096802
-    //     },
-    //     "positions": [],
-    //     "links": [],
-    //     "priority": 100,
-    //     "type": "poi"
-    // } 	    	
+    {
+        "label_de": "Sendezentrum",
+        "label_en": "Sendezentrum",
+        "id": mkID("poi-sendezentrum"),
+        "category": "session-location",
+            "location": {
+                "id": "32c3-b-hne",
+                "label_de": "Sendezentrum",
+                "label_en": "Sendezentrum"
+            },
+        "hidden": false,
+        "positions": [
+            {"map": "32c3-map-level1",
+             "x": 2969.47265625,
+             "y": 1690.3660714285713}
+             // 3680.558035714286,
+             // "y":
+             
+        ],
+        "links": [],
+        "priority": 100,
+        "type": "poi"
+    }	    	
 ];
 
 // Livestream test
@@ -859,9 +862,12 @@ function handlePOIs(graph, titles) {
         poisForMaps[mapID] = pois;
     }    
     
-    console.log(Object.keys(poisForMaps));
-    console.log(Object.keys(allMaps));    
     var allPois = [];
+    
+    additionalPOIs.forEach(function (poi) {
+        allPois.push(poi);
+    });
+    
     for (mapID in poisForMaps) {
         var map = allMaps[mapID];
         if (!map) continue;
@@ -877,6 +883,8 @@ function handlePOIs(graph, titles) {
             allPois.push(poi);
         });
     }
+    
+
     
     alsoAdd("poi", allPois);
 }
@@ -918,6 +926,9 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     if ((/(cash)/i).exec(POI.label_en)) {
         POI["category"] = "service";
     }    
+    if ((/(cloakroom)/i).exec(POI.label_en)) {
+        POI["category"] = "service";
+    }        
     
     
     var xPoints = [];
