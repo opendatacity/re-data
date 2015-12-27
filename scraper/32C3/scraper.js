@@ -830,7 +830,7 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				var recordingJSON = null;
 				
 				eventRecordings.forEach(function (element) {
-					if (eventJSON && eventJSON.url == element.link) {
+					if (eventJSON && eventJSON.guid == element.guid) {
 						recordingJSON = element;
 					}
 				});
@@ -1009,7 +1009,7 @@ exports.scrape = function (callback) {
 		{
 			lectures: function (callback) {
 				json_requester.get({
-					urls: {conference: "http://api.media.ccc.de/public/conferences/66"}
+					urls: {conference: "http://api.media.ccc.de/public/conferences/78"}
 				},
 				function (result) {
 					if (result.conference.events) {
@@ -1025,9 +1025,9 @@ exports.scrape = function (callback) {
 						};
                         
                         // DISABLE VOC FOR NOW
-                        // result.conference.events.forEach(function (event) {
-                        //     videoAPICallURLs[event.guid] = event.url;
-                        // });
+                        result.conference.events.forEach(function (event) {
+                            videoAPICallURLs[event.guid] = event.url;
+                        });
 
 						json_requester.get({urls: videoAPICallURLs},
 							function (result) {
@@ -1044,7 +1044,7 @@ exports.scrape = function (callback) {
                                 var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;
 
                                 // VOC streams
-var voc_streams = result.voc_streams;
+                                var voc_streams = result.voc_streams;
                                 
                                 // POIs 
                                 var poi_graph = result.poi_graph;
