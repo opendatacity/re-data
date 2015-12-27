@@ -22,9 +22,14 @@ var json_requester = require('../lib/json_requester');
 var additional_schedule_url = "http://data.conference.bits.io/data/32c3/voc/workshops.schedule.json";
 var sendezentrum_schedule_url = "https://frab.das-sendezentrum.de/de/32c3/public/schedule.json";
 var sendezentrum_speaker_url = "https://frab.das-sendezentrum.de/de/32c3/public/speakers.json";
-var schedule_url = "https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
-var speakers_url = "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
+var schedule_url = "http://data.conference.bits.io/data/32c3/schedule.json"; //"https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
+var speakers_url = "http://data.conference.bits.io/data/32c3/speakers.json" // "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
 var voc_streams_api_url = "https://streaming.media.ccc.de/streams/v1.json";
+var poi_titles_url = "https://github.com/NoMoKeTo/c3nav/raw/master/src/projects/32c3/titles.json";
+// var pois = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/pois.json";
+var poi_graph_url = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/graph.json";
+
+
  //"https://gist.githubusercontent.com/MaZderMind/d5737ab867ade7888cb4/raw/bb02a27ca758e1ca3de96b1bf3f811541436ab9d/streams-v1.json" 
 // later at https://streaming.media.ccc.de/streams/v1.json
 
@@ -824,6 +829,100 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 	});
 }
 
+function handlePOIs(graph, titles) {
+    var POIs = {}
+    
+    var map2level = {0: "map-level0",
+                     1: "map-level1",
+                     2: "map-level2",    
+                     3: "map-level3",
+                     4: "map-level4"};
+    var poisForMaps = {};
+    
+    for (roomID in graph.rooms) {
+        var roomShape = graph.rooms[roomID];
+        var roomTitles = titles[roomID];
+        var mapID = map2level[roomShape.level];
+        var pois = poisForMaps[mapID];
+        if (!pois) pois = [];
+        
+        var poi = poiForRoomShape(roomID, roomShape, roomTitles, mapID);
+        if (!poi) continue;
+        
+        pois.push(poi);
+        
+        poisForMaps[mapID] = pois;
+    }    
+    
+    console.log(Object.keys(poisForMaps));
+    console.log(Object.keys(allMaps));    
+    var allPois = [];
+    for (mapID in poisForMaps) {
+        var map = allMaps[mapID];
+        if (!map) continue;
+        
+        var pois = poisForMaps[mapID];
+
+        pois.forEach(function (poi) {
+            var mapPOIs = map.pois;
+            if (!mapPOIs) mapPOIs = [];
+            mapPOIs.push(poi);
+            map.pois = mapPOIs;
+            
+            allPois.push(poi);
+        });
+    }
+    
+    alsoAdd("poi", allPois);
+}
+
+function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
+    
+    var POI = {
+        "id": shapeJSON["superroom"] ? mkID(shapeJSON.superroom) : mkID(id),
+        "label_de":  titleJSON["de"],
+        "label_en":  titleJSON["en"],      
+        "positions": [], // fill me later 
+        "hidden": false,
+        "links": [],
+        "description_de": "",
+        "description_en": "",        
+        "category": "other"
+    };
+    
+    
+    var maxPoint = [0,0];
+    var minPoint = [100000,100000];
+    
+    
+    var allPointStrings =  shapeJSON.shape.split(" ").map(function (map) {
+        return map.split(",").map(function (str) { return Number(str); });
+    }).map(function (points) {
+        return [points[0] * 4.21875, points[1] * 4.21875];
+    });
+    var midPointX = (minPoint[0] + maxPoint[0] / 2);
+    var midPointY = (minPoint[1] + maxPoint[1] / 2);
+    
+    if (allPointStrings.length == 0) {
+        return null;
+    }
+    POI.positions.push({"map": mkID(mapID), "x": allPointStrings[0][0], "y": allPointStrings[0][1]});
+    
+    console.log("x/y: ", [midPointX, midPointY]);
+    
+    // var polygon = turf.polygon(allPointStrings);
+    // console.log("poly: ", polygon);
+    // // var merged = turf.merge(polygon);
+    // var center = turf.centroid(polygon);
+    // var extent = turf.extent(polygon);
+    // console.log("exte: ", extent);
+    // console.log("cent: ", center);
+
+    
+    return POI;
+}
+
+
 exports.scrape = function (callback) {
 	console.log("scrape");
 
@@ -845,35 +944,43 @@ exports.scrape = function (callback) {
 				function (result) {
 					if (result.conference.events) {
 						var videoAPICallURLs = {
-							speakers: speakers_url,
-							schedule: schedule_url,
+                            speakers: speakers_url,
+                            schedule: schedule_url,
                             additional_schedule: additional_schedule_url,
                             sendezentrum_schedule: sendezentrum_schedule_url,
                             sendezentrum_speakers: sendezentrum_speaker_url,
-                            voc_streams: voc_streams_api_url
+                            voc_streams: voc_streams_api_url,
+                            poi_graph: poi_graph_url,
+                            poi_titles: poi_titles_url
 						};
                         
                         // DISABLE VOC FOR NOW
-                        // result.conference.events.forEach(function (event) {
-                        //     videoAPICallURLs[event.guid] = event.url;
-                        // });
+                        result.conference.events.forEach(function (event) {
+                            videoAPICallURLs[event.guid] = event.url;
+                        });
 
 						json_requester.get({urls: videoAPICallURLs},
 							function (result) {
 											   
 								// Main Events
-								var speakers = result.speakers.schedule_speakers.speakers;
-								var schedule = result.schedule;
-								
-								// Wiki Events								
+                                var speakers = result.speakers.schedule_speakers.speakers;
+                                var schedule = result.schedule;
+
+                                // Wiki Events
                                 var additional_schedule = result.additional_schedule;
-								
-								// Sendezentrum Events																
+
+                                // Sendezentrum Events
                                 var sendezentrum_schedule = result.sendezentrum_schedule;
                                 var sendezentrum_speakers = result.sendezentrum_speakers.schedule_speakers.speakers;
-								
+
                                 // VOC streams
-                                var voc_streams = result.voc_streams;
+var voc_streams = result.voc_streams;
+                                
+                                // POIs 
+                                var poi_graph = result.poi_graph;
+                                var poi_titles = result.poi_titles;
+                                
+                                handlePOIs(poi_graph, poi_titles);
                                 
 								var allSpeakers = {};
 								
@@ -883,7 +990,9 @@ exports.scrape = function (callback) {
                                 delete result.additional_schedule;
                                 delete result.sendezentrum_schedule;
                                 delete result.sendezentrum_speakers;
-
+                                delete result.poi_titles;
+                                delete result.poi_graph;
+                                
 								var eventRecordingJSONs = toArray(result);
 
 								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
