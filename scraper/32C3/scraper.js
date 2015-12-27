@@ -891,8 +891,27 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     };
     
     
-    var maxPoint = [0,0];
-    var minPoint = [100000,100000];
+    if ((/hall/i).exec(POI.label_en)) {
+        POI["category"] = "session-location";
+    }
+    if ((/toilet/i).exec(POI.label_en)) {
+        POI["category"] = "service";
+    }
+    if ((/elevator/i).exec(POI.label_en)) {
+        POI["category"] = "elevator";
+    }    
+    if ((/shirt/i).exec(POI.label_en)) {
+        POI["category"] = "shopping";
+    }
+    if ((/cert/i).exec(POI.label_en)) {
+        POI["category"] = "safety";
+    }            
+    if ((/(cash)/i).exec(POI.label_en)) {
+        POI["category"] = "service";
+    }    
+    
+    var xPoints = [];
+    var yPoints = [];
     
     
     var allPointStrings =  shapeJSON.shape.split(" ").map(function (map) {
@@ -900,13 +919,28 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     }).map(function (points) {
         return [points[0] * 4.21875, points[1] * 4.21875];
     });
-    var midPointX = (minPoint[0] + maxPoint[0] / 2);
-    var midPointY = (minPoint[1] + maxPoint[1] / 2);
+    allPointStrings.forEach(function (point) {
+        xPoints.push(point[0]);
+        yPoints.push(point[1]);
+    });
+    
+    var midPointX = 0.0;    
+    var midPointY = 0.0;
+    async.reduce(xPoints, 0.0, function (memo, item, callback) {
+        callback(null, memo + item); 
+    }, function (err, res) {
+        midPointX = res / xPoints.length;
+    });
+    async.reduce(yPoints, 0.0, function (memo, item, callback) {
+        callback(null, memo + item); 
+    }, function (err, res) {
+        midPointY = res / yPoints.length;
+    }); 
     
     if (allPointStrings.length == 0) {
         return null;
     }
-    POI.positions.push({"map": mkID(mapID), "x": allPointStrings[0][0], "y": allPointStrings[0][1]});
+    POI.positions.push({"map": mkID(mapID), "x": midPointX, "y": midPointY});
     
     console.log("x/y: ", [midPointX, midPointY]);
     
@@ -955,9 +989,9 @@ exports.scrape = function (callback) {
 						};
                         
                         // DISABLE VOC FOR NOW
-                        result.conference.events.forEach(function (event) {
-                            videoAPICallURLs[event.guid] = event.url;
-                        });
+                        // result.conference.events.forEach(function (event) {
+                        //     videoAPICallURLs[event.guid] = event.url;
+                        // });
 
 						json_requester.get({urls: videoAPICallURLs},
 							function (result) {
