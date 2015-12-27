@@ -110,15 +110,30 @@ var additionalPOIs = [
             {"map": "32c3-map-level1",
              "x": 2969.47265625,
              "y": 1690.3660714285713}
-             // 3680.558035714286,
-             // "y":
              
         ],
         "links": [],
         "priority": 100,
         "type": "poi"
-    }	    	
+    },
+    {
+        "label_de": "POC",
+        "label_en": "POC",
+        "id": mkID("poi-poc"),
+        "category": "service",
+        "hidden": false,
+        "positions": [
+            {"map": "32c3-map-level1",
+             "x": 3620.558035714286,
+             "y": 1777.3660714285713
+            }
+        ],
+        "links": [],
+        "priority": 100,
+        "type": "poi"
+    }	        	
 ];
+
 
 // Livestream test
 var streamURLs = {
