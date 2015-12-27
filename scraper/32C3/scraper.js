@@ -22,9 +22,10 @@ var json_requester = require('../lib/json_requester');
 var additional_schedule_url = "http://data.conference.bits.io/data/32c3/voc/workshops.schedule.json";
 var sendezentrum_schedule_url = "https://frab.das-sendezentrum.de/de/32c3/public/schedule.json";
 var sendezentrum_speaker_url = "https://frab.das-sendezentrum.de/de/32c3/public/speakers.json";
-var schedule_url = "http://events.ccc.de/congress/2015/Fahrplan/schedule.json";
-var speakers_url = "http://events.ccc.de/congress/2015/Fahrplan/speakers.json";
-var voc_streams_api_url = "https://gist.githubusercontent.com/MaZderMind/d5737ab867ade7888cb4/raw/bb02a27ca758e1ca3de96b1bf3f811541436ab9d/streams-v1.json" 
+var schedule_url = "https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
+var speakers_url = "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
+var voc_streams_api_url = "https://streaming.media.ccc.de/streams/v1.json";
+ //"https://gist.githubusercontent.com/MaZderMind/d5737ab867ade7888cb4/raw/bb02a27ca758e1ca3de96b1bf3f811541436ab9d/streams-v1.json" 
 // later at https://streaming.media.ccc.de/streams/v1.json
 
 // for debugging we can just pretend rp14 was today
@@ -69,6 +70,10 @@ var vocSlugToLocatonID = {
     "hall2": '32c3-hall-2',
     "hallg": '32c3-hall-g',
     "hall6": '32c3-hall-6'
+};
+
+var locationNameChanges = {
+    "32c3-b-hne": "Sendezentrum"
 };
 
 var poi2locationMapping = {
@@ -437,8 +442,16 @@ function parseRoom(roomName, index, namePrefix) {
 		roomName = namePrefix + roomName;
 	}
     
+    var id = mkID(roomName);
+    
+    // change some names
+    var newName = locationNameChanges[id];
+    if (newName) {
+        roomName = newName;
+    }
+    
     return {
-      "id": mkID(roomName),
+      "id": id,
       "label_en": roomName,
       "label_de": roomName,		
       "is_stage": roomName.toString().match(/Stage/i) ? true : false,
