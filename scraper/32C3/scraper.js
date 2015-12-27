@@ -23,7 +23,7 @@ var additional_schedule_url = "http://data.conference.bits.io/data/32c3/voc/work
 var sendezentrum_schedule_url = "https://frab.das-sendezentrum.de/de/32c3/public/schedule.json";
 var sendezentrum_speaker_url = "https://frab.das-sendezentrum.de/de/32c3/public/speakers.json";
 var schedule_url = "http://data.conference.bits.io/data/32c3/schedule.json"; //"https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
-var speakers_url = "http://data.conference.bits.io/data/32c3/speakers.json" // "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
+var speakers_url = "http://data.conference.bits.io/data/32c3/speakers-frap.json" // "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
 var voc_streams_api_url = "https://streaming.media.ccc.de/streams/v1.json";
 var poi_titles_url = "https://github.com/NoMoKeTo/c3nav/raw/master/src/projects/32c3/titles.json";
 // var pois = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/pois.json";
@@ -82,7 +82,10 @@ var locationNameChanges = {
 };
 
 var poi2locationMapping = {
-    // "camp15-http-campmap-mazdermind-de-api-villages-id-1787": "camp15-milliways",
+    "32c3-h1": "32c3-hall-1",
+    "32c3-h2": "32c3-hall-2",    
+    "32c3-hg": "32c3-hall-g",        
+    "32c3-hg": "32c3-hall-g"            
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
@@ -888,8 +891,12 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
         "description_de": "",
         "description_en": "",        
         "category": "other"
-    };
+    }; 
     
+    var locationID = poi2locationMapping[POI.id];
+    if (locationID) {
+        POI["location"] = {"id": locationID};
+    }
     
     if ((/hall/i).exec(POI.label_en)) {
         POI["category"] = "session-location";
@@ -909,6 +916,7 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     if ((/(cash)/i).exec(POI.label_en)) {
         POI["category"] = "service";
     }    
+    
     
     var xPoints = [];
     var yPoints = [];
