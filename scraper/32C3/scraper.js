@@ -829,13 +829,13 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				// ------
 				var recordingJSON = null;
 				
-                // eventRecordings.forEach(function (element) {
-                //                     console.log("element ", element);
-                //                     console.log("eventJSON ", eventJSON);
-                //     if (eventJSON && element && eventJSON.title == element.title) {
-                //         recordingJSON = element;
-                //     }
-                // });
+                eventRecordings.forEach(function (element) {
+                                    console.log("element ", element);
+                                    console.log("eventJSON ", eventJSON);
+                    if (eventJSON && element && eventJSON.title == element.title) {
+                        recordingJSON = element;
+                    }
+                });
 				if (recordingJSON && recordingJSON.recording) {
 					eventJSON.enclosures.push({
 						"url": recordingJSON.recording.recording_url,
@@ -1076,6 +1076,8 @@ exports.scrape = function (callback) {
 											
 									
 									return {
+                                        "guid": er.guid,
+                                        "title": er.title,
 										"link": er.link,
 										"thumb": er.thumb_url,
 										"recording": recording.length > 0 ? recording[0] : null
