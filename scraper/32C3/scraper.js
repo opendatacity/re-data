@@ -984,13 +984,14 @@ function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
                                    if (endDate.getHours() < 9 && beginDate.getHours() > 10) { endDate.setDate(endDate.getDate() + 1); }
 
                                    var duration = (endDate - beginDate) / 1000;
-                                   var durMin = duration / 60;
-                                   var durHour = durMin / 60;       
+                                   var durMin = duration / 60.0;
+                                   var durHour = Math.floor(durMin / 60);   
                                    var durHourStr = durHour < 10 ? "0" + durHour : durHour;
-                                   var leftDurMin = durMin - (60 * durHour);                            
+                                   var leftDurMin = durMin - (60.0 * durHour);                            
+
                                    var leftDurMinStr = leftDurMin < 10 ? "0" + leftDurMin : leftDurMin;
-                                   var end = parseEnd(beginDateStr, durHourStr + ":" + leftDurMinStr);
-                                   
+                                   var durStr = durHourStr + ":" + leftDurMinStr;
+                                   var end = parseEnd(beginDateStr, durStr);
                                    var title = row.artist;
                                    var locationJSON = allRooms[row.location];
                                    var trackJSON = defaultTrack;
