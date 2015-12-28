@@ -31,6 +31,9 @@ var poi_titles_url = "https://github.com/NoMoKeTo/c3nav/raw/master/src/projects/
 // var pois = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/pois.json";
 var poi_graph_url = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/graph.json";
 
+// CSV data
+var lounge_session_csv_data = fs.readFileSync(__dirname + "/party_lounge.csv");
+var anti_error_lounge_csv_data = fs.readFileSync(__dirname + "/anti_error.csv");
 
  //"https://gist.githubusercontent.com/MaZderMind/d5737ab867ade7888cb4/raw/bb02a27ca758e1ca3de96b1bf3f811541436ab9d/streams-v1.json" 
 // later at https://streaming.media.ccc.de/streams/v1.json
@@ -58,8 +61,6 @@ var sortOrderOfLocations = [
     '32c3-hall-6',
     '32c3-b-hne',
     '32c3-podcaster-tisch',    
-    '32c3-party-lounge',    
-    '32c3-anti-error-lounge-loc',            
     "32c3-hall-a-1",
     "32c3-hall-a-2",
     "32c3-hall-b",
@@ -69,7 +70,9 @@ var sortOrderOfLocations = [
     "32c3-hall-c-4",
     "32c3-hall-f",        
     "32c3-hall-13",
-    "32c3-hall-14"
+    "32c3-hall-14",
+    '32c3-party-lounge',    
+    '32c3-anti-error-lounge-loc'    
 ];
 
 // to map VOC API output to our rooms
@@ -959,6 +962,78 @@ function handlePOIs(graph, titles) {
     alsoAdd("poi", allPois);
 }
 
+function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
+    parseCSV(csvData, {"delimiter": ";", 
+                       "auto_parse": false,
+                       "auto_parse_date": false,    
+                       "columns": true,
+                       "skip_empty_lines": true}, function(err, output) {
+                           var sessions = [];
+                           if (err) {
+                               log.error("CSV Parse Error: ", err);
+                           } else {
+                               // console.log(output); 
+                               output.forEach(function (row) {
+                                   if (!row.day || !row.calender_day || row.day.length == 0 ) { return; };
+                                   
+                                   
+                                   var beginDateStr = "" + row.calender_day + "T" + row.start_time + "+01:00";
+                                   var beginDate = parseDate(beginDateStr);
+                                   var endDateStr = "" + row.calender_day + "T" + row.end_time + "+0100";
+                                   var endDate = new Date(endDateStr);
+                                   if (endDate.getHours() < 9 && beginDate.getHours() > 10) { endDate.setDate(endDate.getDate() + 1); }
+
+                                   var duration = (endDate - beginDate) / 1000;
+                                   var durMin = duration / 60;
+                                   var durHour = durMin / 60;       
+                                   var durHourStr = durHour < 10 ? "0" + durHour : durHour;
+                                   var leftDurMin = durMin - (60 * durHour);                            
+                                   var leftDurMinStr = leftDurMin < 10 ? "0" + leftDurMin : leftDurMin;
+                                   var end = parseEnd(beginDateStr, durHourStr + ":" + leftDurMinStr);
+                                   
+                                   var title = row.artist;
+                                   var locationJSON = allRooms[row.location];
+                                   var trackJSON = defaultTrack;
+                                   var format = allFormats["talk"];
+                                   var langJSON = allLanguages["de"];
+                                   var levelJSON = allLevels["beginner"];
+                                   
+                                   var day = allDays[row.day];
+                                   
+                                   
+                               	   var session = {
+                               	   	"id": mkID("lounges-" + title),
+                               	   	"title": title,
+                               	   	"url": shareURL,
+                               	   	"abstract": "",
+                               	   	"description": "",
+                               	   	"begin": beginDate,
+                               	   	"end": end,
+                               	   	"track": trackJSON,
+                               	   	"day": day,
+                               	   	"format": format,
+                               	   	"level": levelJSON,
+                               	   	"lang": langJSON,
+                               	   	"speakers": [], 
+                               	   	"enclosures": [], 
+                               	   	"links": [],
+                                    "location": locationJSON
+                               	   };
+                                
+                                   if (row.link && row.link.length > 0 && row.link.indexOf("http") == 0) {
+                                       session.links.push({"title": row.link, "url": row.link, "type": "session-link"})
+                                   }
+                                
+                                   addEntry('session', session);
+                               
+                                                                 
+                               });
+                           }
+
+                           callback(err, sessions);
+                       });
+}
+
 function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     
     var POI = {
@@ -1203,19 +1278,34 @@ exports.scrape = function (callback) {
                                              defaultTrack,
                                              "https://events.ccc.de/congress/2015/Fahrplan",
                                              streamMap);
+
+
+                                // Handle CSV data
+                                            
+                                var shareURL = "https://events.ccc.de/congress/2015/Fahrplan";
+                                var defaultLoungeTrack = allTracks[mkID("entertainment")];
+                                
+                                handleCSVResult(anti_error_lounge_csv_data, defaultLoungeTrack, shareURL, function (err, sessions) {
+                                    handleCSVResult(lounge_session_csv_data, defaultLoungeTrack, shareURL, function (err, sessions) {
+                                        /// AFTER THIS POINT NO SESSIONS SHOULD BE ADDED
 								
-                                var allSessions = data.filter(function (i) {
-									return i.type == "session";
-								});
+                                        var allSessions = data.filter(function (i) {
+        									return i.type == "session";
+        								});
                                 
-                                // Generate iCal Feeds
-								generateIcalData(allSessions);
                                 
-								callback(null, 'lectures');				
+
+                                
+                                        // Generate iCal Feeds
+        								generateIcalData(allSessions);
+                                
+        								callback(null, 'lectures');	
+                                    });  
+                                });                          			
 							});						
 					}
-				});
-			}
+				})
+            }
 		},
 		function (err, results) {
 			if (!err) {
@@ -1243,12 +1333,9 @@ exports.scrape = function (callback) {
 			} else {
 				console.log(err);
 			}
-		}
-		
-	);
-	
+		});
 
-};
+};// scrape
 
 function parsePOIsFromCSV(data, callback) {
 	parseCSV(csvData, {"delimiter": ";", 
