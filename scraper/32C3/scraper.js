@@ -131,7 +131,23 @@ var additionalPOIs = [
         "links": [],
         "priority": 100,
         "type": "poi"
-    }	        	
+    },
+    {
+        "label_de": "Anti-Error Lounge",
+        "label_en": "Anti-Error Lounge",
+        "id": mkID("poi-anti-error-lounge"),
+        "category": "entertainment",
+        "hidden": false,
+        "positions": [
+            {"map": "32c3-map-level4",
+             "x": 2951,
+             "y": 2435
+            }
+        ],
+        "links": [],
+        "priority": 100,
+        "type": "poi"
+    }      	
 ];
 
 
