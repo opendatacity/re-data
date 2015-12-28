@@ -960,6 +960,9 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     if ((/(cloakroom)/i).exec(POI.label_en)) {
         POI["category"] = "service";
     }        
+    if ((/lounge/i).exec(POI.label_en)) {
+        POI["category"] = "entertainment";
+    }
     
     
     var xPoints = [];
