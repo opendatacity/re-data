@@ -974,16 +974,16 @@ function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
                            } else {
                                // console.log(output); 
                                output.forEach(function (row) {
-                                   if (!row.day || !row.calender_day || row.day.length == 0 ) { return; };
+                                   if (!row.day || !row.start_day || !row.end_day || row.day.length == 0 ) { return; };
                                    
                                    
-                                   var beginDateStr = "" + row.calender_day + "T" + row.start_time + "+01:00";
+                                   var beginDateStr = "" + row.start_day + "T" + row.start_time + "+01:00";
                                    var beginDate = parseDate(beginDateStr);
-                                   var endDateStr = "" + row.calender_day + "T" + row.end_time + "+0100";
+                                   var endDateStr = "" + row.end_day + "T" + row.end_time + "+0100";
                                    var endDate = new Date(endDateStr);
-                                   if (endDate.getHours() < 9 && beginDate.getHours() > 10) { endDate.setDate(endDate.getDate() + 1); }
-
-                                   var duration = (endDate - beginDate) / 1000;
+                                                                          
+                                       
+                                   var duration = (endDate.getTime() - beginDate.getTime()) / 1000;
                                    var durMin = duration / 60.0;
                                    var durHour = Math.floor(durMin / 60);   
                                    var durHourStr = durHour < 10 ? "0" + durHour : durHour;
@@ -992,6 +992,7 @@ function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
                                    var leftDurMinStr = leftDurMin < 10 ? "0" + leftDurMin : leftDurMin;
                                    var durStr = durHourStr + ":" + leftDurMinStr;
                                    var end = parseEnd(beginDateStr, durStr);
+                                   console.log(row.artist, " left ", durStr);                                   
                                    var title = row.artist;
                                    var locationJSON = allRooms[row.location];
                                    var trackJSON = defaultTrack;
@@ -1000,7 +1001,7 @@ function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
                                    var levelJSON = allLevels["beginner"];
                                    
                                    var day = allDays[row.day];
-                                   
+                                                                          console.log("-------------------");    
                                    
                                	   var session = {
                                	   	"id": mkID("lounges-" + title),
