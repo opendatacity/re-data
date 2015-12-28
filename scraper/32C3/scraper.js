@@ -58,6 +58,8 @@ var sortOrderOfLocations = [
     '32c3-hall-6',
     '32c3-b-hne',
     '32c3-podcaster-tisch',    
+    '32c3-party-lounge',    
+    '32c3-anti-error-lounge-loc',            
     "32c3-hall-a-1",
     "32c3-hall-a-2",
     "32c3-hall-b",
