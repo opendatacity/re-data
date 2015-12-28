@@ -89,12 +89,29 @@ var poi2locationMapping = {
     "32c3-h1": "32c3-hall-1",
     "32c3-h2": "32c3-hall-2",    
     "32c3-hg": "32c3-hall-g",        
-    "32c3-hg": "32c3-hall-g"            
+    "32c3-hg": "32c3-hall-g",
+    "32c3-lounge":  "32c3-party-lounge",
+    "32c3-poi-anti-error-lounge": "anti-error-lounge-loc"
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1832": "camp15-spacevillage",
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1783": "camp15-foodhackingbase",
     // "camp15-http-campmap-mazdermind-de-api-villages-id-1779": "camp15-amateur-radio"
 	// "camp15-hackcenter-1"
 };
+
+var additionalLocations = [
+    {
+        "id": mkID("party-lounge"),
+        "label_de": "Lounge",
+        "label_en": "Lounge",
+        "is_stage": false
+    },
+    {
+        "id": mkID("anti-error-lounge-loc"),
+        "label_de": "Anti Error Lounge",
+        "label_en": "Anti Error Lounge",
+        "is_stage": false
+    }    
+];
 
 var additionalPOIs = [
     {
@@ -142,14 +159,30 @@ var additionalPOIs = [
         "hidden": false,
         "positions": [
             {"map": "32c3-map-level4",
-             "x": 2951,
-             "y": 2435
+             "x": 2471,
+             "y": 2335
             }
         ],
         "links": [],
         "priority": 100,
         "type": "poi"
-    }      	
+    },
+    {
+        "label_de": "Unbezahlbar",
+        "label_en": "Unbezahlbar",
+        "id": mkID("unbezahlbar"),
+        "category": "community",
+        "hidden": false,
+        "positions": [
+            {"map": "32c3-map-level4",
+             "x": 2391,
+             "y": 2535
+            }
+        ],
+        "links": [],
+        "priority": 100,
+        "type": "poi"
+    }          	
 ];
 
 
@@ -806,6 +839,10 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 			allRooms[roomJSON.id] = roomJSON;
 			roomIndex++;
 			
+            additionalLocations.forEach(function (locationJSON) {
+                allRooms[locationJSON.id] = locationJSON;
+            });
+            
 			var events = rooms[roomLabel];
 			events.forEach(function (event) {
 				// Track
