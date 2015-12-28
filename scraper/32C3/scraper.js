@@ -830,8 +830,6 @@ function handleResult(events, speakers, eventRecordings, urlBase, locationNamePr
 				var recordingJSON = null;
 				
                 eventRecordings.forEach(function (element) {
-                                    console.log("element ", element);
-                                    console.log("eventJSON ", eventJSON);
                     if (eventJSON && element && eventJSON.title == element.title) {
                         recordingJSON = element;
                     }
