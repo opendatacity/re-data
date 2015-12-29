@@ -35,6 +35,7 @@ var poi_graph_url = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src
 var lounge_session_csv_data = fs.readFileSync(__dirname + "/party_lounge.csv");
 var anti_error_lounge_csv_data = fs.readFileSync(__dirname + "/anti_error.csv");
 
+var dome_lounge_csv_data = fs.readFileSync(__dirname + "/dome.csv");
  //"https://gist.githubusercontent.com/MaZderMind/d5737ab867ade7888cb4/raw/bb02a27ca758e1ca3de96b1bf3f811541436ab9d/streams-v1.json" 
 // later at https://streaming.media.ccc.de/streams/v1.json
 
