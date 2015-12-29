@@ -72,7 +72,8 @@ var sortOrderOfLocations = [
     "32c3-hall-13",
     "32c3-hall-14",
     '32c3-party-lounge',    
-    '32c3-anti-error-lounge-loc'    
+    '32c3-anti-error-lounge-loc',
+    '32c3-dome-loc'        
 ];
 
 // to map VOC API output to our rooms
@@ -113,7 +114,13 @@ var additionalLocations = [
         "label_de": "Anti Error Lounge",
         "label_en": "Anti Error Lounge",
         "is_stage": false
-    }    
+    },
+    {
+        "id": mkID("dome-loc"),
+        "label_de": "Dome",
+        "label_en": "Dome",
+        "is_stage": false
+    }        
 ];
 
 var additionalPOIs = [
@@ -1001,7 +1008,6 @@ function handleCSVResult(csvData, defaultTrack, shareURL, callback) {
                                    var levelJSON = allLevels["beginner"];
                                    
                                    var day = allDays[row.day];
-                                                                          console.log("-------------------");    
                                    
                                	   var session = {
                                	   	"id": mkID("lounges-" + title),
@@ -1113,8 +1119,6 @@ function poiForRoomShape(id, shapeJSON, titleJSON, mapID) {
     }
     POI.positions.push({"map": mkID(mapID), "x": midPointX, "y": midPointY});
     
-    console.log("x/y: ", [midPointX, midPointY]);
-    
     // var polygon = turf.polygon(allPointStrings);
     // console.log("poly: ", polygon);
     // // var merged = turf.merge(polygon);
@@ -1201,7 +1205,6 @@ exports.scrape = function (callback) {
 								var eventRecordingJSONs = toArray(result);
 
 								eventRecordingJSONs = eventRecordingJSONs.map(function (er) {
-																			console.log("er: ", er);
 									var recording = er.recordings.filter(function (rec, index, all) {
 										return rec.mime_type == "video/mp4" || rec.mime_type == "vnd.voc/h264-hd";
 									});
@@ -1288,20 +1291,24 @@ exports.scrape = function (callback) {
                                 var defaultLoungeTrack = allTracks[mkID("entertainment")];
                                 
                                 handleCSVResult(anti_error_lounge_csv_data, defaultLoungeTrack, shareURL, function (err, sessions) {
+                                    
                                     handleCSVResult(lounge_session_csv_data, defaultLoungeTrack, shareURL, function (err, sessions) {
-                                        /// AFTER THIS POINT NO SESSIONS SHOULD BE ADDED
-								
-                                        var allSessions = data.filter(function (i) {
-        									return i.type == "session";
-        								});
-                                
-                                
 
-                                
-                                        // Generate iCal Feeds
-        								generateIcalData(allSessions);
-                                
-        								callback(null, 'lectures');	
+                                        handleCSVResult(dome_lounge_csv_data, defaultLoungeTrack, shareURL, function (err, sessions) {                                    
+                                            /// AFTER THIS POINT NO SESSIONS SHOULD BE ADDED
+								            
+                                            var allSessions = data.filter(function (i) {
+        								    	return i.type == "session";
+        								    });
+                                            
+                                            
+                                            
+                                            
+                                            // Generate iCal Feeds
+        								    generateIcalData(allSessions);
+                                            
+        								    callback(null, 'lectures');	
+                                        });  
                                     });  
                                 });                          			
 							});						
