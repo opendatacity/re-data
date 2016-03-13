@@ -117,7 +117,13 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 	"end": "2013-05-08",
 	"locations": [{
 		"label": "Station Berlin",
-		"coords": [52.49814,13.374538] // lat, lon
+		"coords": [52.49814,13.374538], // lat, lon
+        "wifi": {
+            "ssid": "re:publica",
+            "security": "captive",
+            "username": "wifi"            
+            "password": "user"
+        }
 	}],
     "hashtag": "rp13",    
 	"url": "http://13.re-publica.de/",
@@ -132,7 +138,14 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 |`slogan`|`string`|`no`|Slogan of the conference, if present|
 |`begin`|`date`|`yes`|Begin date of the conference|
 |`end`|`date`|`yes`|Begin date of the conference|
-|`locations`|`array` of `dictionaries`|`no`|Locations, might be empty if unknown|
+|`locations`|`array` of `objects`|`no`|Locations, might be empty if unknown|
+|`locations.label`|`string`|`yes`|Name of the location (not localized) |
+|`locations.coords`|`array` of exatly two `number`s|`no`|Geocoordinates in WGS84. First value is latitude, second longitude
+|`locations.wifi`|`object`|`no`|Information about the Wifi at the location|
+|`locations.wifi.ssid`|`string`|`yes`|SSID of the Wifi|
+|`locations.wifi.security`|`(none|wpa2|wpa|wpa2enterprise|captive)`|`yes`|Infomation on the secirity method of the wifi|
+|`locations.wifi.username`|`string`|`no`|if a username is required by the wifi security (e.g. `captive`) and the information is public (!) the username|
+|`locations.wifi.password`|`string`|`no`|if a password is required by the wifi securityand the information is public (!) the password|
 |`hashtag`|`string`|`no`|Hashtag (without `#` sign!) to use with Twitter/Facebook/Instagram, etc.|
 |`url`|`string`|`no`|Homepage URL of the conference|
 
