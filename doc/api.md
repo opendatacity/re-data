@@ -340,6 +340,8 @@ Locations are specified spaces on the compound and may be stages.
 		"id": "stage1", // location_id
 		"label_de": "Stage 1",
 		"label_en": "Stage 1",
+        "shortlabel_de": "ST1",
+        "shortlabel_en": "ST1",
 		"is_stage": true, // is this a stage
 		"order_index": 0, // order stage objects by this, when listed
 		"point_of_interest": {
@@ -355,6 +357,7 @@ Locations are specified spaces on the compound and may be stages.
 - `is_stage`: (Required) This location is a stage, as opposed to a meeting aread/workshop space, etc.
 - `order_index`: (Optional) Unique index per event, it defines the natural order of the locations (e.g. as used on promotional materials). 0 has the highest priority. 
 - `point_of_interest`: (Optional) Relationship to a point of interest, if any. `id` and at least one `label_` properties are required if present
+- `shortlabel_LANG` (Optional) A _very_ short label (not longer then 3 characters!) for use on small screens (e.g. watch complications, Mini LED displays, etc.) 
 
 ### GET `/events/<event-id>/locations/<location-id>`
 
