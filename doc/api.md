@@ -131,23 +131,23 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 }]
 ````
 
-|field|format|required|description |
-------------------------------------
-|`id`|`string`|`yes`|Identifier|
-|`title`|`string`|`yes`|Title of the conference|
-|`slogan`|`string`|`no`|Slogan of the conference, if present|
-|`begin`|`date`|`yes`|Begin date of the conference|
-|`end`|`date`|`yes`|Begin date of the conference|
-|`locations`|`array` of `objects`|`no`|Locations, might be empty if unknown|
-|`locations.label`|`string`|`yes`|Name of the location (not localized) |
-|`locations.coords`|`array` of exatly two `number`s|`no`|Geocoordinates in WGS84. First value is latitude, second longitude
-|`locations.wifi`|`object`|`no`|Information about the Wifi at the location|
-|`locations.wifi.ssid`|`string`|`yes`|SSID of the Wifi|
-|`locations.wifi.security`|`(none|wpa2|wpa|wpa2enterprise|captive)`|`yes`|Infomation on the secirity method of the wifi|
-|`locations.wifi.username`|`string`|`no`|if a username is required by the wifi security (e.g. `captive`) and the information is public (!) the username|
-|`locations.wifi.password`|`string`|`no`|if a password is required by the wifi securityand the information is public (!) the password|
-|`hashtag`|`string`|`no`|Hashtag (without `#` sign!) to use with Twitter/Facebook/Instagram, etc.|
-|`url`|`string`|`no`|Homepage URL of the conference|
+| field | format | required | description |
+| ----- | ------ | -------- | ----------- |
+| `id` |`string`|`yes`|Identifier|
+| `title`|`string`|`yes`|Title of the conference|
+| `slogan`|`string`|`no`|Slogan of the conference, if present|
+| `begin`|`date`|`yes`|Begin date of the conference|
+| `end`|`date`|`yes`|Begin date of the conference|
+| `locations`|`array` of `objects`|`no`|Locations, might be empty if unknown|
+| `locations.label`|`string`|`yes`|Name of the location (not localized) |
+| `locations.coords`|`array` of exatly two `number`s|`no`|Geocoordinates in WGS84. First value is latitude, second longitude
+| `locations.wifi`|`object`|`no`|Information about the Wifi at the location|
+| `locations.wifi.ssid`|`string`|`yes`|SSID of the Wifi|
+| `locations.wifi.security`|`(none|wpa2|wpa|wpa2enterprise|captive)`|`yes`|Infomation on the secirity method of the wifi|
+| `locations.wifi.username`|`string`|`no`|if a username is required by the wifi security (e.g. `captive`) and the information is public (!) the username|
+| `locations.wifi.password`|`string`|`no`|if a password is required by the wifi securityand the information is public (!) the password|
+| `hashtag`|`string`|`no`|Hashtag (without `#` sign!) to use with Twitter/Facebook/Instagram, etc.|
+| `url`|`string`|`no`|Homepage URL of the conference|
 
 ### GET `/events/<event-id>`
 
