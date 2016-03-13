@@ -132,7 +132,7 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 ````
 
 |field|format|required|description |
-+-----+------+--------+-----------+
+------------------------------------
 |`id`|`string`|`yes`|Identifier|
 |`title`|`string`|`yes`|Title of the conference|
 |`slogan`|`string`|`no`|Slogan of the conference, if present|
