@@ -51,9 +51,10 @@ app.use(function(req, res, next) {
 // api: events
 
 app.get('/events', function(req, res) {
-	db.view('events/id', {include_docs: true, descending: true}, function(err, data) {
-		replyList(err, data, req.query, res);
-	});
+    fs.readFile(path.resolve(__dirname, "../scraper/config/events.json"), function (err, data) {
+        replyList(err, data ? JSON.parse(data) : null, req.query, res);
+    });
+    
 });
 
 app.get('/events/:id', function(req, res) {
