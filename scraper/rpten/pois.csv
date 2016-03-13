@@ -1,0 +1,27 @@
+id;floors;x;y;label_en;label_de;category;location_id;location_label_de;location_label_en
+stage1;0;1536;918;STG-1;STG-1;session-location;rp15-location-5591;STG-1;STG-1
+stage2;0;342;454;STG-2;STG-2;session-location;rp15-location-5929;STG-2;STG-2
+stage3;0;730;1150;STG-3;STG-3;session-location;rp15-location-5930;STG-3;STG-3
+stage4;0;2174;1724;STG-4;STG-4;session-location;rp15-location-5931;STG-4;STG-4
+stage5;0;3330;1766;STG-5;STG-5;session-location;rp15-location-5932;STG-5;STG-5
+stage6;0;3674;2470;STG-6;STG-6;session-location;rp15-location-5933;STG-6;STG-6
+stage7;0;5882;2572;STG-7;STG-7;session-location;rp15-location-5934;STG-7;STG-7
+stage8;0;4564;354;STG-8;STG-8;session-location;rp15-location-5935;STG-8;STG-8
+stage9;0;3938;300;STG-9;STG-9;session-location;rp15-location-5936;STG-9;STG-9
+stage10;0;3518;306;STG-10;STG-10;session-location;rp15-location-5937;STG-10;STG-10
+stage11;0;2892;318;STG-11;STG-11;session-location;rp15-location-5934;STG-11;STG-11
+staget;0;6256;1768;STG-T;STG-T;session-location;rp15-location-5934;STG-T;STG-T
+stagej;0;6300;2186;STG-J;STG-J;session-location;rp15-location-5934;STG-J;STG-J
+viparea;0;5430;1850;VIP Area;VIP Area;other;;VIP Area;VIP Area
+entry0;0;7442;566;Entry;Entry;other;;Entry;Entry
+store;0;7014;556;Store;Store;shopping;rp15-location-6289;Store;Store
+registration;0;7234;412;Registration;Registration;service;;Registration;Registration
+jazzbar;0;6898;976;Jazzbar;Jazzbar;entertainment;;Jazzbar;Jazzbar
+backyard;0;6650;470;Backyard;Backyard;community;;Backyard;Backyard
+refill;0;6004;684;re:fill Bar;re:fill Bar;entertainment;;re:fill Bar;re:fill Bar
+courtyard;0;5568;1266;Courtyard;Courtyard;community;;Courtyard;Courtyard
+reception;0;5148;1498;re:ception;re:ception;service;;re:ception;re:ception
+entry1;0;7436;1174;Entry;Entry;other;;Entry;Entry
+patio;0;5472;2372;Patio;Patio;other;;Patio;Patio
+miz;0;3737;1121;MIZ;MIZ;workshop-location;rp15-location-6145;MIZ;MIZ
+makerspace;0;4140;1043;Makerspace;Makerspace;workshop-location;rp15-location-6144;Makerspace;Makerspace
