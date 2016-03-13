@@ -6,9 +6,9 @@ var parseCSV = require('csv-parse');
 
 // for debugging we can just pretend rpTEN was today
 var originalStartDate = new Date(2015, 4, 5, 9, 0, 0, 0);
-var fakeDate = Date();
+var fakeDate = new Date();
 var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
-var removeTimesAndLocations = false;
+var removeTimesAndLocations = true;
 
 // Livestream test
 var streamURLs = {
@@ -168,7 +168,7 @@ exports.scrape = function (callback) {
 				var entry = {
 					'id': eventId + '-speaker-'+speaker.uid,
 					'name': speakerName,
-					'photo': speaker.image,
+					'photo': (speaker.image.src != undefined ? speaker.image.src : speaker.image),
 					'url': speaker.uri,
 					'biography': speaker.description_short,
 					'organization': speaker.org,
@@ -283,7 +283,7 @@ exports.scrape = function (callback) {
 				if (ytLink) {
 					links.push(ytLink);
 				}
-				if (session["video"]) {	
+				if (typeof(session["video"]) === typeof([])) {	
 					
 					session.video.forEach(function (videoURL) {
 						
