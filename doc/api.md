@@ -79,6 +79,17 @@ Several properties are marked as optional. If they are not marked as optional th
 
 If you want to specify an optional property as not present explicity (i.e. delete it if it has been there before) specify an explicit `null` value for the optional property. 
 
+## Formats
+
+Most basic types are defined by JSON
+
+- `string`: JSON String
+- `number`: JSON Number
+- `date`: JSON String representing an ISO 8601 Date (no time)
+- `datetime`: JSON String representing an ISO 8601 Date and Time
+- `boolean`: JSON Bool (true/false)
+
+
 ## Events
 
 An event is one chronologically delimited total of sessions. Like a yearly conference.
@@ -108,10 +119,22 @@ An event is one chronologically delimited total of sessions. Like a yearly confe
 		"label": "Station Berlin",
 		"coords": [52.49814,13.374538] // lat, lon
 	}],
+    "hashtag": "rp13",    
 	"url": "http://13.re-publica.de/",
 	"last_modified": 1393611456.99
 }]
 ````
+
+|field|format|required|description |
++-----+------+--------+-----------+
+|`id`|`string`|`yes`|Identifier|
+|`title`|`string`|`yes`|Title of the conference|
+|`slogan`|`string`|`no`|Slogan of the conference, if present|
+|`begin`|`date`|`yes`|Begin date of the conference|
+|`end`|`date`|`yes`|Begin date of the conference|
+|`locations`|`array` of `dictionaries`|`no`|Locations, might be empty if unknown|
+|`hashtag`|`string`|`no`|Hashtag (without `#` sign!) to use with Twitter/Facebook/Instagram, etc.|
+|`url`|`string`|`no`|Homepage URL of the conference|
 
 ### GET `/events/<event-id>`
 
