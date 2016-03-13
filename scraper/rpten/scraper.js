@@ -8,7 +8,7 @@ var parseCSV = require('csv-parse');
 var originalStartDate = new Date(2015, 4, 5, 9, 0, 0, 0);
 var fakeDate = new Date();
 var sessionStartDateOffsetMilliSecs = fakeDate.getTime() - originalStartDate.getTime();
-var removeTimesAndLocations = true;
+var removeTimesAndLocations = false;
 
 // Livestream test
 var streamURLs = {
@@ -283,25 +283,31 @@ exports.scrape = function (callback) {
 				if (ytLink) {
 					links.push(ytLink);
 				}
-				if (typeof(session["video"]) === typeof([])) {	
+                console.log(session["video"]);
+                var videos = session.video;
+				if (typeof(session["video"]) === 'string') {	
+                    videos = [videos];
+                } else  if (!session["video"]) {
+                    videos = [];
+                }
 					
-					session.video.forEach(function (videoURL) {
-						
-						if (videoURL.match(/^https?\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9\-\_]+)/i)) {
-							if (RegExp.$1) {
-								// https://www.youtube.com/v/12BYSqVGCUk
-								var result =  {
-						 			"thumbnail": "https://img.youtube.com/vi/" + RegExp.$1 + "/hqdefault.jpg",
-						 			"title": session.title,
-						 			"url": "https://www.youtube.com/v/" + RegExp.$1,
-						 			"service": "youtube",
-						 			"type": "recording"
-								};
-								links.push(result);
-							}
-						 };
-					});
-				}
+				videos.forEach(function (videoURL) {
+					
+					if (videoURL.match(/^https?\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9\-\_]+)/i)) {
+						if (RegExp.$1) {
+							// https://www.youtube.com/v/12BYSqVGCUk
+							var result =  {
+					 			"thumbnail": "https://img.youtube.com/vi/" + RegExp.$1 + "/hqdefault.jpg",
+					 			"title": session.title,
+					 			"url": "https://www.youtube.com/v/" + RegExp.$1,
+					 			"service": "youtube",
+					 			"type": "recording"
+							};
+							links.push(result);
+						}
+					 };
+				});
+				
 
 				console.log("session:", session.nid);
 
