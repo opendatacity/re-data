@@ -118,5 +118,18 @@
 			"coords": [53.561583,9.985683]
 		}],
 		"url": "http://events.ccc.de/congress/2015"
+	},
+	{
+		"type": "event",
+		"id": "rpten",
+		"label": "re:publica TEN",
+		"title": "TEN",
+		"date": ["2016-05-02","2016-05-04"],
+		"locations": [{
+			"label": "Station Berlin",
+			"coords": [52.49814, 13.374538]
+		}],
+        "hashtag": "rpTEN",
+		"url": "http://16.re-publica.de/"
 	}
 ]
