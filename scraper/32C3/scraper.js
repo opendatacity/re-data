@@ -5,6 +5,7 @@ var eventId = "32c3";
 
 /* get npm modules */
 var scrapyard = require('scrapyard');
+var http = require('http');
 var moment = require('moment');
 var ent = require('ent');
 var cheerio = require('cheerio');
@@ -22,10 +23,8 @@ var json_requester = require('../lib/json_requester');
 var additional_schedule_url = "http://data.conference.bits.io/data/32c3/voc/workshops.schedule.json";
 var sendezentrum_schedule_url = "https://frab.das-sendezentrum.de/de/32c3/public/schedule.json";
 var sendezentrum_speaker_url = "https://frab.das-sendezentrum.de/de/32c3/public/speakers.json";
-var schedule_url = "https://events.ccc.de/congress/2015/Fahrplan/schedule.json"; 
-//"http://data.conference.bits.io/data/32c3/schedule.json"; //"https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
-var speakers_url = "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
-//"http://data.conference.bits.io/data/32c3/speakers-frap.json" // "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
+var schedule_url = "http://data.conference.bits.io/data/32c3/schedule.json"; //"https://events.ccc.de/congress/2015/Fahrplan/schedule.json";
+var speakers_url = "http://data.conference.bits.io/data/32c3/speakers-frap.json"; // "https://events.ccc.de/congress/2015/Fahrplan/speakers.json";
 var voc_streams_api_url = "https://streaming.media.ccc.de/streams/v1.json";
 var poi_titles_url = "https://github.com/NoMoKeTo/c3nav/raw/master/src/projects/32c3/titles.json";
 // var pois = "https://raw.githubusercontent.com/NoMoKeTo/c3nav/master/src/projects/32c3/pois.json";
