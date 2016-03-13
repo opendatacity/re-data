@@ -106,5 +106,17 @@
 			"coords": [53.031111,13.310278]
 		}],
 		"url": "http://events.ccc.de/camp/2015"
+	},
+	{
+		"type": "event",
+		"id": "32c3",
+		"label": "32C3",
+		"title": "32nd Chaos Communication Congress – Gated Comunities",
+		"date": ["2015-12-27","2015-12-30"],
+		"locations": [{
+			"label": "Congress Center Hamburg",
+			"coords": [53.561583,9.985683]
+		}],
+		"url": "http://events.ccc.de/congress/2015"
 	}
 ]

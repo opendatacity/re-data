@@ -15,7 +15,9 @@
     "moment": "2.2.1",
     "sanitize-html": "1.4.3",
     "scrapyard": "0.0.8",
-	"icalendar": "0.7.1"
+	"icalendar": "0.7.1",
+    "turf": "2.0.0",
+    "paper": "0.9.25"
   },
   "engines": {
     "node": "0.10.21"
