@@ -17,21 +17,21 @@ var streamURLs = {
 };
 
 var allTracks = {
-	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  		label_en:'Business & Innovation', color:[196.0, 55.0, 8.0, 1.0] },    //
-	'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',     		label_en:'City Of The Future'   , color:[102.0, 102.0, 102.0, 1.0] }, //
-	'Culture':                { id:'culture',             label_de:'Kultur',                 		label_en:'Culture'              , color:[195.0, 118.0, 2.0, 1.0] },   //
-	'Fashiontech':            { id:'fashiontech',         label_de:'Fashiontech',            	  	label_en:'Fashiontech'          , color:[193.0, 117.0, 28.0, 1.0] },
-	'GIG':            		  { id:'gig',         		  label_de:'Global Innovation Gathering', 	label_en:'Global Innovation Gathering' , color:[193.0, 117.0, 28.0, 1.0] },	
-	'Media':                  { id:'media',               label_de:'Medien',                 		label_en:'Media'                , color:[11.0, 87.0, 127.0, 1.0] },  //
-	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       		label_en:'Media Convention'     , color:[0.0, 0.0, 0.0, 1.0] },	     //
-	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', 		label_en:'Politics & Society'   , color:[112.0, 77.0, 133.0, 1.0] }, //
-	're:cord Musicday':       { id:'re-cord-musicday',    label_de:'re:cord Musicday',       		label_en:'re:cord Musicday'     , color:[51.0, 204.0, 102.0, 1.0] }, //
-	're:health':              { id:'re-health',           label_de:'re:health',              		label_en:'re:health'            , color:[102.0, 156.0, 44.0, 1.0] },	
-	're:publica':             { id:'re-publica',          label_de:'re:publica',              		label_en:'re:publica'            , color:[99.0, 157.0, 36.0, 1.0] },  //
-	're:think Mobility':      { id:'re-think-mobility',   label_de:'re:think Mobility',      		label_en:'re:think Mobility'    , color:[102.0, 156.0, 44.0, 1.0] },		
-	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', 		label_en:'Science & Technology' , color:[164.0, 148.0, 1.0, 1.0] },  //
-	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    		label_en:'Research & Education' , color:[102.0, 102.0, 204.0, 1.0] },//
-	'Other':                  { id:'other',               label_de:'Other',                  		label_en:'Other'                , color:[101.0, 156.0, 45.0, 1.0] }
+	'Business & Innovation':  { id:'business-innovation', label_de:'Business & Innovation',  		label_en:'Business & Innovation', color:[64, 156, 28, 1.0] },    //
+ 'City Of The Future':     { id:'city-of-the-future',  label_de:'City Of The Future',             label_en:'City Of The Future'   , color:[0, 0, 0, 1.0] }, //
+    'Culture':                { id:'culture',             label_de:'Kultur',                         label_en:'Culture'              , color:[180, 98, 8, 1.0] },   //
+'Fashiontech':            { id:'fashiontech',         label_de:'Fashiontech',            	  	label_en:'Fashiontech'          , color:[0, 0, 0, 1.0] },
+'GIG':            		  { id:'gig',         		  label_de:'Global Innovation Gathering', 	label_en:'Global Innovation Gathering' , color:[193.0, 117.0, 28.0, 1.0] },	
+'Media':                  { id:'media',               label_de:'Medien',                 		label_en:'Media'                , color:[11.0, 87.0, 127.0, 1.0] },  //
+	'Media Convention':       { id:'media-Convention',    label_de:'Media Convention',       		label_en:'Media Convention'     , color:[189, 0, 4, 1.0] },	     //
+	'Politics & Society':     { id:'politics-society',    label_de:'Politik & Gesellschaft', 		label_en:'Politics & Society'   , color:[92, 57, 114, 1.0] }, //
+'re:cord Musicday':       { id:'re-cord-musicday',    label_de:'re:cord Musicday',       		label_en:'re:cord Musicday'     , color:[51.0, 204.0, 102.0, 1.0] }, //
+    'Health':                 { id:'health',           label_de:'Health',              		label_en:'Health'            , color:[139, 0, 23, 1.0] },	
+	're:publica':             { id:'re-publica',          label_de:'re:publica',              		label_en:'re:publica'            , color:[0, 0, 0, 1.0] },  //
+'re:think Mobility':      { id:'re-think-mobility',   label_de:'re:think Mobility',      		label_en:'re:think Mobility'    , color:[102.0, 156.0, 44.0, 1.0] },		
+	'Science & Technology':   { id:'science-technology',  label_de:'Wissenschaft & Technik', 		label_en:'Science & Technology' , color:[146, 132, 7, 1.0] },  //
+	'Research & Education':   { id:'research-education',  label_de:'Forschung & Bildung',    		label_en:'Research & Education' , color:[83, 78, 192, 1.0] },//
+'Other':                  { id:'other',               label_de:'Other',                  		label_en:'Other'                , color:[0, 0, 0, 1.0] }
 };
 
 var allFormats = {
@@ -136,8 +136,8 @@ exports.scrape = function (callback) {
 	require('../lib/json_requester').get(
 		{
 			urls: {
-				sessions: 'http://re-publica.de/event/3013/json/sessions', // rpTEN id: 6553
-				speakers: 'http://re-publica.de/event/3013/json/speakers' // rpTEN id: 6553
+				sessions: 'http://re-publica.de/event/6553/json/sessions', // rpTEN id: 6553
+				speakers: 'http://re-publica.de/event/6553/json/speakers' // rpTEN id: 6553
 			}
 		},
 		function (result) {
